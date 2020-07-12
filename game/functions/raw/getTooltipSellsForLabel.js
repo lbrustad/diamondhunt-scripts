@@ -1,5 +1,5 @@
 /**
- * getTooltipSellsForLabel extracted from ../../deobfuscated/bundle.js at line 7641-0
+ * getTooltipSellsForLabel extracted from ../../deobfuscated/bundle.js at line 7628-7635
  *
  * If this file doesn't contain a function, there is an error in ../raw/getTooltipSellsForLabel.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

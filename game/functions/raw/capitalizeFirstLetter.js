@@ -1,5 +1,5 @@
 /**
- * capitalizeFirstLetter extracted from ../../deobfuscated/bundle.js at line 777-0
+ * capitalizeFirstLetter extracted from ../../deobfuscated/bundle.js at line 764-767
  *
  * If this file doesn't contain a function, there is an error in ../raw/capitalizeFirstLetter.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

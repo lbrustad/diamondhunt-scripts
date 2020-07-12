@@ -1,5 +1,5 @@
 /**
- * initializeTooltips extracted from ../../deobfuscated/bundle.js at line 6965-0
+ * initializeTooltips extracted from ../../deobfuscated/bundle.js at line 6952-7626
  *
  * If this file doesn't contain a function, there is an error in ../raw/initializeTooltips.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

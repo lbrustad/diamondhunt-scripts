@@ -1,13 +1,13 @@
 /**
- * loadMuteList extracted from ../../deobfuscated/bundle.js at line 12292-0
+ * loadMuteList extracted from ../../deobfuscated/bundle.js at line 12280-12326
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadMuteList.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function loadMuteList(data)
+function loadMuteList(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1C8F4 = "<center>";
 	_0x1C8F4 += "<table id=\'muteList-table\' class=\'sortable basic-table\' width=\'90%\'>";
 	_0x1C8F4 += "<thead>";

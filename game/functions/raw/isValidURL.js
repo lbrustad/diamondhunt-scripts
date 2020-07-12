@@ -1,5 +1,5 @@
 /**
- * isValidURL extracted from ../../deobfuscated/bundle.js at line 1132-0
+ * isValidURL extracted from ../../deobfuscated/bundle.js at line 1119-1133
  *
  * If this file doesn't contain a function, there is an error in ../raw/isValidURL.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

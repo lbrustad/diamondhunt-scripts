@@ -1,5 +1,5 @@
 /**
- * BabyPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 9912-0
+ * BabyPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 9899-9970
  *
  * If this file doesn't contain a function, there is an error in ../raw/BabyPolarBearMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

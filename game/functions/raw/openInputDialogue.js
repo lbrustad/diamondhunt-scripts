@@ -1,5 +1,5 @@
 /**
- * openInputDialogue extracted from ../../deobfuscated/bundle.js at line 6726-0
+ * openInputDialogue extracted from ../../deobfuscated/bundle.js at line 6713-6786
  *
  * If this file doesn't contain a function, there is an error in ../raw/openInputDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * onKeyUpStardustXonvertXp extracted from ../../deobfuscated/bundle.js at line 12262-0
+ * onKeyUpStardustXonvertXp extracted from ../../deobfuscated/bundle.js at line 12250-12278
  *
  * If this file doesn't contain a function, there is an error in ../raw/onKeyUpStardustXonvertXp.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

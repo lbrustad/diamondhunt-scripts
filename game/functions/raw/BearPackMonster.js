@@ -1,5 +1,5 @@
 /**
- * BearPackMonster extracted from ../../deobfuscated/bundle.js at line 9193-0
+ * BearPackMonster extracted from ../../deobfuscated/bundle.js at line 9180-9229
  *
  * If this file doesn't contain a function, there is an error in ../raw/BearPackMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

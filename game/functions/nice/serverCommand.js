@@ -1,13 +1,13 @@
 'use strict';
 
-function serverCommand(data)
+function serverCommand(client)
 {
-	var inventoryKeys = data;
+	var inventoryKeys = client;
 	if (inventoryKeys.includes("="))
 	{
-		var tmp = data.split("=");
-		var items = data.split("=").slice(1).join("=").split("~");
-		inventoryKeys = tmp[0];
+		var _a_ = client.split("=");
+		var items = client.split("=").slice(1).join("=").split("~");
+		inventoryKeys = _a_[0];
 	}
 	switch (inventoryKeys)
 	{
@@ -51,7 +51,7 @@ function serverCommand(data)
 		}, 9000);
 		break;
 	case "SET_ITEMS":
-		setItems(data.substr(inventoryKeys.length + 1));
+		setItems(client.substr(inventoryKeys.length + 1));
 		global_setItemsTickCount++;
 		if (!global_loadedFirstItemsFlag)
 		{
@@ -61,43 +61,43 @@ function serverCommand(data)
 		}
 		break;
 	case "LOAD_FOOD_OBJECTS":
-		objects_loadFood(data.substr(18));
+		objects_loadFood(client.substr(18));
 		break;
 	case "FORCE_REFRESH_TRADABLES":
 		sendBytes("REFRESH_TRADABLES");
 		break;
 	case "LOAD_MACHINERY_OBJECTS":
-		objects_loadMachinery(data.substr(23));
+		objects_loadMachinery(client.substr(23));
 		break;
 	case "LOAD_SHOP_OBJECTS":
-		objects_loadShopPrices(data.substr(18));
+		objects_loadShopPrices(client.substr(18));
 		break;
 	case "OPEN_DONOR_PAGE":
 		clicksDonorShopItem("buyDonorCoins");
 		break;
 	case "REFRESH_TRADABLES":
-		refreshTradables(data.substr(18));
+		refreshTradables(client.substr(18));
 		break;
 	case "REFESH_MARKET":
-		refreshMarket(data.substr(14));
+		refreshMarket(client.substr(14));
 		refreshMarketGUI();
 		populateMarketTable();
 		displayMarket(true);
 		break;
 	case "LOAD_SEED_OBJECTS":
-		objects_loadSeeds(data.substr(18));
+		objects_loadSeeds(client.substr(18));
 		break;
 	case "LOAD_STARDUST_TOOL_CONVERSION":
-		objects_loadStardustTools(data.substr(30));
+		objects_loadStardustTools(client.substr(30));
 		break;
 	case "RELOAD":
 		setTimeout(function ()
 		{
 			location.reload();
-		}, parseInt(data.substr(7)));
+		}, parseInt(client.substr(7)));
 		break;
 	case "LOAD_EQUIPMENT_OBJECTS":
-		objects_loadEquipment(data.substr(23));
+		objects_loadEquipment(client.substr(23));
 		loadOnceOnLogin();
 		sendBytes("READY");
 		document.getElementById("chat-area").style.display = "";
@@ -159,13 +159,13 @@ function serverCommand(data)
 		levelUp(items[0], items[1]);
 		break;
 	case "LOOT_DIALOGUE":
-		lootDialogue(data.substr(14));
+		lootDialogue(client.substr(14));
 		break;
 	case "NAVIGATE":
-		navigate(data.substr(9));
+		navigate(client.substr(9));
 		break;
 	case "HIT_SPLAT":
-		addHitSplit(data.substr(10));
+		addHitSplit(client.substr(10));
 		break;
 	case "CSS":
 		setCSSFromServer(items[0], items[1], items[2], items[3]);
@@ -174,10 +174,10 @@ function serverCommand(data)
 		window[items[0]] = items[1];
 		break;
 	case "START_MONSTER_ANIMATION":
-		startMonsterAnimation(data.substr(24));
+		startMonsterAnimation(client.substr(24));
 		break;
 	case "START_HERO_ANIMATION":
-		startHeroAnimation(data.substr(21));
+		startHeroAnimation(client.substr(21));
 		break;
 	case "RELEASE_FARADOX":
 		dimScreen("release_faradox", true);
@@ -198,19 +198,19 @@ function serverCommand(data)
 		dimScreen("dead_hero", true);
 		break;
 	case "REFRESH_TREE_LIST_TAB":
-		refreshTreeListTab(data.substr(22));
+		refreshTreeListTab(client.substr(22));
 		break;
 	case "REFRESH_COMBAT_LOGGER":
-		refreshCombatLogger(data.substr(22));
+		refreshCombatLogger(client.substr(22));
 		break;
 	case "REFRESH_TRANSFORM_LOGGER":
-		refreshTransferLogger(data.substr(25));
+		refreshTransferLogger(client.substr(25));
 		break;
 	case "CONVERT_GUEST_ERROR":
-		displayConvertGuestError(data.substr(20));
+		displayConvertGuestError(client.substr(20));
 		break;
 	case "CONVERT_GUEST_ERROR":
-		displayConvertGuestError(data.substr(20));
+		displayConvertGuestError(client.substr(20));
 		break;
 	case "CONVERT_GUEST_SUCCESS":
 		closeDialogue("dialogue-profile-guest-to-user-password");
@@ -224,10 +224,10 @@ function serverCommand(data)
 		logout();
 		break;
 	case "CHAT":
-		chat(data.substr(5));
+		chat(client.substr(5));
 		break;
 	case "REFRESH_MUTE_LIST":
-		loadMuteList(data.substr(18));
+		loadMuteList(client.substr(18));
 		break;
 	}
 };

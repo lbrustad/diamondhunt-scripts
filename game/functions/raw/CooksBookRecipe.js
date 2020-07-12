@@ -1,5 +1,5 @@
 /**
- * CooksBookRecipe extracted from ../../deobfuscated/bundle.js at line 10734-0
+ * CooksBookRecipe extracted from ../../deobfuscated/bundle.js at line 10721-10732
  *
  * If this file doesn't contain a function, there is an error in ../raw/CooksBookRecipe.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * formatUnixToDate extracted from ../../deobfuscated/bundle.js at line 12340-0
+ * formatUnixToDate extracted from ../../deobfuscated/bundle.js at line 12328-12334
  *
  * If this file doesn't contain a function, there is an error in ../raw/formatUnixToDate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

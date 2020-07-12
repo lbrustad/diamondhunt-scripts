@@ -1,5 +1,5 @@
 /**
- * exitCombatMap extracted from ../../deobfuscated/bundle.js at line 8648-0
+ * exitCombatMap extracted from ../../deobfuscated/bundle.js at line 8635-8644
  *
  * If this file doesn't contain a function, there is an error in ../raw/exitCombatMap.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

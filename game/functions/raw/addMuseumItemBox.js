@@ -1,5 +1,5 @@
 /**
- * addMuseumItemBox extracted from ../../deobfuscated/bundle.js at line 3901-0
+ * addMuseumItemBox extracted from ../../deobfuscated/bundle.js at line 3888-3928
  *
  * If this file doesn't contain a function, there is an error in ../raw/addMuseumItemBox.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

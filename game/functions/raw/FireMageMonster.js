@@ -1,5 +1,5 @@
 /**
- * FireMageMonster extracted from ../../deobfuscated/bundle.js at line 9040-0
+ * FireMageMonster extracted from ../../deobfuscated/bundle.js at line 9027-9076
  *
  * If this file doesn't contain a function, there is an error in ../raw/FireMageMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * refreshDonorTable extracted from ../../deobfuscated/bundle.js at line 12928-0
+ * refreshDonorTable extracted from ../../deobfuscated/bundle.js at line 12916-13022
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshDonorTable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

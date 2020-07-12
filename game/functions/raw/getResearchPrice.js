@@ -1,5 +1,5 @@
 /**
- * getResearchPrice extracted from ../../deobfuscated/bundle.js at line 2777-0
+ * getResearchPrice extracted from ../../deobfuscated/bundle.js at line 2764-2779
  *
  * If this file doesn't contain a function, there is an error in ../raw/getResearchPrice.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

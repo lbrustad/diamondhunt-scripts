@@ -1,5 +1,5 @@
 /**
- * startHeroAnimation extracted from ../../deobfuscated/bundle.js at line 10157-0
+ * startHeroAnimation extracted from ../../deobfuscated/bundle.js at line 10144-10154
  *
  * If this file doesn't contain a function, there is an error in ../raw/startHeroAnimation.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

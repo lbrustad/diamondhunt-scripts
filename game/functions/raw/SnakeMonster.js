@@ -1,5 +1,5 @@
 /**
- * SnakeMonster extracted from ../../deobfuscated/bundle.js at line 9091-0
+ * SnakeMonster extracted from ../../deobfuscated/bundle.js at line 9078-9127
  *
  * If this file doesn't contain a function, there is an error in ../raw/SnakeMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

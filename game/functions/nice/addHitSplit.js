@@ -1,10 +1,10 @@
 'use strict';
 
-function addHitSplit(data)
+function addHitSplit(clusterShardData)
 {
 	if (global_lastTabId == "right-combat-fighting")
 	{
-		var cur_node = data.split("~");
+		var cur_node = clusterShardData.split("~");
 		var indices_in = cur_node[0];
 		var rest_pts_in = cur_node[1];
 		var uvs_in = cur_node[2];

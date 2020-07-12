@@ -1,5 +1,5 @@
 /**
- * refreshGemListTab extracted from ../../deobfuscated/bundle.js at line 6361-0
+ * refreshGemListTab extracted from ../../deobfuscated/bundle.js at line 6348-6483
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshGemListTab.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

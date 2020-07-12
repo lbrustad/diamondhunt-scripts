@@ -1,5 +1,5 @@
 /**
- * chatInput extracted from ../../deobfuscated/bundle.js at line 1191-0
+ * chatInput extracted from ../../deobfuscated/bundle.js at line 1178-1192
  *
  * If this file doesn't contain a function, there is an error in ../raw/chatInput.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

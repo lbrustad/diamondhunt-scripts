@@ -1,5 +1,5 @@
 /**
- * MagicTransformRecipe extracted from ../../deobfuscated/bundle.js at line 10721-0
+ * MagicTransformRecipe extracted from ../../deobfuscated/bundle.js at line 10708-10719
  *
  * If this file doesn't contain a function, there is an error in ../raw/MagicTransformRecipe.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

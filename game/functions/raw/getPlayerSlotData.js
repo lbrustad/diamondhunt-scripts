@@ -1,5 +1,5 @@
 /**
- * getPlayerSlotData extracted from ../../deobfuscated/bundle.js at line 12577-0
+ * getPlayerSlotData extracted from ../../deobfuscated/bundle.js at line 12565-12575
  *
  * If this file doesn't contain a function, there is an error in ../raw/getPlayerSlotData.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

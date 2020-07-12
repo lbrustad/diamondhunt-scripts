@@ -1,5 +1,5 @@
 /**
- * clicksCreateNewAccount extracted from ../../deobfuscated/bundle.js at line 2163-0
+ * clicksCreateNewAccount extracted from ../../deobfuscated/bundle.js at line 2150-2162
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksCreateNewAccount.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

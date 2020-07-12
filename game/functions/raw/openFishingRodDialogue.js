@@ -1,5 +1,5 @@
 /**
- * openFishingRodDialogue extracted from ../../deobfuscated/bundle.js at line 12374-0
+ * openFishingRodDialogue extracted from ../../deobfuscated/bundle.js at line 12362-12373
  *
  * If this file doesn't contain a function, there is an error in ../raw/openFishingRodDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

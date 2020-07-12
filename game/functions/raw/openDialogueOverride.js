@@ -1,5 +1,5 @@
 /**
- * openDialogueOverride extracted from ../../deobfuscated/bundle.js at line 4599-0
+ * openDialogueOverride extracted from ../../deobfuscated/bundle.js at line 4586-4600
  *
  * If this file doesn't contain a function, there is an error in ../raw/openDialogueOverride.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

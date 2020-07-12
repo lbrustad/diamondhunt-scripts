@@ -1,5 +1,5 @@
 /**
- * getCurrentServerForDisplayInGame extracted from ../../deobfuscated/bundle.js at line 30-0
+ * getCurrentServerForDisplayInGame extracted from ../../deobfuscated/bundle.js at line 30-40
  *
  * If this file doesn't contain a function, there is an error in ../raw/getCurrentServerForDisplayInGame.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

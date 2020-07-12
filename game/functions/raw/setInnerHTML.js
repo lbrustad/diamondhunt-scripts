@@ -1,5 +1,5 @@
 /**
- * setInnerHTML extracted from ../../deobfuscated/bundle.js at line 2157-0
+ * setInnerHTML extracted from ../../deobfuscated/bundle.js at line 2144-2148
  *
  * If this file doesn't contain a function, there is an error in ../raw/setInnerHTML.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

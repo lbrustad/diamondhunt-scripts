@@ -1,5 +1,5 @@
 /**
- * loadQuestAndAchievementsTab extracted from ../../deobfuscated/bundle.js at line 3362-0
+ * loadQuestAndAchievementsTab extracted from ../../deobfuscated/bundle.js at line 3349-3363
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadQuestAndAchievementsTab.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

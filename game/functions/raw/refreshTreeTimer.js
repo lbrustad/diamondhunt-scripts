@@ -1,5 +1,5 @@
 /**
- * refreshTreeTimer extracted from ../../deobfuscated/bundle.js at line 11768-0
+ * refreshTreeTimer extracted from ../../deobfuscated/bundle.js at line 11756-11775
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTreeTimer.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

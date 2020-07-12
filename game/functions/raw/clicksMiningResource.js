@@ -1,5 +1,5 @@
 /**
- * clicksMiningResource extracted from ../../deobfuscated/bundle.js at line 748-0
+ * clicksMiningResource extracted from ../../deobfuscated/bundle.js at line 735-762
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksMiningResource.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

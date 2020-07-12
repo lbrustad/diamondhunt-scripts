@@ -1,5 +1,5 @@
 /**
- * CraftingRecipe extracted from ../../deobfuscated/bundle.js at line 10708-0
+ * CraftingRecipe extracted from ../../deobfuscated/bundle.js at line 10695-10705
  *
  * If this file doesn't contain a function, there is an error in ../raw/CraftingRecipe.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

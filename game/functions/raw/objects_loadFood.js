@@ -1,14 +1,14 @@
 /**
- * objects_loadFood extracted from ../../deobfuscated/bundle.js at line 3516-0
+ * objects_loadFood extracted from ../../deobfuscated/bundle.js at line 3503-3530
  *
  * If this file doesn't contain a function, there is an error in ../raw/objects_loadFood.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function objects_loadFood(data)
+function objects_loadFood(_0x1C750)
 {
 	var _0x1D1A6 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{

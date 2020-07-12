@@ -1,5 +1,5 @@
 /**
- * getOilPerSecondForAItem extracted from ../../deobfuscated/bundle.js at line 4382-0
+ * getOilPerSecondForAItem extracted from ../../deobfuscated/bundle.js at line 4369-4382
  *
  * If this file doesn't contain a function, there is an error in ../raw/getOilPerSecondForAItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

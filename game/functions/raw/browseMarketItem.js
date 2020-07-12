@@ -1,5 +1,5 @@
 /**
- * browseMarketItem extracted from ../../deobfuscated/bundle.js at line 12686-0
+ * browseMarketItem extracted from ../../deobfuscated/bundle.js at line 12674-12679
  *
  * If this file doesn't contain a function, there is an error in ../raw/browseMarketItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

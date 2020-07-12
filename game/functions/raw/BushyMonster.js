@@ -1,5 +1,5 @@
 /**
- * BushyMonster extracted from ../../deobfuscated/bundle.js at line 9620-0
+ * BushyMonster extracted from ../../deobfuscated/bundle.js at line 9607-9678
  *
  * If this file doesn't contain a function, there is an error in ../raw/BushyMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

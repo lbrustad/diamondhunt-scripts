@@ -1,5 +1,5 @@
 /**
- * openStardustToolDialogue2 extracted from ../../deobfuscated/bundle.js at line 12110-0
+ * openStardustToolDialogue2 extracted from ../../deobfuscated/bundle.js at line 12098-12138
  *
  * If this file doesn't contain a function, there is an error in ../raw/openStardustToolDialogue2.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

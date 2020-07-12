@@ -1,5 +1,5 @@
 /**
- * getPickaxeTypeData extracted from ../../deobfuscated/bundle.js at line 11855-0
+ * getPickaxeTypeData extracted from ../../deobfuscated/bundle.js at line 11843-11871
  *
  * If this file doesn't contain a function, there is an error in ../raw/getPickaxeTypeData.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

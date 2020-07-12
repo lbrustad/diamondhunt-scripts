@@ -1,5 +1,5 @@
 /**
- * generateHTMLGeneralTooltip extracted from ../../deobfuscated/bundle.js at line 7650-0
+ * generateHTMLGeneralTooltip extracted from ../../deobfuscated/bundle.js at line 7637-7647
  *
  * If this file doesn't contain a function, there is an error in ../raw/generateHTMLGeneralTooltip.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

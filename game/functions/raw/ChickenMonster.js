@@ -1,5 +1,5 @@
 /**
- * ChickenMonster extracted from ../../deobfuscated/bundle.js at line 8734-0
+ * ChickenMonster extracted from ../../deobfuscated/bundle.js at line 8721-8770
  *
  * If this file doesn't contain a function, there is an error in ../raw/ChickenMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

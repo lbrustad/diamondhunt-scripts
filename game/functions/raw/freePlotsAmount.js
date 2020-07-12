@@ -1,5 +1,5 @@
 /**
- * freePlotsAmount extracted from ../../deobfuscated/bundle.js at line 6556-0
+ * freePlotsAmount extracted from ../../deobfuscated/bundle.js at line 6543-6554
  *
  * If this file doesn't contain a function, there is an error in ../raw/freePlotsAmount.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

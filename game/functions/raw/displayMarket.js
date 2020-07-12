@@ -1,5 +1,5 @@
 /**
- * displayMarket extracted from ../../deobfuscated/bundle.js at line 12621-0
+ * displayMarket extracted from ../../deobfuscated/bundle.js at line 12609-12628
  *
  * If this file doesn't contain a function, there is an error in ../raw/displayMarket.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

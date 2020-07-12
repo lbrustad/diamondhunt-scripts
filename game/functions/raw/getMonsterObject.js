@@ -1,5 +1,5 @@
 /**
- * getMonsterObject extracted from ../../deobfuscated/bundle.js at line 10169-0
+ * getMonsterObject extracted from ../../deobfuscated/bundle.js at line 10156-10329
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMonsterObject.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

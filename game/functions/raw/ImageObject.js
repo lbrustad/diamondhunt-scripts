@@ -1,5 +1,5 @@
 /**
- * ImageObject extracted from ../../deobfuscated/bundle.js at line 2208-0
+ * ImageObject extracted from ../../deobfuscated/bundle.js at line 2195-2200
  *
  * If this file doesn't contain a function, there is an error in ../raw/ImageObject.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

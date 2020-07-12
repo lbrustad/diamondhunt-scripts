@@ -1,5 +1,5 @@
 /**
- * openSmallFishingNetDialogue extracted from ../../deobfuscated/bundle.js at line 12361-0
+ * openSmallFishingNetDialogue extracted from ../../deobfuscated/bundle.js at line 12349-12360
  *
  * If this file doesn't contain a function, there is an error in ../raw/openSmallFishingNetDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

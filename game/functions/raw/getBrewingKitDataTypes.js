@@ -1,5 +1,5 @@
 /**
- * getBrewingKitDataTypes extracted from ../../deobfuscated/bundle.js at line 13036-0
+ * getBrewingKitDataTypes extracted from ../../deobfuscated/bundle.js at line 13024-13059
  *
  * If this file doesn't contain a function, there is an error in ../raw/getBrewingKitDataTypes.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * hideElement extracted from ../../deobfuscated/bundle.js at line 2128-0
+ * hideElement extracted from ../../deobfuscated/bundle.js at line 2115-2124
  *
  * If this file doesn't contain a function, there is an error in ../raw/hideElement.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

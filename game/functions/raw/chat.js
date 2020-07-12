@@ -1,13 +1,13 @@
 /**
- * chat extracted from ../../deobfuscated/bundle.js at line 1017-0
+ * chat extracted from ../../deobfuscated/bundle.js at line 1004-1117
  *
  * If this file doesn't contain a function, there is an error in ../raw/chat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function chat(data)
+function chat(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1CEDC = _0x1C75E[0];
 	var _0x1CEB2 = _0x1C75E[1];
 	var _0x1CE88 = _0x1C75E[2];

@@ -1,5 +1,5 @@
 /**
- * getSmallFishingNetTypeData extracted from ../../deobfuscated/bundle.js at line 11915-0
+ * getSmallFishingNetTypeData extracted from ../../deobfuscated/bundle.js at line 11903-11931
  *
  * If this file doesn't contain a function, there is an error in ../raw/getSmallFishingNetTypeData.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

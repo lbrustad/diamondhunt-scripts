@@ -1,5 +1,5 @@
 /**
- * changeValueOfInput extracted from ../../deobfuscated/bundle.js at line 6874-0
+ * changeValueOfInput extracted from ../../deobfuscated/bundle.js at line 6861-6885
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeValueOfInput.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

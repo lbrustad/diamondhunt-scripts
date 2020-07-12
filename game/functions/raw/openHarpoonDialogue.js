@@ -1,5 +1,5 @@
 /**
- * openHarpoonDialogue extracted from ../../deobfuscated/bundle.js at line 12387-0
+ * openHarpoonDialogue extracted from ../../deobfuscated/bundle.js at line 12375-12386
  *
  * If this file doesn't contain a function, there is an error in ../raw/openHarpoonDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

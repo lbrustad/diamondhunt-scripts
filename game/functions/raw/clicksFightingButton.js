@@ -1,5 +1,5 @@
 /**
- * clicksFightingButton extracted from ../../deobfuscated/bundle.js at line 8692-0
+ * clicksFightingButton extracted from ../../deobfuscated/bundle.js at line 8679-8706
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksFightingButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

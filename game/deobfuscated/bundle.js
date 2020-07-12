@@ -130,9 +130,9 @@ $(document).ready(function ()
 	global_canvasFightingHero2D = global_canvasFightingHero.getContext("2d");
 	global_canvasFightingMonster = document.getElementById("canvas-monster");
 	global_canvasFightingMonster2D = global_canvasFightingMonster.getContext("2d");
-	document.addEventListener("keyup", (e) =>
+	document.addEventListener("keyup", (_0x1C6A8) =>
 	{
-		switch (e.keyCode)
+		switch (_0x1C6A8.keyCode)
 		{
 		case 13:
 			if ($("#login-box-new-account-password2").is(":focus"))
@@ -151,19 +151,6 @@ $(document).ready(function ()
 				_0x1C69A[_0x1C6B6].style.display = "none"
 			};
 			break;
-		// could be
-		case 49:
-		case 50:
-		case 51:
-		case 52:
-		case 53:
-			const x = e.keyCode - 48;
-			if (getItem("researcherCombat") >= 3 && global_lastTabId == "right-combat-fighting" && x >= 1 && x <= 5)
-			{
-				sendBytes("USE_PRESET=" + x)
-			};
-			break;
-		// but is like shit
 		case 49:
 			if (getItem("researcherCombat") >= 3 && global_lastTabId == "right-combat-fighting")
 			{
@@ -197,10 +184,10 @@ $(document).ready(function ()
 		}
 	})
 });
-$(document).mousemove(function (e)
+$(document).mousemove(function (_0x1C6A8)
 {
-	window.mouseX = e.pageX;
-	window.mouseY = e.pageY
+	window.mouseX = _0x1C6A8.pageX;
+	window.mouseY = _0x1C6A8.pageY
 });
 
 function initWebSocketFunctions()
@@ -257,234 +244,234 @@ String.prototype.includes = function (_0x1C6D2)
 };
 global_loadedFirstItemsFlag = false;
 
-function serverCommand(data)
+function serverCommand(_0x1C750)
 {
-	var commandAction = data;
-	if (commandAction.includes("="))
+	var _0x1C884 = _0x1C750;
+	if (_0x1C884.includes("="))
 	{
-		var tmp = data.split("=");
-		var cmdData = data.split("=").slice(1).join("=").split("~");
-		commandAction = tmp[0]
+		var _0x1C75E = _0x1C750.split("=");
+		var _0x1E20E = _0x1C750.split("=").slice(1).join("=").split("~");
+		_0x1C884 = _0x1C75E[0]
 	};
-	switch (commandAction)
+	switch (_0x1C884)
 	{
-		case "CONNECTION_ESTABLISHED":
-			if (localStorage.getItem("auto_login_token") === null || localStorage.getItem("auto-login") != null)
+	case "CONNECTION_ESTABLISHED":
+		if (localStorage.getItem("auto_login_token") === null || localStorage.getItem("auto-login") != null)
+		{
+			document.getElementById("login-box-connecting").style.display = "none";
+			document.getElementById("login-box-server-offline").style.display = "none";
+			document.getElementById("login-box-connected-guest").style.display = ""
+		}
+		else
+		{
+			sendBytes("LOAD_TOKEN=" + localStorage.getItem("auto_login_token"))
+		};
+		break;
+	case "REDSEND_TOKEN":
+		document.getElementById("connecting-to-server-other-info").innerHTML = "This account session is already active on another server.";
+		setTimeout(function ()
+		{
+			document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><br />Starting the reconnecting phase..."
+		}, 1000);
+		setTimeout(function ()
+		{
+			document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><span style=\'color:lime\'>Succesfully saved session on other server...</span>"
+		}, 3000);
+		setTimeout(function ()
+		{
+			document.getElementById("connecting-to-server-other-info").innerHTML += "<br />Closing session..."
+		}, 4000);
+		setTimeout(function ()
+		{
+			document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><span style=\'color:lime\'>Succesfully closed.</span>"
+		}, 6000);
+		setTimeout(function ()
+		{
+			document.getElementById("connecting-to-server-other-info").innerHTML += "<br />Connecting..."
+		}, 7000);
+		setTimeout(function ()
+		{
+			sendBytes("LOAD_TOKEN=" + localStorage.getItem("auto_login_token"))
+		}, 9000);
+		break;
+	case "SET_ITEMS":
+		setItems(_0x1C750.substr(_0x1C884.length + 1));
+		global_setItemsTickCount++;
+		if (!global_loadedFirstItemsFlag)
+		{
+			global_loadedFirstItemsFlag = true;
+			setTimeout(loadItemBoxes(), 100);
+			sendBytes("LOAD_OBJECTS")
+		};
+		break;
+	case "LOAD_FOOD_OBJECTS":
+		objects_loadFood(_0x1C750.substr(18));
+		break;
+	case "FORCE_REFRESH_TRADABLES":
+		sendBytes("REFRESH_TRADABLES");
+		break;
+	case "LOAD_MACHINERY_OBJECTS":
+		objects_loadMachinery(_0x1C750.substr(23));
+		break;
+	case "LOAD_SHOP_OBJECTS":
+		objects_loadShopPrices(_0x1C750.substr(18));
+		break;
+	case "OPEN_DONOR_PAGE":
+		clicksDonorShopItem("buyDonorCoins");
+		break;
+	case "REFRESH_TRADABLES":
+		refreshTradables(_0x1C750.substr(18));
+		break;
+	case "REFESH_MARKET":
+		refreshMarket(_0x1C750.substr(14));
+		refreshMarketGUI();
+		populateMarketTable();
+		displayMarket(true);
+		break;
+	case "LOAD_SEED_OBJECTS":
+		objects_loadSeeds(_0x1C750.substr(18));
+		break;
+	case "LOAD_STARDUST_TOOL_CONVERSION":
+		objects_loadStardustTools(_0x1C750.substr(30));
+		break;
+	case "RELOAD":
+		setTimeout(function ()
+		{
+			location.reload()
+		}, parseInt(_0x1C750.substr(7)));
+		break;
+	case "LOAD_EQUIPMENT_OBJECTS":
+		objects_loadEquipment(_0x1C750.substr(23));
+		loadOnceOnLogin();
+		sendBytes("READY");
+		document.getElementById("chat-area").style.display = "";
+		initializeTooltips();
+		break;
+	case "TELEPORT_ANIMATION":
+		playTeleportAnimation();
+		break;
+	case "SHOW_STARS_MAP":
+		showStarsMap();
+		sendBytes("LOOKING_STARS");
+		break;
+	case "DISPLAY_GAME":
+		document.getElementById("login-box").style.display = "none";
+		document.getElementById("game").style.display = "";
+		startClientTicks();
+		setInterval(clientTick, 1000);
+		if (getItemString("home") != "none")
+		{
+			navigate("right-home")
+		};
+		break;
+	case "SET_LOCAL_STORAGE":
+		localStorage.setItem(_0x1E20E[0], _0x1E20E[1]);
+		break;
+	case "SET_INNER_HTML":
+		setInnerHTML(_0x1E20E[0], _0x1E20E[1]);
+		break;
+	case "CONFIRM_DIALOGUE":
+		returnCommand = _0x1E20E[4];
+		if (_0x1E20E.length > 5)
+		{
+			returnCommand = "";
+			for (var _0x1C6B6 = 4; _0x1C6B6 < _0x1E20E.length; _0x1C6B6++)
 			{
-				document.getElementById("login-box-connecting").style.display = "none";
-				document.getElementById("login-box-server-offline").style.display = "none";
-				document.getElementById("login-box-connected-guest").style.display = ""
-			}
-			else
-			{
-				sendBytes("LOAD_TOKEN=" + localStorage.getItem("auto_login_token"))
+				returnCommand += "~" + _0x1E20E[_0x1C6B6]
 			};
-			break;
-		case "REDSEND_TOKEN":
-			document.getElementById("connecting-to-server-other-info").innerHTML = "This account session is already active on another server.";
-			setTimeout(function ()
-			{
-				document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><br />Starting the reconnecting phase..."
-			}, 1000);
-			setTimeout(function ()
-			{
-				document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><span style=\'color:lime\'>Succesfully saved session on other server...</span>"
-			}, 3000);
-			setTimeout(function ()
-			{
-				document.getElementById("connecting-to-server-other-info").innerHTML += "<br />Closing session..."
-			}, 4000);
-			setTimeout(function ()
-			{
-				document.getElementById("connecting-to-server-other-info").innerHTML += "<br /><span style=\'color:lime\'>Succesfully closed.</span>"
-			}, 6000);
-			setTimeout(function ()
-			{
-				document.getElementById("connecting-to-server-other-info").innerHTML += "<br />Connecting..."
-			}, 7000);
-			setTimeout(function ()
-			{
-				sendBytes("LOAD_TOKEN=" + localStorage.getItem("auto_login_token"))
-			}, 9000);
-			break;
-		case "SET_ITEMS":
-			setItems(data.substr(commandAction.length + 1));
-			global_setItemsTickCount++;
-			if (!global_loadedFirstItemsFlag)
-			{
-				global_loadedFirstItemsFlag = true;
-				setTimeout(loadItemBoxes(), 100);
-				sendBytes("LOAD_OBJECTS")
-			};
-			break;
-		case "LOAD_FOOD_OBJECTS":
-			objects_loadFood(data.substr(18));
-			break;
-		case "FORCE_REFRESH_TRADABLES":
-			sendBytes("REFRESH_TRADABLES");
-			break;
-		case "LOAD_MACHINERY_OBJECTS":
-			objects_loadMachinery(data.substr(23));
-			break;
-		case "LOAD_SHOP_OBJECTS":
-			objects_loadShopPrices(data.substr(18));
-			break;
-		case "OPEN_DONOR_PAGE":
-			clicksDonorShopItem("buyDonorCoins");
-			break;
-		case "REFRESH_TRADABLES":
-			refreshTradables(data.substr(18));
-			break;
-		case "REFESH_MARKET":
-			refreshMarket(data.substr(14));
-			refreshMarketGUI();
-			populateMarketTable();
-			displayMarket(true);
-			break;
-		case "LOAD_SEED_OBJECTS":
-			objects_loadSeeds(data.substr(18));
-			break;
-		case "LOAD_STARDUST_TOOL_CONVERSION":
-			objects_loadStardustTools(data.substr(30));
-			break;
-		case "RELOAD":
-			setTimeout(function ()
-			{
-				location.reload()
-			}, parseInt(data.substr(7)));
-			break;
-		case "LOAD_EQUIPMENT_OBJECTS":
-			objects_loadEquipment(data.substr(23));
-			loadOnceOnLogin();
-			sendBytes("READY");
-			document.getElementById("chat-area").style.display = "";
-			initializeTooltips();
-			break;
-		case "TELEPORT_ANIMATION":
-			playTeleportAnimation();
-			break;
-		case "SHOW_STARS_MAP":
-			showStarsMap();
-			sendBytes("LOOKING_STARS");
-			break;
-		case "DISPLAY_GAME":
-			document.getElementById("login-box").style.display = "none";
-			document.getElementById("game").style.display = "";
-			startClientTicks();
-			setInterval(clientTick, 1000);
-			if (getItemString("home") != "none")
-			{
-				navigate("right-home")
-			};
-			break;
-		case "SET_LOCAL_STORAGE":
-			localStorage.setItem(cmdData[0], cmdData[1]);
-			break;
-		case "SET_INNER_HTML":
-			setInnerHTML(cmdData[0], cmdData[1]);
-			break;
-		case "CONFIRM_DIALOGUE":
-			returnCommand = cmdData[4];
-			if (cmdData.length > 5)
-			{
-				returnCommand = "";
-				for (var _0x1C6B6 = 4; _0x1C6B6 < cmdData.length; _0x1C6B6++)
-				{
-					returnCommand += "~" + cmdData[_0x1C6B6]
-				};
-				returnCommand = returnCommand.substr(1)
-			};
-			confirmDialogue(cmdData[0], cmdData[1], cmdData[2], cmdData[3], returnCommand);
-			break;
-		case "furnaceCapacity":
-			initializeTooltips();
-			break;
-		case "BUY_SPECIAL_FISHING_BAIT_DIALOGUE":
-			openInputDialogue("Special Bait<br />", "images/specialBait.png", "specialBait", 1, ["specialBait"], [1], ["coins"], [500], "Buy from Sketchy Dealer", "BUY_SPECIAL_BAIT", "Used to catch a special anguler fish.");
-			break;
-		case "ST":
-			setTimeout(function ()
-			{
-				scrollText(cmdData[0], cmdData[1], cmdData[2])
-			}, parseInt(cmdData[3]));
-			break;
-		case "QUEST_OPTIONS":
-			openQuestDialogue(cmdData[0], cmdData[1], cmdData[2], cmdData[3], cmdData[4], cmdData[5], cmdData[6], cmdData[7], cmdData[8], cmdData[9], cmdData[10], cmdData[11]);
-			break;
-		case "LEVEL_UP":
-			levelUp(cmdData[0], cmdData[1]);
-			break;
-		case "LOOT_DIALOGUE":
-			lootDialogue(data.substr(14));
-			break;
-		case "NAVIGATE":
-			navigate(data.substr(9));
-			break;
-		case "HIT_SPLAT":
-			addHitSplit(data.substr(10));
-			break;
-		case "CSS":
-			setCSSFromServer(cmdData[0], cmdData[1], cmdData[2], cmdData[3]);
-			break;
-		case "SET_GLOBAL_VAR":
-			window[cmdData[0]] = cmdData[1];
-			break;
-		case "START_MONSTER_ANIMATION":
-			startMonsterAnimation(data.substr(24));
-			break;
-		case "START_HERO_ANIMATION":
-			startHeroAnimation(data.substr(21));
-			break;
-		case "RELEASE_FARADOX":
-			dimScreen("release_faradox", true);
-			break;
-		case "FARADOX_MINION2_DEAD":
-			dimScreen("release_faradox_2", true);
-			break;
-		case "ACCESS_MANA":
-			dimScreen("mana", true);
-			break;
-		case "BUSHY_DEAD":
-			dimScreen("bushy_dead", true);
-			break;
-		case "SKY_CRYSTAL_SHAKE":
-			doSkyCrystalShake();
-			break;
-		case "PLAY_DEAD_SCREEN":
-			dimScreen("dead_hero", true);
-			break;
-		case "REFRESH_TREE_LIST_TAB":
-			refreshTreeListTab(data.substr(22));
-			break;
-		case "REFRESH_COMBAT_LOGGER":
-			refreshCombatLogger(data.substr(22));
-			break;
-		case "REFRESH_TRANSFORM_LOGGER":
-			refreshTransferLogger(data.substr(25));
-			break;
-		case "CONVERT_GUEST_ERROR":
-			displayConvertGuestError(data.substr(20));
-			break;
-		case "CONVERT_GUEST_ERROR":
-			displayConvertGuestError(data.substr(20));
-			break;
-		case "CONVERT_GUEST_SUCCESS":
-			closeDialogue("dialogue-profile-guest-to-user-password");
-			confirmDialogue("images/check.png", "Submit succesful!<br /><br /><span style=\'color:grey\'>Please login again to keep playing.</span><br /><br />Thank you for joining the community, if you have questions be sure to contact me.<br /><br />-Smitty", "Logout", "", "JS_CONVERT_GUEST_SUCCESS");
-			break;
-		case "CHANGE_PASSWORD_SUCCESS":
-			closeDialogue("dialogue-profile-guest-to-user-password");
-			confirmDialogue("images/check.png", "Password successfully changed.", "Close", "", "");
-			break;
-		case "RESET_LOGIN_TOKEN":
-			logout();
-			break;
-		case "CHAT":
-			chat(data.substr(5));
-			break;
-		case "REFRESH_MUTE_LIST":
-			loadMuteList(data.substr(18));
-			break
+			returnCommand = returnCommand.substr(1)
+		};
+		confirmDialogue(_0x1E20E[0], _0x1E20E[1], _0x1E20E[2], _0x1E20E[3], returnCommand);
+		break;
+	case "furnaceCapacity":
+		initializeTooltips();
+		break;
+	case "BUY_SPECIAL_FISHING_BAIT_DIALOGUE":
+		openInputDialogue("Special Bait<br />", "images/specialBait.png", "specialBait", 1, ["specialBait"], [1], ["coins"], [500], "Buy from Sketchy Dealer", "BUY_SPECIAL_BAIT", "Used to catch a special anguler fish.");
+		break;
+	case "ST":
+		setTimeout(function ()
+		{
+			scrollText(_0x1E20E[0], _0x1E20E[1], _0x1E20E[2])
+		}, parseInt(_0x1E20E[3]));
+		break;
+	case "QUEST_OPTIONS":
+		openQuestDialogue(_0x1E20E[0], _0x1E20E[1], _0x1E20E[2], _0x1E20E[3], _0x1E20E[4], _0x1E20E[5], _0x1E20E[6], _0x1E20E[7], _0x1E20E[8], _0x1E20E[9], _0x1E20E[10], _0x1E20E[11]);
+		break;
+	case "LEVEL_UP":
+		levelUp(_0x1E20E[0], _0x1E20E[1]);
+		break;
+	case "LOOT_DIALOGUE":
+		lootDialogue(_0x1C750.substr(14));
+		break;
+	case "NAVIGATE":
+		navigate(_0x1C750.substr(9));
+		break;
+	case "HIT_SPLAT":
+		addHitSplit(_0x1C750.substr(10));
+		break;
+	case "CSS":
+		setCSSFromServer(_0x1E20E[0], _0x1E20E[1], _0x1E20E[2], _0x1E20E[3]);
+		break;
+	case "SET_GLOBAL_VAR":
+		window[_0x1E20E[0]] = _0x1E20E[1];
+		break;
+	case "START_MONSTER_ANIMATION":
+		startMonsterAnimation(_0x1C750.substr(24));
+		break;
+	case "START_HERO_ANIMATION":
+		startHeroAnimation(_0x1C750.substr(21));
+		break;
+	case "RELEASE_FARADOX":
+		dimScreen("release_faradox", true);
+		break;
+	case "FARADOX_MINION2_DEAD":
+		dimScreen("release_faradox_2", true);
+		break;
+	case "ACCESS_MANA":
+		dimScreen("mana", true);
+		break;
+	case "BUSHY_DEAD":
+		dimScreen("bushy_dead", true);
+		break;
+	case "SKY_CRYSTAL_SHAKE":
+		doSkyCrystalShake();
+		break;
+	case "PLAY_DEAD_SCREEN":
+		dimScreen("dead_hero", true);
+		break;
+	case "REFRESH_TREE_LIST_TAB":
+		refreshTreeListTab(_0x1C750.substr(22));
+		break;
+	case "REFRESH_COMBAT_LOGGER":
+		refreshCombatLogger(_0x1C750.substr(22));
+		break;
+	case "REFRESH_TRANSFORM_LOGGER":
+		refreshTransferLogger(_0x1C750.substr(25));
+		break;
+	case "CONVERT_GUEST_ERROR":
+		displayConvertGuestError(_0x1C750.substr(20));
+		break;
+	case "CONVERT_GUEST_ERROR":
+		displayConvertGuestError(_0x1C750.substr(20));
+		break;
+	case "CONVERT_GUEST_SUCCESS":
+		closeDialogue("dialogue-profile-guest-to-user-password");
+		confirmDialogue("images/check.png", "Submit succesful!<br /><br /><span style=\'color:grey\'>Please login again to keep playing.</span><br /><br />Thank you for joining the community, if you have questions be sure to contact me.<br /><br />-Smitty", "Logout", "", "JS_CONVERT_GUEST_SUCCESS");
+		break;
+	case "CHANGE_PASSWORD_SUCCESS":
+		closeDialogue("dialogue-profile-guest-to-user-password");
+		confirmDialogue("images/check.png", "Password successfully changed.", "Close", "", "");
+		break;
+	case "RESET_LOGIN_TOKEN":
+		logout();
+		break;
+	case "CHAT":
+		chat(_0x1C750.substr(5));
+		break;
+	case "REFRESH_MUTE_LIST":
+		loadMuteList(_0x1C750.substr(18));
+		break
 	}
 }
 
@@ -500,14 +487,14 @@ function loadOnceOnLogin()
 	}
 }
 
-function refreshCombatLogger(data)
+function refreshCombatLogger(_0x1C750)
 {
-	document.getElementById("combat-combatLog-section").innerHTML = data
+	document.getElementById("combat-combatLog-section").innerHTML = _0x1C750
 }
 
-function refreshTransferLogger(data)
+function refreshTransferLogger(_0x1C750)
 {
-	document.getElementById("transformLog-section").innerHTML = data
+	document.getElementById("transformLog-section").innerHTML = _0x1C750
 }
 
 function getSkillLevel(_0x1D55E)
@@ -1014,9 +1001,9 @@ function setAutoScroll(_0x1CDB6)
 	}
 }
 
-function chat(data)
+function chat(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1CEDC = _0x1C75E[0];
 	var _0x1CEB2 = _0x1C75E[1];
 	var _0x1CE88 = _0x1C75E[2];
@@ -1226,10 +1213,10 @@ function refreshHomeTab()
 }
 var clientSetItesmTick = 0;
 
-function setItems(data)
+function setItems(_0x1C750)
 {
 	clientSetItesmTick++;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1E2A8 = [];
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
 	{
@@ -2182,11 +2169,11 @@ function clicksLoginAccount()
 	setInnerHTML("login-box-new-account-errors", "Loading...")
 }
 
-function sendBytes(data)
+function sendBytes(_0x1C750)
 {
-	if (data.length <= 255)
+	if (_0x1C750.length <= 255)
 	{
-		global_webSocket.send(data)
+		global_webSocket.send(_0x1C750)
 	}
 }
 global_ImageCache = [];
@@ -3513,10 +3500,10 @@ function Food(_0x1D286, _0x1D24E, _0x1D278, _0x1D26A, _0x1CBCC, _0x1D25C, _0x1C7
 	this.desc = _0x1C7CE
 }
 
-function objects_loadFood(data)
+function objects_loadFood(_0x1C750)
 {
 	var _0x1D1A6 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -3555,10 +3542,10 @@ function Machinery(_0x1D8B4, _0x1D8C2, _0x1D8EC, _0x1D88A, _0x1D8A6, _0x1D8DE, _
 	this.promethiumChance = _0x1D8D0
 }
 
-function objects_loadMachinery(data)
+function objects_loadMachinery(_0x1C750)
 {
 	var _0x1D6AE = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -3591,10 +3578,10 @@ function ItemPrice(_0x1D1EC, _0x1CDD2)
 	this.price = _0x1CDD2
 }
 
-function objects_loadShopPrices(data)
+function objects_loadShopPrices(_0x1C750)
 {
 	var _0x1DA20 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -3617,10 +3604,10 @@ function StardustTool(_0x1D0D4, _0x1DA3C, _0x1DA2E)
 }
 var global_stardustToolsMap = [];
 
-function objects_loadStardustTools(data)
+function objects_loadStardustTools(_0x1C750)
 {
 	var _0x1DA4A = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	var _0x1DA58 = _0x1C75E[0];
 	var _0x1DA3C = [];
@@ -3649,10 +3636,10 @@ function Seed(_0x1D1EC, _0x1CB40, _0x1DA04, _0x1D9DA, _0x1CBCC, _0x1DA12, _0x1D9
 	this.desc = _0x1C7CE
 }
 
-function objects_loadSeeds(data)
+function objects_loadSeeds(_0x1C750)
 {
 	var _0x1D6E6 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -3681,10 +3668,10 @@ function objects_loadSeeds(data)
 	}
 }
 
-function objects_loadEquipment(data)
+function objects_loadEquipment(_0x1C750)
 {
 	var _0x1D676 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -3727,10 +3714,10 @@ function Equipment(_0x1D1EC, _0x1D1B4, _0x1D1C2, _0x1D1FA, _0x1D1D0, _0x1D1DE, _
 	this.desc = _0x1C7CE
 }
 
-function objects_loadEquipment(data)
+function objects_loadEquipment(_0x1C750)
 {
 	var _0x1D676 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{
@@ -6848,9 +6835,9 @@ function onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, _0x1DA
 
 function bonemealBinDialgue()
 {
-	var data = getBonemealTypeData();
-	var _0x1CC58 = data[2];
-	var _0x1CC3C = data[3];
+	var _0x1C750 = getBonemealTypeData();
+	var _0x1CC58 = _0x1C750[2];
+	var _0x1CC3C = _0x1C750[3];
 	if (_0x1CC3C == "INF")
 	{
 		_0x1CC3C = "&#8734;"
@@ -6863,11 +6850,11 @@ function bonemealBinDialgue()
 	var _0x1CC4A = "<b style=\'font-size:16pt;\'><img src=\'images/bonemeal_dark.png\' class=\'img-60\' /> Current Bonemeal: " + getItem("bonemeal") + "/" + _0x1CC3C + " <img src=\'images/bonemeal_dark.png\' class=\'img-60\' /></b>" + _0x1CC66;
 	if (_0x1CC58 == "none")
 	{
-		confirmDialogue("images/" + data[0] + ".png", _0x1CC4A, "Close", "", "")
+		confirmDialogue("images/" + _0x1C750[0] + ".png", _0x1CC4A, "Close", "", "")
 	}
 	else
 	{
-		confirmDialogue("images/" + data[0] + ".png", _0x1CC4A, "Socket Gem", "Close", "SOCKET=bonemealBin")
+		confirmDialogue("images/" + _0x1C750[0] + ".png", _0x1CC4A, "Socket Gem", "Close", "SOCKET=bonemealBin")
 	}
 }
 
@@ -7801,9 +7788,9 @@ function generateHTMLToSelectOreFurnace(_0x1D34A, _0x1C91E)
 	return _0x1CC4A
 }
 
-function lootDialogue(data)
+function lootDialogue(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1C8E6 = _0x1C75E[0];
 	var _0x1D860 = _0x1C75E[1];
 	var _0x1C8F4 = "<h1 style=\'text-align:center;\'>" + _0x1C8E6 + "</h1>";
@@ -10343,11 +10330,11 @@ function getMonsterObject(_0x1D1EC)
 var global_monsterHitAnimationHashSet = new Set();
 var global_heroHitAnimationHashSet = new Set();
 
-function addHitSplit(data)
+function addHitSplit(_0x1C750)
 {
 	if (global_lastTabId == "right-combat-fighting")
 	{
-		var _0x1C75E = data.split("~");
+		var _0x1C75E = _0x1C750.split("~");
 		var _0x1C796 = _0x1C75E[0];
 		var _0x1C7B2 = _0x1C75E[1];
 		var _0x1C77A = _0x1C75E[2];
@@ -10503,29 +10490,29 @@ function fightingMonsterCanvasTick()
 
 function resetHeroNerfs()
 {
-	// var _0x1E19E = .heroDebuffPosion;
-	// var _0x1C8AE = .images / poison.png;
-	// var _0x1E174 = .Poisoned;
-	// var _0x1E190 = [false];
-	// var _0x1C85A = document.getElementById("combat-fight-hero-nerfs");
-	// var _0x1CC4A = "";
-	// for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1E19E.length; _0x1C6B6++)
-	// {
-	// 	var _0x1D1EC = _0x1E19E[_0x1C6B6];
-	// 	var _0x1E182 = _0x1E190[_0x1C6B6];
-	// 	var _0x1C7CE = _0x1E174[_0x1C6B6];
-	// 	if (getItem(_0x1E19E[_0x1C6B6]) > 0)
-	// 	{
-	// 		_0x1CC4A += "<div style=\'float:right;border:1px solid grey;background-color:#222211;padding:5px; margin:5px;\'>";
-	// 		_0x1CC4A += "<img src=\'" + _0x1C8AE + "\' class=\'img-40\' / > " + _0x1E174;
-	// 		if (_0x1E190[_0x1C6B6])
-	// 		{
-	// 			_0x1CC4A += " <span style=\'color:grey\'>" + getItem(_0x1E19E[_0x1C6B6] + "Timer") + "</span>"
-	// 		};
-	// 		_0x1CC4A += "</div> "
-	// 	}
-	// };
-	// _0x1C85A.innerHTML = _0x1CC4A
+	var _0x1E19E = .heroDebuffPosion;
+	var _0x1C8AE = .images / poison.png;
+	var _0x1E174 = .Poisoned;
+	var _0x1E190 = [false];
+	var _0x1C85A = document.getElementById("combat-fight-hero-nerfs");
+	var _0x1CC4A = "";
+	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1E19E.length; _0x1C6B6++)
+	{
+		var _0x1D1EC = _0x1E19E[_0x1C6B6];
+		var _0x1E182 = _0x1E190[_0x1C6B6];
+		var _0x1C7CE = _0x1E174[_0x1C6B6];
+		if (getItem(_0x1E19E[_0x1C6B6]) > 0)
+		{
+			_0x1CC4A += "<div style=\'float:right;border:1px solid grey;background-color:#222211;padding:5px; margin:5px;\'>";
+			_0x1CC4A += "<img src=\'" + _0x1C8AE + "\' class=\'img-40\' / > " + _0x1E174;
+			if (_0x1E190[_0x1C6B6])
+			{
+				_0x1CC4A += " <span style=\'color:grey\'>" + getItem(_0x1E19E[_0x1C6B6] + "Timer") + "</span>"
+			};
+			_0x1CC4A += "</div> "
+		}
+	};
+	_0x1C85A.innerHTML = _0x1CC4A
 }
 
 function hideOtherInterfacesForCombat(_0x1D5A4)
@@ -11180,9 +11167,9 @@ function refreshCooksBook()
 	document.getElementById(_0x1C85A).innerHTML += "<table class=\'table-craftables\' width=\'90%\'><tr><th>Name</th><th>Item</th><th>Level</th><th>Ingredients</th><th width=\'50%\'>Description</th><th>Prep Time</th></tr>" + _0x1C8F4 + "</table>"
 }
 
-function refreshXpBarAnimation(data)
+function refreshXpBarAnimation(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1CEEA = _0x1C75E[0];
 	var _0x1E158 = _0x1C75E[1];
 	var _0x1E14A = _0x1C75E[2];
@@ -11441,7 +11428,8 @@ function addRecipeToTable(_0x1CA60, _0x1C85A)
 	{
 		_0x1CB24 = "style=\'background-color:#ffc2b3;\'"
 	};
-	var _0x1CAA6 = "onclick=\'craftItem(\"" + _0x1C83E + "\", " + _0x1CA98 + ",\"" + _0x1CA8A + "\",\"" + _0x1CAC2 + "\"" + _0x1CAD0 + ", \")\'";
+	var _0x1CAA6 = "onclick=\'craftItem(\"" + _0x1C83E + "\", " + _0x1CA98 + ",\"" + _0x1CA8A + "\",\"" + _0x1CAC2 + "\"+ _0x1CAD0+ "
+		, ")\'";
 	return "<tr " + _0x1CAA6 + " " + _0x1CB24 + ">" + _0x1CAB4 + "</tr>"
 }
 
@@ -12156,7 +12144,7 @@ function playerMarketBuyClicksAll()
 	var _0x1C84C = document.getElementById("dialogue-market-buy-hidden-amount").value;
 	var _0x1DA66 = document.getElementById("dialogue-market-buy-input").value;
 	var _0x1DA74 = _0x1CDD2 * _0x1DA66;
-	var _0x1C9F0 = createHTMLBoxCheckOrXCollection("coins", [_0x1DA74], ["", ""]);
+	var _0x1C9F0 = createHTMLBoxCheckOrXCollection(.coins, [_0x1DA74], ["", ""]);
 	document.getElementById("dialogue-market-buy-area").innerHTML = _0x1C9F0
 }
 
@@ -12167,7 +12155,7 @@ function onKeyUpBuyPlayerMarket()
 	var _0x1C84C = document.getElementById("dialogue-market-buy-hidden-amount").value;
 	var _0x1DA66 = document.getElementById("dialogue-market-buy-input").value;
 	var _0x1DA74 = _0x1CDD2 * _0x1DA66;
-	var _0x1C9F0 = createHTMLBoxCheckOrXCollection("coins", [_0x1DA74], ["", ""]);
+	var _0x1C9F0 = createHTMLBoxCheckOrXCollection(.coins, [_0x1DA74], ["", ""]);
 	document.getElementById("dialogue-market-buy-area").innerHTML = _0x1C9F0
 }
 
@@ -12289,9 +12277,9 @@ function onKeyUpStardustXonvertXp()
 	document.getElementById("dialogue-stardustTool2-section-area").innerHTML = "<span class=\'html-box-check-or-check\' style=\'border:1px solid purple;display:inline-block;background-color:#ff99cc;font-size:16pt\'><img src=\'images/" + _0x1DA82 + "Skill.png\' class=\'img-50\' /> +" + formatNumber(_0x1D47E * _0x1CDC4) + " XP</span>" + _0x1C9F0
 }
 
-function loadMuteList(data)
+function loadMuteList(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1C8F4 = "<center>";
 	_0x1C8F4 += "<table id=\'muteList-table\' class=\'sortable basic-table\' width=\'90%\'>";
 	_0x1C8F4 += "<thead>";
@@ -12877,10 +12865,10 @@ function marketFilter(_0x1C7B2, _0x1D994)
 	}
 }
 
-function refreshTradables(data)
+function refreshTradables(_0x1C750)
 {
 	global_TradablesData = [];
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
 	{
 		var _0x1C83E = _0x1C75E[_0x1C6B6];
@@ -12894,14 +12882,14 @@ function refreshTradables(data)
 	}
 }
 
-function refreshMarket(data)
+function refreshMarket(_0x1C750)
 {
-	if (data == "")
+	if (_0x1C750 == "")
 	{
 		return
 	};
 	global_MarketData = [];
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
 	{
 		var _0x1D96A = _0x1C75E[_0x1C6B6];

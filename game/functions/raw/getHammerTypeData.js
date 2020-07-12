@@ -1,5 +1,5 @@
 /**
- * getHammerTypeData extracted from ../../deobfuscated/bundle.js at line 12035-0
+ * getHammerTypeData extracted from ../../deobfuscated/bundle.js at line 12023-12051
  *
  * If this file doesn't contain a function, there is an error in ../raw/getHammerTypeData.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

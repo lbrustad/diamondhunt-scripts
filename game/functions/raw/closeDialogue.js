@@ -1,5 +1,5 @@
 /**
- * closeDialogue extracted from ../../deobfuscated/bundle.js at line 4708-0
+ * closeDialogue extracted from ../../deobfuscated/bundle.js at line 4695-4698
  *
  * If this file doesn't contain a function, there is an error in ../raw/closeDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

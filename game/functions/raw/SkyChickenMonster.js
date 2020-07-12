@@ -1,5 +1,5 @@
 /**
- * SkyChickenMonster extracted from ../../deobfuscated/bundle.js at line 8836-0
+ * SkyChickenMonster extracted from ../../deobfuscated/bundle.js at line 8823-8872
  *
  * If this file doesn't contain a function, there is an error in ../raw/SkyChickenMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

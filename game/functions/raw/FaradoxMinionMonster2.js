@@ -1,5 +1,5 @@
 /**
- * FaradoxMinionMonster2 extracted from ../../deobfuscated/bundle.js at line 10058-0
+ * FaradoxMinionMonster2 extracted from ../../deobfuscated/bundle.js at line 10045-10116
  *
  * If this file doesn't contain a function, there is an error in ../raw/FaradoxMinionMonster2.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

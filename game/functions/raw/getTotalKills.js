@@ -1,5 +1,5 @@
 /**
- * getTotalKills extracted from ../../deobfuscated/bundle.js at line 2433-0
+ * getTotalKills extracted from ../../deobfuscated/bundle.js at line 2420-2427
  *
  * If this file doesn't contain a function, there is an error in ../raw/getTotalKills.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

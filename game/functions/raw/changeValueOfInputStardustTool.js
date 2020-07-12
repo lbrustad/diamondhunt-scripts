@@ -1,5 +1,5 @@
 /**
- * changeValueOfInputStardustTool extracted from ../../deobfuscated/bundle.js at line 12215-0
+ * changeValueOfInputStardustTool extracted from ../../deobfuscated/bundle.js at line 12203-12220
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeValueOfInputStardustTool.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * getSeedDropRate extracted from ../../deobfuscated/bundle.js at line 5779-0
+ * getSeedDropRate extracted from ../../deobfuscated/bundle.js at line 5766-5791
  *
  * If this file doesn't contain a function, there is an error in ../raw/getSeedDropRate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

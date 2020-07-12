@@ -1,5 +1,5 @@
 /**
- * buttonsDialogue extracted from ../../deobfuscated/bundle.js at line 10558-0
+ * buttonsDialogue extracted from ../../deobfuscated/bundle.js at line 10545-10634
  *
  * If this file doesn't contain a function, there is an error in ../raw/buttonsDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

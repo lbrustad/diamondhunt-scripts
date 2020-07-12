@@ -1,5 +1,5 @@
 /**
- * bindDonorCoinsInterface extracted from ../../deobfuscated/bundle.js at line 5456-0
+ * bindDonorCoinsInterface extracted from ../../deobfuscated/bundle.js at line 5443-5446
  *
  * If this file doesn't contain a function, there is an error in ../raw/bindDonorCoinsInterface.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

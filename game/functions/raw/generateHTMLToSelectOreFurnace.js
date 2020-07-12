@@ -1,5 +1,5 @@
 /**
- * generateHTMLToSelectOreFurnace extracted from ../../deobfuscated/bundle.js at line 7791-0
+ * generateHTMLToSelectOreFurnace extracted from ../../deobfuscated/bundle.js at line 7778-7789
  *
  * If this file doesn't contain a function, there is an error in ../raw/generateHTMLToSelectOreFurnace.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

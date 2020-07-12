@@ -1,5 +1,5 @@
 /**
- * addItemBox extracted from ../../deobfuscated/bundle.js at line 3782-0
+ * addItemBox extracted from ../../deobfuscated/bundle.js at line 3769-3886
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemBox.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

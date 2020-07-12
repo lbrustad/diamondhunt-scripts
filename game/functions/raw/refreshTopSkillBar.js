@@ -1,5 +1,5 @@
 /**
- * refreshTopSkillBar extracted from ../../deobfuscated/bundle.js at line 7904-0
+ * refreshTopSkillBar extracted from ../../deobfuscated/bundle.js at line 7891-8014
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTopSkillBar.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

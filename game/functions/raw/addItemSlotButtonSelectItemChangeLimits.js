@@ -1,5 +1,5 @@
 /**
- * addItemSlotButtonSelectItemChangeLimits extracted from ../../deobfuscated/bundle.js at line 12722-0
+ * addItemSlotButtonSelectItemChangeLimits extracted from ../../deobfuscated/bundle.js at line 12710-12737
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemSlotButtonSelectItemChangeLimits.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

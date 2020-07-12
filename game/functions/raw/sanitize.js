@@ -1,5 +1,5 @@
 /**
- * sanitize extracted from ../../deobfuscated/bundle.js at line 982-0
+ * sanitize extracted from ../../deobfuscated/bundle.js at line 969-981
  *
  * If this file doesn't contain a function, there is an error in ../raw/sanitize.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

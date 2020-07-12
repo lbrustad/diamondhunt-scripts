@@ -1,5 +1,5 @@
 /**
- * convertStringToURL extracted from ../../deobfuscated/bundle.js at line 1148-0
+ * convertStringToURL extracted from ../../deobfuscated/bundle.js at line 1135-1143
  *
  * If this file doesn't contain a function, there is an error in ../raw/convertStringToURL.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * addItemBoxQuests extracted from ../../deobfuscated/bundle.js at line 3162-0
+ * addItemBoxQuests extracted from ../../deobfuscated/bundle.js at line 3149-3202
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemBoxQuests.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

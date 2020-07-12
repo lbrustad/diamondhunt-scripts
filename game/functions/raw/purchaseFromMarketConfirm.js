@@ -1,5 +1,5 @@
 /**
- * purchaseFromMarketConfirm extracted from ../../deobfuscated/bundle.js at line 12832-0
+ * purchaseFromMarketConfirm extracted from ../../deobfuscated/bundle.js at line 12820-12828
  *
  * If this file doesn't contain a function, there is an error in ../raw/purchaseFromMarketConfirm.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
