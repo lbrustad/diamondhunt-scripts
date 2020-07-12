@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"alwaysStrict": true
+		, "declaration": false
+		, "emitDecoratorMetadata": true
+		, "experimentalDecorators": true
+		, "lib": ["dom", "es2015"]
+		, "module": "System"
+		, "moduleResolution": "node"
+		, "noImplicitAny": true
+		, "noImplicitReturns": false
+		, "noImplicitThis": true
+		, "noUnusedLocals": true
+		, "noUnusedParameters": false
+		, "outFile": "dh3UltraChat.user.js"
+		, "removeComments": false
+		, "sourceMap": false
+		, "strictNullChecks": true
+		, "target": "ES5"
+		, "typeRoots": [
+			"../node_modules/@types"
+		]
+	}
+	, "files": [
+		"./src/_all.d.ts"
+	]
+}

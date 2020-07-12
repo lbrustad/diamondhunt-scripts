@@ -1,0 +1,11 @@
+{
+	"indent_with_tabs": true
+	, "eol": "\n"
+	, "end_with_newline": true
+	, "max_preserve_newlines": 5
+	, "jslint_happy": true
+	, "space_after_anon_function": true
+	, "brace_style": "expand"
+	, "comma_first": true
+	, "operator_position": "after-newline"
+}

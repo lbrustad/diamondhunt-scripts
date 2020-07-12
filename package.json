@@ -1,0 +1,41 @@
+{
+  "name": "diamondhunt-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for Diamond Hunt, the text based web games",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^5.1.0",
+    "es6-template-strings": "^2.0.1",
+    "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-typescript": "^5.0.1",
+    "gulp-wrapper": "^1.0.0",
+    "request": "^2.88.2",
+    "run-sequence": "^2.2.1",
+    "through2": "^4.0.2",
+    "typescript": "^3.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "gulp build",
+    "evaluate-game": "gulp evaluate",
+    "release": "gulp release",
+    "start": "gulp",
+    "update-game": "gulp update",
+    "download": "gulp download",
+    "deobfuscate": "gulp deobfuscate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbrustad/diamondhunt-scripts.git"
+  },
+  "author": "Lasse Brustad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lbrustad/diamondhunt-scripts/issues"
+  },
+  "homepage": "https://github.com/lbrustad/diamondhunt-scripts#readme"
+}
