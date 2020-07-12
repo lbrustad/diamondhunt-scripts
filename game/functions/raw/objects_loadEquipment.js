@@ -1,0 +1,38 @@
+/**
+ * objects_loadEquipment extracted from ../../deobfuscated/bundle.js at line 3730-0
+ *
+ * If this file doesn't contain a function, there is an error in ../raw/objects_loadEquipment.js
+ * You can fix it manually and use http://jsnice.org/ to make it nice
+ **/
+
+function objects_loadEquipment(data)
+{
+	var _0x1D676 = null;
+	var _0x1C75E = data.split("~");
+	var _0x1D48C = 0;
+	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
+	{
+		var _0x1D1EC = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D1B4 = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D1C2 = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D1FA = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D1D0 = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D1DE = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1C9AA = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1D208 = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		var _0x1C7CE = _0x1C75E[_0x1C6B6];
+		_0x1C6B6++;
+		_0x1D676 = new Equipment(_0x1D1EC, _0x1D1B4, _0x1D1C2, _0x1D1FA, _0x1D1D0, _0x1D1DE, _0x1C9AA, _0x1D208, _0x1C7CE);
+		global_equipmentMap[_0x1D1EC] = _0x1D676;
+		global_equipmentMap[_0x1D48C] = _0x1D676;
+		_0x1D48C++
+	}
+}
