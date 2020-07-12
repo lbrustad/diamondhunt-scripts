@@ -1,5 +1,5 @@
 /**
- * confirmDialogue extracted from ../../deobfuscated/bundle.js at line 4615-0
+ * confirmDialogue extracted from ../../deobfuscated/bundle.js at line 4602-4649
  *
  * If this file doesn't contain a function, there is an error in ../raw/confirmDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * setInnerHTMLCache extracted from ../../deobfuscated/bundle.js at line 11192-0
+ * setInnerHTMLCache extracted from ../../deobfuscated/bundle.js at line 11179-11187
  *
  * If this file doesn't contain a function, there is an error in ../raw/setInnerHTMLCache.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

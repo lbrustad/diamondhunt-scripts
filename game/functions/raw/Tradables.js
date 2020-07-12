@@ -1,5 +1,5 @@
 /**
- * Tradables extracted from ../../deobfuscated/bundle.js at line 12569-0
+ * Tradables extracted from ../../deobfuscated/bundle.js at line 12557-12563
  *
  * If this file doesn't contain a function, there is an error in ../raw/Tradables.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

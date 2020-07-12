@@ -1,5 +1,5 @@
 /**
- * loadSelectServerScreen extracted from ../../deobfuscated/bundle.js at line 42-0
+ * loadSelectServerScreen extracted from ../../deobfuscated/bundle.js at line 42-77
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadSelectServerScreen.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

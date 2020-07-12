@@ -1,5 +1,5 @@
 /**
- * YetiMonster extracted from ../../deobfuscated/bundle.js at line 9839-0
+ * YetiMonster extracted from ../../deobfuscated/bundle.js at line 9826-9897
  *
  * If this file doesn't contain a function, there is an error in ../raw/YetiMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

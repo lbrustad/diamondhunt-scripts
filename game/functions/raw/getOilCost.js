@@ -1,5 +1,5 @@
 /**
- * getOilCost extracted from ../../deobfuscated/bundle.js at line 2461-0
+ * getOilCost extracted from ../../deobfuscated/bundle.js at line 2448-2471
  *
  * If this file doesn't contain a function, there is an error in ../raw/getOilCost.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

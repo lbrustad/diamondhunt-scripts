@@ -1,5 +1,5 @@
 /**
- * MammaPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 9409-0
+ * MammaPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 9396-9445
  *
  * If this file doesn't contain a function, there is an error in ../raw/MammaPolarBearMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

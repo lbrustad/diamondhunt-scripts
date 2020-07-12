@@ -1,5 +1,5 @@
 /**
- * FireHawkMonster extracted from ../../deobfuscated/bundle.js at line 9693-0
+ * FireHawkMonster extracted from ../../deobfuscated/bundle.js at line 9680-9751
  *
  * If this file doesn't contain a function, there is an error in ../raw/FireHawkMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

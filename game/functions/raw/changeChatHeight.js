@@ -1,5 +1,5 @@
 /**
- * changeChatHeight extracted from ../../deobfuscated/bundle.js at line 1213-0
+ * changeChatHeight extracted from ../../deobfuscated/bundle.js at line 1200-1205
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeChatHeight.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

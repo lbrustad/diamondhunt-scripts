@@ -1,5 +1,5 @@
 /**
- * EntMonster extracted from ../../deobfuscated/bundle.js at line 9460-0
+ * EntMonster extracted from ../../deobfuscated/bundle.js at line 9447-9496
  *
  * If this file doesn't contain a function, there is an error in ../raw/EntMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * showStarsMap extracted from ../../deobfuscated/bundle.js at line 8615-0
+ * showStarsMap extracted from ../../deobfuscated/bundle.js at line 8602-8611
  *
  * If this file doesn't contain a function, there is an error in ../raw/showStarsMap.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

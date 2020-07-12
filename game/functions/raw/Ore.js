@@ -1,5 +1,5 @@
 /**
- * Ore extracted from ../../deobfuscated/bundle.js at line 519-0
+ * Ore extracted from ../../deobfuscated/bundle.js at line 506-510
  *
  * If this file doesn't contain a function, there is an error in ../raw/Ore.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

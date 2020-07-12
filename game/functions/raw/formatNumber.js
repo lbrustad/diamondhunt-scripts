@@ -1,5 +1,5 @@
 /**
- * formatNumber extracted from ../../deobfuscated/bundle.js at line 1288-0
+ * formatNumber extracted from ../../deobfuscated/bundle.js at line 1275-1300
  *
  * If this file doesn't contain a function, there is an error in ../raw/formatNumber.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

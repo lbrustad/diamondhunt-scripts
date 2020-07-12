@@ -1,5 +1,5 @@
 /**
- * getMinersOrMachineryAvailable extracted from ../../deobfuscated/bundle.js at line 891-0
+ * getMinersOrMachineryAvailable extracted from ../../deobfuscated/bundle.js at line 878-889
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMinersOrMachineryAvailable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

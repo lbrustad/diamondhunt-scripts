@@ -1,5 +1,5 @@
 /**
- * addRecipeToTable extracted from ../../deobfuscated/bundle.js at line 11393-0
+ * addRecipeToTable extracted from ../../deobfuscated/bundle.js at line 11380-11434
  *
  * If this file doesn't contain a function, there is an error in ../raw/addRecipeToTable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -56,6 +56,7 @@ function addRecipeToTable(_0x1CA60, _0x1C85A)
 	{
 		_0x1CB24 = "style=\'background-color:#ffc2b3;\'"
 	};
-	var _0x1CAA6 = "onclick=\'craftItem(\"" + _0x1C83E + "\", " + _0x1CA98 + ",\"" + _0x1CA8A + "\",\"" + _0x1CAC2 + "\"" + _0x1CAD0 + ", \")\'";
+	var _0x1CAA6 = "onclick=\'craftItem(\"" + _0x1C83E + "\", " + _0x1CA98 + ",\"" + _0x1CA8A + "\",\"" + _0x1CAC2 + "\"+ _0x1CAD0+ "
+		, ")\'";
 	return "<tr " + _0x1CAA6 + " " + _0x1CB24 + ">" + _0x1CAB4 + "</tr>"
 }

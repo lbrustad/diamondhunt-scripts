@@ -1,5 +1,5 @@
 /**
- * loadShopTab extracted from ../../deobfuscated/bundle.js at line 3392-0
+ * loadShopTab extracted from ../../deobfuscated/bundle.js at line 3379-3473
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadShopTab.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * refreshPotionsCombat extracted from ../../deobfuscated/bundle.js at line 10677-0
+ * refreshPotionsCombat extracted from ../../deobfuscated/bundle.js at line 10664-10686
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshPotionsCombat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

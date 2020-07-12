@@ -1,5 +1,5 @@
 /**
- * levelUp extracted from ../../deobfuscated/bundle.js at line 8040-0
+ * levelUp extracted from ../../deobfuscated/bundle.js at line 8027-8054
  *
  * If this file doesn't contain a function, there is an error in ../raw/levelUp.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,8 +1,8 @@
 'use strict';
 
-function refreshXpBarAnimation(data)
+function refreshXpBarAnimation(menupath)
 {
-	var reverseItemData = data.split("~");
+	var reverseItemData = menupath.split("~");
 	var tiledImageBR = reverseItemData[0];
 	var tiledImageTL = reverseItemData[1];
 	var reverseItemControlData = reverseItemData[2];

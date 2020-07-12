@@ -1,5 +1,5 @@
 /**
- * getMaxForStardustTool extracted from ../../deobfuscated/bundle.js at line 12234-0
+ * getMaxForStardustTool extracted from ../../deobfuscated/bundle.js at line 12222-12248
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMaxForStardustTool.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

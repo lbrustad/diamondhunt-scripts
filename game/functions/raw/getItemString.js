@@ -1,5 +1,5 @@
 /**
- * getItemString extracted from ../../deobfuscated/bundle.js at line 2068-0
+ * getItemString extracted from ../../deobfuscated/bundle.js at line 2055-2058
  *
  * If this file doesn't contain a function, there is an error in ../raw/getItemString.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

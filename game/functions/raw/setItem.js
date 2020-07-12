@@ -1,5 +1,5 @@
 /**
- * setItem extracted from ../../deobfuscated/bundle.js at line 2037-0
+ * setItem extracted from ../../deobfuscated/bundle.js at line 2024-2027
  *
  * If this file doesn't contain a function, there is an error in ../raw/setItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * getItemPrice extracted from ../../deobfuscated/bundle.js at line 4813-0
+ * getItemPrice extracted from ../../deobfuscated/bundle.js at line 4800-4807
  *
  * If this file doesn't contain a function, there is an error in ../raw/getItemPrice.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

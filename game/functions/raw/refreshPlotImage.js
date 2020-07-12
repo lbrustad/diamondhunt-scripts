@@ -1,5 +1,5 @@
 /**
- * refreshPlotImage extracted from ../../deobfuscated/bundle.js at line 11751-0
+ * refreshPlotImage extracted from ../../deobfuscated/bundle.js at line 11739-11754
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshPlotImage.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

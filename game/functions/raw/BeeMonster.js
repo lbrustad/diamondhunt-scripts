@@ -1,5 +1,5 @@
 /**
- * BeeMonster extracted from ../../deobfuscated/bundle.js at line 8938-0
+ * BeeMonster extracted from ../../deobfuscated/bundle.js at line 8925-8974
  *
  * If this file doesn't contain a function, there is an error in ../raw/BeeMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

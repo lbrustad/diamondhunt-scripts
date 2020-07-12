@@ -1,5 +1,5 @@
 /**
- * setMaxOreThatCanSmelt extracted from ../../deobfuscated/bundle.js at line 7727-0
+ * setMaxOreThatCanSmelt extracted from ../../deobfuscated/bundle.js at line 7714-7727
  *
  * If this file doesn't contain a function, there is an error in ../raw/setMaxOreThatCanSmelt.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

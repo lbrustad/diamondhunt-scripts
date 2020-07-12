@@ -1,5 +1,5 @@
 /**
- * loadItemBoxes extracted from ../../deobfuscated/bundle.js at line 4048-0
+ * loadItemBoxes extracted from ../../deobfuscated/bundle.js at line 4035-4367
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadItemBoxes.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

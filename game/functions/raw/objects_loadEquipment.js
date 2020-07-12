@@ -1,14 +1,14 @@
 /**
- * objects_loadEquipment extracted from ../../deobfuscated/bundle.js at line 3730-0
+ * objects_loadEquipment extracted from ../../deobfuscated/bundle.js at line 3717-3747
  *
  * If this file doesn't contain a function, there is an error in ../raw/objects_loadEquipment.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function objects_loadEquipment(data)
+function objects_loadEquipment(_0x1C750)
 {
 	var _0x1D676 = null;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1D48C = 0;
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6 += 0)
 	{

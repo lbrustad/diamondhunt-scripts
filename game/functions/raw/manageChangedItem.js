@@ -1,5 +1,5 @@
 /**
- * manageChangedItem extracted from ../../deobfuscated/bundle.js at line 1315-0
+ * manageChangedItem extracted from ../../deobfuscated/bundle.js at line 1302-2022
  *
  * If this file doesn't contain a function, there is an error in ../raw/manageChangedItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

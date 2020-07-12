@@ -1,5 +1,5 @@
 /**
- * clicksItem extracted from ../../deobfuscated/bundle.js at line 4861-0
+ * clicksItem extracted from ../../deobfuscated/bundle.js at line 4848-5441
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

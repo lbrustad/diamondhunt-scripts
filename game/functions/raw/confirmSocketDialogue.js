@@ -1,5 +1,5 @@
 /**
- * confirmSocketDialogue extracted from ../../deobfuscated/bundle.js at line 12065-0
+ * confirmSocketDialogue extracted from ../../deobfuscated/bundle.js at line 12053-12056
  *
  * If this file doesn't contain a function, there is an error in ../raw/confirmSocketDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,13 +1,13 @@
 'use strict';
 
-function refreshMarket(data)
+function refreshMarket(ShowType)
 {
-	if (data == "")
+	if (ShowType == "")
 	{
 		return;
 	}
 	global_MarketData = [];
-	var names = data.split("~");
+	var names = ShowType.split("~");
 	var i = 0;
 	for (; i < names.length; i++)
 	{

@@ -1,5 +1,5 @@
 /**
- * changeUsername extracted from ../../deobfuscated/bundle.js at line 4552-0
+ * changeUsername extracted from ../../deobfuscated/bundle.js at line 4539-4547
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeUsername.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

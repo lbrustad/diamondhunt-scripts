@@ -1,5 +1,5 @@
 /**
- * refreshHeroHpBar extracted from ../../deobfuscated/bundle.js at line 5759-0
+ * refreshHeroHpBar extracted from ../../deobfuscated/bundle.js at line 5746-5754
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshHeroHpBar.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * clicksLoginAccount extracted from ../../deobfuscated/bundle.js at line 2177-0
+ * clicksLoginAccount extracted from ../../deobfuscated/bundle.js at line 2164-2170
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksLoginAccount.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

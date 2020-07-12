@@ -1,5 +1,5 @@
 /**
- * setOrBuyChatTag extracted from ../../deobfuscated/bundle.js at line 2576-0
+ * setOrBuyChatTag extracted from ../../deobfuscated/bundle.js at line 2563-2573
  *
  * If this file doesn't contain a function, there is an error in ../raw/setOrBuyChatTag.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

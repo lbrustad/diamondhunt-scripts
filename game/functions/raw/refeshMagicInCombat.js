@@ -1,5 +1,5 @@
 /**
- * refeshMagicInCombat extracted from ../../deobfuscated/bundle.js at line 3985-0
+ * refeshMagicInCombat extracted from ../../deobfuscated/bundle.js at line 3972-4010
  *
  * If this file doesn't contain a function, there is an error in ../raw/refeshMagicInCombat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * clicksPuzzleChestOneSolveButton extracted from ../../deobfuscated/bundle.js at line 4422-0
+ * clicksPuzzleChestOneSolveButton extracted from ../../deobfuscated/bundle.js at line 4409-4467
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksPuzzleChestOneSolveButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

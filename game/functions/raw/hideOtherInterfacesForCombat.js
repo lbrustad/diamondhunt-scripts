@@ -1,5 +1,5 @@
 /**
- * hideOtherInterfacesForCombat extracted from ../../deobfuscated/bundle.js at line 10531-0
+ * hideOtherInterfacesForCombat extracted from ../../deobfuscated/bundle.js at line 10518-10543
  *
  * If this file doesn't contain a function, there is an error in ../raw/hideOtherInterfacesForCombat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * clicksCombatPresets extracted from ../../deobfuscated/bundle.js at line 5471-0
+ * clicksCombatPresets extracted from ../../deobfuscated/bundle.js at line 5458-5512
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksCombatPresets.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

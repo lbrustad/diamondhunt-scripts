@@ -1,5 +1,5 @@
 /**
- * addItemSlotButtonSelectItem extracted from ../../deobfuscated/bundle.js at line 12693-0
+ * addItemSlotButtonSelectItem extracted from ../../deobfuscated/bundle.js at line 12681-12708
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemSlotButtonSelectItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

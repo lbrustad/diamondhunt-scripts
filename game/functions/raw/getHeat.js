@@ -1,5 +1,5 @@
 /**
- * getHeat extracted from ../../deobfuscated/bundle.js at line 12413-0
+ * getHeat extracted from ../../deobfuscated/bundle.js at line 12401-12429
  *
  * If this file doesn't contain a function, there is an error in ../raw/getHeat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

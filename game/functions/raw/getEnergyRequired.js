@@ -1,5 +1,5 @@
 /**
- * getEnergyRequired extracted from ../../deobfuscated/bundle.js at line 8069-0
+ * getEnergyRequired extracted from ../../deobfuscated/bundle.js at line 8056-8069
  *
  * If this file doesn't contain a function, there is an error in ../raw/getEnergyRequired.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

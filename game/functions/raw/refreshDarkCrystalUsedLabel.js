@@ -1,5 +1,5 @@
 /**
- * refreshDarkCrystalUsedLabel extracted from ../../deobfuscated/bundle.js at line 3762-0
+ * refreshDarkCrystalUsedLabel extracted from ../../deobfuscated/bundle.js at line 3749-3767
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshDarkCrystalUsedLabel.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

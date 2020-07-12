@@ -1,5 +1,5 @@
 /**
- * SpiderMonster extracted from ../../deobfuscated/bundle.js at line 9244-0
+ * SpiderMonster extracted from ../../deobfuscated/bundle.js at line 9231-9292
  *
  * If this file doesn't contain a function, there is an error in ../raw/SpiderMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

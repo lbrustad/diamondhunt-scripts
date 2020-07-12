@@ -1,14 +1,14 @@
 /**
- * setItems extracted from ../../deobfuscated/bundle.js at line 1229-0
+ * setItems extracted from ../../deobfuscated/bundle.js at line 1216-1273
  *
  * If this file doesn't contain a function, there is an error in ../raw/setItems.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function setItems(data)
+function setItems(_0x1C750)
 {
 	clientSetItesmTick++;
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1E2A8 = [];
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
 	{

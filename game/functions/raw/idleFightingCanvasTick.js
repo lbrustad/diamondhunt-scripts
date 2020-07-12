@@ -1,5 +1,5 @@
 /**
- * idleFightingCanvasTick extracted from ../../deobfuscated/bundle.js at line 8659-0
+ * idleFightingCanvasTick extracted from ../../deobfuscated/bundle.js at line 8646-8677
  *
  * If this file doesn't contain a function, there is an error in ../raw/idleFightingCanvasTick.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

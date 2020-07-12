@@ -1,13 +1,13 @@
 /**
- * lootDialogue extracted from ../../deobfuscated/bundle.js at line 7804-0
+ * lootDialogue extracted from ../../deobfuscated/bundle.js at line 7791-7814
  *
  * If this file doesn't contain a function, there is an error in ../raw/lootDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function lootDialogue(data)
+function lootDialogue(_0x1C750)
 {
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	var _0x1C8E6 = _0x1C75E[0];
 	var _0x1D860 = _0x1C75E[1];
 	var _0x1C8F4 = "<h1 style=\'text-align:center;\'>" + _0x1C8E6 + "</h1>";

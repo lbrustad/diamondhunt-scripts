@@ -1,5 +1,5 @@
 /**
- * onKeyUpWildInputDialogue extracted from ../../deobfuscated/bundle.js at line 6801-0
+ * onKeyUpWildInputDialogue extracted from ../../deobfuscated/bundle.js at line 6788-6834
  *
  * If this file doesn't contain a function, there is an error in ../raw/onKeyUpWildInputDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

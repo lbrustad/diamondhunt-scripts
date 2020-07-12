@@ -1,5 +1,5 @@
 /**
- * resetSeedItemBoxBorders extracted from ../../deobfuscated/bundle.js at line 6569-0
+ * resetSeedItemBoxBorders extracted from ../../deobfuscated/bundle.js at line 6556-6566
  *
  * If this file doesn't contain a function, there is an error in ../raw/resetSeedItemBoxBorders.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

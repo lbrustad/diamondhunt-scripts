@@ -1,5 +1,5 @@
 /**
- * refreshMagicTransformList extracted from ../../deobfuscated/bundle.js at line 10747-0
+ * refreshMagicTransformList extracted from ../../deobfuscated/bundle.js at line 10734-10752
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshMagicTransformList.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

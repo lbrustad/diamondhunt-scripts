@@ -1,5 +1,5 @@
 /**
- * getLevel extracted from ../../deobfuscated/bundle.js at line 7829-0
+ * getLevel extracted from ../../deobfuscated/bundle.js at line 7816-7832
  *
  * If this file doesn't contain a function, there is an error in ../raw/getLevel.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

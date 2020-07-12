@@ -1,5 +1,5 @@
 /**
- * navigate extracted from ../../deobfuscated/bundle.js at line 2339-0
+ * navigate extracted from ../../deobfuscated/bundle.js at line 2326-2418
  *
  * If this file doesn't contain a function, there is an error in ../raw/navigate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * getImage extracted from ../../deobfuscated/bundle.js at line 2194-0
+ * getImage extracted from ../../deobfuscated/bundle.js at line 2181-2193
  *
  * If this file doesn't contain a function, there is an error in ../raw/getImage.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

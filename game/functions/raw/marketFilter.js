@@ -1,5 +1,5 @@
 /**
- * marketFilter extracted from ../../deobfuscated/bundle.js at line 12842-0
+ * marketFilter extracted from ../../deobfuscated/bundle.js at line 12830-12866
  *
  * If this file doesn't contain a function, there is an error in ../raw/marketFilter.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

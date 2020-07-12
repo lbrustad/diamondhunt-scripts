@@ -1,5 +1,5 @@
 /**
- * faradoxRandomShow extracted from ../../deobfuscated/bundle.js at line 11313-0
+ * faradoxRandomShow extracted from ../../deobfuscated/bundle.js at line 11300-11306
  *
  * If this file doesn't contain a function, there is an error in ../raw/faradoxRandomShow.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

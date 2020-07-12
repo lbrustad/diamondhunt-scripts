@@ -1,5 +1,5 @@
 /**
- * getBurnRate extracted from ../../deobfuscated/bundle.js at line 5806-0
+ * getBurnRate extracted from ../../deobfuscated/bundle.js at line 5793-5816
  *
  * If this file doesn't contain a function, there is an error in ../raw/getBurnRate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

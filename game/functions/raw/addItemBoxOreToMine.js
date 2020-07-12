@@ -1,5 +1,5 @@
 /**
- * addItemBoxOreToMine extracted from ../../deobfuscated/bundle.js at line 525-0
+ * addItemBoxOreToMine extracted from ../../deobfuscated/bundle.js at line 512-541
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemBoxOreToMine.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

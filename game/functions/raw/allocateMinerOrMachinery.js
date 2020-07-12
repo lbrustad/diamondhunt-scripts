@@ -1,5 +1,5 @@
 /**
- * allocateMinerOrMachinery extracted from ../../deobfuscated/bundle.js at line 857-0
+ * allocateMinerOrMachinery extracted from ../../deobfuscated/bundle.js at line 844-876
  *
  * If this file doesn't contain a function, there is an error in ../raw/allocateMinerOrMachinery.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

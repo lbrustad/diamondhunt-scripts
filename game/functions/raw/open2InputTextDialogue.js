@@ -1,5 +1,5 @@
 /**
- * open2InputTextDialogue extracted from ../../deobfuscated/bundle.js at line 5562-0
+ * open2InputTextDialogue extracted from ../../deobfuscated/bundle.js at line 5549-5571
  *
  * If this file doesn't contain a function, there is an error in ../raw/open2InputTextDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

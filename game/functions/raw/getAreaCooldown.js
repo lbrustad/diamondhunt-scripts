@@ -1,5 +1,5 @@
 /**
- * getAreaCooldown extracted from ../../deobfuscated/bundle.js at line 8084-0
+ * getAreaCooldown extracted from ../../deobfuscated/bundle.js at line 8071-8084
  *
  * If this file doesn't contain a function, there is an error in ../raw/getAreaCooldown.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

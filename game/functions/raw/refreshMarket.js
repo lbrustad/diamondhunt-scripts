@@ -1,18 +1,18 @@
 /**
- * refreshMarket extracted from ../../deobfuscated/bundle.js at line 12897-0
+ * refreshMarket extracted from ../../deobfuscated/bundle.js at line 12885-12914
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshMarket.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function refreshMarket(data)
+function refreshMarket(_0x1C750)
 {
-	if (data == "")
+	if (_0x1C750 == "")
 	{
 		return
 	};
 	global_MarketData = [];
-	var _0x1C75E = data.split("~");
+	var _0x1C75E = _0x1C750.split("~");
 	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
 	{
 		var _0x1D96A = _0x1C75E[_0x1C6B6];

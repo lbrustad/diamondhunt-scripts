@@ -1,5 +1,5 @@
 /**
- * clicksSeed extracted from ../../deobfuscated/bundle.js at line 6509-0
+ * clicksSeed extracted from ../../deobfuscated/bundle.js at line 6496-6521
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksSeed.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

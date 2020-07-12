@@ -1,5 +1,5 @@
 /**
- * getSkillLevel extracted from ../../deobfuscated/bundle.js at line 513-0
+ * getSkillLevel extracted from ../../deobfuscated/bundle.js at line 500-503
  *
  * If this file doesn't contain a function, there is an error in ../raw/getSkillLevel.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

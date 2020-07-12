@@ -1,5 +1,5 @@
 /**
- * getItemName extracted from ../../deobfuscated/bundle.js at line 3148-0
+ * getItemName extracted from ../../deobfuscated/bundle.js at line 3135-3147
  *
  * If this file doesn't contain a function, there is an error in ../raw/getItemName.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

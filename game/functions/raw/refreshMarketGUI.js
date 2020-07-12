@@ -1,5 +1,5 @@
 /**
- * refreshMarketGUI extracted from ../../deobfuscated/bundle.js at line 12589-0
+ * refreshMarketGUI extracted from ../../deobfuscated/bundle.js at line 12577-12607
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshMarketGUI.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

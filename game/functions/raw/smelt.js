@@ -1,5 +1,5 @@
 /**
- * smelt extracted from ../../deobfuscated/bundle.js at line 7722-0
+ * smelt extracted from ../../deobfuscated/bundle.js at line 7709-7712
  *
  * If this file doesn't contain a function, there is an error in ../raw/smelt.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

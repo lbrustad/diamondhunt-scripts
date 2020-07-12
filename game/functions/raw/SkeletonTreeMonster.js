@@ -1,5 +1,5 @@
 /**
- * SkeletonTreeMonster extracted from ../../deobfuscated/bundle.js at line 9573-0
+ * SkeletonTreeMonster extracted from ../../deobfuscated/bundle.js at line 9560-9605
  *
  * If this file doesn't contain a function, there is an error in ../raw/SkeletonTreeMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

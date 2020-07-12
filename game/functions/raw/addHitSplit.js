@@ -1,15 +1,15 @@
 /**
- * addHitSplit extracted from ../../deobfuscated/bundle.js at line 10346-0
+ * addHitSplit extracted from ../../deobfuscated/bundle.js at line 10333-10355
  *
  * If this file doesn't contain a function, there is an error in ../raw/addHitSplit.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function addHitSplit(data)
+function addHitSplit(_0x1C750)
 {
 	if (global_lastTabId == "right-combat-fighting")
 	{
-		var _0x1C75E = data.split("~");
+		var _0x1C75E = _0x1C750.split("~");
 		var _0x1C796 = _0x1C75E[0];
 		var _0x1C7B2 = _0x1C75E[1];
 		var _0x1C77A = _0x1C75E[2];

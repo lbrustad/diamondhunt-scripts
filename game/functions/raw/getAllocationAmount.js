@@ -1,5 +1,5 @@
 /**
- * getAllocationAmount extracted from ../../deobfuscated/bundle.js at line 904-0
+ * getAllocationAmount extracted from ../../deobfuscated/bundle.js at line 891-902
  *
  * If this file doesn't contain a function, there is an error in ../raw/getAllocationAmount.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

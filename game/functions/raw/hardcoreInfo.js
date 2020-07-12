@@ -1,5 +1,5 @@
 /**
- * hardcoreInfo extracted from ../../deobfuscated/bundle.js at line 13204-0
+ * hardcoreInfo extracted from ../../deobfuscated/bundle.js at line 13192-13195
  *
  * If this file doesn't contain a function, there is an error in ../raw/hardcoreInfo.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

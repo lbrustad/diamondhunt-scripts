@@ -1,5 +1,5 @@
 /**
- * refreshTreeImage extracted from ../../deobfuscated/bundle.js at line 11735-0
+ * refreshTreeImage extracted from ../../deobfuscated/bundle.js at line 11723-11737
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTreeImage.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

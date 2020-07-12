@@ -1,5 +1,5 @@
 /**
- * refreshSigilsDialoguesIcons extracted from ../../deobfuscated/bundle.js at line 2486-0
+ * refreshSigilsDialoguesIcons extracted from ../../deobfuscated/bundle.js at line 2473-2555
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshSigilsDialoguesIcons.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * changeMarketLimits extracted from ../../deobfuscated/bundle.js at line 12758-0
+ * changeMarketLimits extracted from ../../deobfuscated/bundle.js at line 12746-12751
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeMarketLimits.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

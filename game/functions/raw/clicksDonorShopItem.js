@@ -1,5 +1,5 @@
 /**
- * clicksDonorShopItem extracted from ../../deobfuscated/bundle.js at line 5586-0
+ * clicksDonorShopItem extracted from ../../deobfuscated/bundle.js at line 5573-5596
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksDonorShopItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

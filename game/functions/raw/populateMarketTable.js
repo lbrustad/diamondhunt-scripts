@@ -1,5 +1,5 @@
 /**
- * populateMarketTable extracted from ../../deobfuscated/bundle.js at line 12770-0
+ * populateMarketTable extracted from ../../deobfuscated/bundle.js at line 12758-12808
  *
  * If this file doesn't contain a function, there is an error in ../raw/populateMarketTable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

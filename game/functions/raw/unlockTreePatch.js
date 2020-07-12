@@ -1,5 +1,5 @@
 /**
- * unlockTreePatch extracted from ../../deobfuscated/bundle.js at line 11715-0
+ * unlockTreePatch extracted from ../../deobfuscated/bundle.js at line 11703-11711
  *
  * If this file doesn't contain a function, there is an error in ../raw/unlockTreePatch.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * refreshTagsDialoguesIcons extracted from ../../deobfuscated/bundle.js at line 2588-0
+ * refreshTagsDialoguesIcons extracted from ../../deobfuscated/bundle.js at line 2575-2706
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTagsDialoguesIcons.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

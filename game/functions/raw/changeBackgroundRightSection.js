@@ -1,5 +1,5 @@
 /**
- * changeBackgroundRightSection extracted from ../../deobfuscated/bundle.js at line 3217-0
+ * changeBackgroundRightSection extracted from ../../deobfuscated/bundle.js at line 3204-3217
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeBackgroundRightSection.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

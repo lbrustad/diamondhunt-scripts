@@ -1,5 +1,5 @@
 /**
- * HitAnimation extracted from ../../deobfuscated/bundle.js at line 10370-0
+ * HitAnimation extracted from ../../deobfuscated/bundle.js at line 10357-10448
  *
  * If this file doesn't contain a function, there is an error in ../raw/HitAnimation.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

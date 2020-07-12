@@ -1,5 +1,5 @@
 /**
- * showCombatMap extracted from ../../deobfuscated/bundle.js at line 8638-0
+ * showCombatMap extracted from ../../deobfuscated/bundle.js at line 8625-8633
  *
  * If this file doesn't contain a function, there is an error in ../raw/showCombatMap.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

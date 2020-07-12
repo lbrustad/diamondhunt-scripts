@@ -1,5 +1,5 @@
 /**
- * ThiefMonster extracted from ../../deobfuscated/bundle.js at line 9511-0
+ * ThiefMonster extracted from ../../deobfuscated/bundle.js at line 9498-9547
  *
  * If this file doesn't contain a function, there is an error in ../raw/ThiefMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

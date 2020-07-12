@@ -1,5 +1,5 @@
 /**
- * changeCombatMap extracted from ../../deobfuscated/bundle.js at line 2042-0
+ * changeCombatMap extracted from ../../deobfuscated/bundle.js at line 2029-2048
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeCombatMap.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

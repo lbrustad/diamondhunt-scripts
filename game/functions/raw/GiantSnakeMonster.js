@@ -1,5 +1,5 @@
 /**
- * GiantSnakeMonster extracted from ../../deobfuscated/bundle.js at line 9358-0
+ * GiantSnakeMonster extracted from ../../deobfuscated/bundle.js at line 9345-9394
  *
  * If this file doesn't contain a function, there is an error in ../raw/GiantSnakeMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

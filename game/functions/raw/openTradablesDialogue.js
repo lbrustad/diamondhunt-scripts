@@ -1,5 +1,5 @@
 /**
- * openTradablesDialogue extracted from ../../deobfuscated/bundle.js at line 12654-0
+ * openTradablesDialogue extracted from ../../deobfuscated/bundle.js at line 12642-12672
  *
  * If this file doesn't contain a function, there is an error in ../raw/openTradablesDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

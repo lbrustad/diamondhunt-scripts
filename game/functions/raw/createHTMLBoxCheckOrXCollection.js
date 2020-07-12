@@ -1,5 +1,5 @@
 /**
- * createHTMLBoxCheckOrXCollection extracted from ../../deobfuscated/bundle.js at line 7763-0
+ * createHTMLBoxCheckOrXCollection extracted from ../../deobfuscated/bundle.js at line 7750-7760
  *
  * If this file doesn't contain a function, there is an error in ../raw/createHTMLBoxCheckOrXCollection.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

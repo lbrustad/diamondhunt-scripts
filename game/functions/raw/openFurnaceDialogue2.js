@@ -1,5 +1,5 @@
 /**
- * openFurnaceDialogue2 extracted from ../../deobfuscated/bundle.js at line 7696-0
+ * openFurnaceDialogue2 extracted from ../../deobfuscated/bundle.js at line 7683-7707
  *
  * If this file doesn't contain a function, there is an error in ../raw/openFurnaceDialogue2.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

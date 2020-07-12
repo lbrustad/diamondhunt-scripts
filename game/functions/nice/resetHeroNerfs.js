@@ -1,4 +1,1 @@
-'use strict';
-
-function resetHeroNerfs()
-{};
+// ERROR! Transpilng failed. Try disabling the transpiling step in the settings.

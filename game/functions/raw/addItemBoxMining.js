@@ -1,5 +1,5 @@
 /**
- * addItemBoxMining extracted from ../../deobfuscated/bundle.js at line 3943-0
+ * addItemBoxMining extracted from ../../deobfuscated/bundle.js at line 3930-3970
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemBoxMining.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

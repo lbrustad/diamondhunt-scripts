@@ -1,10 +1,10 @@
 'use strict';
 
-function objects_loadFood(data)
+function objects_loadFood(clusterShardData)
 {
 	var newFood = null;
-	var args = data.split("~");
-	var indexLookupKey = 0;
+	var args = clusterShardData.split("~");
+	var expectedSiteKey = 0;
 	var i = 0;
 	for (; i < args.length; i = i + 0)
 	{
@@ -12,7 +12,7 @@ function objects_loadFood(data)
 		i++;
 		var data = args[i];
 		i++;
-		var xPos = args[i];
+		var sqlParam = args[i];
 		i++;
 		var color = args[i];
 		i++;
@@ -22,10 +22,10 @@ function objects_loadFood(data)
 		i++;
 		var size = args[i];
 		i++;
-		newFood = new Food(id, data, xPos, color, width, yPos, size);
+		newFood = new Food(id, data, sqlParam, color, width, yPos, size);
 		global_foodMap[id] = newFood;
 		global_foodMap[data] = newFood;
-		global_foodMap[indexLookupKey] = newFood;
-		indexLookupKey++;
+		global_foodMap[expectedSiteKey] = newFood;
+		expectedSiteKey++;
 	}
 };
