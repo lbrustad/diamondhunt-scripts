@@ -1,5 +1,5 @@
 /**
- * getTimeFetch extracted from ../../deobfuscated/bundle.js at line 1155-1176
+ * getTimeFetch extracted from ../../deobfuscated/bundle.js at line 1483-1504
  *
  * If this file doesn't contain a function, there is an error in ../raw/getTimeFetch.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -7,23 +7,23 @@
 
 function getTimeFetch()
 {
-	var _0x1D304 = new Date();
-	if (_0x1D304.getHours() < 10)
+	var _0x511A = new Date();
+	if (_0x511A.getHours() < 10)
 	{
-		var _0x1D57A = "0" + _0x1D304.getHours()
+		var _0x5738 = "0" + _0x511A.getHours()
 	}
 	else
 	{
-		var _0x1D57A = _0x1D304.getHours()
+		var _0x5738 = _0x511A.getHours()
 	};
-	if (_0x1D304.getMinutes() < 10)
+	if (_0x511A.getMinutes() < 10)
 	{
-		var _0x1D588 = "0" + _0x1D304.getMinutes()
+		var _0x5755 = "0" + _0x511A.getMinutes()
 	}
 	else
 	{
-		var _0x1D588 = _0x1D304.getMinutes()
+		var _0x5755 = _0x511A.getMinutes()
 	};
-	var _0x1D56C = "[" + _0x1D57A + ":" + _0x1D588 + "] ";
-	return _0x1D56C
+	var _0x571B = "[" + _0x5738 + ":" + _0x5755 + "] ";
+	return _0x571B
 }

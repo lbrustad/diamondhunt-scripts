@@ -1,12 +1,12 @@
 /**
- * ItemPrice extracted from ../../deobfuscated/bundle.js at line 3575-3579
+ * ItemPrice extracted from ../../deobfuscated/bundle.js at line 4524-4528
  *
  * If this file doesn't contain a function, there is an error in ../raw/ItemPrice.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function ItemPrice(_0x1D1EC, _0x1CDD2)
+function ItemPrice(_0x4ED6, _0x44DE)
 {
-	this.name = _0x1D1EC;
-	this.price = _0x1CDD2
+	this.name = _0x4ED6;
+	this.price = _0x44DE
 }

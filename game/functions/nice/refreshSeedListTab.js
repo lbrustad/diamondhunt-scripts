@@ -230,6 +230,21 @@ function refreshSeedListTab()
 		attributeTemplate = attributeTemplate + "</span>";
 		attributeTemplate = attributeTemplate + "</div>";
 	}
+	patch3c = "appleTreeSeeds";
+	rarity = getSeedDropRate(patch3c);
+	if (getItem(patch3c + "Chopped") > 0)
+	{
+		attributeTemplate = attributeTemplate + "<div class='mobile-style' style='background-image:url(images/background18.jpg)'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + patch3c + ".png' class='img-100' style='float:left;' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "APPLE TREE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<span style='color:white;font-size:12pt;color:grey'>N/A</span>";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(patch3c + "Chopped") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
 	patch3c = "mapleTreeSeeds";
 	rarity = getSeedDropRate(patch3c);
 	if (getItem(patch3c + "Chopped") > 0)
@@ -252,6 +267,36 @@ function refreshSeedListTab()
 		attributeTemplate = attributeTemplate + "<div class='mobile-style' style='background-image:url(images/background18.jpg)'>";
 		attributeTemplate = attributeTemplate + ("<img src='images/" + patch3c + ".png' class='img-100' style='float:left;' />");
 		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "LAVA TREE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<span style='color:white;font-size:12pt;color:grey'>N/A</span>";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(patch3c + "Chopped") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	patch3c = "bananaTreeSeeds";
+	rarity = getSeedDropRate(patch3c);
+	if (getItem(patch3c + "Chopped") > 0)
+	{
+		attributeTemplate = attributeTemplate + "<div class='mobile-style' style='background-image:url(images/background18.jpg)'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + patch3c + ".png' class='img-100' style='float:left;' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "BANANA TREE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<span style='color:white;font-size:12pt;color:grey'>N/A</span>";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(patch3c + "Chopped") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	patch3c = "pineTreeSeeds";
+	rarity = getSeedDropRate(patch3c);
+	if (getItem(patch3c + "Chopped") > 0)
+	{
+		attributeTemplate = attributeTemplate + "<div class='mobile-style' style='background-image:url(images/background18.jpg)'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + patch3c + ".png' class='img-100' style='float:left;' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "PINE TREE");
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + "<span style='color:white;font-size:12pt;color:grey'>N/A</span>";
 		attributeTemplate = attributeTemplate + "<br />";

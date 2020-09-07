@@ -23,8 +23,11 @@ function getHeat(value)
 	case "lavaLogs":
 		_a_ = 6;
 		break;
-	case "stardustLogs":
+	case "pineLogs":
 		_a_ = 7;
+		break;
+	case "stardustLogs":
+		_a_ = 8;
 		break;
 	}
 	return _a_;

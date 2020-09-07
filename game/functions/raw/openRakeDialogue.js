@@ -1,5 +1,5 @@
 /**
- * openRakeDialogue extracted from ../../deobfuscated/bundle.js at line 12162-12201
+ * openRakeDialogue extracted from ../../deobfuscated/bundle.js at line 16846-16889
  *
  * If this file doesn't contain a function, there is an error in ../raw/openRakeDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -42,6 +42,10 @@ function openRakeDialogue()
 	if (getItem("researcherFarming") >= 2)
 	{
 		document.getElementById("dialogue-rake-stardustSeeds-check-or-x").src = "images/check.png"
+	};
+	if (getItem("researcherFarming") >= 4)
+	{
+		document.getElementById("dialogue-rake-blewitMushroomSeeds-check-or-x").src = "images/check.png"
 	};
 	openDialogue("dialogue-rake")
 }

@@ -2,6 +2,7 @@
 
 function clicksFightingBossButton(canCreateDiscussions)
 {
+	$(window).scrollTop(0);
 	if (canCreateDiscussions == "fireHawk")
 	{
 		confirmDialogue("none", "<center><img src='images/bossMarker.gif' /><br /><br />Fight this boss?<br /><br /><span style='color:red'>It is extremely hot in here.</span></center>", "Fight", "Run", "FIGHT_BOSS=" + canCreateDiscussions);

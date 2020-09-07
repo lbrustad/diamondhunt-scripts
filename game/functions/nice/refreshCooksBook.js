@@ -34,5 +34,8 @@ function refreshCooksBook()
 	th_field = "seaweedChicken";
 	cookingRecipes[th_field] = new CooksBookRecipe(th_field, ["cooking"], [20], ["seaweed", "chicken"], [10, 1], "A chicken with mixed with seaweed.", true, "Seaweed Chicken", 2700);
 	pix_color = pix_color + addRecipeToTable(cookingRecipes[th_field], SCROLL_ID);
-	document.getElementById(SCROLL_ID).innerHTML += "<table class='table-craftables' width='90%'><tr><th>Name</th><th>Item</th><th>Level</th><th>Ingredients</th><th width='50%'>Description</th><th>Prep Time</th></tr>" + pix_color + "</table>";
+	th_field = "batSkinSushi";
+	cookingRecipes[th_field] = new CooksBookRecipe(th_field, ["cooking"], [30], ["batSkin", "rawShrimp", "rawTrout", "rawTuna"], [2, 10, 5, 1], "A sushi made with batskin instead of traditional seaweed.", true, "Batskin Sushi", 3600);
+	pix_color = pix_color + addRecipeToTable(cookingRecipes[th_field], SCROLL_ID);
+	document.getElementById(SCROLL_ID).innerHTML += "<table class='table-craftables' width='90%'><tr><th>Name</th><th>Item</th><th>Level</th><th>Ingredients</th><th width='50%'>Description</th><th>Prep Time</th></tr>" + pix_color + "</table><br />";
 };

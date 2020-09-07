@@ -38,6 +38,22 @@ function clicksOreToMine(mobKind)
 				compareKey = getAllocationAmount(key, mobKind);
 				document.getElementById("dialogue-mining-ore-" + key + "-allocated").innerHTML = compareKey;
 			}
+			key = "giantDrills";
+			if (getItem(key) > 0)
+			{
+				global_lastMiningResourceClickedAvailable[key] = getMinersOrMachineryAvailable(key);
+				document.getElementById("dialogue-mining-ore-" + key).style.display = "";
+				compareKey = getAllocationAmount(key, mobKind);
+				document.getElementById("dialogue-mining-ore-" + key + "-allocated").innerHTML = compareKey;
+			}
+			key = "excavators";
+			if (getItem(key) > 0)
+			{
+				global_lastMiningResourceClickedAvailable[key] = getMinersOrMachineryAvailable(key);
+				document.getElementById("dialogue-mining-ore-" + key).style.display = "";
+				compareKey = getAllocationAmount(key, mobKind);
+				document.getElementById("dialogue-mining-ore-" + key + "-allocated").innerHTML = compareKey;
+			}
 			openDialogue("dialogue-mining-ore");
 		}
 	}

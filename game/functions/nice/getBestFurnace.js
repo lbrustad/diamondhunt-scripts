@@ -28,5 +28,15 @@ function getBestFurnace()
 	{
 		return boxsize;
 	}
+	boxsize = "promethiumFurnace";
+	if (getItem(boxsize) == 1)
+	{
+		return boxsize;
+	}
+	boxsize = "titaniumFurnace";
+	if (getItem(boxsize) == 1)
+	{
+		return boxsize;
+	}
 	return "none";
 };

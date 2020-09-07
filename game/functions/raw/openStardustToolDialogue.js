@@ -1,46 +1,46 @@
 /**
- * openStardustToolDialogue extracted from ../../deobfuscated/bundle.js at line 12058-12096
+ * openStardustToolDialogue extracted from ../../deobfuscated/bundle.js at line 16694-16732
  *
  * If this file doesn't contain a function, there is an error in ../raw/openStardustToolDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function openStardustToolDialogue(_0x1D0D4)
+function openStardustToolDialogue(_0x4C92)
 {
-	var _0x1DCA4 = document.getElementById("dialogue-stardust-tools-socket-button");
-	var _0x1C902 = document.getElementById("dialogue-stardust-tools-socket-image");
-	var _0x1D87C = document.getElementById("dialogue-stardust-tools-socket-gem-label");
-	var _0x1DCC0;
-	if (_0x1D0D4 == "stardustPickaxe")
+	var _0x68E4 = document.getElementById("dialogue-stardust-tools-socket-button");
+	var _0x3AC9 = document.getElementById("dialogue-stardust-tools-socket-image");
+	var _0x5DAD = document.getElementById("dialogue-stardust-tools-socket-gem-label");
+	var _0x691E;
+	if (_0x4C92 == "stardustPickaxe")
 	{
-		var _0x1DCC0 = getPickaxeTypeData();
-		var _0x1CC58 = _0x1DCC0[2]
+		var _0x691E = getPickaxeTypeData();
+		var _0x41CF = _0x691E[2]
 	};
-	if (_0x1D0D4 == "stardustHammer")
+	if (_0x4C92 == "stardustHammer")
 	{
-		var _0x1DCC0 = getHammerTypeData();
-		var _0x1CC58 = _0x1DCC0[2]
+		var _0x691E = getHammerTypeData();
+		var _0x41CF = _0x691E[2]
 	};
-	if (_0x1CC58 == "none")
+	if (_0x41CF == "none")
 	{
-		_0x1DCA4.style.display = "none"
+		_0x68E4.style.display = "none"
 	}
 	else
 	{
-		_0x1C902.src = "images/" + _0x1CC58 + ".png";
-		_0x1DCA4.style.display = "";
-		_0x1DCA4.setAttribute("onclick", "confirmSocketDialogue(\'" + _0x1D0D4 + "\',\'images/" + _0x1DCC0[0] + ".png\',\'" + _0x1CC58 + "\');closeDialogue(\'dialogue-stardust-tools\')");
-		_0x1D87C.innerHTML = _0x1CC58
+		_0x3AC9.src = "images/" + _0x41CF + ".png";
+		_0x68E4.style.display = "";
+		_0x68E4.setAttribute("onclick", "confirmSocketDialogue(\'" + _0x4C92 + "\',\'images/" + _0x691E[0] + ".png\',\'" + _0x41CF + "\');closeDialogue(\'dialogue-stardust-tools\')");
+		_0x5DAD.innerHTML = _0x41CF
 	};
-	var _0x1DCB2 = global_stardustToolsMap[_0x1D0D4];
-	var _0x1DA3C = _0x1DCB2.arrayItemsToConvertArray;
-	var _0x1DA2E = _0x1DCB2.arrayItemsConvetXpArray;
+	var _0x6901 = global_stardustToolsMap[_0x4C92];
+	var _0x61FB = _0x6901.arrayItemsToConvertArray;
+	var _0x61DE = _0x6901.arrayItemsConvetXpArray;
 	document.getElementById("dialogue-stardust-tools-selectItem").innerHTML = "";
-	var _0x1C8F4 = "";
-	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1DA3C.length; _0x1C6B6++)
+	var _0x3AAC = "";
+	for (var _0x3607 = 0; _0x3607 < _0x61FB.length; _0x3607++)
 	{
-		_0x1C8F4 += generateHTMLToSelectToolConversionItem(_0x1D0D4, _0x1DA3C[_0x1C6B6], _0x1DA2E[_0x1C6B6])
+		_0x3AAC += generateHTMLToSelectToolConversionItem(_0x4C92, _0x61FB[_0x3607], _0x61DE[_0x3607])
 	};
-	document.getElementById("dialogue-stardust-tools-selectItem").innerHTML = _0x1C8F4;
+	document.getElementById("dialogue-stardust-tools-selectItem").innerHTML = _0x3AAC;
 	openDialogueOverride("dialogue-stardust-tools", "large")
 }

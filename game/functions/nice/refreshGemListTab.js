@@ -109,7 +109,7 @@ function refreshGemListTab()
 		attributeTemplate = attributeTemplate + ("<img src='images/" + icon + ".png' style='float:left;' class='img-100' />");
 		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "LARGE");
 		attributeTemplate = attributeTemplate + "<br />";
-		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/TBA  <br /><span style='color:grey'><img src='images/miningSkill.png' class='img-20' /> <span " + _b_ + ">" + _a_ + "</span></span>");
+		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/188,000  <br /><span style='color:grey'><img src='images/miningSkill.png' class='img-20' /> <span " + _b_ + ">" + _a_ + "</span></span>");
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");
@@ -127,6 +127,67 @@ function refreshGemListTab()
 		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "HUGE");
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/TBA  <br /><span style='color:grey'><img src='images/miningSkill.png' class='img-20' /> <span " + _b_ + ">" + _a_ + "</span></span>");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	var previous_step = "none";
+	if (getItem("researcherMining") >= 4)
+	{
+		previous_step = "drills";
+		icon = "blueGeode";
+		attributeTemplate = attributeTemplate + "<div class='mobile-style'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + icon + ".png' style='float:left;' class='img-100' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "BLUE GEODE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/51,840 <br /><span style='color:grey'><img src='images/" + previous_step + ".png' class='img-20' /> Per <span>" + getItemName(previous_step) + "</span></span>");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	if (getItem("researcherMining") >= 4)
+	{
+		previous_step = "crushers";
+		icon = "greenGeode";
+		attributeTemplate = attributeTemplate + "<div class='mobile-style'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + icon + ".png' style='float:left;' class='img-100' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "GREEN GEODE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/259,200 <br /><span style='color:grey'><img src='images/" + previous_step + ".png' class='img-20' /> Per <span>" + getItemName(previous_step) + "</span></span>");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	if (getItem("researcherMining") >= 4)
+	{
+		previous_step = "giantDrills";
+		icon = "redGeode";
+		attributeTemplate = attributeTemplate + "<div class='mobile-style'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + icon + ".png' style='float:left;' class='img-100' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "RED GEODE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/777,600 <br /><span style='color:grey'><img src='images/" + previous_step + ".png' class='img-20' /> Per <span>" + getItemName(previous_step) + "</span></span>");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");
+		attributeTemplate = attributeTemplate + "</span>";
+		attributeTemplate = attributeTemplate + "</div>";
+	}
+	if (getItem("researcherMining") >= 4)
+	{
+		previous_step = "excavators";
+		icon = "purpleGeode";
+		attributeTemplate = attributeTemplate + "<div class='mobile-style'>";
+		attributeTemplate = attributeTemplate + ("<img src='images/" + icon + ".png' style='float:left;' class='img-100' />");
+		attributeTemplate = attributeTemplate + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + "PURPLE GEODE");
+		attributeTemplate = attributeTemplate + "<br />";
+		attributeTemplate = attributeTemplate + ("<span style='color:white;font-size:12pt;'>1/1,555,200 <br /><span style='color:grey'><img src='images/" + previous_step + ".png' class='img-20' /> Per <span>" + getItemName(previous_step) + "</span></span>");
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + "<br />";
 		attributeTemplate = attributeTemplate + ("<span style='font-size:12pt;color:yellow'>Found " + getItem(icon + "Mined") + "</span>");

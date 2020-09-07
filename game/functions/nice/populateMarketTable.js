@@ -2,10 +2,6 @@
 
 function populateMarketTable()
 {
-	if (document.getElementById("market-filter").value.length > 0)
-	{
-		return;
-	}
 	if (global_MarketData.length == 0)
 	{
 		document.getElementById("market-display-section").innerHTML = "<h1 style='text-align:center'>Market is currently empty.</h1>";
@@ -51,4 +47,8 @@ function populateMarketTable()
 	attributeTemplate = attributeTemplate + "</center>";
 	document.getElementById("market-display-section").innerHTML = attributeTemplate;
 	sorttable.makeSortable(document.getElementById("market-table"));
+	if (document.getElementById("market-filter").value.length > 0)
+	{
+		marketFilter(document.getElementById("market-filter").value, false);
+	}
 };

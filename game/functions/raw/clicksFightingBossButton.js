@@ -1,19 +1,20 @@
 /**
- * clicksFightingBossButton extracted from ../../deobfuscated/bundle.js at line 8708-8719
+ * clicksFightingBossButton extracted from ../../deobfuscated/bundle.js at line 11547-11559
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksFightingBossButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function clicksFightingBossButton(_0x1CF4C)
+function clicksFightingBossButton(_0x480A)
 {
-	if (_0x1CF4C == "fireHawk")
+	$(window).scrollTop(0);
+	if (_0x480A == "fireHawk")
 	{
-		confirmDialogue("none", "<center><img src=\'images/bossMarker.gif\' /><br /><br />Fight this boss?<br /><br /><span style=\'color:red\'>It is extremely hot in here.</span></center>", "Fight", "Run", "FIGHT_BOSS=" + _0x1CF4C)
+		confirmDialogue("none", "<center><img src=\'images/bossMarker.gif\' /><br /><br />Fight this boss?<br /><br /><span style=\'color:red\'>It is extremely hot in here.</span></center>", "Fight", "Run", "FIGHT_BOSS=" + _0x480A)
 	}
 	else
 	{
-		confirmDialogue("none", "<center><img src=\'images/bossMarker.gif\' /><br /><br />Fight this boss?</center>", "Fight", "Run", "FIGHT_BOSS=" + _0x1CF4C)
+		confirmDialogue("none", "<center><img src=\'images/bossMarker.gif\' /><br /><br />Fight this boss?</center>", "Fight", "Run", "FIGHT_BOSS=" + _0x480A)
 	};
 	exitCombatMap()
 }

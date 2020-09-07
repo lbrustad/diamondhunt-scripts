@@ -4,7 +4,14 @@ function clicksFarmingPlot(canCreateDiscussions)
 {
 	if (selectedSeed == "none")
 	{
-		sendBytes("HARVEST=" + canCreateDiscussions);
+		if (getItem("plotUnlocked" + canCreateDiscussions) == 0)
+		{
+			confirmDialogue("images/farm_none.png", "Are you sure you want to unlock this patch?", "Unlock", "Cancel", "HARVEST=" + canCreateDiscussions);
+		}
+		else
+		{
+			sendBytes("HARVEST=" + canCreateDiscussions);
+		}
 	}
 	else
 	{

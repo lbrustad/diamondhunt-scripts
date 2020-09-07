@@ -1,20 +1,25 @@
 'use strict';
 
-function getLevel(fn)
+function getLevel(levelsetIndex, levelIndex)
 {
-	if (fn == 0)
+	if (levelsetIndex == 0)
 	{
 		return 1;
 	}
+	var logLevel = 100;
+	if (levelIndex)
+	{
+		logLevel = 1000;
+	}
 	var level = 1;
-	for (; level <= 100; level++)
+	for (; level <= logLevel; level++)
 	{
 		var size = 3 + level / 200;
 		var resizeUrl = Math.pow(level, size);
-		if (fn < resizeUrl)
+		if (levelsetIndex < resizeUrl)
 		{
 			return level - 1;
 		}
 	}
-	return 100;
+	return logLevel;
 };

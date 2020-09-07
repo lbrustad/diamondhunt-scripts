@@ -1,517 +1,740 @@
 'use strict';
 
-function getEncountersImgArrayForAreaareaChosen(p_Interval)
+function getEncountersImgArrayForAreaareaChosen(boolStr)
 {
-	p_Interval = p_Interval.toLowerCase();
-	var newNodeLists = [];
-	var iconURL = "";
-	switch (p_Interval)
+	boolStr = boolStr.toLowerCase();
+	var numberPolyfill = [];
+	var val = "";
+	switch (boolStr)
 	{
 	case "fields":
 		var _a_ = false;
 		var data = [];
-		iconURL = "chicken";
-		if (getItem(iconURL + "Kills") >= 100)
+		val = "chicken";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[0] = getItem(iconURL + "Kills");
-		iconURL = "rat";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[0] = getItem(val + "Kills");
+		val = "rat";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[1] = getItem(iconURL + "Kills");
-		iconURL = "bee";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[1] = getItem(val + "Kills");
+		val = "bee";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[2] = getItem(iconURL + "Kills");
-		var itemNodeList = "images/redFightMarker.gif";
+		data[2] = getItem(val + "Kills");
+		var step = "images/redFightMarker.gif";
 		if (Math.min.apply(null, data) >= 100)
 		{
-			itemNodeList = "images/blueFightMarker.gif";
+			step = "images/blueFightMarker.gif";
 		}
 		else
 		{
 			if (Math.min.apply(null, data) >= 1)
 			{
-				itemNodeList = "images/greenFightMarker.gif";
+				step = "images/greenFightMarker.gif";
 			}
 			else
 			{
-				var i = 0;
-				for (; i < data.length; i++)
+				var a = 0;
+				for (; a < data.length; a++)
 				{
 					if (data[0] > 0)
 					{
-						itemNodeList = "images/yellowFightMarker.gif";
+						step = "images/yellowFightMarker.gif";
 						break;
 					}
 				}
 			}
 		}
-		newNodeLists.push(itemNodeList);
+		numberPolyfill.push(step);
 		break;
 	case "forest":
 		_a_ = false;
 		data = [];
-		iconURL = "snake";
-		if (getItem(iconURL + "Kills") >= 100)
+		val = "snake";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[0] = getItem(iconURL + "Kills");
-		iconURL = "ent";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[0] = getItem(val + "Kills");
+		val = "ent";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[1] = getItem(iconURL + "Kills");
-		iconURL = "thief";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[1] = getItem(val + "Kills");
+		val = "thief";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[2] = getItem(iconURL + "Kills");
-		itemNodeList = "images/redFightMarker.gif";
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
 		if (Math.min.apply(null, data) >= 100)
 		{
-			itemNodeList = "images/blueFightMarker.gif";
+			step = "images/blueFightMarker.gif";
 		}
 		else
 		{
 			if (Math.min.apply(null, data) >= 1)
 			{
-				itemNodeList = "images/greenFightMarker.gif";
+				step = "images/greenFightMarker.gif";
 			}
 			else
 			{
-				i = 0;
-				for (; i < data.length; i++)
+				a = 0;
+				for (; a < data.length; a++)
 				{
 					if (data[0] > 0)
 					{
-						itemNodeList = "images/yellowFightMarker.gif";
+						step = "images/yellowFightMarker.gif";
 						break;
 					}
 				}
 			}
 		}
-		newNodeLists.push(itemNodeList);
+		numberPolyfill.push(step);
 		break;
 	case "caves":
 		_a_ = false;
 		data = [];
-		iconURL = "bear";
-		if (getItem(iconURL + "Kills") >= 100)
+		val = "bear";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[0] = getItem(iconURL + "Kills");
-		iconURL = "spider";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[0] = getItem(val + "Kills");
+		val = "spider";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[1] = getItem(iconURL + "Kills");
-		iconURL = "skeleton";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[1] = getItem(val + "Kills");
+		val = "skeleton";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[2] = getItem(iconURL + "Kills");
-		itemNodeList = "images/redFightMarker.gif";
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
 		if (Math.min.apply(null, data) >= 100)
 		{
-			itemNodeList = "images/blueFightMarker.gif";
+			step = "images/blueFightMarker.gif";
 		}
 		else
 		{
 			if (Math.min.apply(null, data) >= 1)
 			{
-				itemNodeList = "images/greenFightMarker.gif";
+				step = "images/greenFightMarker.gif";
 			}
 			else
 			{
-				i = 0;
-				for (; i < data.length; i++)
+				a = 0;
+				for (; a < data.length; a++)
 				{
 					if (data[0] > 0)
 					{
-						itemNodeList = "images/yellowFightMarker.gif";
+						step = "images/yellowFightMarker.gif";
 						break;
 					}
 				}
 			}
 		}
-		newNodeLists.push(itemNodeList);
+		numberPolyfill.push(step);
 		break;
 	case "lavadungeon":
 		_a_ = false;
 		data = [];
-		iconURL = "lavaAlien";
-		if (getItem(iconURL + "Kills") >= 100)
+		val = "lavaAlien";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[0] = getItem(iconURL + "Kills");
-		iconURL = "bat";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[0] = getItem(val + "Kills");
+		val = "bat";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[1] = getItem(iconURL + "Kills");
-		iconURL = "fireMage";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[1] = getItem(val + "Kills");
+		val = "fireMage";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[2] = getItem(iconURL + "Kills");
-		itemNodeList = "images/redFightMarker.gif";
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
 		if (Math.min.apply(null, data) >= 100)
 		{
-			itemNodeList = "images/blueFightMarker.gif";
+			step = "images/blueFightMarker.gif";
 		}
 		else
 		{
 			if (Math.min.apply(null, data) >= 1)
 			{
-				itemNodeList = "images/greenFightMarker.gif";
+				step = "images/greenFightMarker.gif";
 			}
 			else
 			{
-				i = 0;
-				for (; i < data.length; i++)
+				a = 0;
+				for (; a < data.length; a++)
 				{
 					if (data[0] > 0)
 					{
-						itemNodeList = "images/yellowFightMarker.gif";
+						step = "images/yellowFightMarker.gif";
 						break;
 					}
 				}
 			}
 		}
-		newNodeLists.push(itemNodeList);
+		numberPolyfill.push(step);
 		break;
 	case "northernfields":
 		_a_ = false;
 		data = [];
-		iconURL = "boneHead";
-		if (getItem(iconURL + "Kills") >= 100)
+		val = "boneHead";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[0] = getItem(iconURL + "Kills");
-		iconURL = "mammaPolarBear";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[0] = getItem(val + "Kills");
+		val = "mammaPolarBear";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[1] = getItem(iconURL + "Kills");
-		iconURL = "yeti";
-		if (getItem(iconURL + "Kills") >= 100)
+		data[1] = getItem(val + "Kills");
+		val = "yeti";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
 		{
-			newNodeLists.push("images/" + iconURL + "Monster_blue.png");
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
 		}
 		else
 		{
-			if (getItem(iconURL + "Kills") >= 30)
+			if (getItem(val + "Kills") >= 30)
 			{
-				newNodeLists.push("images/" + iconURL + "Monster_yellow.png");
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
 			}
 			else
 			{
-				if (getItem(iconURL + "Kills") >= 1)
+				if (getItem(val + "Kills") >= 1)
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_green.png");
+					numberPolyfill.push("images/" + val + "Monster_green.png");
 				}
 				else
 				{
-					newNodeLists.push("images/" + iconURL + "Monster_black.png");
+					numberPolyfill.push("images/" + val + "Monster_black.png");
 				}
 			}
 		}
-		data[2] = getItem(iconURL + "Kills");
-		itemNodeList = "images/redFightMarker.gif";
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
 		if (Math.min.apply(null, data) >= 100)
 		{
-			itemNodeList = "images/blueFightMarker.gif";
+			step = "images/blueFightMarker.gif";
 		}
 		else
 		{
 			if (Math.min.apply(null, data) >= 1)
 			{
-				itemNodeList = "images/greenFightMarker.gif";
+				step = "images/greenFightMarker.gif";
 			}
 			else
 			{
-				i = 0;
-				for (; i < data.length; i++)
+				a = 0;
+				for (; a < data.length; a++)
 				{
 					if (data[0] > 0)
 					{
-						itemNodeList = "images/yellowFightMarker.gif";
+						step = "images/yellowFightMarker.gif";
 						break;
 					}
 				}
 			}
 		}
-		newNodeLists.push(itemNodeList);
+		numberPolyfill.push(step);
+		break;
+	case "cemetery":
+		_a_ = false;
+		data = [];
+		val = "ghost";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[0] = getItem(val + "Kills");
+		val = "skeletonGhost";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[1] = getItem(val + "Kills");
+		val = "reaper";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
+		if (Math.min.apply(null, data) >= 100)
+		{
+			step = "images/blueFightMarker.gif";
+		}
+		else
+		{
+			if (Math.min.apply(null, data) >= 1)
+			{
+				step = "images/greenFightMarker.gif";
+			}
+			else
+			{
+				a = 0;
+				for (; a < data.length; a++)
+				{
+					if (data[0] > 0)
+					{
+						step = "images/yellowFightMarker.gif";
+						break;
+					}
+				}
+			}
+		}
+		numberPolyfill.push(step);
+		break;
+	case "ocean":
+		_a_ = false;
+		data = [];
+		val = "shark";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[0] = getItem(val + "Kills");
+		val = "pufferFish";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[1] = getItem(val + "Kills");
+		val = "tridentSoldier";
+		numberPolyfill.push(val);
+		if (getItem(val + "Kills") >= 100)
+		{
+			numberPolyfill.push("images/" + val + "Monster_blue.png");
+		}
+		else
+		{
+			if (getItem(val + "Kills") >= 30)
+			{
+				numberPolyfill.push("images/" + val + "Monster_yellow.png");
+			}
+			else
+			{
+				if (getItem(val + "Kills") >= 1)
+				{
+					numberPolyfill.push("images/" + val + "Monster_green.png");
+				}
+				else
+				{
+					numberPolyfill.push("images/" + val + "Monster_black.png");
+				}
+			}
+		}
+		data[2] = getItem(val + "Kills");
+		step = "images/redFightMarker.gif";
+		if (Math.min.apply(null, data) >= 100)
+		{
+			step = "images/blueFightMarker.gif";
+		}
+		else
+		{
+			if (Math.min.apply(null, data) >= 1)
+			{
+				step = "images/greenFightMarker.gif";
+			}
+			else
+			{
+				a = 0;
+				for (; a < data.length; a++)
+				{
+					if (data[0] > 0)
+					{
+						step = "images/yellowFightMarker.gif";
+						break;
+					}
+				}
+			}
+		}
+		numberPolyfill.push(step);
 		break;
 	}
-	return newNodeLists;
+	return numberPolyfill;
 };

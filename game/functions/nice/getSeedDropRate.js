@@ -20,6 +20,8 @@ function getSeedDropRate(canCreateDiscussions)
 		return 3000000;
 	case "redMushroomSeeds":
 		return 3600;
+	case "blewitMushroomSeeds":
+		return 36000;
 	case "stardustSeeds":
 		return 28800;
 	default:

@@ -1,5 +1,5 @@
 /**
- * selectServerStuff extracted from ../../deobfuscated/bundle.js at line 95-110
+ * selectServerStuff extracted from ../../deobfuscated/bundle.js at line 98-113
  *
  * If this file doesn't contain a function, there is an error in ../raw/selectServerStuff.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

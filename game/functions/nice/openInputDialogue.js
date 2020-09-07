@@ -1,11 +1,11 @@
 'use strict';
 
-function openInputDialogue(start_r, end_r, step, diff, config, $timeout, ajaxUtils, userService, $state, post, match)
+function openInputDialogue(start_r, end_r, step, diff, config, $timeout, ajaxUtils, userService, $state, confirmDialogService, intLatency, strLearningObjectiveID)
 {
 	var th_field = "";
-	if (match != "")
+	if (intLatency != "")
 	{
-		th_field = "<span style='color:grey;cursor:pointer;' onclick='this.innerHTML = \"<br /><br />" + match + "<br /><br />\"'>(more info)</span>";
+		th_field = "<span style='color:grey;cursor:pointer;' onclick='this.innerHTML = \"<br /><br />" + intLatency + "<br /><br />\"'>(more info)</span>";
 	}
 	var fsHTML = "";
 	fsHTML = fsHTML + "<div class='dialogue' id='wild-dialogue' style='display:none;'>";
@@ -44,27 +44,27 @@ function openInputDialogue(start_r, end_r, step, diff, config, $timeout, ajaxUti
 	}
 	document.getElementById("dialogue-wild-input-confirm").onclick = function ()
 	{
-		sendBytes(post + "=" + step + "~" + convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
+		sendBytes(confirmDialogService + "=" + step + "~" + convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 		closeDialogue("wild-dialogue");
 	};
 	document.getElementById("dialogue-wild-input-button-1").onclick = function ()
 	{
-		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "ONE");
+		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "ONE", strLearningObjectiveID);
 		onKeyUpWildInputDialogue(config, $timeout, ajaxUtils, userService, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 	};
 	document.getElementById("dialogue-wild-input-button-2").onclick = function ()
 	{
-		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "25%");
+		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "25%", strLearningObjectiveID);
 		onKeyUpWildInputDialogue(config, $timeout, ajaxUtils, userService, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 	};
 	document.getElementById("dialogue-wild-input-button-3").onclick = function ()
 	{
-		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "50%");
+		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "50%", strLearningObjectiveID);
 		onKeyUpWildInputDialogue(config, $timeout, ajaxUtils, userService, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 	};
 	document.getElementById("dialogue-wild-input-button-4").onclick = function ()
 	{
-		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "ALL");
+		changeValueOfInput(ajaxUtils, userService, "dialogue-wild-input", "ALL", strLearningObjectiveID);
 		onKeyUpWildInputDialogue(config, $timeout, ajaxUtils, userService, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 	};
 	document.getElementById("dialogue-wild-input").onkeyup = function ()

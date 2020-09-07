@@ -1,16 +1,16 @@
 /**
- * convertStringToURL extracted from ../../deobfuscated/bundle.js at line 1135-1143
+ * convertStringToURL extracted from ../../deobfuscated/bundle.js at line 1463-1471
  *
  * If this file doesn't contain a function, there is an error in ../raw/convertStringToURL.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function convertStringToURL(_0x1C6D2)
+function convertStringToURL(_0x3641)
 {
-	if (!_0x1C6D2.startsWith("http"))
+	if (!_0x3641.startsWith("http"))
 	{
-		_0x1C6D2 = "http://" + _0x1C6D2
+		_0x3641 = "http://" + _0x3641
 	};
-	var _0x1D0E2 = "<a onclick=\'return clicksLink();\' href=\'" + _0x1C6D2 + "\' target=\'_blank\'>" + _0x1C6D2 + "</a>";
-	return _0x1D0E2
+	var _0x4CAF = "<a onclick=\'return clicksLink();\' href=\'" + _0x3641 + "\' target=\'_blank\'>" + _0x3641 + "</a>";
+	return _0x4CAF
 }

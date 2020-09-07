@@ -1,5 +1,5 @@
 /**
- * clicksLink extracted from ../../deobfuscated/bundle.js at line 1145-1153
+ * clicksLink extracted from ../../deobfuscated/bundle.js at line 1473-1481
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksLink.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

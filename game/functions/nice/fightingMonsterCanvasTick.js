@@ -29,6 +29,23 @@ function fightingMonsterCanvasTick()
 		}
 		global_canvasFightingMonster2D.shadowBlur = 15;
 		global_canvasFightingMonster2D.shadowColor = "black";
+		if (getItem("freezeTimer") > 0)
+		{
+			global_canvasFightingMonster2D.shadowBlur = 50;
+			global_canvasFightingMonster2D.shadowColor = "cyan";
+		}
+		if (ghostScanRequired() && getItem("ghostScanOn") == 0)
+		{
+			global_canvasFightingMonster2D.globalAlpha = 0.1;
+		}
+		else
+		{
+			global_canvasFightingMonster2D.globalAlpha = 1.0;
+		}
+		if (getItem("hideEnemy") >= 1)
+		{
+			global_canvasFightingMonster2D.globalAlpha = 0;
+		}
 		global_canvasFightingMonster2D.drawImage(mergedPiskel.getImage(), x, y);
 		if (getItem("combatCountDown") > 0)
 		{

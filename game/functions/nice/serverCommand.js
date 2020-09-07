@@ -60,6 +60,9 @@ function serverCommand(client)
 			sendBytes("LOAD_OBJECTS");
 		}
 		break;
+	case "DIALOGUE_CHEF_SPICES":
+		openDialogueSpices();
+		break;
 	case "LOAD_FOOD_OBJECTS":
 		objects_loadFood(client.substr(18));
 		break;
@@ -78,11 +81,17 @@ function serverCommand(client)
 	case "REFRESH_TRADABLES":
 		refreshTradables(client.substr(18));
 		break;
+	case "JS_ALERT":
+		alert(client.substr(9));
+		break;
 	case "REFESH_MARKET":
 		refreshMarket(client.substr(14));
 		refreshMarketGUI();
 		populateMarketTable();
 		displayMarket(true);
+		break;
+	case "COMPLETE_CEMETERY_TOMBS":
+		completeCemeteryTombs();
 		break;
 	case "LOAD_SEED_OBJECTS":
 		objects_loadSeeds(client.substr(18));
@@ -101,7 +110,6 @@ function serverCommand(client)
 		loadOnceOnLogin();
 		sendBytes("READY");
 		document.getElementById("chat-area").style.display = "";
-		initializeTooltips();
 		break;
 	case "TELEPORT_ANIMATION":
 		playTeleportAnimation();
@@ -111,7 +119,9 @@ function serverCommand(client)
 		sendBytes("LOOKING_STARS");
 		break;
 	case "DISPLAY_GAME":
+		global_gameLoaded = true;
 		document.getElementById("login-box").style.display = "none";
+		document.getElementById("navigation-index-bar").style.display = "none";
 		document.getElementById("game").style.display = "";
 		startClientTicks();
 		setInterval(clientTick, 1000);
@@ -119,12 +129,27 @@ function serverCommand(client)
 		{
 			navigate("right-home");
 		}
+		initializeTooltips();
+		refreshTooltips();
+		if (global_newAccount)
+		{
+			dimScreen("combat_animation", true);
+		}
 		break;
 	case "SET_LOCAL_STORAGE":
 		localStorage.setItem(items[0], items[1]);
 		break;
+	case "REFRESH_MARKET_HISTORY":
+		refreshMarketHistory(client.substr(23));
+		break;
 	case "SET_INNER_HTML":
 		setInnerHTML(items[0], items[1]);
+		break;
+	case "EXPLORER_MESSAGE":
+		setTimeout(function ()
+		{
+			confirmDialogue("images/explorer.png", "Pssst. Come talk to me.<br /><br /><span style='color:grey'>Explorer added to combat section.</span>", "Close", "", "");
+		}, 4000);
 		break;
 	case "CONFIRM_DIALOGUE":
 		returnCommand = items[4];
@@ -185,6 +210,9 @@ function serverCommand(client)
 	case "FARADOX_MINION2_DEAD":
 		dimScreen("release_faradox_2", true);
 		break;
+	case "COMBAT_TUTORIAL":
+		combatTutorial(client.substr(16));
+		break;
 	case "ACCESS_MANA":
 		dimScreen("mana", true);
 		break;
@@ -194,14 +222,23 @@ function serverCommand(client)
 	case "SKY_CRYSTAL_SHAKE":
 		doSkyCrystalShake();
 		break;
+	case "SHAKE_ROCKET_IMAGE":
+		shakeRocketNotificationImage();
+		break;
 	case "PLAY_DEAD_SCREEN":
 		dimScreen("dead_hero", true);
+		break;
+	case "PLAY_DEAD_SCREEN_2":
+		dimScreen("dead_hero_special", true);
 		break;
 	case "REFRESH_TREE_LIST_TAB":
 		refreshTreeListTab(client.substr(22));
 		break;
 	case "REFRESH_COMBAT_LOGGER":
 		refreshCombatLogger(client.substr(22));
+		break;
+	case "REFRESH_LOOT_BAGS_LOGGER":
+		refreshLootBagsLogger(client.substr(25));
 		break;
 	case "REFRESH_TRANSFORM_LOGGER":
 		refreshTransferLogger(client.substr(25));
@@ -228,6 +265,23 @@ function serverCommand(client)
 		break;
 	case "REFRESH_MUTE_LIST":
 		loadMuteList(client.substr(18));
+		break;
+	case "PLAY_NOTIFICATION":
+		if (global_setItemsTickCount < 5)
+		{
+			return;
+		}
+		if (!global_titleNotification)
+		{
+			if (localStorage.getItem("notificationSound") != null)
+			{
+				playSound("sounds/twinkle.mp3");
+			}
+			global_titleNotification = true;
+		}
+		break;
+	case "STOP_NOTIFICATION":
+		global_titleNotification = false;
 		break;
 	}
 };

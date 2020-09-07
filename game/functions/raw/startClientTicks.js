@@ -1,5 +1,5 @@
 /**
- * startClientTicks extracted from ../../deobfuscated/bundle.js at line 921-928
+ * startClientTicks extracted from ../../deobfuscated/bundle.js at line 1191-1198
  *
  * If this file doesn't contain a function, there is an error in ../raw/startClientTicks.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

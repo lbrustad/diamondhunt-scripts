@@ -6,7 +6,7 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 	var element = document.createElement("div");
 	element.setAttribute("class", "item-box");
 	element.setAttribute("onclick", "clicksItem('" + name + "')");
-	element.setAttribute("oncontextmenu", "rightClicksItem('" + name + "'); return false;");
+	element.setAttribute("oncontextmenu", "return rightClicksItem('" + name + "');");
 	element.setAttribute("id", "item-box-" + name);
 	if (data != "")
 	{
@@ -34,6 +34,7 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 	var thisSystemDiv = document.createElement("div");
 	thisSystemDiv.setAttribute("style", "text-align:center");
 	var style = getImage("images/" + name + getImageExtention(name), "item-" + name + "-box-image");
+	style.setAttribute("id", "item-box-" + name + "-image");
 	style.setAttribute("class", "img-100");
 	var wrapper = document.createElement("item-" + name);
 	wrapper.setAttribute("type", "number");
@@ -41,7 +42,9 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 	wrapper.innerHTML = formatNumber(getItem(name), false);
 	if (getterOrType == 1)
 	{
-		wrapper = document.createElement("span");
+		wrapper = document.createElement("div");
+		wrapper.setAttribute("style", "text-align:center");
+		wrapper.setAttribute("id", "itemBox-" + name + "-amount");
 		wrapper.innerHTML = "";
 	}
 	if (name == "researcher")
@@ -64,6 +67,13 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 		wrapper.setAttribute("style", "text-align:center;display:block;");
 		wrapper.innerHTML = "<span id='oxygenTank-itemBox-value'></span>";
 	}
+	if (name.toLowerCase().endsWith("chef"))
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<span id='chef-itemBox-value'></span>";
+	}
 	if (name.toLowerCase().endsWith("bonemealbin"))
 	{
 		wrapper = document.createElement("span");
@@ -71,11 +81,116 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 		wrapper.setAttribute("style", "text-align:center;display:block;");
 		wrapper.innerHTML = "<img src='images/bonemeal.png' class='img-20' /> " + "<item-bonemeal>0</item-bonemeal>";
 	}
-	if (name == "museum")
+	if (name == "axe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
 		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 5 - 10";
+	}
+	if (name == "sapphireAxe")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 10 - 15";
+	}
+	if (name == "emeraldAxe")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 15 - 20";
+	}
+	if (name == "rubyAxe")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 20 - 25";
+	}
+	if (name == "diamondAxe")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 25 - 30";
+	}
+	if (name == "chainsaw")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +5";
+	}
+	if (name == "sapphireChainsaw")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +10";
+	}
+	if (name == "emeraldChainsaw")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +15";
+	}
+	if (name == "rubyChainsaw")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +20";
+	}
+	if (name == "diamondChainsaw")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +25";
+	}
+	if (name == "trowel")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +5%";
+	}
+	if (name == "sapphireTrowel")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +10%";
+	}
+	if (name == "emeraldTrowel")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +15%";
+	}
+	if (name == "rubyTrowel")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +20%";
+	}
+	if (name == "diamondTrowel")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +25%";
+	}
+	if (name == "museum")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<span id='museum-info-itembox'>" + getMuseumItemsCount()[0] + "/" + getMuseumItemsCount()[1] + "</span>";
 	}
 	if (name == "puzzleChest1")
@@ -104,6 +219,12 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("style", "text-align:center;display:block;");
 		wrapper.innerHTML = "<span id='darkCrystalUsed-label'></span>";
+	}
+	if (name.toLowerCase().endsWith("stew"))
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("style", "text-align:center;display:block;font-size:9pt;");
+		wrapper.innerHTML = "<img src='images/energy.png' class='img-20' /> <item-stewEnergy type='number'>0</item-stewEnergy> " + "<br /> <img src='images/hourglass_grey.png' class='img-20' /> <item-stewCooldownReduction type='timer'>0</item-stewCooldownReduction>";
 	}
 	element.appendChild(img);
 	thisSystemDiv.appendChild(style);

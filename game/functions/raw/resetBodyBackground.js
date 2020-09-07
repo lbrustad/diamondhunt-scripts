@@ -1,5 +1,5 @@
 /**
- * resetBodyBackground extracted from ../../deobfuscated/bundle.js at line 10648-10651
+ * resetBodyBackground extracted from ../../deobfuscated/bundle.js at line 14668-14671
  *
  * If this file doesn't contain a function, there is an error in ../raw/resetBodyBackground.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

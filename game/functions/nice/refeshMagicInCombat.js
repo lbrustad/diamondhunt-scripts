@@ -10,12 +10,12 @@ function refeshMagicInCombat()
 	{
 		return;
 	}
-	var mapboxIds = ["heal", "poison", "reflect", "fire", "teleport"];
-	var conf_shortcuts_icon = [3, 5, 3, 2, 0];
-	var i = 0;
-	for (; i < mapboxIds.length; i++)
+	var crossfilterable_layers = ["heal", "poison", "reflect", "fire", "teleport", "freeze", "ghostScan", "invisibility"];
+	var expRecords = [3, 5, 3, 2, 0, 5, 0, 1];
+	var layer_i = 0;
+	for (; layer_i < crossfilterable_layers.length; layer_i++)
 	{
-		var id = mapboxIds[i];
+		var id = crossfilterable_layers[layer_i];
 		if (getItem(id) > 0)
 		{
 			showElement("combat-spell-" + id);
@@ -26,7 +26,7 @@ function refeshMagicInCombat()
 			}
 			else
 			{
-				if (conf_shortcuts_icon[i] > getItem("heroMana"))
+				if (expRecords[layer_i] > getItem("heroMana"))
 				{
 					document.getElementById("combat-spell-" + id + "-icon").style.filter = "brightness(20%) sepia(100%) hue-rotate(190deg) saturate(500%)";
 					hideElement("combat-spell-" + id + "-cooldown");

@@ -128,6 +128,36 @@ function refreshTreeListTab()
 	d = d + ("<span style='font-size:12pt;color:yellow'>Chopped " + getItem(command + "ChoppedTotal") + "</span>");
 	d = d + "</span>";
 	d = d + "</div>";
+	if (getItem("researcherWoodcutting") >= 5)
+	{
+		command = "appleTree";
+		rarity = "Uncommon";
+		th_field = "45";
+		if (getItem(command + "ChoppedTotal") > 0)
+		{
+			path = getItemName(command).toUpperCase();
+			backgroundImageStyle = _a_;
+			str = "<img src='images/" + command + ".png' style='float:left;' class='img-100' />";
+		}
+		else
+		{
+			backgroundImageStyle = "";
+			path = "???";
+			str = manyParticipants;
+		}
+		d = d + ("<div class='mobile-style' style='" + backgroundImageStyle + "'>");
+		d = d + str;
+		d = d + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + path);
+		d = d + "<br />";
+		d = d + ("<span style='color:white;font-size:12pt;'>" + rarity + "</span>");
+		d = d + "<br />";
+		d = d + ("<span style='color:grey;font-size:12pt;'>Level " + th_field + "</span>");
+		d = d + "<br />";
+		d = d + "<br />";
+		d = d + ("<span style='font-size:12pt;color:yellow'>Chopped " + getItem(command + "ChoppedTotal") + "</span>");
+		d = d + "</span>";
+		d = d + "</div>";
+	}
 	command = "mapleTree";
 	rarity = "Uncommon";
 	th_field = "50";
@@ -158,6 +188,63 @@ function refreshTreeListTab()
 	command = "lavaTree";
 	rarity = "Rare";
 	th_field = "60";
+	if (getItem(command + "ChoppedTotal") > 0)
+	{
+		path = getItemName(command).toUpperCase();
+		backgroundImageStyle = _a_;
+		str = "<img src='images/" + command + ".png' style='float:left;' class='img-100' />";
+	}
+	else
+	{
+		backgroundImageStyle = "";
+		path = "???";
+		str = manyParticipants;
+	}
+	d = d + ("<div class='mobile-style' style='" + backgroundImageStyle + "'>");
+	d = d + str;
+	d = d + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + path);
+	d = d + "<br />";
+	d = d + ("<span style='color:white;font-size:12pt;'>" + rarity + "</span>");
+	d = d + "<br />";
+	d = d + ("<span style='color:grey;font-size:12pt;'>Level " + th_field + "</span>");
+	d = d + "<br />";
+	d = d + "<br />";
+	d = d + ("<span style='font-size:12pt;color:yellow'>Chopped " + getItem(command + "ChoppedTotal") + "</span>");
+	d = d + "</span>";
+	d = d + "</div>";
+	if (getItem("researcherWoodcutting") >= 5)
+	{
+		command = "bananaTree";
+		rarity = "Rare";
+		th_field = "63";
+		if (getItem(command + "ChoppedTotal") > 0)
+		{
+			path = getItemName(command).toUpperCase();
+			backgroundImageStyle = _a_;
+			str = "<img src='images/" + command + ".png' style='float:left;' class='img-100' />";
+		}
+		else
+		{
+			backgroundImageStyle = "";
+			path = "???";
+			str = manyParticipants;
+		}
+		d = d + ("<div class='mobile-style' style='" + backgroundImageStyle + "'>");
+		d = d + str;
+		d = d + ("<span style='float:right;color:orange;font-size:18pt;font-weight:bold;text-align:right;'>" + path);
+		d = d + "<br />";
+		d = d + ("<span style='color:white;font-size:12pt;'>" + rarity + "</span>");
+		d = d + "<br />";
+		d = d + ("<span style='color:grey;font-size:12pt;'>Level " + th_field + "</span>");
+		d = d + "<br />";
+		d = d + "<br />";
+		d = d + ("<span style='font-size:12pt;color:yellow'>Chopped " + getItem(command + "ChoppedTotal") + "</span>");
+		d = d + "</span>";
+		d = d + "</div>";
+	}
+	command = "pineTree";
+	rarity = "Rare";
+	th_field = "65";
 	if (getItem(command + "ChoppedTotal") > 0)
 	{
 		path = getItemName(command).toUpperCase();

@@ -1,21 +1,32 @@
 /**
- * setMaxOreThatCanSmelt extracted from ../../deobfuscated/bundle.js at line 7714-7727
+ * setMaxOreThatCanSmelt extracted from ../../deobfuscated/bundle.js at line 10074-10098
  *
  * If this file doesn't contain a function, there is an error in ../raw/setMaxOreThatCanSmelt.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function setMaxOreThatCanSmelt(_0x1C91E, _0x1D34A)
+function setMaxOreThatCanSmelt(_0x3B03, _0x51C8)
 {
-	var _0x1E2E0 = getItem(_0x1C91E);
-	if (getItem(_0x1C91E) >= getItem("furnaceCapacity"))
+	var _0x770D = getItem(_0x3B03);
+	if (getItem(_0x3B03) >= getItem("furnaceCapacity"))
 	{
-		_0x1E2E0 = getItem("furnaceCapacity")
+		_0x770D = getItem("furnaceCapacity")
 	};
-	var _0x1E2EE = _0x1E2E0 * getOilCost(_0x1C91E);
-	if (getItem("oil") < _0x1E2EE)
+	if (_0x3B03 == "titanium")
 	{
-		_0x1E2E0 = getItem("oil") / getOilCost(_0x1C91E)
+		var _0x76F0 = _0x770D * getCharcoalCost(_0x3B03);
+		if (getItem("charcoal") < _0x76F0)
+		{
+			_0x770D = getItem("charcoal") / getCharcoalCost(_0x3B03)
+		}
+	}
+	else
+	{
+		var _0x772A = _0x770D * getOilCost(_0x3B03);
+		if (getItem("oil") < _0x772A)
+		{
+			_0x770D = getItem("oil") / getOilCost(_0x3B03)
+		}
 	};
-	document.getElementById("dialogue-furnace-smelt-amount").value = parseInt(_0x1E2E0)
+	document.getElementById("dialogue-furnace-smelt-amount").value = parseInt(_0x770D)
 }

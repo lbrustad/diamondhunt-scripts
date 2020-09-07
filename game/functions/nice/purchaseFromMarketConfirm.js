@@ -7,5 +7,12 @@ function purchaseFromMarketConfirm()
 	var ratio = document.getElementById("dialogue-market-buy-hidden-price").value;
 	var code_content = document.getElementById("dialogue-market-buy-hidden-amount").value;
 	var value = document.getElementById("dialogue-market-buy-input").value;
-	confirmDialogue("images/shop_black.png", "You are about to purchase:<br /><br /><img src='images/" + vulnData + ".png' class='img-30' /> " + formatNumber(value) + " for <img src='images/coins.png' class='img-30' /> " + formatNumber(value * ratio) + " coins.", "Confirm", "Cancel", "MARKET_BUY=" + countWrap + "~" + value + "~" + vulnData + "~" + ratio);
+	if (vulnData == "donorCoins")
+	{
+		confirmDialogue("images/shop_black.png", "You are about to purchase:<br /><br /><img src='images/" + vulnData + ".png' class='img-30' /> " + formatNumber(value) + " for <img src='images/coins.png' class='img-30' />" + formatNumber(value * ratio) + " coins.<br /><br /><b style='color:red'>Warning:</b> Coins will automatically bind to your account.", "Confirm", "Cancel", "MARKET_BUY=" + countWrap + "~" + value + "~" + vulnData + "~" + ratio);
+	}
+	else
+	{
+		confirmDialogue("images/shop_black.png", "You are about to purchase:<br /><br /><img src='images/" + vulnData + ".png' class='img-30' /> " + formatNumber(value) + " for <img src='images/coins.png' class='img-30' /> " + formatNumber(value * ratio) + " coins.", "Confirm", "Cancel", "MARKET_BUY=" + countWrap + "~" + value + "~" + vulnData + "~" + ratio);
+	}
 };

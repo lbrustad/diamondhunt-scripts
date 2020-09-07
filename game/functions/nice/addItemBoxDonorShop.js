@@ -51,7 +51,7 @@ function addItemBoxDonorShop(name, data, warning, type, content, switchTextDiv)
 	else
 	{
 		body = document.createElement("div");
-		body.innerHTML = "<i style='font-size:12pt;color:yellow;'>1.00$ EACH</i>";
+		body.innerHTML = "<i style='font-size:12pt;color:yellow;'>1.00$ EACH<br /><span style='color:grey;font-size:10pt;'>PayPal</span><br /><span style='color:grey;font-size:10pt;'>(BTC Accepted Too)</span></i>";
 		testNode.appendChild(body);
 	}
 	node.appendChild(div);

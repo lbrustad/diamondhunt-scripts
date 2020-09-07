@@ -9,6 +9,7 @@ function loadMiningOreBoxes()
 	addItemBoxOreToMine("silver", "SILVER", 10);
 	addItemBoxOreToMine("gold", "GOLD", 20);
 	addItemBoxOreToMine("promethium", "PROMETHIUM", 40);
+	addItemBoxOreToMine("titanium", "TITANIUM", 65);
 	refreshMiningAllocationIcons();
 	if (!loaded_loadMiningOreBoxes)
 	{

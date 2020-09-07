@@ -1,13 +1,13 @@
 /**
- * getOilCost extracted from ../../deobfuscated/bundle.js at line 2448-2471
+ * getOilCost extracted from ../../deobfuscated/bundle.js at line 3160-3187
  *
  * If this file doesn't contain a function, there is an error in ../raw/getOilCost.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getOilCost(_0x1CF30)
+function getOilCost(_0x47D0)
 {
-	switch (_0x1CF30)
+	switch (_0x47D0)
 	{
 	case "drills":
 		;
@@ -15,10 +15,14 @@ function getOilCost(_0x1CF30)
 		;
 	case "sand":
 		return 1;
-	case "iron":
-		;
 	case "crushers":
+		return 3;
+	case "iron":
 		return 5;
+	case "giantDrills":
+		return 10;
+	case "excavators":
+		return 30;
 	case "silver":
 		return 20;
 	case "gold":

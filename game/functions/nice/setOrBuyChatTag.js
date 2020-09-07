@@ -2,7 +2,7 @@
 
 function setOrBuyChatTag(frustum2DWidth, mode)
 {
-	if (mode == "SET")
+	if (mode == "SET" || mode == "UNSET")
 	{
 		sendBytes("SET_PRICE_TAG=" + frustum2DWidth);
 	}

@@ -1,19 +1,19 @@
 /**
- * HitAnimation extracted from ../../deobfuscated/bundle.js at line 10357-10448
+ * HitAnimation extracted from ../../deobfuscated/bundle.js at line 14234-14384
  *
  * If this file doesn't contain a function, there is an error in ../raw/HitAnimation.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function HitAnimation(_0x1C796, _0x1C7B2, _0x1C77A, _0x1C742, _0x1C734, _0x1C788, _0x1C7A4)
+function HitAnimation(_0x37D7, _0x3811, _0x379D, _0x3729, _0x370C, _0x37BA, _0x37F4)
 {
-	this.target = _0x1C796;
-	this.number = _0x1C7B2;
-	this.icon = _0x1C77A;
-	this.color = _0x1C742;
-	this.borderColor = _0x1C734;
-	this.otherInfo = _0x1C788;
-	this.time = _0x1C7A4;
+	this.target = _0x37D7;
+	this.number = _0x3811;
+	this.icon = _0x379D;
+	this.color = _0x3729;
+	this.borderColor = _0x370C;
+	this.otherInfo = _0x37BA;
+	this.time = _0x37F4;
 	this.frameAt = 0;
 	this.MAX_FRAMES = 60;
 	this.getOffset = function ()
@@ -54,35 +54,94 @@ function HitAnimation(_0x1C796, _0x1C7B2, _0x1C77A, _0x1C742, _0x1C734, _0x1C788
 			return 75
 		}
 	};
-	this.draw = function (_0x1D5EA, _0x1D5F8)
+	this.draw = function (_0x5820, _0x583D)
 	{
-		var _0x1D5CE = global_canvasFightingMonster2D;
+		var _0x57E6 = global_canvasFightingMonster2D;
 		if (this.target == "hero")
 		{
-			_0x1D5CE = global_canvasFightingHero2D
+			_0x57E6 = global_canvasFightingHero2D
 		};
-		var _0x1D5B2 = 80;
-		var _0x1D5C0 = 130;
-		var _0x1D5DC = 60;
+		var _0x57AC = 80;
+		var _0x57C9 = 130;
+		var _0x5803 = 60;
 		if (this.number.length > 1)
 		{
-			_0x1D5C0 = 160
+			_0x57C9 = 160
+		};
+		if (this.number.length == 3)
+		{
+			_0x57C9 = 200
+		};
+		if (this.number == "Miss")
+		{
+			_0x57C9 = 240
+		};
+		if (this.number == "Immune")
+		{
+			_0x57C9 = 330
 		};
 		if (this.icon == "images/coins.png")
 		{
-			_0x1D5C0 = 800;
-			_0x1D5EA = 0
+			_0x57C9 = 800;
+			_0x5820 = 0
 		};
-		_0x1D5CE.fillStyle = _0x1C742;
-		_0x1D5CE.globalAlpha = 0.5;
-		_0x1D5CE.fillRect(_0x1D5EA, _0x1D5F8 - this.getOffset(), _0x1D5C0, _0x1D5B2);
-		_0x1D5CE.globalAlpha = 1.0;
-		_0x1D5CE.fillStyle = this.borderColor;
-		_0x1D5CE.strokeRect(_0x1D5EA, _0x1D5F8 - this.getOffset(), _0x1D5C0, _0x1D5B2);
-		_0x1D5CE.drawImage(getImage(this.icon, this.target + "_hitsplat"), _0x1D5EA, _0x1D5F8 - this.getOffset(), _0x1D5B2, _0x1D5B2);
-		_0x1D5CE.font = "60px Arial";
-		_0x1D5CE.fillStyle = "black";
-		_0x1D5CE.fillText(this.number, _0x1D5EA + 130 - 45, _0x1D5F8 - this.getOffset() + 60);
+		if (this.icon == "images/invisibilityIcon.png")
+		{
+			_0x57C9 = 240;
+			_0x5820 = 0
+		};
+		if (this.icon == "images/invisibilityAmulet.png")
+		{
+			_0x57C9 = 240;
+			_0x5820 = 0
+		};
+		if (this.icon == "images/bushyBlockIcon.png")
+		{
+			_0x57C9 = 250;
+			_0x5820 = 0
+		};
+		if (this.icon == "images/stab_dark.png")
+		{
+			_0x57C9 = 250;
+			_0x5820 = 0
+		};
+		if (this.number.endsWith("/30)"))
+		{
+			_0x57C9 = 330;
+			_0x5820 = 0
+		};
+		if (this.number == "")
+		{
+			_0x57C9 = 80
+		};
+		if (this.number.length == 10)
+		{
+			_0x57C9 = 350
+		};
+		_0x57E6.fillStyle = _0x3729;
+		_0x57E6.globalAlpha = 0.5;
+		_0x57E6.fillRect(_0x5820, _0x583D - this.getOffset(), _0x57C9, _0x57AC);
+		_0x57E6.globalAlpha = 1.0;
+		_0x57E6.fillStyle = this.borderColor;
+		_0x57E6.strokeRect(_0x5820, _0x583D - this.getOffset(), _0x57C9, _0x57AC);
+		_0x57E6.drawImage(getImage(this.icon, this.target + "_hitsplat"), _0x5820, _0x583D - this.getOffset(), _0x57AC, _0x57AC);
+		if (this.number.length == 10)
+		{
+			_0x57E6.font = "30px Arial"
+		}
+		else
+		{
+			_0x57E6.font = "60px Arial"
+		};
+		_0x57E6.fillStyle = "black";
+		if (this.number.length == 10)
+		{
+			_0x57E6.fillText(this.number, _0x5820 + 130 - 45, _0x583D - this.getOffset() - 12 + 60)
+		}
+		else
+		{
+			_0x57E6.fillText(this.number, _0x5820 + 130 - 45, _0x583D - this.getOffset() + 60)
+		};
 		this.frameAt++;
 		if (this.frameAt >= this.MAX_FRAMES)
 		{

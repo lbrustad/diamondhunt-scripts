@@ -1,5 +1,5 @@
 /**
- * BatMonster extracted from ../../deobfuscated/bundle.js at line 8976-9025
+ * BatMonster extracted from ../../deobfuscated/bundle.js at line 12189-12241
  *
  * If this file doesn't contain a function, there is an error in ../raw/BatMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -17,7 +17,10 @@ function BatMonster()
 		animationObj = this.currentAnimation;
 		if (this.speedAt == animationObj.speed)
 		{
-			this.frameAt++;
+			if (getItem("freezeTimer") == 0)
+			{
+				this.frameAt++
+			};
 			if (this.frameAt >= animationObj.getNumberOfFrames())
 			{
 				this.frameAt = 0
@@ -31,11 +34,11 @@ function BatMonster()
 	};
 	this.preloadImages = function ()
 	{
-		var _0x1CC12 = this.idleAnimationObject;
-		for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1CC12.getNumberOfFrames(); _0x1C6B6++)
+		var _0x413E = this.idleAnimationObject;
+		for (var _0x3607 = 0; _0x3607 < _0x413E.getNumberOfFrames(); _0x3607++)
 		{
-			var _0x1CC20 = getImage("images/" + this.name + "_" + "monster" + "_" + _0x1CC12.name + "_" + _0x1CC12.framesArray[_0x1C6B6] + ".png", this.name + "_" + [_0x1C6B6] + "_" + _0x1CC12);
-			$("#section-combat-loader").append(_0x1CC20)
+			var _0x415B = getImage("images/" + this.name + "_" + "monster" + "_" + _0x413E.name + "_" + _0x413E.framesArray[_0x3607] + ".png", this.name + "_" + [_0x3607] + "_" + _0x413E);
+			$("#section-combat-loader").append(_0x415B)
 		}
 	};
 	this.getImage = function ()

@@ -10,6 +10,10 @@ function getOilPerSecondForAItem(canCreateDiscussions)
 		return 5;
 	case "silverOilWell":
 		return 10;
+	case "goldOilWell":
+		return 20;
+	case "promethiumOilWell":
+		return 35;
 	default:
 		return 0;
 	}

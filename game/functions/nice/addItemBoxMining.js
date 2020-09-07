@@ -1,6 +1,6 @@
 'use strict';
 
-function addItemBoxMining(name, setting, n, fill, color, title, duration, result)
+function addItemBoxMining(name, setting, n, fill, color, text, duration, result)
 {
 	var h = document.getElementById(n);
 	var node = document.createElement("div");
@@ -15,7 +15,14 @@ function addItemBoxMining(name, setting, n, fill, color, title, duration, result
 	node.style.border = "1px solid " + color;
 	var div = document.createElement("div");
 	div.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;");
-	div.innerHTML = title;
+	if (name == "miner")
+	{
+		div.innerHTML = "<img style='display:none;' id='wrench-icon-miner' src='images/wrench.png' class='img-20' /> " + text;
+	}
+	else
+	{
+		div.innerHTML = text;
+	}
 	if (result)
 	{
 		div.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;color:orange;");

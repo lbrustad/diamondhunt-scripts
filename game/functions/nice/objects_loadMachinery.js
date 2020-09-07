@@ -24,7 +24,9 @@ function objects_loadMachinery(clusterShardData)
 		level++;
 		var max = data[level];
 		level++;
-		polygon = new Machinery(map, code, rows, speed, color, val, start, max);
+		var method = data[level];
+		level++;
+		polygon = new Machinery(map, code, rows, speed, color, val, start, max, method);
 		global_machineryMap[i] = polygon;
 		i++;
 	}

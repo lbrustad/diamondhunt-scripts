@@ -30,7 +30,10 @@ function FaradoxMinionMonster()
 		animationObj = this.currentAnimation;
 		if (this.speedAt == animationObj.speed)
 		{
-			this.frameAt++;
+			if (getItem("freezeTimer") == 0)
+			{
+				this.frameAt++;
+			}
 			if (this.frameAt >= animationObj.getNumberOfFrames())
 			{
 				this.frameAt = 0;

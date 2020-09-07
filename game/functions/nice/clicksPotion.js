@@ -9,13 +9,41 @@ function clicksPotion(name)
 	}
 	else
 	{
-		if (name == "sapphireStardustPotion")
+		if (name == "repelPotion1")
 		{
-			confirmDialogue("images/" + name + ".png", "Pour over a sapphire?<br /><br /><span style='color:grey'>You will lose your sapphire.</span>", "Pour on Sapphire", "Cancel", "DRINK=" + name);
+			clicksRepelPotion(1);
 		}
 		else
 		{
-			confirmDialogue("images/" + name + ".png", "Drink this potion?", "Drink", "Cancel", "DRINK=" + name);
+			if (name == "repelPotion2")
+			{
+				clicksRepelPotion(2);
+			}
+			else
+			{
+				if (name == "repelPotion3")
+				{
+					clicksRepelPotion(3);
+				}
+				else
+				{
+					if (name == "sapphireStardustPotion")
+					{
+						confirmDialogue("images/" + name + ".png", "Pour over a sapphire?<br /><br /><span style='color:grey'>You will lose your sapphire.</span>", "Pour on Sapphire", "Cancel", "DRINK=" + name);
+					}
+					else
+					{
+						if (name == "largeEmeraldStardustPotion")
+						{
+							confirmDialogue("images/" + name + ".png", "Pour over a emerald?<br /><br /><span style='color:grey'>You will lose your emerald.</span>", "Pour on Emerald", "Cancel", "DRINK=" + name);
+						}
+						else
+						{
+							confirmDialogue("images/" + name + ".png", "Drink this potion?", "Drink", "Cancel", "DRINK=" + name);
+						}
+					}
+				}
+			}
 		}
 	}
 };

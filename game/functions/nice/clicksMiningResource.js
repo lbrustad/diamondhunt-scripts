@@ -4,6 +4,17 @@ function clicksMiningResource(prop)
 {
 	var prefixes = ["stone", "copper", "iron", "silver", "gold", "promethium", "titanium", "ancient"];
 	var patch3c = "";
+	if (prop == "miner" && getItem("wrench") > 0)
+	{
+		patch3c = patch3c + '<div onclick="closeDialogue(\'dialogue-confirm\');clicksWrenchDialogue()" class="dialogue-fancy-button-div">';
+		patch3c = patch3c + '<table width="100%">';
+		patch3c = patch3c + "<tr>";
+		patch3c = patch3c + '<td width="120px"><img src="images/wrench.png" class="img-100" /></td>';
+		patch3c = patch3c + '<td style="text-align:right;"><span style="font-size:20pt;color:orange">WRENCH</span><hr class="hr-thin" /><i style="color:grey">Set up wrench options.</i></td>';
+		patch3c = patch3c + "</tr>";
+		patch3c = patch3c + "</table>";
+		patch3c = patch3c + "</div>";
+	}
 	patch3c = patch3c + ("<div onclick=\"sendBytes('MINING_ALLOCATE_RESET=" + prop + "');closeDialogue('dialogue-confirm')\" class=\"dialogue-fancy-button-div\">");
 	patch3c = patch3c + '<table width="100%">';
 	patch3c = patch3c + "<tr>";

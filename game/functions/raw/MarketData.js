@@ -1,19 +1,19 @@
 /**
- * MarketData extracted from ../../deobfuscated/bundle.js at line 12543-12554
+ * MarketData extracted from ../../deobfuscated/bundle.js at line 17486-17497
  *
  * If this file doesn't contain a function, there is an error in ../raw/MarketData.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function MarketData(_0x1D96A, _0x1D978, _0x1C83E, _0x1D932, _0x1CDD2, _0x1D95C, _0x1D94E, _0x1D940, _0x1D986)
+function MarketData(_0x5FD4, _0x5FF1, _0x3933, _0x5F60, _0x44DE, _0x5FB7, _0x5F9A, _0x5F7D, _0x600E)
 {
-	this.keyFound = _0x1D96A;
-	this.playerId = _0x1D978;
-	this.itemName = _0x1C83E;
-	this.itemAmount = _0x1D932;
-	this.price = _0x1CDD2;
-	this.itemSlot = _0x1D95C;
-	this.itemCollect = _0x1D94E;
-	this.itemCategory = _0x1D940;
-	this.postDate = _0x1D986
+	this.keyFound = _0x5FD4;
+	this.playerId = _0x5FF1;
+	this.itemName = _0x3933;
+	this.itemAmount = _0x5F60;
+	this.price = _0x44DE;
+	this.itemSlot = _0x5FB7;
+	this.itemCollect = _0x5F9A;
+	this.itemCategory = _0x5F7D;
+	this.postDate = _0x600E
 }

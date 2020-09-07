@@ -1,30 +1,30 @@
 /**
- * startMonsterAnimation extracted from ../../deobfuscated/bundle.js at line 10119-10141
+ * startMonsterAnimation extracted from ../../deobfuscated/bundle.js at line 13905-13927
  *
  * If this file doesn't contain a function, there is an error in ../raw/startMonsterAnimation.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function startMonsterAnimation(_0x1CC2E)
+function startMonsterAnimation(_0x4178)
 {
-	if (_0x1CC2E.startsWith("shake"))
+	if (_0x4178.startsWith("shake"))
 	{
-		var _0x1E318 = _0x1CC2E.split("~")[1];
+		var _0x7781 = _0x4178.split("~")[1];
 		global_monsterShake = true;
 		setTimeout(function ()
 		{
 			global_monsterShake = false
-		}, parseInt(_0x1E318 * 1000))
+		}, parseInt(_0x7781 * 1000))
 	}
 	else
 	{
-		if (_0x1CC2E == 0)
+		if (_0x4178 == 0)
 		{
 			resetAnimationOfCurrentFightToIdle()
 		}
 		else
 		{
-			getMonsterObject(getItem("monsterName")).callAnimation(parseInt(_0x1CC2E))
+			getMonsterObject(getItem("monsterName")).callAnimation(parseInt(_0x4178))
 		}
 	}
 }

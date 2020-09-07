@@ -38,15 +38,22 @@ function craftItem(type, name, count)
 						}
 						else
 						{
-							if (type.endsWith("Potion"))
+							if (type == "iceArrow")
 							{
-								openInputDialogue("Mix Potion", "images/" + type + ".png", type, 1, [type], [1], brewingRecipes[type].recipe, brewingRecipes[type].recipeCost, "Mix", "BREW", "Potions generally give you a temporary buff when drank.");
+								openInputDialogue("Crafting Arrows", "images/iceArrow.png", "iceArrow", 1, ["iceArrow"], [1], ["iceFeather", "pineLogs", "iceBones"], [1, 1, 1], "Craft", "MULTI_CRAFT", "Used with a bow to shoot ice arrows at your enemy.");
 							}
 							else
 							{
-								if (type == "salad" || type.startsWith("snakeSushi") || type.startsWith("oysterMornay") || type.startsWith("seaweedChicken"))
+								if (type.endsWith("Potion") || type.endsWith("Potion1") || type.endsWith("Potion2"))
 								{
-									openInputDialogue("Prepare Food", "images/" + type + ".png", type, 1, [type], [1], cookingRecipes[type].recipe, cookingRecipes[type].recipeCost, "Prepare", "PREPARE_FOOD", "Additional energy source at the cost of preperation time.");
+									openInputDialogue("Mix Potion", "images/" + type + ".png", type, 1, [type], [1], brewingRecipes[type].recipe, brewingRecipes[type].recipeCost, "Mix", "BREW", "Potions generally give you a temporary buff when drank.");
+								}
+								else
+								{
+									if (type == "salad" || type.startsWith("snakeSushi") || type.startsWith("oysterMornay") || type.startsWith("seaweedChicken") || type.startsWith("batSkinSushi"))
+									{
+										openInputDialogue("Prepare Food", "images/" + type + ".png", type, 1, [type], [1], cookingRecipes[type].recipe, cookingRecipes[type].recipeCost, "Prepare", "PREPARE_FOOD", "Additional energy source at the cost of preperation time.");
+									}
 								}
 							}
 						}

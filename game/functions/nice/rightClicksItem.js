@@ -1,40 +1,59 @@
 'use strict';
 
-function rightClicksItem(stroke_prev)
+function rightClicksItem(solString)
 {
-	if (global_equipmentMap[stroke_prev] != null)
+	if (global_equipmentMap[solString] != null)
 	{
 		if (getItem("needle") > 0)
 		{
-			if (stroke_prev.startsWith("snakeskin"))
+			if (solString.startsWith("snakeskin"))
 			{
-				confirmDialogue("images/needle.png", "<img src='images/" + stroke_prev + ".png' class='img-50' /> Use needle on this? <img src='images/" + stroke_prev + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + stroke_prev);
-				return;
+				confirmDialogue("images/needle.png", "<img src='images/" + solString + ".png' class='img-50' /> Use needle on this? <img src='images/" + solString + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + solString);
+				return false;
 			}
 			else
 			{
-				if (stroke_prev.startsWith("bearFur"))
+				if (solString.startsWith("bearFur"))
 				{
-					confirmDialogue("images/needle.png", "<img src='images/" + stroke_prev + ".png' class='img-50' /> Use needle on this? <img src='images/" + stroke_prev + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + stroke_prev);
-					return;
+					confirmDialogue("images/needle.png", "<img src='images/" + solString + ".png' class='img-50' /> Use needle on this? <img src='images/" + solString + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + solString);
+					return false;
 				}
 				else
 				{
-					if (stroke_prev.startsWith("polarBearFur"))
+					if (solString.startsWith("polarBearFur"))
 					{
-						confirmDialogue("images/needle.png", "<img src='images/" + stroke_prev + ".png' class='img-50' /> Use needle on this? <img src='images/" + stroke_prev + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + stroke_prev);
-						return;
+						confirmDialogue("images/needle.png", "<img src='images/" + solString + ".png' class='img-50' /> Use needle on this? <img src='images/" + solString + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + solString);
+						return false;
 					}
 					else
 					{
-						if (stroke_prev.startsWith("batSkin"))
+						if (solString.startsWith("batSkin"))
 						{
-							confirmDialogue("images/needle.png", "<img src='images/" + stroke_prev + ".png' class='img-50' /> Use needle on this? <img src='images/" + stroke_prev + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + stroke_prev);
-							return;
+							confirmDialogue("images/needle.png", "<img src='images/" + solString + ".png' class='img-50' /> Use needle on this? <img src='images/" + solString + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + solString);
+							return false;
+						}
+						else
+						{
+							if (solString.startsWith("reaper"))
+							{
+								confirmDialogue("images/needle.png", "<img src='images/" + solString + ".png' class='img-50' /> Use needle on this? <img src='images/" + solString + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + solString);
+								return false;
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+	if (solString.endsWith("Seeds") && getItem("planter") == 1)
+	{
+		sendBytes("PLANTER=" + solString);
+		return false;
+	}
+	switch (solString)
+	{
+	case "planter":
+		sendBytes("HARVEST_PLANTER");
+		return false;
 	}
 };

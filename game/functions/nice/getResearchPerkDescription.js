@@ -83,7 +83,7 @@ function getResearchPerkDescription(steal, param)
 	case 2:
 		if (param == "mining")
 		{
-			return "Ability to own 3 drills and 3 crushers.";
+			return "Ability to own 3 of each mining machinery.";
 		}
 		if (param == "crafting")
 		{
@@ -113,6 +113,10 @@ function getResearchPerkDescription(steal, param)
 		{
 			return "5% burn reduction on all ovens.";
 		}
+		if (param == "fishing")
+		{
+			return "Ability to find boat blueprints on the ocean floors.";
+		}
 		break;
 	case 3:
 		if (param == "woodcutting")
@@ -131,7 +135,48 @@ function getResearchPerkDescription(steal, param)
 		{
 			return "Ability to brew mana potions.";
 		}
+		if (param == "fishing")
+		{
+			return "1% chance to bring back a map from a boat trip.";
+		}
+		if (param == "farming")
+		{
+			return "Ability to find blewit mushroom seeds.";
+		}
+		if (param == "mining")
+		{
+			return "Mining machinery can now find geodes.";
+		}
+		if (param == "cooking")
+		{
+			return "Chef's recipe is skippable, and the chef's dialogue now contains more information on the stew proposed.";
+		}
+		if (param == "magic")
+		{
+			return "Teleport cooldown reduced from 15 to 5 minutes.";
+		}
 		break;
+	case 4:
+		if (param == "woodcutting")
+		{
+			return "Chance for fruit trees to grow.";
+		}
+		if (param == "combat")
+		{
+			return "5% chance to encounter shiny monsters, yielding more loot.";
+		}
+		if (param == "farming")
+		{
+			return "5% chance that planting a seed will grow a shiny crop.";
+		}
+		if (param == "brewing")
+		{
+			return "Ability to brew repel potions.<br /><span onclick='infoRepelPotionDialogue()' class='researcher-more-info-button'>more info</span>";
+		}
+		if (param == "cooking")
+		{
+			return "Teleporting on of an area or a boss will refund 10% of the energy used.";
+		}
 	}
 	return "-1";
 };

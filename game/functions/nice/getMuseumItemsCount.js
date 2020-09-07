@@ -17,6 +17,18 @@ function getMuseumItemsCount()
 	{
 		_b_++;
 	}
+	th_field = "rubyGlassHand";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "snowmanCrafted";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
 	th_field = "brokenStinger";
 	_a_++;
 	if (getItem(th_field + "Museum") == 1)
@@ -24,6 +36,24 @@ function getMuseumItemsCount()
 		_b_++;
 	}
 	th_field = "snakeBones";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "giantPearl";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "rareGiantPearl";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "sharkTooth";
 	_a_++;
 	if (getItem(th_field + "Museum") == 1)
 	{

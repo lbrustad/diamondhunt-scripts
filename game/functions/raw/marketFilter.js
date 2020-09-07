@@ -1,39 +1,39 @@
 /**
- * marketFilter extracted from ../../deobfuscated/bundle.js at line 12830-12866
+ * marketFilter extracted from ../../deobfuscated/bundle.js at line 17780-17816
  *
  * If this file doesn't contain a function, there is an error in ../raw/marketFilter.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function marketFilter(_0x1C7B2, _0x1D994)
+function marketFilter(_0x3811, _0x602B)
 {
-	_0x1C7B2 = _0x1C7B2.toLowerCase();
-	var _0x1D9B0 = document.getElementById("market-table");
-	var _0x1D9A2 = _0x1D9B0.getElementsByTagName("tr");
-	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D9A2.length; _0x1C6B6++)
+	_0x3811 = _0x3811.toLowerCase();
+	var _0x6065 = document.getElementById("market-table");
+	var _0x6048 = _0x6065.getElementsByTagName("tr");
+	for (var _0x3607 = 0; _0x3607 < _0x6048.length; _0x3607++)
 	{
-		_0x1D9A2[_0x1C6B6].style.display = "";
-		var _0x1D1EC = _0x1D9A2[_0x1C6B6].id.split("-")[2];
-		if (_0x1D1EC != null)
+		_0x6048[_0x3607].style.display = "";
+		var _0x4ED6 = _0x6048[_0x3607].id.split("-")[2];
+		if (_0x4ED6 != null)
 		{
-			_0x1D1EC = getItemName(_0x1D1EC).toLowerCase();
-			if (_0x1D994)
+			_0x4ED6 = getItemName(_0x4ED6).toLowerCase();
+			if (_0x602B)
 			{
-				if (_0x1D1EC != _0x1C7B2)
+				if (_0x4ED6 != _0x3811)
 				{
-					_0x1D9A2[_0x1C6B6].style.display = "none"
+					_0x6048[_0x3607].style.display = "none"
 				}
 			}
 			else
 			{
-				if (!_0x1D1EC.includes(_0x1C7B2.trim()))
+				if (!_0x4ED6.includes(_0x3811.trim()))
 				{
-					_0x1D9A2[_0x1C6B6].style.display = "none"
+					_0x6048[_0x3607].style.display = "none"
 				}
 			}
 		}
 	};
-	if (_0x1C7B2.length > 0)
+	if (_0x3811.length > 0)
 	{
 		document.getElementById("market-filter-x").style.display = ""
 	}

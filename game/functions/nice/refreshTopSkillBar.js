@@ -70,6 +70,7 @@ function refreshTopSkillBar(canCreateDiscussions)
 	if (level >= 100)
 	{
 		document.getElementById("xp-bar-" + extType + "-inner").style.backgroundColor = "#00ace6";
+		document.getElementById("xp-bar-" + extType + "-inner").style.width = "100" + "%";
 	}
 	extType = "farming";
 	level = getLevel(getItem(extType + "Xp"));

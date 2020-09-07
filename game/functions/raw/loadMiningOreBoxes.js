@@ -1,5 +1,5 @@
 /**
- * loadMiningOreBoxes extracted from ../../deobfuscated/bundle.js at line 905-919
+ * loadMiningOreBoxes extracted from ../../deobfuscated/bundle.js at line 1174-1189
  *
  * If this file doesn't contain a function, there is an error in ../raw/loadMiningOreBoxes.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -14,6 +14,7 @@ function loadMiningOreBoxes()
 	addItemBoxOreToMine("silver", "SILVER", 10);
 	addItemBoxOreToMine("gold", "GOLD", 20);
 	addItemBoxOreToMine("promethium", "PROMETHIUM", 40);
+	addItemBoxOreToMine("titanium", "TITANIUM", 65);
 	refreshMiningAllocationIcons();
 	if (!loaded_loadMiningOreBoxes)
 	{

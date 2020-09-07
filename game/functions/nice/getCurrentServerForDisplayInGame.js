@@ -2,7 +2,7 @@
 
 function getCurrentServerForDisplayInGame()
 {
-	if (wss_host == "ws://127.0.0.1")
+	if (wss_host == "ws://192.168.2.23")
 	{
 		return "local";
 	}

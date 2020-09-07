@@ -1,517 +1,738 @@
 /**
- * getEncountersImgArrayForAreaareaChosen extracted from ../../deobfuscated/bundle.js at line 8086-8595
+ * getEncountersImgArrayForAreaareaChosen extracted from ../../deobfuscated/bundle.js at line 10488-11218
  *
  * If this file doesn't contain a function, there is an error in ../raw/getEncountersImgArrayForAreaareaChosen.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getEncountersImgArrayForAreaareaChosen(_0x1CF5A)
+function getEncountersImgArrayForAreaareaChosen(_0x4827)
 {
-	_0x1CF5A = _0x1CF5A.toLowerCase();
-	var _0x1D390 = [];
-	var _0x1CEEA = "";
-	switch (_0x1CF5A)
+	_0x4827 = _0x4827.toLowerCase();
+	var _0x52EA = [];
+	var _0x473F = "";
+	switch (_0x4827)
 	{
 	case "fields":
-		var _0x1D3BA = false;
-		var _0x1D39E = [];
-		_0x1CEEA = "chicken";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "chicken";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[0] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "rat";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "rat";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[1] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "bee";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "bee";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[2] = getItem(_0x1CEEA + "Kills");
-		var _0x1D3AC = "images/redFightMarker.gif";
-		if (Math.min.apply(null, _0x1D39E) >= 100)
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
 		{
-			_0x1D3AC = "images/blueFightMarker.gif"
+			_0x5324 = "images/blueFightMarker.gif"
 		}
 		else
 		{
-			if (Math.min.apply(null, _0x1D39E) >= 1)
+			if (Math.min.apply(null, _0x5307) >= 1)
 			{
-				_0x1D3AC = "images/greenFightMarker.gif"
+				_0x5324 = "images/greenFightMarker.gif"
 			}
 			else
 			{
-				for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D39E.length; _0x1C6B6++)
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
 				{
-					if (_0x1D39E[0] > 0)
+					if (_0x5307[0] > 0)
 					{
-						_0x1D3AC = "images/yellowFightMarker.gif";
+						_0x5324 = "images/yellowFightMarker.gif";
 						break
 					}
 				}
 			}
 		};
-		_0x1D390.push(_0x1D3AC);
+		_0x52EA.push(_0x5324);
 		break;
 	case "forest":
-		var _0x1D3BA = false;
-		var _0x1D39E = [];
-		_0x1CEEA = "snake";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "snake";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[0] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "ent";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "ent";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[1] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "thief";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "thief";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[2] = getItem(_0x1CEEA + "Kills");
-		var _0x1D3AC = "images/redFightMarker.gif";
-		if (Math.min.apply(null, _0x1D39E) >= 100)
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
 		{
-			_0x1D3AC = "images/blueFightMarker.gif"
+			_0x5324 = "images/blueFightMarker.gif"
 		}
 		else
 		{
-			if (Math.min.apply(null, _0x1D39E) >= 1)
+			if (Math.min.apply(null, _0x5307) >= 1)
 			{
-				_0x1D3AC = "images/greenFightMarker.gif"
+				_0x5324 = "images/greenFightMarker.gif"
 			}
 			else
 			{
-				for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D39E.length; _0x1C6B6++)
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
 				{
-					if (_0x1D39E[0] > 0)
+					if (_0x5307[0] > 0)
 					{
-						_0x1D3AC = "images/yellowFightMarker.gif";
+						_0x5324 = "images/yellowFightMarker.gif";
 						break
 					}
 				}
 			}
 		};
-		_0x1D390.push(_0x1D3AC);
+		_0x52EA.push(_0x5324);
 		break;
 	case "caves":
-		var _0x1D3BA = false;
-		var _0x1D39E = [];
-		_0x1CEEA = "bear";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "bear";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[0] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "spider";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "spider";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[1] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "skeleton";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "skeleton";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[2] = getItem(_0x1CEEA + "Kills");
-		var _0x1D3AC = "images/redFightMarker.gif";
-		if (Math.min.apply(null, _0x1D39E) >= 100)
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
 		{
-			_0x1D3AC = "images/blueFightMarker.gif"
+			_0x5324 = "images/blueFightMarker.gif"
 		}
 		else
 		{
-			if (Math.min.apply(null, _0x1D39E) >= 1)
+			if (Math.min.apply(null, _0x5307) >= 1)
 			{
-				_0x1D3AC = "images/greenFightMarker.gif"
+				_0x5324 = "images/greenFightMarker.gif"
 			}
 			else
 			{
-				for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D39E.length; _0x1C6B6++)
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
 				{
-					if (_0x1D39E[0] > 0)
+					if (_0x5307[0] > 0)
 					{
-						_0x1D3AC = "images/yellowFightMarker.gif";
+						_0x5324 = "images/yellowFightMarker.gif";
 						break
 					}
 				}
 			}
 		};
-		_0x1D390.push(_0x1D3AC);
+		_0x52EA.push(_0x5324);
 		break;
 	case "lavadungeon":
-		var _0x1D3BA = false;
-		var _0x1D39E = [];
-		_0x1CEEA = "lavaAlien";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "lavaAlien";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[0] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "bat";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "bat";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[1] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "fireMage";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "fireMage";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[2] = getItem(_0x1CEEA + "Kills");
-		var _0x1D3AC = "images/redFightMarker.gif";
-		if (Math.min.apply(null, _0x1D39E) >= 100)
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
 		{
-			_0x1D3AC = "images/blueFightMarker.gif"
+			_0x5324 = "images/blueFightMarker.gif"
 		}
 		else
 		{
-			if (Math.min.apply(null, _0x1D39E) >= 1)
+			if (Math.min.apply(null, _0x5307) >= 1)
 			{
-				_0x1D3AC = "images/greenFightMarker.gif"
+				_0x5324 = "images/greenFightMarker.gif"
 			}
 			else
 			{
-				for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D39E.length; _0x1C6B6++)
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
 				{
-					if (_0x1D39E[0] > 0)
+					if (_0x5307[0] > 0)
 					{
-						_0x1D3AC = "images/yellowFightMarker.gif";
+						_0x5324 = "images/yellowFightMarker.gif";
 						break
 					}
 				}
 			}
 		};
-		_0x1D390.push(_0x1D3AC);
+		_0x52EA.push(_0x5324);
 		break;
 	case "northernfields":
-		var _0x1D3BA = false;
-		var _0x1D39E = [];
-		_0x1CEEA = "boneHead";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "boneHead";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[0] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "mammaPolarBear";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "mammaPolarBear";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[1] = getItem(_0x1CEEA + "Kills");
-		_0x1CEEA = "yeti";
-		if (getItem(_0x1CEEA + "Kills") >= 100)
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "yeti";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
 		{
-			_0x1D390.push("images/" + _0x1CEEA + "Monster_blue.png")
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
 		}
 		else
 		{
-			if (getItem(_0x1CEEA + "Kills") >= 30)
+			if (getItem(_0x473F + "Kills") >= 30)
 			{
-				_0x1D390.push("images/" + _0x1CEEA + "Monster_yellow.png")
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
 			}
 			else
 			{
-				if (getItem(_0x1CEEA + "Kills") >= 1)
+				if (getItem(_0x473F + "Kills") >= 1)
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_green.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
 				}
 				else
 				{
-					_0x1D390.push("images/" + _0x1CEEA + "Monster_black.png")
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
 				}
 			}
 		};
-		_0x1D39E[2] = getItem(_0x1CEEA + "Kills");
-		var _0x1D3AC = "images/redFightMarker.gif";
-		if (Math.min.apply(null, _0x1D39E) >= 100)
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
 		{
-			_0x1D3AC = "images/blueFightMarker.gif"
+			_0x5324 = "images/blueFightMarker.gif"
 		}
 		else
 		{
-			if (Math.min.apply(null, _0x1D39E) >= 1)
+			if (Math.min.apply(null, _0x5307) >= 1)
 			{
-				_0x1D3AC = "images/greenFightMarker.gif"
+				_0x5324 = "images/greenFightMarker.gif"
 			}
 			else
 			{
-				for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1D39E.length; _0x1C6B6++)
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
 				{
-					if (_0x1D39E[0] > 0)
+					if (_0x5307[0] > 0)
 					{
-						_0x1D3AC = "images/yellowFightMarker.gif";
+						_0x5324 = "images/yellowFightMarker.gif";
 						break
 					}
 				}
 			}
 		};
-		_0x1D390.push(_0x1D3AC);
+		_0x52EA.push(_0x5324);
+		break;
+	case "cemetery":
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "ghost";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "skeletonGhost";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "reaper";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
+		{
+			_0x5324 = "images/blueFightMarker.gif"
+		}
+		else
+		{
+			if (Math.min.apply(null, _0x5307) >= 1)
+			{
+				_0x5324 = "images/greenFightMarker.gif"
+			}
+			else
+			{
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
+				{
+					if (_0x5307[0] > 0)
+					{
+						_0x5324 = "images/yellowFightMarker.gif";
+						break
+					}
+				}
+			}
+		};
+		_0x52EA.push(_0x5324);
+		break;
+	case "ocean":
+		var _0x5341 = false;
+		var _0x5307 = [];
+		_0x473F = "shark";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[0] = getItem(_0x473F + "Kills");
+		_0x473F = "pufferFish";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[1] = getItem(_0x473F + "Kills");
+		_0x473F = "tridentSoldier";
+		_0x52EA.push(_0x473F);
+		if (getItem(_0x473F + "Kills") >= 100)
+		{
+			_0x52EA.push("images/" + _0x473F + "Monster_blue.png")
+		}
+		else
+		{
+			if (getItem(_0x473F + "Kills") >= 30)
+			{
+				_0x52EA.push("images/" + _0x473F + "Monster_yellow.png")
+			}
+			else
+			{
+				if (getItem(_0x473F + "Kills") >= 1)
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_green.png")
+				}
+				else
+				{
+					_0x52EA.push("images/" + _0x473F + "Monster_black.png")
+				}
+			}
+		};
+		_0x5307[2] = getItem(_0x473F + "Kills");
+		var _0x5324 = "images/redFightMarker.gif";
+		if (Math.min.apply(null, _0x5307) >= 100)
+		{
+			_0x5324 = "images/blueFightMarker.gif"
+		}
+		else
+		{
+			if (Math.min.apply(null, _0x5307) >= 1)
+			{
+				_0x5324 = "images/greenFightMarker.gif"
+			}
+			else
+			{
+				for (var _0x3607 = 0; _0x3607 < _0x5307.length; _0x3607++)
+				{
+					if (_0x5307[0] > 0)
+					{
+						_0x5324 = "images/yellowFightMarker.gif";
+						break
+					}
+				}
+			}
+		};
+		_0x52EA.push(_0x5324);
 		break
 	};
-	return _0x1D390
+	return _0x52EA
 }

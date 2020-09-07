@@ -2,6 +2,9 @@
 
 function setInnerHTML(el, value)
 {
-	document.getElementById(el).style.display = "";
-	document.getElementById(el).innerHTML = value;
+	if (document.getElementById(el) != null)
+	{
+		document.getElementById(el).style.display = "";
+		document.getElementById(el).innerHTML = value;
+	}
 };

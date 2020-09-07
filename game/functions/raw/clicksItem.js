@@ -1,56 +1,69 @@
 /**
- * clicksItem extracted from ../../deobfuscated/bundle.js at line 4848-5441
+ * clicksItem extracted from ../../deobfuscated/bundle.js at line 6266-7154
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function clicksItem(_0x1CF30)
+function clicksItem(_0x47D0)
 {
-	if (_0x1CF30.endsWith("Seeds"))
+	if (_0x47D0.endsWith("Seeds"))
 	{
-		clicksSeed(_0x1CF30);
+		clicksSeed(_0x47D0);
 		return
 	};
-	if (_0x1CF30.endsWith("Museum"))
+	if (_0x47D0.endsWith("Museum"))
 	{
-		if (getItem(_0x1CF30) == 0)
+		if (getItem(_0x47D0) == 0)
 		{
-			sendBytes("MUSEUM_OFFER=" + _0x1CF30.substr(0, _0x1CF30.length - 6));
+			sendBytes("MUSEUM_OFFER=" + _0x47D0.substr(0, _0x47D0.length - 6));
 			return
 		}
 	};
-	if (_0x1CF30.startsWith("stardustBox"))
+	if (_0x47D0.startsWith("stardustBox"))
 	{
-		openInputDialogue("Open", "images/" + _0x1CF30 + ".png", _0x1CF30, 1, ["stardust"], [0], [_0x1CF30], [1], "Open", "OPEN_STARDUST_BOX", "Contains a random amount of stardust.");
+		openInputDialogue("Open", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["stardust"], [0], [_0x47D0], [1], "Open", "OPEN_STARDUST_BOX", "Contains a random amount of stardust.");
 		return
 	};
-	if (_0x1CF30.endsWith("StardustPrism"))
+	if (_0x47D0.toLowerCase().endsWith("oilwell"))
 	{
-		openInputDialogue("Open", "images/" + _0x1CF30 + ".png", _0x1CF30, 1, ["stardust"], [0], [_0x1CF30], [1], "Break", "OPEN_STARDUST_PRISM", "Contains a random amount of stardust.");
+		sendBytes("CLICKS_OIL_WELL");
 		return
 	};
-	if (_0x1CF30.endsWith("ManaStar"))
+	if (_0x47D0.endsWith("StardustPrism"))
 	{
-		confirmDialogue("images/" + _0x1CF30 + ".png", "Absorb the star to increase maximum mana permanently?", "Absorb Mana Star", "Cancel", "MANA_STAR=" + _0x1CF30);
+		openInputDialogue("Open", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["stardust"], [0], [_0x47D0], [1], "Break", "OPEN_STARDUST_PRISM", "Contains a random amount of stardust.");
 		return
 	};
-	if (getItemPrice(_0x1CF30) > 0 && _0x1CF30 != "oyster")
+	if (_0x47D0.toLowerCase().endsWith("geode"))
 	{
-		openInputDialogue("Sell", "images/" + _0x1CF30 + ".png", _0x1CF30, 1, ["coins"], [getItemPrice(_0x1CF30)], [_0x1CF30], [1], "Sell", "SELL", "Sell this to the shop for some coins.")
+		openInputDialogue("Open", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["questionMarkIcon"], [0], [_0x47D0], [1], "Crack", "OPEN_GEODES", "Contains ore or a mineral.");
+		return
 	};
-	if (_0x1CF30.toLowerCase().endsWith("rake"))
+	if (_0x47D0.endsWith("ManaStar"))
+	{
+		confirmDialogue("images/" + _0x47D0 + ".png", "Absorb the star to increase maximum mana permanently?", "Absorb Mana Star", "Cancel", "MANA_STAR=" + _0x47D0);
+		return
+	};
+	if (_0x47D0 != "oyster" && _0x47D0 != "specialOyster")
+	{
+		if (getItemPrice(_0x47D0) > 0)
+		{
+			openInputDialogue("Sell", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["coins"], [getItemPrice(_0x47D0)], [_0x47D0], [1], "Sell", "SELL", "Sell this to the shop for some coins.")
+		}
+	};
+	if (_0x47D0.toLowerCase().endsWith("rake"))
 	{
 		openRakeDialogue()
 	};
-	if (_0x1CF30.startsWith("heartCrystal"))
+	if (_0x47D0.startsWith("heartCrystal"))
 	{
-		confirmDialogue("images/" + _0x1CF30 + ".png", "Break crystal and gain a permanent <img src=\'images/heartIcon.png\' class=\'img-20\' /> +5 health?", "Break Crystal", "Cancel", "HEART_CRYSTAL=" + _0x1CF30);
+		confirmDialogue("images/" + _0x47D0 + ".png", "Break crystal and gain a permanent <img src=\'images/heartIcon.png\' class=\'img-20\' /> +5 health?", "Break Crystal", "Cancel", "HEART_CRYSTAL=" + _0x47D0);
 		return
 	};
-	if (global_foodMap[_0x1CF30] != null)
+	if (global_foodMap[_0x47D0] != null)
 	{
-		if (_0x1CF30.startsWith("raw"))
+		if (_0x47D0.startsWith("raw"))
 		{
 			if (getItem("cookingUnlocked") == 0)
 			{
@@ -60,83 +73,102 @@ function clicksItem(_0x1CF30)
 			{
 				if (getItem("cookingBoostPotionOn") == 1)
 				{
-					confirmDialogue("images/cookingBoostPotion.png", "You are about to use your cooking boost to cook one of this type of food.", "Cook", "Cancel", "COOK=" + _0x1CF30 + "~1")
+					confirmDialogue("images/cookingBoostPotion.png", "You are about to use your cooking boost to cook one of this type of food.", "Cook", "Cancel", "COOK=" + _0x47D0 + "~1")
 				}
 				else
 				{
-					if (global_foodMap[_0x1CF30].cookLevel > getLevel(getItem("cookingXp")))
+					if (global_foodMap[_0x47D0].cookLevel > getLevel(getItem("cookingXp")))
 					{
-						confirmDialogue("images/cookingSkill.png", "You need a level of " + global_foodMap[_0x1CF30].cookLevel + " to cook this.", "Close", "", "")
+						confirmDialogue("images/cookingSkill.png", "You need a level of " + global_foodMap[_0x47D0].cookLevel + " to cook this.", "Close", "", "")
 					}
 					else
 					{
-						openInputDialogue("Cook", "images/" + _0x1CF30 + ".png", _0x1CF30, 1, ["cookingSkill_xp"], [global_foodMap[_0x1CF30].xp], [_0x1CF30, "heat"], [1, global_foodMap[_0x1CF30].heat], "Cook", "COOK", "Cooking food allows it to be consumed afterwards for energy.  Remember to check your burn rate on your oven.")
+						openInputDialogue("Cook", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["cookingSkill_xp"], [global_foodMap[_0x47D0].xp], [_0x47D0, "heat"], [1, global_foodMap[_0x47D0].heat], "Cook", "COOK", "Cooking food allows it to be consumed afterwards for energy.  Remember to check your burn rate on your oven.")
 					}
 				}
 			}
 		}
 		else
 		{
-			if (_0x1CF30 == "redMushroom" && getItem("researcherFarming") == 0)
+			if (_0x47D0 == "redMushroom" && getItem("researcherFarming") == 0)
 			{
 				return
 			};
-			openInputDialogue(getItemName(_0x1CF30.charAt(0).toUpperCase() + _0x1CF30.slice(1)) + "s", "images/" + _0x1CF30 + ".png", _0x1CF30, 1, ["energy"], [global_foodMap[_0x1CF30].energy], [_0x1CF30], [1], "Consume", "CONSUME", "Food gives you energy for your hero.  Energy is required to begin a fight with a monster.")
+			openInputDialogue(getItemName(_0x47D0.charAt(0).toUpperCase() + _0x47D0.slice(1)) + "s", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["energy"], [global_foodMap[_0x47D0].energy], [_0x47D0], [1], "Consume", "CONSUME", "Food gives you energy for your hero.  Energy is required to begin a fight with a monster.")
 		}
 	};
-	if (global_equipmentMap[_0x1CF30] != null)
+	if (_0x47D0.startsWith("blue") && _0x47D0.endsWith("Orb"))
+	{
+		clicksBlueOrb(_0x47D0);
+		return
+	};
+	if (global_equipmentMap[_0x47D0] != null)
 	{
 		if (document.getElementById("item-box-needle").style.border == "3px solid orange")
 		{
-			if (_0x1CF30.startsWith("snakeskin"))
+			if (_0x47D0.startsWith("snakeskin"))
 			{
-				confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
+				confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
 				return
 			}
 			else
 			{
-				if (_0x1CF30.startsWith("bearFur"))
+				if (_0x47D0.startsWith("bearFur"))
 				{
-					confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
+					confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
 					return
 				}
 				else
 				{
-					if (_0x1CF30.startsWith("polarBearFur"))
+					if (_0x47D0.startsWith("polarBearFur"))
 					{
-						confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
+						confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
 						return
 					}
 					else
 					{
-						if (_0x1CF30.startsWith("batSkin"))
+						if (_0x47D0.startsWith("batSkin"))
 						{
-							confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
+							confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
 							return
+						}
+						else
+						{
+							if (_0x47D0.startsWith("reaper"))
+							{
+								confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+								return
+							}
 						}
 					}
 				}
 			}
 		};
-		sendBytes("EQUIP=" + _0x1CF30)
+		sendBytes("EQUIP=" + _0x47D0)
 	};
-	if (_0x1CF30.toLowerCase().endsWith("arrow"))
+	if (_0x47D0.toLowerCase().endsWith("arrow"))
 	{
-		sendBytes("EQUIP=" + _0x1CF30);
+		sendBytes("EQUIP=" + _0x47D0);
 		return
 	};
-	if (_0x1CF30.endsWith("Potion"))
+	if (_0x47D0.endsWith("Potion") || _0x47D0.endsWith("Potion1") || _0x47D0.endsWith("Potion2"))
 	{
-		clicksPotion(_0x1CF30);
+		clicksPotion(_0x47D0);
 		return
 	};
-	if (_0x1CF30.endsWith("Mould"))
+	if (_0x47D0.substr(0, _0x47D0.length - 1).endsWith("Ring"))
 	{
-		switchCraftingType(_0x1CF30);
+		confirmDialogue("images/" + _0x47D0 + ".png", "Ring are automatically equipped.<br /><br /><span style=\'color:grey\'>Bonuses are stacked for each ring.</span>", "Close", "", "");
+		return
+	};
+	if (_0x47D0.endsWith("Mould"))
+	{
+		navigate("right-crafting");
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		return
 	};
-	if (_0x1CF30.endsWith("Furnace"))
+	if (_0x47D0.endsWith("Furnace"))
 	{
 		if (isSmelting())
 		{
@@ -150,15 +182,15 @@ function clicksItem(_0x1CF30)
 			}
 			else
 			{
-				openFurnaceDialogue(_0x1CF30)
+				openFurnaceDialogue(_0x47D0)
 			}
 		}
 	};
-	if (global_museumItemsArray[_0x1CF30] != null)
+	if (global_museumItemsArray[_0x47D0] != null)
 	{
-		sendBytes("CLICKS_MUSEUM_ITEM=" + _0x1CF30)
+		sendBytes("CLICKS_MUSEUM_ITEM=" + _0x47D0)
 	};
-	if (_0x1CF30.toLowerCase().endsWith("fishingnet"))
+	if (_0x47D0.toLowerCase().endsWith("fishingnet"))
 	{
 		if (getItem("theFisherman2Quest") == -1)
 		{
@@ -183,7 +215,7 @@ function clicksItem(_0x1CF30)
 			openSmallFishingNetDialogue()
 		}
 	};
-	if (_0x1CF30.toLowerCase().endsWith("fishingrod"))
+	if (_0x47D0.toLowerCase().endsWith("fishingrod"))
 	{
 		if (getItem("theFisherman2Quest") == -1)
 		{
@@ -208,7 +240,7 @@ function clicksItem(_0x1CF30)
 			openFishingRodDialogue()
 		}
 	};
-	if (_0x1CF30.toLowerCase().endsWith("harpoon"))
+	if (_0x47D0.toLowerCase().endsWith("harpoon"))
 	{
 		if (getItem("theFisherman2Quest") == -1)
 		{
@@ -233,27 +265,40 @@ function clicksItem(_0x1CF30)
 			openHarpoonDialogue()
 		}
 	};
-	if (_0x1CF30.toLowerCase().endsWith("shovel"))
+	if (_0x47D0.toLowerCase().endsWith("shovel"))
 	{
 		openShovelDialogue()
 	};
-	if (_0x1CF30.toLowerCase().endsWith("axe") && !_0x1CF30.toLowerCase().endsWith("pickaxe"))
+	if (_0x47D0.toLowerCase().endsWith("axe") && !_0x47D0.toLowerCase().endsWith("pickaxe"))
 	{
 		openAxeDialogue()
 	};
-	if (_0x1CF30.toLowerCase().endsWith("bonemealbin"))
+	if (_0x47D0.toLowerCase().endsWith("chainsaw"))
+	{
+		openChainsawDialogue()
+	};
+	if (_0x47D0.toLowerCase().endsWith("trowel"))
+	{
+		openTrowelDialogue()
+	};
+	openChainsawDialogue;
+	if (_0x47D0.toLowerCase().endsWith("chisel"))
+	{
+		openChiselDialogue()
+	};
+	if (_0x47D0.toLowerCase().endsWith("bonemealbin"))
 	{
 		bonemealBinDialgue()
 	};
-	if (_0x1CF30.toLowerCase().endsWith("brewingkit"))
+	if (_0x47D0.toLowerCase().endsWith("brewingkit"))
 	{
 		openBrewingKitDialogue()
 	};
-	if (_0x1CF30.toLowerCase().endsWith("stardustpickaxe"))
+	if (_0x47D0.toLowerCase().endsWith("stardustpickaxe"))
 	{
 		openStardustToolDialogue("stardustPickaxe")
 	};
-	if (_0x1CF30.toLowerCase().endsWith("stardusthammer"))
+	if (_0x47D0.toLowerCase().endsWith("stardusthammer"))
 	{
 		if (getItem("telescopePart") == 1 && getItem("telescopeLens") == 1)
 		{
@@ -264,41 +309,203 @@ function clicksItem(_0x1CF30)
 			openStardustToolDialogue("stardustHammer")
 		}
 	};
-	if (_0x1CF30.endsWith("Oven"))
+	if (_0x47D0.endsWith("Oven"))
 	{
 		clicksOven()
 	};
-	if (_0x1CF30.startsWith("spellScroll"))
+	if (_0x47D0.startsWith("spellScroll"))
 	{
-		confirmDialogue("images/" + _0x1CF30 + ".png", "Study the spell scroll?", "Learn", "Cancel", "LEARN_SPELL=" + _0x1CF30)
+		confirmDialogue("images/" + _0x47D0 + ".png", "Study the spell scroll?", "Learn", "Cancel", "LEARN_SPELL=" + _0x47D0)
 	};
-	if (_0x1CF30 == "houseBlueprint")
+	if (_0x47D0 == "houseBlueprint")
 	{
 		confirmDialogue("images/researcher.png", "You may only craft one of three houses.<br /><br />The house you craft will define your character.", "Close", "", "");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		return
 	};
-	if (_0x1CF30 == "museumBlueprint")
+	if (_0x47D0.endsWith("LootBag"))
 	{
-		switchCraftingType(_0x1CF30);
+		openInputDialogue("Loot Bag", "images/" + _0x47D0 + ".png", _0x47D0, 1, ["questionMarkIcon"], [1], [_0x47D0], [1], "Open", "OPEN_LOOTBAGS", "Loot bags contain basic items which are area specific.");
+		return
+	};
+	if (_0x47D0.endsWith("Stew"))
+	{
+		confirmDialogue("images/" + _0x47D0 + ".png", "Drink the stew?", "Drink", "Cancel", "DRINK_CHEF_STEW=" + _0x47D0);
+		return
+	};
+	if (_0x47D0 == "museumBlueprint")
+	{
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		return
 	};
-	switch (_0x1CF30)
+	switch (_0x47D0)
 	{
+	case "rowBoatBlueprints":
+		navigate("right-crafting");
+		switchCraftingType(_0x47D0);
+		refreshCraftables();
+		break;
+	case "canoeBoatBlueprints":
+		navigate("right-crafting");
+		switchCraftingType(_0x47D0);
+		refreshCraftables();
+		break;
+	case "greenSpices":
+		;
+	case "blueSpices":
+		;
+	case "greenSpices":
+		;
+	case "yellowSpices":
+		sendBytes("QUEST=theStewChef~0");
+		break;
+	case "charcoalFoundry":
+		if (isUsingFoundry())
+		{
+			confirmDialogue("images/" + "charcoalFoundry.png", "Your foundry is already running! Would you like to reset it?<br /><br /><b style=\'color:red\'>Remaining logs and oil will be lost.</b>", "Reset Foundry", "Nevermind", "RESET_FOUNDRY")
+		}
+		else
+		{
+			clicksCharcoalFoundry()
+		};
+		break;
 	case "feather":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		break;
 	case "fireFeather":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
+		break;
+	case "iceFeather":
+		navigate("right-crafting");
+		switchCraftingType(_0x47D0);
+		refreshCraftables();
+		break;
+	case "stew":
+		confirmDialogue("images/stew.png", "Drink the stew to reduce cooldown by 15 minutes?", "Drink", "Close", "DRINK_STEW");
+		break;
+	case "chef":
+		if (getItem("chefCooldown") > 1)
+		{
+			confirmDialogue("images/chef.png", "I\'m still trying to think of a stew recipe.  Come back later.", "Close", "", "")
+		}
+		else
+		{
+			if (ownsStew())
+			{
+				confirmDialogue("images/chef.png", "I\'m offended, do you not enjoy the master piece we have created? Finish eating your stew if you want to make a new one!", "Close", "", "");
+				return
+			};
+			var _0x4861 = getItemString("chefRecipeItem1");
+			var _0x487E = getItemString("chefRecipeAmount1");
+			var _0x48B8 = getItemString("chefRecipeItem2");
+			var _0x48D5 = getItemString("chefRecipeAmount2");
+			var _0x490F = getItemString("chefRecipeItem3");
+			var _0x492C = getItemString("chefRecipeAmount3");
+			var _0x4844 = "<img src=\'images/check.png\' class=\'img-20\' />";
+			if (getItem(_0x4861) < _0x487E)
+			{
+				_0x4844 = "<img src=\'images/x.png\' class=\'img-20\' />"
+			};
+			var _0x489B = "<img src=\'images/check.png\' class=\'img-20\' />";
+			if (getItem(_0x48B8) < _0x48D5)
+			{
+				_0x489B = "<img src=\'images/x.png\' class=\'img-20\' />"
+			};
+			var _0x48F2 = "<img src=\'images/check.png\' class=\'img-20\' />";
+			if (getItem(_0x490F) < _0x492C)
+			{
+				_0x48F2 = "<img src=\'images/x.png\' class=\'img-20\' />"
+			};
+			if (getItem("researcherCooking") >= 4)
+			{
+				confirmDialogue2("images/chef.png", "I need some ingredients!  I\'m trying to make a <b style=\'color:green\'>" + getItemName(getItemString("chefStew")) + "</b><br /><br />Ingredients:<br /><br /><center><table width=\'70%\' style=\'text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/" + _0x4861 + ".png\' class=\'img-50\' /></td><td>" + _0x487E + " " + _0x4844 + "</td></tr><tr><td><img src=\'images/" + _0x48B8 + ".png\' class=\'img-50\' /></td><td>" + _0x48D5 + " " + _0x489B + "</td></tr><tr><td><img src=\'images/" + _0x490F + ".png\' class=\'img-50\' /></td><td>" + _0x492C + " " + _0x48F2 + "</td></tr></table><br /><br /><table width=\'70%\' style=\'text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/energy.png\' class=\'img-50\' /></td><td style=\'color:green\'>" + formatNumber(getItem("stewEnergy")) + "</td></tr><tr><td><img src=\'images/hourglass.png\' class=\'img-50\' /></td><td style=\'color:green\'>" + formatTime(getItem("stewCooldownReduction")) + "</td></tr></table></center>", "Make Stew", "Skip this Stew", "Close", "MAKE_STEW", "SKIP_STEW")
+			}
+			else
+			{
+				confirmDialogue("images/chef.png", "I need some ingredients!  I\'m trying to make a <b style=\'color:green\'>" + getItemName(getItemString("chefStew")) + "</b><br /><br />Ingredients:<br /><br /><center><table width=\'70%\' style=\'text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/" + _0x4861 + ".png\' class=\'img-50\' /></td><td>" + _0x487E + " " + _0x4844 + "</td></tr><tr><td><img src=\'images/" + _0x48B8 + ".png\' class=\'img-50\' /></td><td>" + _0x48D5 + " " + _0x489B + "</td></tr><tr><td><img src=\'images/" + _0x490F + ".png\' class=\'img-50\' /></td><td>" + _0x492C + " " + _0x48F2 + "</td></tr></table></center>", "Make Stew", "Close", "MAKE_STEW")
+			}
+		};
+		break;
+	case "darkCrystalUsed":
+		confirmDialogue("images/faradox.png", "Faradox has been released into this world.<br /><br /><span style=\'color:grey\'>We need to find and use all 7 crystals scattered around the world for it to gain its power back.</span>", "Close", "", "");
+		break;
+	case "planter":
+		confirmDialogue("images/planter.png", "<b>Right click</b> a seed to automatically harvest all and replant.<br /><br /><b>Right click</b> this planter to only harvest all.", "Close", "", "");
+		break;
+	case "lumberJack":
+		sendBytes("LUMBERJACK");
+		break;
+	case "chain":
+		;
+	case "skeletonHead":
+		;
+	case "skeletonLeftArm":
+		;
+	case "skeletonRightArm":
+		;
+	case "skeletonLeftLeg":
+		;
+	case "skeletonRightLeg":
+		navigate("right-crafting");
+		switchCraftingType("cemeterySkeleton");
+		refreshCraftables();
+		break;
+	case "smallSnowballs":
+		;
+	case "mediumSnowball":
+		;
+	case "largeSnowball":
+		;
+	case "leftBranch":
+		;
+	case "rightBranch":
+		navigate("right-crafting");
+		switchCraftingType("snowman");
+		refreshCraftables();
+		break;
+	case "cemeterySkeletonShield1":
+		;
+	case "cemeterySkeletonShield2":
+		;
+	case "cemeterySkeletonShield3":
+		navigate("right-crafting");
+		switchCraftingType("cemeterySkeletonShield");
+		refreshCraftables();
+		break;
+	case "stardust1000":
+		sendBytes("OPEN_SD_PACKS");
+		break;
+	case "rocket":
+		if (getItemString("rocketDestination") == "moon" && getItem("rocketKm") == 384000)
+		{
+			sendBytes("COLLECT_ROCKET=moon")
+		}
+		else
+		{
+			var _0x3AC9 = "<img src=\'images/x.png\' class=\'img-20\' />";
+			if (getItem("oil") >= 100000)
+			{
+				_0x3AC9 = "<img src=\'images/check.png\' class=\'img-20\' />"
+			};
+			var _0x4966 = "";
+			if (getItem("titaniumRocketBoosters") > 0)
+			{
+				_0x4966 = "<br /><table style=\'color:grey;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/titaniumRocketBoosters.png\' class=\'img-30\' /></td><td style=\'font-size:10pt;text-align:right;\'>A notification will show up and can be clicked to activate the boosters. <u style=\'cursor:pointer;\' onclick=\'titaniumRocketBoostersMoreInfo()\'>(more info)</u></td></tr></table>"
+			};
+			confirmDialogue(getRocketImage(), "Would you like to go to the moon?<br /><br /><span style=\'color:grey\'>Requires <img src=\'images/oil.png\' class=\'img-20\' /> 100,000 oil " + _0x3AC9 + "</span><br /><br /><center><table style=\'color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/moon.png\' class=\'img-50\' /></td><td>384,000 km</td></tr><tr><td><img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /></td><td>" + formatNumber(getItem(_0x47D0 + "Trips")) + " Trips completed</td></tr></table></center>" + _0x4966, "Launch Rocket", "Close", "LAUNCH_ROCKET=moon")
+		};
 		break;
 	case "oyster":
 		openDialogue("dialogue-oysterOptions");
+		break;
+	case "specialOyster":
+		openDialogue("dialogue-specialOysterOptions");
 		break;
 	case "vial":
 		if (getItem("poisonCombatVial") > 0 || getItemString("weapon") == "posionCombatVial" || getItemString("weapon") == "combatVial" || getItem("combatVial") > 0)
@@ -320,6 +527,12 @@ function clicksItem(_0x1CF30)
 			confirmDialogue("images/largeVial.png", "Try a smaller vial if you wish to hold poison.", "Close", "", "")
 		};
 		break;
+	case "treasureMap":
+		sendBytes("CLICKS_TREASURE_MAP");
+		break;
+	case "treasureChest":
+		openDialogue("dialogue-treasureChest");
+		break;
 	case "bones":
 		if (getBonemealTypeData() == "none")
 		{
@@ -327,12 +540,15 @@ function clicksItem(_0x1CF30)
 		}
 		else
 		{
-			var _0x1CC3C = getBonemealTypeData()[3];
-			if (_0x1CC3C == "INF")
+			var _0x4195 = getBonemealTypeData()[3];
+			if (_0x4195 == "INF")
 			{
-				_0x1CC3C = "&#8734;"
+				_0x4195 = "&#8734;"
 			};
-			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x1CC3C + "</span>", "images/bonemeal.png", "bones", 1, ["bonemeal"], [1], ["bones"], [1], "Add", "ADD_BONEMEAL", "Bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.")
+			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x4195 + "</span>", "images/bonemeal.png", "bones", 1, ["bonemeal"], [1], ["bones"], [1], "Add", "ADD_BONEMEAL", "Bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.");
+			var _0x4949 = getMaxBonemealToPut(_0x47D0);
+			document.getElementById("dialogue-wild-input").value = _0x4949;
+			$("#dialogue-wild-input").keyup()
 		};
 		break;
 	case "ashes":
@@ -342,12 +558,15 @@ function clicksItem(_0x1CF30)
 		}
 		else
 		{
-			var _0x1CC3C = getBonemealTypeData()[3];
-			if (_0x1CC3C == "INF")
+			var _0x4195 = getBonemealTypeData()[3];
+			if (_0x4195 == "INF")
 			{
-				_0x1CC3C = "&#8734;"
+				_0x4195 = "&#8734;"
 			};
-			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x1CC3C + "</span>", "images/bonemeal.png", "ashes", 1, ["bonemeal"], [2], ["ashes"], [1], "Add", "ADD_BONEMEAL", "Ashes can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.")
+			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x4195 + "</span>", "images/bonemeal.png", "ashes", 1, ["bonemeal"], [2], ["ashes"], [1], "Add", "ADD_BONEMEAL", "Ashes can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.");
+			var _0x4949 = getMaxBonemealToPut(_0x47D0);
+			document.getElementById("dialogue-wild-input").value = _0x4949;
+			$("#dialogue-wild-input").keyup()
 		};
 		break;
 	case "iceBones":
@@ -357,12 +576,15 @@ function clicksItem(_0x1CF30)
 		}
 		else
 		{
-			var _0x1CC3C = getBonemealTypeData()[3];
-			if (_0x1CC3C == "INF")
+			var _0x4195 = getBonemealTypeData()[3];
+			if (_0x4195 == "INF")
 			{
-				_0x1CC3C = "&#8734;"
+				_0x4195 = "&#8734;"
 			};
-			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x1CC3C + "</span>", "images/bonemeal.png", "iceBones", 1, ["bonemeal"], [3], ["iceBones"], [1], "Add", "ADD_BONEMEAL", "Ice bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds. The cold has preserved its calcium content.")
+			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x4195 + "</span>", "images/bonemeal.png", "iceBones", 1, ["bonemeal"], [3], ["iceBones"], [1], "Add", "ADD_BONEMEAL", "Ice bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds. The cold has preserved its calcium content.");
+			var _0x4949 = getMaxBonemealToPut(_0x47D0);
+			document.getElementById("dialogue-wild-input").value = _0x4949;
+			$("#dialogue-wild-input").keyup()
 		};
 		break;
 	case "needle":
@@ -388,12 +610,12 @@ function clicksItem(_0x1CF30)
 				confirmDialogue("images/fishBones.png", "You need at least 10 to get bonemeal out of these.", "Close", "", "");
 				return
 			};
-			var _0x1CC3C = getBonemealTypeData()[3];
-			if (_0x1CC3C == "INF")
+			var _0x4195 = getBonemealTypeData()[3];
+			if (_0x4195 == "INF")
 			{
-				_0x1CC3C = "&#8734;"
+				_0x4195 = "&#8734;"
 			};
-			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x1CC3C + "</span>", "images/bonemeal.png", "fishBones", 1, ["bonemeal"], [0.1], ["fishBones"], [1], "Add", "ADD_BONEMEAL", "Fishbones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.")
+			openInputDialogue("Bonemeal<br /><span style=\'color:grey;font-size:10pt;\'>Currently stored: " + getItem("bonemeal") + "/" + _0x4195 + "</span>", "images/bonemeal.png", "fishBones", 1, ["bonemeal"], [0.1], ["fishBones"], [1], "Add", "ADD_BONEMEAL", "Fishbones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.")
 		};
 		break;
 	case "fightMonsterButton":
@@ -432,7 +654,7 @@ function clicksItem(_0x1CF30)
 			{
 				if (getItem("oxygenTankTimer") > 1)
 				{
-					confirmDialogue("images/oxygenTank.png", "Your already exploring the deep ocean floors!", "Close", "", "SEND_BOAT=oxygenTank");
+					confirmDialogue("images/oxygenTank.png", "You\'re already exploring the deep ocean floors!", "Close", "", "");
 					hideElement("notification-specialBaitOn")
 				}
 				else
@@ -444,6 +666,40 @@ function clicksItem(_0x1CF30)
 		else
 		{
 			confirmDialogue("images/oxygenTank.png", "I\'m not sure how to use this yet.", "Close", "", "")
+		};
+		break;
+	case "rowBoat":
+		if (getItem(_0x47D0 + "Timer") == 1)
+		{
+			sendBytes("COLLECT_BOAT=" + _0x47D0)
+		}
+		else
+		{
+			if (getItem(_0x47D0 + "Timer") > 1)
+			{
+				confirmDialogue("images/" + _0x47D0 + ".png", "You\'re already out on a boat!", "Close", "", "")
+			}
+			else
+			{
+				confirmDialogue("images/" + _0x47D0 + ".png", "Would you like to go fishing on your boat?<br /><br /><span style=\'color:grey\'>You will not obtain fish from your tool during this time.</span><br /><br /><center><table style=\'color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/hourglass.png\' class=\'img-50\' /></td><td>6 hours</td></tr><tr><td><img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /></td><td>" + formatNumber(getItem(_0x47D0 + "Trips")) + " Trips completed</td></tr></table></center>", "Send Boat", "Close", "SEND_BOAT=" + _0x47D0)
+			}
+		};
+		break;
+	case "canoeBoat":
+		if (getItem(_0x47D0 + "Timer") == 1)
+		{
+			sendBytes("COLLECT_BOAT=" + _0x47D0)
+		}
+		else
+		{
+			if (getItem(_0x47D0 + "Timer") > 1)
+			{
+				confirmDialogue("images/" + _0x47D0 + ".png", "You\'re already out on a boat!", "Close", "", "")
+			}
+			else
+			{
+				confirmDialogue("images/" + _0x47D0 + ".png", "Would you like to go fishing on your canoe?<br /><br /><span style=\'color:grey\'>You will not obtain fish from your tool during this time.</span><br /><br /><center><table style=\'color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;\'><tr><td><img src=\'images/hourglass.png\' class=\'img-50\' /></td><td>10 hours</td></tr><tr><td><img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /></td><td>" + formatNumber(getItem(_0x47D0 + "Trips")) + " Trips completed</td></tr></table></center>", "Send Boat", "Close", "SEND_BOAT=" + _0x47D0)
+			}
 		};
 		break;
 	case "manaStars":
@@ -472,7 +728,7 @@ function clicksItem(_0x1CF30)
 		confirmDialogue("images/telescopeLens.png", "I need to find a way to get the telescope lens in the telescope.<br /><br />Maybe I require some kind of tool where I can bang the lens in place.", "Close", "", "");
 		break;
 	case "telescope":
-		confirmDialogue("images/telescope.png", "There is too much light pollution.", "Close", "", "");
+		confirmDialogue("images/telescope.png", "You look through the telescope...<br /><br />Nothing is visible! There is too much light pollution.", "Close", "", "");
 		break;
 	case "fightPvpButton":
 		confirmDialogue("images/underConstruction.png", "This piece of content is currently under construction!", "Close", "", "");
@@ -490,6 +746,9 @@ function clicksItem(_0x1CF30)
 	case "redCrystal":
 		confirmDialogue("images/redCrystal.png", "<i style=\'color:grey\'>You feel a sense of comfort near the lava crystal.</i><br /><br />Touch the crystal?", "Touch Crystal", "Cancel", "TOUCH_CRYSTAL=redCrystal");
 		break;
+	case "blueCrystal":
+		confirmDialogue("images/blueCrystal.png", "<i style=\'color:grey\'>You feel a sense of comfort near the ocean crystal.</i><br /><br />Touch the crystal?", "Touch Crystal", "Cancel", "TOUCH_CRYSTAL=blueCrystal");
+		break;
 	case "puzzleChest1":
 		navigate("right-puzzleChest1");
 		break;
@@ -501,7 +760,11 @@ function clicksItem(_0x1CF30)
 	case "drills":
 		;
 	case "crushers":
-		if (_0x1CF30 == "miner" && getItem("letTheMiningBeginQuest") == 2 && getAllocationAmount(_0x1CF30) == 0)
+		;
+	case "giantDrills":
+		;
+	case "excavators":
+		if (_0x47D0 == "miner" && getItem("letTheMiningBeginQuest") == 2 && getAllocationAmount(_0x47D0) == 0)
 		{
 			if (getMinersOrMachineryAvailable("miner") == 0)
 			{
@@ -514,7 +777,7 @@ function clicksItem(_0x1CF30)
 		}
 		else
 		{
-			clicksMiningResource(_0x1CF30)
+			clicksMiningResource(_0x47D0)
 		};
 		break;
 	case "carePackage1":
@@ -522,6 +785,9 @@ function clicksItem(_0x1CF30)
 		break;
 	case "carePackage2":
 		confirmDialogue("images/carePackage2.png", "Open package?", "Open", "Wait", "OPEN_CARE_PACKAGE_2");
+		break;
+	case "carePackage3":
+		confirmDialogue("images/carePackage3.png", "Open package?", "Open", "Wait", "OPEN_CARE_PACKAGE_3");
 		break;
 	case "researcher":
 		navigate("right-researcher");
@@ -533,9 +799,27 @@ function clicksItem(_0x1CF30)
 		refreshTreeListTab();
 		navigate("right-treeList");
 		break;
+	case "pirate":
+		refreshBoundOrbs();
+		navigate("right-pirate");
+		break;
 	case "combatLog":
 		navigate("right-combatLog");
 		sendBytes("REFRESH_COMBAT_LOG");
+		break;
+	case "lootBagLog":
+		navigate("right-lootBagLog");
+		sendBytes("REFRESH_LOOT_BAGS_LOG");
+		break;
+	case "explorer":
+		if (getItem("explorerDialogue") == 1)
+		{
+			sendBytes("EXPLORER_DIALOGUE=4")
+		}
+		else
+		{
+			navigate("right-explorer")
+		};
 		break;
 	case "seedList":
 		refreshSeedListTab();
@@ -544,6 +828,10 @@ function clicksItem(_0x1CF30)
 	case "diamond_verydark":
 		;
 	case "gemList2":
+		refreshGemListTab();
+		navigate("right-gemList");
+		break;
+	case "gemList3":
 		refreshGemListTab();
 		navigate("right-gemList");
 		break;
@@ -562,22 +850,27 @@ function clicksItem(_0x1CF30)
 		break;
 	case "snakeskin":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		break;
 	case "bearFur":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		break;
 	case "polarBearFur":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
+		refreshCraftables();
+		break;
+	case "blackSilk":
+		navigate("right-crafting");
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		break;
 	case "batSkin":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType(_0x47D0);
 		refreshCraftables();
 		break;
 	case "daggerBlade":
@@ -593,8 +886,10 @@ function clicksItem(_0x1CF30)
 		refreshCraftables();
 		break;
 	case "bowBase":
+		;
+	case "magicString":
 		navigate("right-crafting");
-		switchCraftingType(_0x1CF30);
+		switchCraftingType("bowBase");
 		refreshCraftables();
 		break
 	}

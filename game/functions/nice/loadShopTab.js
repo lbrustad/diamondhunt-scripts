@@ -82,6 +82,11 @@ function loadShopTab()
 	}
 	if (getItem("communityCenter3") == 1)
 	{
+		lines = "lumberJack";
+		if (getItem(lines + "Bought", false) != 1)
+		{
+			addItemBoxShop(lines, "images/lumberJack.png", "LUMBERJACK<br /><br />", 250, "tooltip-lumberJack", SCROLL_ID);
+		}
 		lines = "carePackage2";
 		if (getItem(lines + "Bought", false) != 1)
 		{
@@ -93,5 +98,17 @@ function loadShopTab()
 			addItemBoxShop(lines, "images/bronzeOven.png", "BRONZE OVEN<br /><br />", 10000, "tooltip-bronzeOven", SCROLL_ID);
 		}
 	}
-	refreshTooltips();
+	if (getItem("communityCenter4") == 1)
+	{
+		lines = "carePackage3";
+		if (getItem(lines + "Bought", false) != 1)
+		{
+			addItemBoxShop(lines, "images/carePackage3.png", "PACKAGE<br /><br />", 85000, "tooltip-carePackage", SCROLL_ID);
+		}
+		lines = "pirate";
+		if (getItem(lines + "Bought", false) != 1)
+		{
+			addItemBoxShop(lines, "images/pirate.png", "PIRATE<br /><br />", 500000, "tooltip-pirate", SCROLL_ID);
+		}
+	}
 };

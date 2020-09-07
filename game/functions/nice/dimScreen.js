@@ -77,6 +77,37 @@ function dimScreen(name, buildingApp)
 			});
 			return;
 		}
+		if (name == "combat_animation")
+		{
+			keyToAdd = keyToAdd + "<center>";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<img id='dim-screen-img-1' src='images/reaper_grey.png' />";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<span id='dim-screen-area1'></span>";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<span id='dim-screen-area2'></span>";
+			keyToAdd = keyToAdd + "</center>";
+			$("#dim-screen").fadeIn(10);
+			$("#game").fadeOut(10, function ()
+			{
+				document.getElementById("dim-screen").innerHTML = keyToAdd;
+				setTimeout(function ()
+				{
+					setTimeout(function ()
+					{
+						setTimeout(function ()
+						{
+							addTextByDelay("Don't get any closer!", $("#dim-screen-area1"), 50);
+						}, 1000);
+						setTimeout(function ()
+						{
+							document.getElementById("dim-screen-area2").innerHTML += "<br /><br /><span class='resumeFight' onclick='sendBytes(\"TUT_RESUME_FIGHT\");dimScreen(\"none\", false);'><img src='images/scythe.png' class='img-30' /> Fight Reaper</span>";
+						}, 5000);
+					}, 1000);
+				}, 1000);
+			});
+			return;
+		}
 		if (name == "release_faradox")
 		{
 			keyToAdd = keyToAdd + "<center>";
@@ -165,6 +196,32 @@ function dimScreen(name, buildingApp)
 					setTimeout(function ()
 					{
 						dimScreen("none", false);
+					}, 6000);
+				}, 1000);
+			});
+			return;
+		}
+		if (name == "dead_hero_special")
+		{
+			keyToAdd = keyToAdd + "<center>";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<img id='dim-screen-img-1' src='images/deadHero.png' />";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<div style='color:grey' id='dim-screen-area1'></div>";
+			keyToAdd = keyToAdd + "</center>";
+			$("#dim-screen").fadeIn(1000);
+			$("#game").fadeOut(1000, function ()
+			{
+				document.getElementById("dim-screen").innerHTML = keyToAdd;
+				setTimeout(function ()
+				{
+					addTextByDelay("You have fainted.", $("#dim-screen-area1"), 50);
+					setTimeout(function ()
+					{
+						dimScreen("none", false);
+						confirmDialogue("images/deathIcon.png", "The blow to your head has made you forget who you are, what spells you learned and the reaper has looted all your items except for a few <img src='images/coins.png' class='img-30' /> coins.", "Close", "", "COMBAT_TUTORIAL_6");
+						document.getElementById("back-button-fighting").style.display = "";
 					}, 6000);
 				}, 1000);
 			});

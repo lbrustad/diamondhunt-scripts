@@ -1,11 +1,13 @@
 'use strict';
 
-function addItemBoxQuests(params, url, indexNumber, inStyles, listExpression, h, name, res)
+function addItemBoxQuests(params, courseId, canCreateDiscussions, inStyles, _wid_attr, data, libraryName, fileName)
 {
-	var csBox = document.getElementById(name);
+	var id = document.getElementById(libraryName);
 	var t = document.createElement("div");
+	var _a_ = false;
 	if (getItem(params + "Quest") == -1)
 	{
+		_a_ = true;
 		t.setAttribute("class", "quest-button-completed");
 	}
 	else
@@ -14,44 +16,49 @@ function addItemBoxQuests(params, url, indexNumber, inStyles, listExpression, h,
 	}
 	t.setAttribute("id", "quest-box-" + params);
 	t.setAttribute("onclick", "sendBytes('QUEST=" + params + "~0')");
-	var output = document.createElement("div");
-	if (getItem("questPoints") < res)
+	var thisSystemDiv = document.createElement("div");
+	if (getItem("questPoints") < fileName)
 	{
-		var image = getImage("images/questPoints.png", "quest-x-" + stylesLimit);
+		var image = getImage("images/questPoints_lock.png", "quest-x-" + stylesLimit);
 		image.setAttribute("class", "img-30");
 		t.setAttribute("class", "quest-button-locked");
-		output.appendChild(image);
-		output.innerHTML += " REQUIRED QUEST POINTS: " + res;
-		t.setAttribute("onclick", "confirmDialogue('images/questPoints.png', 'You need to complete other quests to earn quest points before starting this one.', 'Exit', '', '')");
+		thisSystemDiv.appendChild(image);
+		thisSystemDiv.innerHTML += " You need at least " + getItem("questPoints") + "/" + fileName + " quest points to unlock this quest.";
+		t.setAttribute("onclick", "confirmDialogue('images/questPoints_lock.png', 'You need to complete other quests to earn quest points before starting this one.', 'Exit', '', '')");
 	}
 	else
 	{
-		output = document.createElement("div");
-		output.innerHTML = url + "<br /><span style='font-size:10pt;color:black;'>" + indexNumber + "<br /><br />" + h + "</span>";
-		output.setAttribute("style", "font-size:16pt;");
-		var thisSystemDiv = document.createElement("div");
-		thisSystemDiv.setAttribute("style", "float:right;font-size:10pt;color:purple;text-align:right;");
+		thisSystemDiv = document.createElement("div");
+		var userId = "";
+		if (_a_)
+		{
+			userId = "<img src='images/check.png' class='img-20' />";
+		}
+		thisSystemDiv.innerHTML = courseId + " " + userId + "<br /><span style='font-size:10pt;color:black;'>" + canCreateDiscussions + "<br /><br />" + data + "</span>";
+		thisSystemDiv.setAttribute("style", "font-size:16pt;");
+		var detectBlock = document.createElement("div");
+		detectBlock.setAttribute("style", "float:right;font-size:10pt;color:purple;text-align:right;");
 		var stylesLimit = 0;
 		for (; stylesLimit < inStyles.length; stylesLimit++)
 		{
 			image = getImage("images/x.png", params + "_quest-x-" + stylesLimit);
 			image.setAttribute("class", "img-15");
-			if (listExpression[stylesLimit])
+			if (_wid_attr[stylesLimit])
 			{
 				image = getImage("images/check_dark.png", params + "_quest-check-" + stylesLimit);
 				image.setAttribute("class", "img-15");
 			}
 			var span = document.createElement("span");
 			span.innerHTML = inStyles[stylesLimit] + " ";
-			if (listExpression[stylesLimit] != null && getItem(params + "Quest") != -1)
+			if (_wid_attr[stylesLimit] != null && getItem(params + "Quest") != -1)
 			{
 				span.appendChild(image);
 			}
 			span.appendChild(document.createElement("br"));
-			thisSystemDiv.appendChild(span);
+			detectBlock.appendChild(span);
 		}
-		t.appendChild(thisSystemDiv);
+		t.appendChild(detectBlock);
 	}
-	t.appendChild(output);
-	csBox.appendChild(t);
+	t.appendChild(thisSystemDiv);
+	id.appendChild(t);
 };

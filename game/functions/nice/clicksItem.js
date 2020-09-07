@@ -20,9 +20,19 @@ function clicksItem(id)
 		openInputDialogue("Open", "images/" + id + ".png", id, 1, ["stardust"], [0], [id], [1], "Open", "OPEN_STARDUST_BOX", "Contains a random amount of stardust.");
 		return;
 	}
+	if (id.toLowerCase().endsWith("oilwell"))
+	{
+		sendBytes("CLICKS_OIL_WELL");
+		return;
+	}
 	if (id.endsWith("StardustPrism"))
 	{
 		openInputDialogue("Open", "images/" + id + ".png", id, 1, ["stardust"], [0], [id], [1], "Break", "OPEN_STARDUST_PRISM", "Contains a random amount of stardust.");
+		return;
+	}
+	if (id.toLowerCase().endsWith("geode"))
+	{
+		openInputDialogue("Open", "images/" + id + ".png", id, 1, ["questionMarkIcon"], [0], [id], [1], "Crack", "OPEN_GEODES", "Contains ore or a mineral.");
 		return;
 	}
 	if (id.endsWith("ManaStar"))
@@ -30,9 +40,12 @@ function clicksItem(id)
 		confirmDialogue("images/" + id + ".png", "Absorb the star to increase maximum mana permanently?", "Absorb Mana Star", "Cancel", "MANA_STAR=" + id);
 		return;
 	}
-	if (getItemPrice(id) > 0 && id != "oyster")
+	if (id != "oyster" && id != "specialOyster")
 	{
-		openInputDialogue("Sell", "images/" + id + ".png", id, 1, ["coins"], [getItemPrice(id)], [id], [1], "Sell", "SELL", "Sell this to the shop for some coins.");
+		if (getItemPrice(id) > 0)
+		{
+			openInputDialogue("Sell", "images/" + id + ".png", id, 1, ["coins"], [getItemPrice(id)], [id], [1], "Sell", "SELL", "Sell this to the shop for some coins.");
+		}
 	}
 	if (id.toLowerCase().endsWith("rake"))
 	{
@@ -79,6 +92,11 @@ function clicksItem(id)
 			openInputDialogue(getItemName(id.charAt(0).toUpperCase() + id.slice(1)) + "s", "images/" + id + ".png", id, 1, ["energy"], [global_foodMap[id].energy], [id], [1], "Consume", "CONSUME", "Food gives you energy for your hero.  Energy is required to begin a fight with a monster.");
 		}
 	}
+	if (id.startsWith("blue") && id.endsWith("Orb"))
+	{
+		clicksBlueOrb(id);
+		return;
+	}
 	if (global_equipmentMap[id] != null)
 	{
 		if (document.getElementById("item-box-needle").style.border == "3px solid orange")
@@ -109,6 +127,14 @@ function clicksItem(id)
 							confirmDialogue("images/needle.png", "<img src='images/" + id + ".png' class='img-50' /> Use needle on this? <img src='images/" + id + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + id);
 							return;
 						}
+						else
+						{
+							if (id.startsWith("reaper"))
+							{
+								confirmDialogue("images/needle.png", "<img src='images/" + id + ".png' class='img-50' /> Use needle on this? <img src='images/" + id + ".png' class='img-30' />", "Use Needle", "Cancel", "NEEDLE=" + id);
+								return;
+							}
+						}
 					}
 				}
 			}
@@ -120,13 +146,19 @@ function clicksItem(id)
 		sendBytes("EQUIP=" + id);
 		return;
 	}
-	if (id.endsWith("Potion"))
+	if (id.endsWith("Potion") || id.endsWith("Potion1") || id.endsWith("Potion2"))
 	{
 		clicksPotion(id);
 		return;
 	}
+	if (id.substr(0, id.length - 1).endsWith("Ring"))
+	{
+		confirmDialogue("images/" + id + ".png", "Ring are automatically equipped.<br /><br /><span style='color:grey'>Bonuses are stacked for each ring.</span>", "Close", "", "");
+		return;
+	}
 	if (id.endsWith("Mould"))
 	{
+		navigate("right-crafting");
 		switchCraftingType(id);
 		refreshCraftables();
 		return;
@@ -236,6 +268,19 @@ function clicksItem(id)
 	{
 		openAxeDialogue();
 	}
+	if (id.toLowerCase().endsWith("chainsaw"))
+	{
+		openChainsawDialogue();
+	}
+	if (id.toLowerCase().endsWith("trowel"))
+	{
+		openTrowelDialogue();
+	}
+	openChainsawDialogue;
+	if (id.toLowerCase().endsWith("chisel"))
+	{
+		openChiselDialogue();
+	}
 	if (id.toLowerCase().endsWith("bonemealbin"))
 	{
 		bonemealBinDialgue();
@@ -274,6 +319,16 @@ function clicksItem(id)
 		refreshCraftables();
 		return;
 	}
+	if (id.endsWith("LootBag"))
+	{
+		openInputDialogue("Loot Bag", "images/" + id + ".png", id, 1, ["questionMarkIcon"], [1], [id], [1], "Open", "OPEN_LOOTBAGS", "Loot bags contain basic items which are area specific.");
+		return;
+	}
+	if (id.endsWith("Stew"))
+	{
+		confirmDialogue("images/" + id + ".png", "Drink the stew?", "Drink", "Cancel", "DRINK_CHEF_STEW=" + id);
+		return;
+	}
 	if (id == "museumBlueprint")
 	{
 		switchCraftingType(id);
@@ -282,6 +337,32 @@ function clicksItem(id)
 	}
 	switch (id)
 	{
+	case "rowBoatBlueprints":
+		navigate("right-crafting");
+		switchCraftingType(id);
+		refreshCraftables();
+		break;
+	case "canoeBoatBlueprints":
+		navigate("right-crafting");
+		switchCraftingType(id);
+		refreshCraftables();
+		break;
+	case "greenSpices":
+	case "blueSpices":
+	case "greenSpices":
+	case "yellowSpices":
+		sendBytes("QUEST=theStewChef~0");
+		break;
+	case "charcoalFoundry":
+		if (isUsingFoundry())
+		{
+			confirmDialogue("images/" + "charcoalFoundry.png", "Your foundry is already running! Would you like to reset it?<br /><br /><b style='color:red'>Remaining logs and oil will be lost.</b>", "Reset Foundry", "Nevermind", "RESET_FOUNDRY");
+		}
+		else
+		{
+			clicksCharcoalFoundry();
+		}
+		break;
 	case "feather":
 		navigate("right-crafting");
 		switchCraftingType(id);
@@ -292,8 +373,124 @@ function clicksItem(id)
 		switchCraftingType(id);
 		refreshCraftables();
 		break;
+	case "iceFeather":
+		navigate("right-crafting");
+		switchCraftingType(id);
+		refreshCraftables();
+		break;
+	case "stew":
+		confirmDialogue("images/stew.png", "Drink the stew to reduce cooldown by 15 minutes?", "Drink", "Close", "DRINK_STEW");
+		break;
+	case "chef":
+		if (getItem("chefCooldown") > 1)
+		{
+			confirmDialogue("images/chef.png", "I'm still trying to think of a stew recipe.  Come back later.", "Close", "", "");
+		}
+		else
+		{
+			if (ownsStew())
+			{
+				confirmDialogue("images/chef.png", "I'm offended, do you not enjoy the master piece we have created? Finish eating your stew if you want to make a new one!", "Close", "", "");
+				return;
+			}
+			var sourceid_for_account = getItemString("chefRecipeItem1");
+			var MAX_SYNC_START = getItemString("chefRecipeAmount1");
+			var medianResidual = getItemString("chefRecipeItem2");
+			var accuracy = getItemString("chefRecipeAmount2");
+			var hqPercent = getItemString("chefRecipeItem3");
+			var qualityPercent = getItemString("chefRecipeAmount3");
+			var _a_ = "<img src='images/check.png' class='img-20' />";
+			if (getItem(sourceid_for_account) < MAX_SYNC_START)
+			{
+				_a_ = "<img src='images/x.png' class='img-20' />";
+			}
+			var _b_ = "<img src='images/check.png' class='img-20' />";
+			if (getItem(medianResidual) < accuracy)
+			{
+				_b_ = "<img src='images/x.png' class='img-20' />";
+			}
+			var _c_ = "<img src='images/check.png' class='img-20' />";
+			if (getItem(hqPercent) < qualityPercent)
+			{
+				_c_ = "<img src='images/x.png' class='img-20' />";
+			}
+			if (getItem("researcherCooking") >= 4)
+			{
+				confirmDialogue2("images/chef.png", "I need some ingredients!  I'm trying to make a <b style='color:green'>" + getItemName(getItemString("chefStew")) + "</b><br /><br />Ingredients:<br /><br /><center><table width='70%' style='text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/" + sourceid_for_account + ".png' class='img-50' /></td><td>" + MAX_SYNC_START + " " + _a_ + "</td></tr><tr><td><img src='images/" + medianResidual
+					+ ".png' class='img-50' /></td><td>" + accuracy + " " + _b_ + "</td></tr><tr><td><img src='images/" + hqPercent + ".png' class='img-50' /></td><td>" + qualityPercent + " " + _c_ + "</td></tr></table><br /><br /><table width='70%' style='text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/energy.png' class='img-50' /></td><td style='color:green'>" + formatNumber(getItem("stewEnergy")) + "</td></tr><tr><td><img src='images/hourglass.png' class='img-50' /></td><td style='color:green'>"
+					+ formatTime(getItem("stewCooldownReduction")) + "</td></tr></table></center>", "Make Stew", "Skip this Stew", "Close", "MAKE_STEW", "SKIP_STEW");
+			}
+			else
+			{
+				confirmDialogue("images/chef.png", "I need some ingredients!  I'm trying to make a <b style='color:green'>" + getItemName(getItemString("chefStew")) + "</b><br /><br />Ingredients:<br /><br /><center><table width='70%' style='text-align:center;color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/" + sourceid_for_account + ".png' class='img-50' /></td><td>" + MAX_SYNC_START + " " + _a_ + "</td></tr><tr><td><img src='images/" + medianResidual
+					+ ".png' class='img-50' /></td><td>" + accuracy + " " + _b_ + "</td></tr><tr><td><img src='images/" + hqPercent + ".png' class='img-50' /></td><td>" + qualityPercent + " " + _c_ + "</td></tr></table></center>", "Make Stew", "Close", "MAKE_STEW");
+			}
+		}
+		break;
+	case "darkCrystalUsed":
+		confirmDialogue("images/faradox.png", "Faradox has been released into this world.<br /><br /><span style='color:grey'>We need to find and use all 7 crystals scattered around the world for it to gain its power back.</span>", "Close", "", "");
+		break;
+	case "planter":
+		confirmDialogue("images/planter.png", "<b>Right click</b> a seed to automatically harvest all and replant.<br /><br /><b>Right click</b> this planter to only harvest all.", "Close", "", "");
+		break;
+	case "lumberJack":
+		sendBytes("LUMBERJACK");
+		break;
+	case "chain":
+	case "skeletonHead":
+	case "skeletonLeftArm":
+	case "skeletonRightArm":
+	case "skeletonLeftLeg":
+	case "skeletonRightLeg":
+		navigate("right-crafting");
+		switchCraftingType("cemeterySkeleton");
+		refreshCraftables();
+		break;
+	case "smallSnowballs":
+	case "mediumSnowball":
+	case "largeSnowball":
+	case "leftBranch":
+	case "rightBranch":
+		navigate("right-crafting");
+		switchCraftingType("snowman");
+		refreshCraftables();
+		break;
+	case "cemeterySkeletonShield1":
+	case "cemeterySkeletonShield2":
+	case "cemeterySkeletonShield3":
+		navigate("right-crafting");
+		switchCraftingType("cemeterySkeletonShield");
+		refreshCraftables();
+		break;
+	case "stardust1000":
+		sendBytes("OPEN_SD_PACKS");
+		break;
+	case "rocket":
+		if (getItemString("rocketDestination") == "moon" && getItem("rocketKm") == 384000)
+		{
+			sendBytes("COLLECT_ROCKET=moon");
+		}
+		else
+		{
+			var _d_ = "<img src='images/x.png' class='img-20' />";
+			if (getItem("oil") >= 100000)
+			{
+				_d_ = "<img src='images/check.png' class='img-20' />";
+			}
+			var th_field = "";
+			if (getItem("titaniumRocketBoosters") > 0)
+			{
+				th_field = "<br /><table style='color:grey;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/titaniumRocketBoosters.png' class='img-30' /></td><td style='font-size:10pt;text-align:right;'>A notification will show up and can be clicked to activate the boosters. <u style='cursor:pointer;' onclick='titaniumRocketBoostersMoreInfo()'>(more info)</u></td></tr></table>";
+			}
+			confirmDialogue(getRocketImage(), "Would you like to go to the moon?<br /><br /><span style='color:grey'>Requires <img src='images/oil.png' class='img-20' /> 100,000 oil " + _d_ + "</span><br /><br /><center><table style='color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/moon.png' class='img-50' /></td><td>384,000 km</td></tr><tr><td><img src='images/" + id + ".png' class='img-50' /></td><td>" + formatNumber(getItem(id + "Trips"))
+				+ " Trips completed</td></tr></table></center>" + th_field, "Launch Rocket", "Close", "LAUNCH_ROCKET=moon");
+		}
+		break;
 	case "oyster":
 		openDialogue("dialogue-oysterOptions");
+		break;
+	case "specialOyster":
+		openDialogue("dialogue-specialOysterOptions");
 		break;
 	case "vial":
 		if (getItem("poisonCombatVial") > 0 || getItemString("weapon") == "posionCombatVial" || getItemString("weapon") == "combatVial" || getItem("combatVial") > 0)
@@ -315,6 +512,12 @@ function clicksItem(id)
 			confirmDialogue("images/largeVial.png", "Try a smaller vial if you wish to hold poison.", "Close", "", "");
 		}
 		break;
+	case "treasureMap":
+		sendBytes("CLICKS_TREASURE_MAP");
+		break;
+	case "treasureChest":
+		openDialogue("dialogue-treasureChest");
+		break;
 	case "bones":
 		if (getBonemealTypeData() == "none")
 		{
@@ -328,6 +531,9 @@ function clicksItem(id)
 				value = "&#8734;";
 			}
 			openInputDialogue("Bonemeal<br /><span style='color:grey;font-size:10pt;'>Currently stored: " + getItem("bonemeal") + "/" + value + "</span>", "images/bonemeal.png", "bones", 1, ["bonemeal"], [1], ["bones"], [1], "Add", "ADD_BONEMEAL", "Bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.");
+			var data_phone_number = getMaxBonemealToPut(id);
+			document.getElementById("dialogue-wild-input").value = data_phone_number;
+			$("#dialogue-wild-input").keyup();
 		}
 		break;
 	case "ashes":
@@ -343,6 +549,9 @@ function clicksItem(id)
 				value = "&#8734;";
 			}
 			openInputDialogue("Bonemeal<br /><span style='color:grey;font-size:10pt;'>Currently stored: " + getItem("bonemeal") + "/" + value + "</span>", "images/bonemeal.png", "ashes", 1, ["bonemeal"], [2], ["ashes"], [1], "Add", "ADD_BONEMEAL", "Ashes can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds.");
+			data_phone_number = getMaxBonemealToPut(id);
+			document.getElementById("dialogue-wild-input").value = data_phone_number;
+			$("#dialogue-wild-input").keyup();
 		}
 		break;
 	case "iceBones":
@@ -358,6 +567,9 @@ function clicksItem(id)
 				value = "&#8734;";
 			}
 			openInputDialogue("Bonemeal<br /><span style='color:grey;font-size:10pt;'>Currently stored: " + getItem("bonemeal") + "/" + value + "</span>", "images/bonemeal.png", "iceBones", 1, ["bonemeal"], [3], ["iceBones"], [1], "Add", "ADD_BONEMEAL", "Ice bones can be stored in the bonemeal bin.  Bonemeal is required to plant high level seeds. The cold has preserved its calcium content.");
+			data_phone_number = getMaxBonemealToPut(id);
+			document.getElementById("dialogue-wild-input").value = data_phone_number;
+			$("#dialogue-wild-input").keyup();
 		}
 		break;
 	case "needle":
@@ -427,7 +639,7 @@ function clicksItem(id)
 			{
 				if (getItem("oxygenTankTimer") > 1)
 				{
-					confirmDialogue("images/oxygenTank.png", "Your already exploring the deep ocean floors!", "Close", "", "SEND_BOAT=oxygenTank");
+					confirmDialogue("images/oxygenTank.png", "You're already exploring the deep ocean floors!", "Close", "", "");
 					hideElement("notification-specialBaitOn");
 				}
 				else
@@ -440,6 +652,42 @@ function clicksItem(id)
 		else
 		{
 			confirmDialogue("images/oxygenTank.png", "I'm not sure how to use this yet.", "Close", "", "");
+		}
+		break;
+	case "rowBoat":
+		if (getItem(id + "Timer") == 1)
+		{
+			sendBytes("COLLECT_BOAT=" + id);
+		}
+		else
+		{
+			if (getItem(id + "Timer") > 1)
+			{
+				confirmDialogue("images/" + id + ".png", "You're already out on a boat!", "Close", "", "");
+			}
+			else
+			{
+				confirmDialogue("images/" + id + ".png", "Would you like to go fishing on your boat?<br /><br /><span style='color:grey'>You will not obtain fish from your tool during this time.</span><br /><br /><center><table style='color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/hourglass.png' class='img-50' /></td><td>6 hours</td></tr><tr><td><img src='images/" + id + ".png' class='img-50' /></td><td>" + formatNumber(getItem(id + "Trips")) + " Trips completed</td></tr></table></center>"
+					, "Send Boat", "Close", "SEND_BOAT=" + id);
+			}
+		}
+		break;
+	case "canoeBoat":
+		if (getItem(id + "Timer") == 1)
+		{
+			sendBytes("COLLECT_BOAT=" + id);
+		}
+		else
+		{
+			if (getItem(id + "Timer") > 1)
+			{
+				confirmDialogue("images/" + id + ".png", "You're already out on a boat!", "Close", "", "");
+			}
+			else
+			{
+				confirmDialogue("images/" + id + ".png", "Would you like to go fishing on your canoe?<br /><br /><span style='color:grey'>You will not obtain fish from your tool during this time.</span><br /><br /><center><table style='color:black;padding:10px;border:1px solid #000033; background-color:#b3d9ff;'><tr><td><img src='images/hourglass.png' class='img-50' /></td><td>10 hours</td></tr><tr><td><img src='images/" + id + ".png' class='img-50' /></td><td>" + formatNumber(getItem(id + "Trips"))
+					+ " Trips completed</td></tr></table></center>", "Send Boat", "Close", "SEND_BOAT=" + id);
+			}
 		}
 		break;
 	case "manaStars":
@@ -468,7 +716,7 @@ function clicksItem(id)
 		confirmDialogue("images/telescopeLens.png", "I need to find a way to get the telescope lens in the telescope.<br /><br />Maybe I require some kind of tool where I can bang the lens in place.", "Close", "", "");
 		break;
 	case "telescope":
-		confirmDialogue("images/telescope.png", "There is too much light pollution.", "Close", "", "");
+		confirmDialogue("images/telescope.png", "You look through the telescope...<br /><br />Nothing is visible! There is too much light pollution.", "Close", "", "");
 		break;
 	case "fightPvpButton":
 		confirmDialogue("images/underConstruction.png", "This piece of content is currently under construction!", "Close", "", "");
@@ -486,6 +734,9 @@ function clicksItem(id)
 	case "redCrystal":
 		confirmDialogue("images/redCrystal.png", "<i style='color:grey'>You feel a sense of comfort near the lava crystal.</i><br /><br />Touch the crystal?", "Touch Crystal", "Cancel", "TOUCH_CRYSTAL=redCrystal");
 		break;
+	case "blueCrystal":
+		confirmDialogue("images/blueCrystal.png", "<i style='color:grey'>You feel a sense of comfort near the ocean crystal.</i><br /><br />Touch the crystal?", "Touch Crystal", "Cancel", "TOUCH_CRYSTAL=blueCrystal");
+		break;
 	case "puzzleChest1":
 		navigate("right-puzzleChest1");
 		break;
@@ -495,6 +746,8 @@ function clicksItem(id)
 	case "miner":
 	case "drills":
 	case "crushers":
+	case "giantDrills":
+	case "excavators":
 		if (id == "miner" && getItem("letTheMiningBeginQuest") == 2 && getAllocationAmount(id) == 0)
 		{
 			if (getMinersOrMachineryAvailable("miner") == 0)
@@ -517,6 +770,9 @@ function clicksItem(id)
 	case "carePackage2":
 		confirmDialogue("images/carePackage2.png", "Open package?", "Open", "Wait", "OPEN_CARE_PACKAGE_2");
 		break;
+	case "carePackage3":
+		confirmDialogue("images/carePackage3.png", "Open package?", "Open", "Wait", "OPEN_CARE_PACKAGE_3");
+		break;
 	case "researcher":
 		navigate("right-researcher");
 		break;
@@ -527,9 +783,27 @@ function clicksItem(id)
 		refreshTreeListTab();
 		navigate("right-treeList");
 		break;
+	case "pirate":
+		refreshBoundOrbs();
+		navigate("right-pirate");
+		break;
 	case "combatLog":
 		navigate("right-combatLog");
 		sendBytes("REFRESH_COMBAT_LOG");
+		break;
+	case "lootBagLog":
+		navigate("right-lootBagLog");
+		sendBytes("REFRESH_LOOT_BAGS_LOG");
+		break;
+	case "explorer":
+		if (getItem("explorerDialogue") == 1)
+		{
+			sendBytes("EXPLORER_DIALOGUE=4");
+		}
+		else
+		{
+			navigate("right-explorer");
+		}
 		break;
 	case "seedList":
 		refreshSeedListTab();
@@ -537,6 +811,10 @@ function clicksItem(id)
 		break;
 	case "diamond_verydark":
 	case "gemList2":
+		refreshGemListTab();
+		navigate("right-gemList");
+		break;
+	case "gemList3":
 		refreshGemListTab();
 		navigate("right-gemList");
 		break;
@@ -568,6 +846,11 @@ function clicksItem(id)
 		switchCraftingType(id);
 		refreshCraftables();
 		break;
+	case "blackSilk":
+		navigate("right-crafting");
+		switchCraftingType(id);
+		refreshCraftables();
+		break;
 	case "batSkin":
 		navigate("right-crafting");
 		switchCraftingType(id);
@@ -585,8 +868,9 @@ function clicksItem(id)
 		refreshCraftables();
 		break;
 	case "bowBase":
+	case "magicString":
 		navigate("right-crafting");
-		switchCraftingType(id);
+		switchCraftingType("bowBase");
 		refreshCraftables();
 		break;
 	}

@@ -1,21 +1,25 @@
 /**
- * navigate extracted from ../../deobfuscated/bundle.js at line 2326-2418
+ * navigate extracted from ../../deobfuscated/bundle.js at line 3034-3130
  *
  * If this file doesn't contain a function, there is an error in ../raw/navigate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function navigate(_0x1D9CC)
+function navigate(_0x6113)
 {
-	sendBytes("LAST_TAB=" + _0x1D9CC);
+	sendBytes("LAST_TAB=" + _0x6113);
 	hideAllRightTabs();
-	document.getElementById("navigation-" + _0x1D9CC).style.display = "";
-	global_lastTabId = _0x1D9CC;
+	document.getElementById("navigation-" + _0x6113).style.display = "";
+	global_lastTabId = _0x6113;
 	changeBackgroundRightSection("default");
-	switch (_0x1D9CC)
+	switch (_0x6113)
 	{
 	case "right-home":
 		refreshHomeTab();
+		break;
+	case "right-marketHistory":
+		clicksMarketHistory();
+		sendBytes("REFRESH_MARKET_HISTORY");
 		break;
 	case "right-shop":
 		loadShopTab();
@@ -93,7 +97,7 @@ function navigate(_0x1D9CC)
 		sendBytes("REFRESH_TRADABLES");
 		break
 	};
-	if (_0x1D9CC != "right-combat-fighting" && getRandomInt(10000) == 0 && getItem("darkCrystalUsed") > 0)
+	if (_0x6113 != "right-combat-fighting" && getRandomInt(10000) == 0 && getItem("darkCrystalUsed") > 0)
 	{
 		faradoxRandomShow()
 	}

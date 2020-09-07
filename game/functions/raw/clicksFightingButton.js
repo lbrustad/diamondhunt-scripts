@@ -1,34 +1,38 @@
 /**
- * clicksFightingButton extracted from ../../deobfuscated/bundle.js at line 8679-8706
+ * clicksFightingButton extracted from ../../deobfuscated/bundle.js at line 11340-11371
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksFightingButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function clicksFightingButton(_0x1CF5A)
+function clicksFightingButton(_0x4827)
 {
-	var _0x1CF68 = "";
-	if (getItem("heroHp") < getItem("heroMaxHp"))
+	$(window).scrollTop(0);
+	if (getItem("giantSnakeTimer") > 0 && _0x4827 == "forest")
 	{
-		_0x1CF68 = "<br /><br /><img src=\'images/heart.png\' class=\'img-30\' /> <i style=\'color:red\'>Warning, you do not have full heatlh.</i>"
-	};
-	if (getItemString("arrows") == "arrows" && getItemString("weapon") == "bow")
-	{
-		_0x1CF68 = "<br /><br /><img src=\'images/bow.png\' class=\'img-30\' /> <i style=\'color:red\'>Warning, no arrows equipped.</i>"
-	};
-	if (getItem("giantSnakeTimer") > 0 && _0x1CF5A == "forest")
-	{
-		confirmDialogue2("images/warning.png", "There is currently a giant snake roaming the forest.  If you manage to find it, would you like to fight it?<br /><br /><span style=\'color:grey\'>The giant snake is not 100% guaranteed.</span>", "Yes, I\'m not scared!", "No, fight normal forest monsters", "Cancel", "FIGHT_WITH_GIANT_SNAKE=" + _0x1CF5A, "FIGHT=" + _0x1CF5A)
+		confirmDialogue2("images/warning.png", "There is currently a giant snake roaming the forest.  If you manage to find it, would you like to fight it?<br /><br /><span style=\'color:grey\'>The giant snake is not 100% guaranteed.</span>", "Yes, I\'m not scared!", "No, fight normal forest monsters", "Cancel", "FIGHT_WITH_GIANT_SNAKE=" + _0x4827, "FIGHT=" + _0x4827)
 	}
 	else
 	{
-		if (getItem("honey") > 0 && _0x1CF5A == "caves")
+		if (getItem("honey") > 0 && _0x4827 == "caves")
 		{
-			confirmDialogue2("images/honey.png", "Would you like to bring honey with you?<br /><br /><span style=\'color:grey\'>You will lose the honey when combat begins.</span>", "Bring 1 honey", "No, just find a fight", "Cancel", "FIGHT_WITH_ONE_HONEY=" + _0x1CF5A, "FIGHT=" + _0x1CF5A)
+			confirmDialogue2("images/honey.png", "Would you like to bring honey with you?<br /><br /><span style=\'color:grey\'>You will lose the honey when combat begins.</span>", "Bring 1 honey", "No, just find a fight", "Cancel", "FIGHT_WITH_ONE_HONEY=" + _0x4827, "FIGHT=" + _0x4827)
 		}
 		else
 		{
-			confirmDialogue("none", "<center><img src=\'images/" + _0x1CF5A + ".png\' /><br /><br />Look for a fight in the <b>" + getItemName(_0x1CF5A) + "</b>?" + _0x1CF68 + "</center>", "Fight", "Run", "FIGHT=" + _0x1CF5A)
+			if (getItem("telescope") > 0 && _0x4827 == "fields")
+			{
+				sendBytes("FIGHT=" + _0x4827)
+			}
+			else
+			{
+				if (_0x4827 == "fields" && getItem("combatXp") == 0 && getItemString("weapon") == "weapon")
+				{
+					confirmDialogue("images/rustySword.png", "I should maybe equip a weapon before fighting.", "Close", "", "");
+					return
+				};
+				openConfirmDialogueFighting(_0x4827)
+			}
 		}
 	};
 	exitCombatMap()

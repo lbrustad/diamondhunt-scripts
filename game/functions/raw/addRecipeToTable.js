@@ -1,62 +1,62 @@
 /**
- * addRecipeToTable extracted from ../../deobfuscated/bundle.js at line 11380-11434
+ * addRecipeToTable extracted from ../../deobfuscated/bundle.js at line 15807-15861
  *
  * If this file doesn't contain a function, there is an error in ../raw/addRecipeToTable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function addRecipeToTable(_0x1CA60, _0x1C85A)
+function addRecipeToTable(_0x3DBB, _0x396D)
 {
-	var _0x1C83E = _0x1CA60.itemName;
-	var _0x1CAFA = _0x1CA60.skill;
-	var _0x1CB08 = _0x1CA60.skillLevel;
-	var _0x1CAC2 = _0x1CA60.recipe;
-	var _0x1CAD0 = _0x1CA60.recipeCost;
-	var _0x1CA98 = _0x1CA60.isMultiCraft;
-	var _0x1CA8A = _0x1CA60.itemNameDisplay;
-	var _0x1CA6E = _0x1CA60.description;
-	var _0x1CA52 = true;
-	var _0x1CAB4 = "<td>" + _0x1CA8A + "</td>";
-	_0x1CAB4 += "<td>" + "<img src=\'images/" + _0x1C83E + ".png\' class=\'img-100\' /> " + "</td>";
-	if (getLevel(getItem(_0x1CA60.skill[0] + "Xp")) >= _0x1CB08)
+	var _0x3933 = _0x3DBB.itemName;
+	var _0x3EFA = _0x3DBB.skill;
+	var _0x3F17 = _0x3DBB.skillLevel;
+	var _0x3E86 = _0x3DBB.recipe;
+	var _0x3EA3 = _0x3DBB.recipeCost;
+	var _0x3E2F = _0x3DBB.isMultiCraft;
+	var _0x3E12 = _0x3DBB.itemNameDisplay;
+	var _0x3DD8 = _0x3DBB.description;
+	var _0x3D9E = true;
+	var _0x3E69 = "<td>" + _0x3E12 + "</td>";
+	_0x3E69 += "<td>" + "<img src=\'images/" + _0x3933 + ".png\' class=\'img-100\' /> " + "</td>";
+	if (getLevel(getItem(_0x3DBB.skill[0] + "Xp")) >= _0x3F17)
 	{
-		_0x1CAB4 += "<td style=\'color:green\'>" + _0x1CB08 + "</td>"
+		_0x3E69 += "<td style=\'color:green\'>" + _0x3F17 + "</td>"
 	}
 	else
 	{
-		_0x1CAB4 += "<td style=\'color:red\'>" + _0x1CB08 + "</td>";
-		_0x1CA52 = false
+		_0x3E69 += "<td style=\'color:red\'>" + _0x3F17 + "</td>";
+		_0x3D9E = false
 	};
-	_0x1CAB4 += "<td>";
-	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1CAC2.length; _0x1C6B6++)
+	_0x3E69 += "<td>";
+	for (var _0x3607 = 0; _0x3607 < _0x3E86.length; _0x3607++)
 	{
-		var _0x1CAEC = _0x1CAC2[_0x1C6B6];
-		var _0x1CADE = _0x1CAD0[_0x1C6B6];
-		var _0x1CA7C = getItem(_0x1CAEC) >= _0x1CADE;
-		var _0x1CB16 = "style=\'color:green\'";
-		if (!_0x1CA7C)
+		var _0x3EDD = _0x3E86[_0x3607];
+		var _0x3EC0 = _0x3EA3[_0x3607];
+		var _0x3DF5 = getItem(_0x3EDD) >= _0x3EC0;
+		var _0x3F34 = "style=\'color:green\'";
+		if (!_0x3DF5)
 		{
-			_0x1CA52 = false;
-			_0x1CB16 = "style=\'color:red\'"
+			_0x3D9E = false;
+			_0x3F34 = "style=\'color:red\'"
 		};
-		if (_0x1CAEC != "vial" && _0x1CAEC != "largeVial")
+		if (_0x3EDD != "vial" && _0x3EDD != "largeVial" && _0x3EDD != "hugeVial")
 		{
-			_0x1CAB4 += "<span title=\'" + getItemName(_0x1CAEC) + "\' " + _0x1CB16 + ">" + "<img src=\'images/" + _0x1CAEC + ".png\' class=\'img-50\' /> " + formatNumber(_0x1CADE) + " </span>";
-			_0x1CAB4 += "<br />"
+			_0x3E69 += "<span title=\'" + getItemName(_0x3EDD) + "\' " + _0x3F34 + ">" + "<img src=\'images/" + _0x3EDD + ".png\' class=\'img-50\' /> " + formatNumber(_0x3EC0) + " </span>";
+			_0x3E69 += "<br />"
 		}
 	};
-	_0x1CAB4 += "</td>";
-	_0x1CAB4 += "<td>" + _0x1CA6E + "</td>";
-	if (_0x1CAFA[0] == "cooking")
+	_0x3E69 += "</td>";
+	_0x3E69 += "<td>" + _0x3DD8 + "</td>";
+	if (_0x3EFA[0] == "cooking")
 	{
-		_0x1CAB4 += "<td>" + formatTime(_0x1CA60.timeToPrep) + "</td>"
+		_0x3E69 += "<td>" + formatTime(_0x3DBB.timeToPrep) + "</td>"
 	};
-	var _0x1CB24 = "style=\'background-color:#b3ffb3;\'";
-	if (!_0x1CA52)
+	var _0x3F51 = "style=\'background-color:#b3ffb3;\'";
+	if (!_0x3D9E)
 	{
-		_0x1CB24 = "style=\'background-color:#ffc2b3;\'"
+		_0x3F51 = "style=\'background-color:#ffc2b3;\'"
 	};
-	var _0x1CAA6 = "onclick=\'craftItem(\"" + _0x1C83E + "\", " + _0x1CA98 + ",\"" + _0x1CA8A + "\",\"" + _0x1CAC2 + "\"+ _0x1CAD0+ "
+	var _0x3E4C = "onclick=\'craftItem(\"" + _0x3933 + "\", " + _0x3E2F + ",\"" + _0x3E12 + "\",\"" + _0x3E86 + "\"+ _0x3EA3+ "
 		, ")\'";
-	return "<tr " + _0x1CAA6 + " " + _0x1CB24 + ">" + _0x1CAB4 + "</tr>"
+	return "<tr " + _0x3E4C + " " + _0x3F51 + ">" + _0x3E69 + "</tr>"
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-function getMonsterObject(_value)
+function getMonsterObject(name)
 {
 	if (window.chickenMonsterObj == null)
 	{
@@ -22,10 +22,35 @@ function getMonsterObject(_value)
 		fireHawkMonsterObj = new FireHawkMonster;
 		fireHawkMonsterObj.preloadImages();
 	}
+	if (window.iceHawkMonsterObj == null)
+	{
+		iceHawkMonsterObj = new IceHawkMonster;
+		iceHawkMonsterObj.preloadImages();
+	}
+	if (window.piranhasMonsterObj == null)
+	{
+		piranhasMonsterObj = new PiranhasMonster;
+		piranhasMonsterObj.preloadImages();
+	}
 	if (window.lavaAlienMonsterObj == null)
 	{
 		lavaAlienMonsterObj = new LavaAlienMonster;
 		lavaAlienMonsterObj.preloadImages();
+	}
+	if (window.reaperMonsterObj == null)
+	{
+		reaperMonsterObj = new ReaperMonster;
+		reaperMonsterObj.preloadImages();
+	}
+	if (window.sharkMonsterObj == null)
+	{
+		sharkMonsterObj = new SharkMonster;
+		sharkMonsterObj.preloadImages();
+	}
+	if (window.tridentSoldierMonsterObj == null)
+	{
+		tridentSoldierMonsterObj = new TridentSoldierMonster;
+		tridentSoldierMonsterObj.preloadImages();
 	}
 	if (window.babyPolarBearMonsterObj == null)
 	{
@@ -51,25 +76,55 @@ function getMonsterObject(_value)
 		ratMonsterObj = new RatMonster;
 		ratMonsterObj.preloadImages();
 	}
-	if (_value == "bee" && window.beeMonsterObj == null)
+	if (name == "bee" && window.beeMonsterObj == null)
 	{
 		beeMonsterObj = new BeeMonster;
 		beeMonsterObj.preloadImages();
 	}
-	if (_value == "bat" && window.batMonsterObj == null)
+	if (name == "bat" && window.batMonsterObj == null)
 	{
 		batMonsterObj = new BatMonster;
 		batMonsterObj.preloadImages();
 	}
-	if (_value == "fireMage" && window.fireMageMonsterObj == null)
+	if (name == "fireMage" && window.fireMageMonsterObj == null)
 	{
 		fireMageMonsterObj = new FireMageMonster;
 		fireMageMonsterObj.preloadImages();
 	}
-	if (_value == "boneHead" && window.boneHeadMonsterObj == null)
+	if (name == "boneHead" && window.boneHeadMonsterObj == null)
 	{
 		boneHeadMonsterObj = new BoneHeadMonster;
 		boneHeadMonsterObj.preloadImages();
+	}
+	if (name == "ghost" && window.ghostMonsterObj == null)
+	{
+		ghostMonsterObj = new GhostMonster;
+		ghostMonsterObj.preloadImages();
+	}
+	if (name == "explorer" && window.explorerMonsterObj == null)
+	{
+		explorerMonsterObj = new ExplorerMonster;
+		explorerMonsterObj.preloadImages();
+	}
+	if (name == "skeletonGhost" && window.skeletonGhostMonsterObj == null)
+	{
+		skeletonGhostMonsterObj = new SkeletonGhostMonster;
+		skeletonGhostMonsterObj.preloadImages();
+	}
+	if (name == "cemeterySkeleton" && window.cemeterySkeletonMonsterObj == null)
+	{
+		cemeterySkeletonMonsterObj = new CemeterySkeletonMonster;
+		cemeterySkeletonMonsterObj.preloadImages();
+	}
+	if (name == "fireCemeterySkeleton" && window.fireCemeterySkeletonMonsterObj == null)
+	{
+		fireCemeterySkeletonMonsterObj = new FireCemeterySkeletonMonster;
+		fireCemeterySkeletonMonsterObj.preloadImages();
+	}
+	if (name == "iceCemeterySkeleton" && window.iceCemeterySkeletonMonsterObj == null)
+	{
+		iceCemeterySkeletonMonsterObj = new IceCemeterySkeletonMonster;
+		iceCemeterySkeletonMonsterObj.preloadImages();
 	}
 	if (window.snakeMonsterObj == null)
 	{
@@ -101,6 +156,11 @@ function getMonsterObject(_value)
 		yetiMonsterObj = new YetiMonster;
 		yetiMonsterObj.preloadImages();
 	}
+	if (window.pufferFishMonsterObj == null)
+	{
+		pufferFishMonsterObj = new PufferFishMonster;
+		pufferFishMonsterObj.preloadImages();
+	}
 	if (window.mammaPolarBearObj == null)
 	{
 		mammaPolarBearObj = new MammaPolarBearMonster;
@@ -121,7 +181,12 @@ function getMonsterObject(_value)
 		thiefMonsterObj = new ThiefMonster;
 		thiefMonsterObj.preloadImages();
 	}
-	switch (_value)
+	if (window.frozenBarbarianObj == null)
+	{
+		frozenBarbarianObj = new FrozenBarbarianMonster;
+		frozenBarbarianObj.preloadImages();
+	}
+	switch (name)
 	{
 	case "chicken":
 		return chickenMonsterObj;
@@ -129,8 +194,18 @@ function getMonsterObject(_value)
 		return bushyMonsterObj;
 	case "fireHawk":
 		return fireHawkMonsterObj;
+	case "iceHawk":
+		return iceHawkMonsterObj;
+	case "piranhas":
+		return piranhasMonsterObj;
 	case "lavaAlien":
 		return lavaAlienMonsterObj;
+	case "reaper":
+		return reaperMonsterObj;
+	case "shark":
+		return sharkMonsterObj;
+	case "tridentSoldier":
+		return tridentSoldierMonsterObj;
 	case "babyPolarBear":
 		return babyPolarBearMonsterObj;
 	case "skeletonTree":
@@ -151,6 +226,8 @@ function getMonsterObject(_value)
 		return entMonsterObj;
 	case "thief":
 		return thiefMonsterObj;
+	case "frozenBarbarian":
+		return frozenBarbarianObj;
 	case "faradoxMinion":
 		return faradoxMinionObj;
 	case "faradoxMinion2":
@@ -159,6 +236,8 @@ function getMonsterObject(_value)
 		return skyChickenMonsterObj;
 	case "yeti":
 		return yetiMonsterObj;
+	case "pufferFish":
+		return pufferFishMonsterObj;
 	case "giantSnake":
 		return giantSnakeMonsterObj;
 	case "bear":
@@ -171,6 +250,18 @@ function getMonsterObject(_value)
 		return skeletonMonsterObj;
 	case "boneHead":
 		return boneHeadMonsterObj;
+	case "ghost":
+		return ghostMonsterObj;
+	case "explorer":
+		return explorerMonsterObj;
+	case "skeletonGhost":
+		return skeletonGhostMonsterObj;
+	case "cemeterySkeleton":
+		return cemeterySkeletonMonsterObj;
+	case "fireCemeterySkeleton":
+		return fireCemeterySkeletonMonsterObj;
+	case "iceCemeterySkeleton":
+		return iceCemeterySkeletonMonsterObj;
 	}
 	return "none";
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-function Machinery(comment, oil, weight, motionQueueEnt, isSlidingUp, $cont, $slides, callback)
+function Machinery(comment, oil, weight, motionQueueEnt, isSlidingUp, $cont, $slides, callback, watchPanel)
 {
 	this.machineryName = comment;
 	this.oil = oil;
@@ -10,4 +10,5 @@ function Machinery(comment, oil, weight, motionQueueEnt, isSlidingUp, $cont, $sl
 	this.silverChance = $cont;
 	this.goldChance = $slides;
 	this.promethiumChance = callback;
+	this.titaniumChance = watchPanel;
 };

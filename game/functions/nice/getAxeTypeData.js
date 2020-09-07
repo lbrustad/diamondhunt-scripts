@@ -28,4 +28,5 @@ function getAxeTypeData()
 	{
 		return [boxsize, "diamond", "none", "20"];
 	}
+	return ["none", "none", "none", 0];
 };

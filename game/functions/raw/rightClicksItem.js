@@ -1,45 +1,64 @@
 /**
- * rightClicksItem extracted from ../../deobfuscated/bundle.js at line 4809-4846
+ * rightClicksItem extracted from ../../deobfuscated/bundle.js at line 6208-6264
  *
  * If this file doesn't contain a function, there is an error in ../raw/rightClicksItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function rightClicksItem(_0x1CF30)
+function rightClicksItem(_0x47D0)
 {
-	if (global_equipmentMap[_0x1CF30] != null)
+	if (global_equipmentMap[_0x47D0] != null)
 	{
 		if (getItem("needle") > 0)
 		{
-			if (_0x1CF30.startsWith("snakeskin"))
+			if (_0x47D0.startsWith("snakeskin"))
 			{
-				confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
-				return
+				confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+				return false
 			}
 			else
 			{
-				if (_0x1CF30.startsWith("bearFur"))
+				if (_0x47D0.startsWith("bearFur"))
 				{
-					confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
-					return
+					confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+					return false
 				}
 				else
 				{
-					if (_0x1CF30.startsWith("polarBearFur"))
+					if (_0x47D0.startsWith("polarBearFur"))
 					{
-						confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
-						return
+						confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+						return false
 					}
 					else
 					{
-						if (_0x1CF30.startsWith("batSkin"))
+						if (_0x47D0.startsWith("batSkin"))
 						{
-							confirmDialogue("images/needle.png", "<img src=\'images/" + _0x1CF30 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x1CF30 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x1CF30);
-							return
+							confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+							return false
+						}
+						else
+						{
+							if (_0x47D0.startsWith("reaper"))
+							{
+								confirmDialogue("images/needle.png", "<img src=\'images/" + _0x47D0 + ".png\' class=\'img-50\' /> Use needle on this? <img src=\'images/" + _0x47D0 + ".png\' class=\'img-30\' />", "Use Needle", "Cancel", "NEEDLE=" + _0x47D0);
+								return false
+							}
 						}
 					}
 				}
 			}
 		}
+	};
+	if (_0x47D0.endsWith("Seeds") && getItem("planter") == 1)
+	{
+		sendBytes("PLANTER=" + _0x47D0);
+		return false
+	};
+	switch (_0x47D0)
+	{
+	case "planter":
+		sendBytes("HARVEST_PLANTER");
+		return false
 	}
 }

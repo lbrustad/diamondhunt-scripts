@@ -1,5 +1,5 @@
 /**
- * infoGemsDialogue extracted from ../../deobfuscated/bundle.js at line 3112-3115
+ * infoGemsDialogue extracted from ../../deobfuscated/bundle.js at line 4024-4027
  *
  * If this file doesn't contain a function, there is an error in ../raw/infoGemsDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

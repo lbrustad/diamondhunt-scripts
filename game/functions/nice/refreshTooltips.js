@@ -2,6 +2,10 @@
 
 function refreshTooltips()
 {
+	if (!global_gameLoaded)
+	{
+		return;
+	}
 	var value = "[data-tooltip-id]";
 	var bcofl_checkbox = $(value);
 	var i = 0;

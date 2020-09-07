@@ -2,7 +2,7 @@
 
 function confirmDialogue(value, ast, name, index, item)
 {
-	if (value == "" || value == "none")
+	if (value == "" || value == "none" || value == null)
 	{
 		document.getElementById("dialogue-confirm-img").style.display = "none";
 	}

@@ -1,13 +1,13 @@
 /**
- * getSeedDropRate extracted from ../../deobfuscated/bundle.js at line 5766-5791
+ * getSeedDropRate extracted from ../../deobfuscated/bundle.js at line 7529-7556
  *
  * If this file doesn't contain a function, there is an error in ../raw/getSeedDropRate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getSeedDropRate(_0x1D4FC)
+function getSeedDropRate(_0x5633)
 {
-	switch (_0x1D4FC)
+	switch (_0x5633)
 	{
 	case "dottedGreenLeafSeeds":
 		return 14400;
@@ -25,6 +25,8 @@ function getSeedDropRate(_0x1D4FC)
 		return 3000000;
 	case "redMushroomSeeds":
 		return 3600;
+	case "blewitMushroomSeeds":
+		return 36000;
 	case "stardustSeeds":
 		return 28800;
 	default:

@@ -1,81 +1,81 @@
 /**
- * openInputDialogue extracted from ../../deobfuscated/bundle.js at line 6713-6786
+ * openInputDialogue extracted from ../../deobfuscated/bundle.js at line 8849-8922
  *
  * If this file doesn't contain a function, there is an error in ../raw/openInputDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function openInputDialogue(_0x1C8E6, _0x1DBEE, _0x1DBE0, _0x1DBB6, _0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, _0x1DBD2, _0x1DBA8, _0x1C7CE)
+function openInputDialogue(_0x3A8F, _0x676B, _0x674E, _0x66F7, _0x62C6, _0x62E3, _0x456F, _0x458C, _0x6731, _0x66DA, _0x384B, _0x4535)
 {
-	var _0x1DBC4 = "";
-	if (_0x1C7CE != "")
+	var _0x6714 = "";
+	if (_0x384B != "")
 	{
-		_0x1DBC4 = "<span style=\'color:grey;cursor:pointer;\' onclick=\'this.innerHTML = \"<br /><br />" + _0x1C7CE + "<br /><br />\"\'>(more info)</span>"
+		_0x6714 = "<span style=\'color:grey;cursor:pointer;\' onclick=\'this.innerHTML = \"<br /><br />" + _0x384B + "<br /><br />\"\'>(more info)</span>"
 	};
-	var _0x1CC4A = "";
-	_0x1CC4A += "<div class=\'dialogue\' id=\'wild-dialogue\' style=\'display:none;\'>";
-	_0x1CC4A += "<center>";
-	_0x1CC4A += "<h1>" + _0x1C8E6 + "</h1>";
-	_0x1CC4A += "<div>" + "<img src=\'" + _0x1DBEE + "\' class=\'img-150\' />" + "</div>";
-	_0x1CC4A += "<br /><br />";
-	_0x1CC4A += "<div style=\'display:block\' class=\'input-multi-values-div\'>";
-	_0x1CC4A += "<table width=\'100%\'>";
-	_0x1CC4A += "<tr>";
-	if (_0x1DBE0 == "ironBucket")
+	var _0x41B2 = "";
+	_0x41B2 += "<div class=\'dialogue\' id=\'wild-dialogue\' style=\'display:none;\'>";
+	_0x41B2 += "<center>";
+	_0x41B2 += "<h1>" + _0x3A8F + "</h1>";
+	_0x41B2 += "<div>" + "<img src=\'" + _0x676B + "\' class=\'img-150\' />" + "</div>";
+	_0x41B2 += "<br /><br />";
+	_0x41B2 += "<div style=\'display:block\' class=\'input-multi-values-div\'>";
+	_0x41B2 += "<table width=\'100%\'>";
+	_0x41B2 += "<tr>";
+	if (_0x674E == "ironBucket")
 	{
-		_0x1CC4A += "<td colspan=\'4\'>How many " + getItemName("silverBuckets").toLowerCase() + "? " + _0x1DBC4 + "<input type=\'text\' value=\'" + _0x1DBB6 + "\' id=\'dialogue-wild-input\' /></td>"
+		_0x41B2 += "<td colspan=\'4\'>How many " + getItemName("silverBuckets").toLowerCase() + "? " + _0x6714 + "<input type=\'text\' value=\'" + _0x66F7 + "\' id=\'dialogue-wild-input\' /></td>"
 	}
 	else
 	{
-		_0x1CC4A += "<td colspan=\'4\'>How many " + getItemName(_0x1DBE0).toLowerCase() + "? " + _0x1DBC4 + "<input type=\'text\' value=\'" + _0x1DBB6 + "\' id=\'dialogue-wild-input\' /></td>"
+		_0x41B2 += "<td colspan=\'4\'>How many " + getItemName(_0x674E).toLowerCase() + "? " + _0x6714 + "<input type=\'text\' value=\'" + _0x66F7 + "\' id=\'dialogue-wild-input\' /></td>"
 	};
-	_0x1CC4A += "</tr>";
-	_0x1CC4A += "<tr>";
-	_0x1CC4A += "<td width=\'25%\'><div id=\'dialogue-wild-input-button-1\' class=\'input-button-values\'>ONE</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-2\' class=\'input-button-values\'>25%</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-3\' class=\'input-button-values\'>50%</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-4\' class=\'input-button-values\'>ALL</div></td>";
-	_0x1CC4A += "</tr>";
-	_0x1CC4A += "</table>";
-	_0x1CC4A += "</div>";
-	_0x1CC4A += "<br />";
-	_0x1CC4A += "<div id=\'dialogue-wild-htmlboxes-area\'></div>";
-	_0x1CC4A += "<br />";
-	_0x1CC4A += "<div style=\'background-color:#b3ffff\' id=\'dialogue-wild-input-confirm\' class=\'dialogue-button\'>" + _0x1DBD2 + "</div><br />";
-	_0x1CC4A += "<div onclick=\'closeDialogue(\"wild-dialogue\")\' class=\'dialogue-button\'>Close</div><br />";
-	_0x1CC4A += "</center>";
-	_0x1CC4A += "</div>";
-	document.getElementById("dynamic-dialogue-area").innerHTML = _0x1CC4A;
-	if (_0x1DA9E.length > 0)
+	_0x41B2 += "</tr>";
+	_0x41B2 += "<tr>";
+	_0x41B2 += "<td width=\'25%\'><div id=\'dialogue-wild-input-button-1\' class=\'input-button-values\'>ONE</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-2\' class=\'input-button-values\'>25%</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-3\' class=\'input-button-values\'>50%</div></td><td width=\'25%\'><div id=\'dialogue-wild-input-button-4\' class=\'input-button-values\'>ALL</div></td>";
+	_0x41B2 += "</tr>";
+	_0x41B2 += "</table>";
+	_0x41B2 += "</div>";
+	_0x41B2 += "<br />";
+	_0x41B2 += "<div id=\'dialogue-wild-htmlboxes-area\'></div>";
+	_0x41B2 += "<br />";
+	_0x41B2 += "<div style=\'background-color:#b3ffff\' id=\'dialogue-wild-input-confirm\' class=\'dialogue-button\'>" + _0x6731 + "</div><br />";
+	_0x41B2 += "<div onclick=\'closeDialogue(\"wild-dialogue\")\' class=\'dialogue-button\'>Close</div><br />";
+	_0x41B2 += "</center>";
+	_0x41B2 += "</div>";
+	document.getElementById("dynamic-dialogue-area").innerHTML = _0x41B2;
+	if (_0x62C6.length > 0)
 	{
-		var _0x1DAE4 = (_0x1DA9E[0] == "xp_icon")
+		var _0x6357 = (_0x62C6[0] == "xp_icon")
 	};
 	document.getElementById("dialogue-wild-input-confirm").onclick = function ()
 	{
-		sendBytes(_0x1DBA8 + "=" + _0x1DBE0 + "~" + convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
+		sendBytes(_0x66DA + "=" + _0x674E + "~" + convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value));
 		closeDialogue("wild-dialogue")
 	};
 	document.getElementById("dialogue-wild-input-button-1").onclick = function ()
 	{
-		changeValueOfInput(_0x1CE0A, _0x1CE18, "dialogue-wild-input", "ONE");
-		onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
+		changeValueOfInput(_0x456F, _0x458C, "dialogue-wild-input", "ONE", _0x4535);
+		onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
 	};
 	document.getElementById("dialogue-wild-input-button-2").onclick = function ()
 	{
-		changeValueOfInput(_0x1CE0A, _0x1CE18, "dialogue-wild-input", "25%");
-		onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
+		changeValueOfInput(_0x456F, _0x458C, "dialogue-wild-input", "25%", _0x4535);
+		onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
 	};
 	document.getElementById("dialogue-wild-input-button-3").onclick = function ()
 	{
-		changeValueOfInput(_0x1CE0A, _0x1CE18, "dialogue-wild-input", "50%");
-		onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
+		changeValueOfInput(_0x456F, _0x458C, "dialogue-wild-input", "50%", _0x4535);
+		onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
 	};
 	document.getElementById("dialogue-wild-input-button-4").onclick = function ()
 	{
-		changeValueOfInput(_0x1CE0A, _0x1CE18, "dialogue-wild-input", "ALL");
-		onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
+		changeValueOfInput(_0x456F, _0x458C, "dialogue-wild-input", "ALL", _0x4535);
+		onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
 	};
 	document.getElementById("dialogue-wild-input").onkeyup = function ()
 	{
-		onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
+		onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, convertNumberWithLetrtsKMBToNumber(document.getElementById("dialogue-wild-input").value))
 	};
 	openDialogue("wild-dialogue");
-	onKeyUpWildInputDialogue(_0x1DA9E, _0x1DAAC, _0x1CE0A, _0x1CE18, 1)
+	onKeyUpWildInputDialogue(_0x62C6, _0x62E3, _0x456F, _0x458C, 1)
 }

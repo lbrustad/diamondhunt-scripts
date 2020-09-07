@@ -26,10 +26,28 @@ function manageChangedItem(type)
 		{
 			document.getElementById("notification-questsStarted").style.display = "none";
 		}
+		if (type == "theFrozenBarbarianQuest")
+		{
+			if (item == 1)
+			{
+				showElement("frozenBarbarianMap");
+			}
+			else
+			{
+				hideElement("frozenBarbarianMap");
+			}
+		}
 	}
 	if (type.startsWith("heroDebuff"))
 	{
 		resetHeroNerfs();
+	}
+	if (type.endsWith("Cooldown"))
+	{
+		if (global_lastTabId == "right-combat-fighting")
+		{
+			refeshMagicInCombat();
+		}
 	}
 	if (type.endsWith("Museum"))
 	{
@@ -56,6 +74,10 @@ function manageChangedItem(type)
 		if (item > 0)
 		{
 			showElement("notification-" + type);
+			if (document.getElementById("notification" + "-" + type) != null)
+			{
+				document.getElementById("notification" + "-" + type).setAttribute("onclick", "clicksItem('" + type.substr(0, type.length - 5) + "')");
+			}
 		}
 		else
 		{
@@ -88,7 +110,39 @@ function manageChangedItem(type)
 	}
 	switch (type)
 	{
+	case "wrench":
+		if (item > 0)
+		{
+			if (document.getElementById("wrench-icon-miner") != null)
+			{
+				document.getElementById("wrench-icon-miner").style.display = "";
+			}
+		}
+		break;
+	case "chefCooldown":
+		if (document.getElementById("chef" + "-itemBox-value") != null)
+		{
+			if (item <= 1)
+			{
+				document.getElementById("chef" + "-itemBox-value").innerHTML = "Ready";
+			}
+			else
+			{
+				document.getElementById("chef" + "-itemBox-value").innerHTML = formatTime(item);
+			}
+		}
+		if (item == 0 && getItem("theStewChefQuest") == -1)
+		{
+			showElement("notification-chefStew");
+		}
+		else
+		{
+			hideElement("notification-chefStew");
+		}
+		break;
 	case "oxygenTankTimer":
+	case "rowBoatTimer":
+	case "canoeBoatTimer":
 		var htmlElId = type.substring(0, type.length - 5);
 		if (item > 1)
 		{
@@ -120,6 +174,22 @@ function manageChangedItem(type)
 			}
 		}
 		break;
+	case "shinyMonster":
+		if (item == 1)
+		{
+			showElement("shiny-monster-gif");
+		}
+		else
+		{
+			hideElement("shiny-monster-gif");
+		}
+		break;
+	case "blueFurnaceOrbBound":
+		if (item > 0)
+		{
+			showElement("blueFurnaceOrb-tooltip-furnace");
+		}
+		break;
 	case "specialBaitOn":
 		if (getItem("specialBaitOn") == 1)
 		{
@@ -130,16 +200,55 @@ function manageChangedItem(type)
 			hideElement("notification-specialBaitOn");
 		}
 		break;
-	case "healCooldown":
-	case "poisonCooldown":
-	case "reflectCooldown":
-		if (global_lastTabId == "right-combat-fighting")
+	case "plotShiny1":
+	case "plotShiny2":
+	case "plotShiny3":
+	case "plotShiny4":
+	case "plotShiny5":
+	case "plotShiny6":
+		var s = type.substr(9);
+		if (item > 0)
 		{
-			refeshMagicInCombat();
+			showElement("plot-section-shiny-" + s);
+		}
+		else
+		{
+			hideElement("plot-section-shiny-" + s);
+		}
+		break;
+	case "repelMonster":
+		if (item == "none")
+		{
+			hideElement("notification-repelNotification");
+		}
+		else
+		{
+			document.getElementById("repelNotification-monsterImg").src = "images/" + item + "_monster_idle_0.png";
+			showElement("notification-repelNotification");
+		}
+		break;
+	case "teleportCooldown":
+		if (item > 0)
+		{
+			showElement("teleport-spell-cd-notif");
+		}
+		else
+		{
+			hideElement("teleport-spell-cd-notif");
 		}
 		break;
 	case "questPoints":
 		loadQuestAndAchievementsTab();
+		break;
+	case "treasureMap":
+		if (item > 0)
+		{
+			showElement("notification-treasureMapReady");
+		}
+		else
+		{
+			hideElement("notification-treasureMapReady");
+		}
 		break;
 	case "researcherMagic":
 		if (item >= 3)
@@ -157,8 +266,42 @@ function manageChangedItem(type)
 			document.getElementById("hardcore-icon-top-left").style.display = "none";
 		}
 		break;
+	case "combatTut":
+		if (item == 3)
+		{
+			showElement("notification-hint");
+		}
+		else
+		{
+			hideElement("notification-hint");
+		}
+		if (item >= 2)
+		{
+			document.getElementById("fighting-screen-magic-area").style.display = "none";
+			document.getElementById("combat-spell-heal").style.display = "none";
+			document.getElementById("combat-spell-fire").style.display = "none";
+			document.getElementById("combat-spell-ghostScan").style.display = "none";
+			document.getElementById("combat-spell-invisibility").style.display = "none";
+			document.getElementById("hero-outer-mana-bar").style.display = "none";
+			document.getElementById("hero-mana-display").style.display = "none";
+		}
+		break;
 	case "largeManaPotionUsed":
 		refreshPotionsCombat();
+		break;
+	case "titaniumRocketBoosters":
+		if (document.getElementById("item-box-rocket-image") != null)
+		{
+			document.getElementById("item-box-rocket-image").src = "images/titaniumRocket.png";
+		}
+		break;
+	case "energyRing1":
+	case "energyRing2":
+	case "energyRing3":
+	case "cooldownRing1":
+	case "cooldownRing2":
+	case "cooldownRing3":
+		initializeTooltips();
 		break;
 	case "oilIn":
 	case "oilOut":
@@ -176,6 +319,7 @@ function manageChangedItem(type)
 				btn_subsidy.setAttribute("type", "timer");
 				document.getElementById("td-hero-cooldown").append(btn_subsidy);
 			}
+			showElement("notification-heroCooldownNotification");
 		}
 		else
 		{
@@ -183,6 +327,7 @@ function manageChangedItem(type)
 			{
 				document.getElementById("td-hero-cooldown").innerHTML = "";
 			}
+			hideElement("notification-heroCooldownNotification");
 		}
 		if (getItem("heroCooldownResetTimer") == 0)
 		{
@@ -230,6 +375,12 @@ function manageChangedItem(type)
 		refreshDonorTable();
 		loadDonorShopTab();
 		break;
+	case "lastCombatMap":
+		if (item > 0)
+		{
+			changeCombatMap(item);
+		}
+		break;
 	case "fireFeatherSpawn":
 		if (item > 0)
 		{
@@ -242,8 +393,23 @@ function manageChangedItem(type)
 			hideElement("notification-fireFeatherSpawnReady");
 		}
 		break;
+	case "iceFeatherSpawn":
+		if (item > 0)
+		{
+			showElement("iceFeatherSpawn-" + item);
+			showElement("notification-iceFeatherSpawnReady");
+		}
+		else
+		{
+			hideElement("iceFeatherSpawn-1");
+			hideElement("notification-iceFeatherSpawnReady");
+		}
+		break;
 	case "chatIcon":
 		refreshSigilsDialoguesIcons();
+		break;
+	case "rocketMap":
+		document.getElementById("img-rocket-map").src = "images/rocketMap" + getItem(type) + ".png";
 		break;
 	case "updateLogNotification":
 		if (item > 0)
@@ -278,12 +444,6 @@ function manageChangedItem(type)
 			hideElement("notification-" + type);
 		}
 		break;
-	case "currentFighingArea":
-		if (global_lastTabId == "right-combat-fighting")
-		{
-			changeBodyBackground("images/" + getItemString("currentFighingArea") + "_background.png");
-		}
-		break;
 	case "cooksBookTimer":
 		if (getItem(type) > 1)
 		{
@@ -306,10 +466,66 @@ function manageChangedItem(type)
 			}
 		}
 		break;
+	case "titaniumRocketBoostersAvailable":
+		if (item > 0)
+		{
+			showElement("notification-rocketBoost");
+		}
+		else
+		{
+			hideElement("notification-rocketBoost");
+		}
+		break;
+	case "rocketKm":
+		if (getItem(type) == 0)
+		{
+			hideElement("notification-rocket");
+			setInnerHTML("itemBox-rocket-amount", "");
+		}
+		else
+		{
+			if (getItemString("rocketDestination") == "moon" && getItem(type) == 384000)
+			{
+				if (document.getElementById("itemBox-rocket-amount") != null)
+				{
+					document.getElementById("itemBox-rocket-amount").innerHTML = "LANDED";
+					document.getElementById("notification-rocket-value").innerHTML = "LANDED";
+					document.getElementById("notification-rocket-running").style.display = "none";
+					document.getElementById("notification-rocket-landed").style.display = "";
+					document.getElementById("notification-rocket-returning").style.display = "none";
+				}
+			}
+			else
+			{
+				if (document.getElementById("itemBox-rocket-amount") != null)
+				{
+					if (getItem("rocketStatus") == 3)
+					{
+						document.getElementById("itemBox-rocket-amount").innerHTML = formatNumber(getItem(type)) + " KM";
+						document.getElementById("notification-rocket-value").innerHTML = formatNumber(getItem(type)) + " KM";
+						document.getElementById("notification-rocket-running").style.display = "none";
+						document.getElementById("notification-rocket-landed").style.display = "none";
+						document.getElementById("notification-rocket-returning").style.display = "";
+					}
+					else
+					{
+						document.getElementById("itemBox-rocket-amount").innerHTML = formatNumber(getItem(type)) + " KM";
+						document.getElementById("notification-rocket-value").innerHTML = formatNumber(getItem(type)) + " KM";
+						document.getElementById("notification-rocket-running").style.display = "";
+						document.getElementById("notification-rocket-landed").style.display = "none";
+						document.getElementById("notification-rocket-returning").style.display = "none";
+					}
+				}
+			}
+			showElement("notification-rocket");
+		}
+		break;
 	case "cyanCrystalUsed":
 	case "greenCrystalUsed":
 	case "redCrystalUsed":
+	case "blueCrystalUsed":
 		refreshDarkCrystalUsedLabel();
+		refreshFaradoxDarkCrystalTooltip();
 		break;
 	case "researcherTimer":
 		if (item == 1)
@@ -323,10 +539,12 @@ function manageChangedItem(type)
 			{
 				document.getElementById("researcher-status-label").innerHTML = "<img src='images/" + getItemString("researcherSkill") + "Skill.png' class='img-50' /> " + formatTime(item);
 				showElement("notification-researcher");
+				showElement("notification-researcherTimerNotification");
 				hideElement("notification-researcherReady");
 			}
 			else
 			{
+				hideElement("notification-researcherTimerNotification");
 				document.getElementById("researcher-status-label").innerHTML = "IDLE";
 				hideElement("notification-researcherReady");
 			}
@@ -342,10 +560,18 @@ function manageChangedItem(type)
 		}
 		else
 		{
-			if (item >= 2)
+			if (item >= 2 && item <= 3)
 			{
 				hideElement("item-box-diamond_verydark");
 				showElement("item-box-gemList2");
+			}
+			else
+			{
+				if (item >= 4)
+				{
+					showElement("item-box-gemList3");
+					hideElement("item-box-gemList2");
+				}
 			}
 		}
 		break;
@@ -438,6 +664,17 @@ function manageChangedItem(type)
 			hideElement("notification-furnace");
 		}
 		break;
+	case "charcoalFoundryLogType":
+		if (getItemString("charcoalFoundryLogType") != "none")
+		{
+			showElement("notification-charcoalFoundry");
+			document.getElementById("notification-charcoalFoundry-img").src = "images/" + "charcoalFoundry" + ".png";
+		}
+		else
+		{
+			hideElement("notification-charcoalFoundry");
+		}
+		break;
 	case "smeltingCurrentAmount":
 		var normalized_images = parseInt(getItem("smeltingCurrentAmount") / getItem("smeltingRequestedAmount") * 100);
 		if (isNaN(normalized_images))
@@ -445,6 +682,14 @@ function manageChangedItem(type)
 			normalized_images = 0;
 		}
 		document.getElementById("notification-furnace-value").innerHTML = normalized_images + "%";
+		break;
+	case "charcoalFoundryCurrentAmount":
+		normalized_images = parseInt(getItem("charcoalFoundryCurrentAmount") / getItem("charcoalFoundryRequestedAmount") * 100);
+		if (isNaN(normalized_images))
+		{
+			normalized_images = 0;
+		}
+		document.getElementById("notification-charcoalFoundry-value").innerHTML = normalized_images + "%";
 		break;
 	case "monsterHp":
 	case "monsterMaxHp":
@@ -519,6 +764,20 @@ function manageChangedItem(type)
 		else
 		{
 			document.getElementById("spellScrollTeleportGroundFound-combat").style.display = "none";
+		}
+		break;
+	case "spellScrollGhostScanCombatMapFound":
+	case "cemeteryPuzzleCompleted":
+		if (getItem("spellScrollGhostScanCombatMapFound") > 0)
+		{
+			hideElement("spellScrollGhostScanGroundFound-combat");
+		}
+		else
+		{
+			if (getItem("cemeteryPuzzleCompleted") == 1)
+			{
+				showElement("spellScrollGhostScanGroundFound-combat");
+			}
 		}
 		break;
 	case "farmingUnlocked":

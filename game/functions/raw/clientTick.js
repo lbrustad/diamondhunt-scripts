@@ -1,5 +1,5 @@
 /**
- * clientTick extracted from ../../deobfuscated/bundle.js at line 931-967
+ * clientTick extracted from ../../deobfuscated/bundle.js at line 1223-1285
  *
  * If this file doesn't contain a function, there is an error in ../raw/clientTick.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -40,5 +40,31 @@ function clientTick()
 	else
 	{
 		hideElement("notification-marketReady")
+	};
+	if (getItem("smallManaStar") > 0 || getItem("mediumManaStar") > 0 || getItem("largeManaStar") > 0 || getItem("hugeManaStar") > 0)
+	{
+		showElement("notification-manaReadyNotification")
+	}
+	else
+	{
+		hideElement("notification-manaReadyNotification")
+	};
+	if (document.hidden && global_titleNotification && localStorage.getItem("titletrigger") == null)
+	{
+		if (document.getElementById("html-title").innerHTML == "Diamond Hunt 3")
+		{
+			document.getElementById("html-title").innerHTML = "Notifications - Ready"
+		}
+		else
+		{
+			document.getElementById("html-title").innerHTML = "Diamond Hunt 3"
+		}
+	}
+	else
+	{
+		if (document.getElementById("html-title").innerHTML != "Diamond Hunt 3")
+		{
+			document.getElementById("html-title").innerHTML = "Diamond Hunt 3"
+		}
 	}
 }

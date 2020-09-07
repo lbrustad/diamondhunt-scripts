@@ -1,5 +1,5 @@
 /**
- * giftDonorCoinsInterface2 extracted from ../../deobfuscated/bundle.js at line 5453-5456
+ * giftDonorCoinsInterface2 extracted from ../../deobfuscated/bundle.js at line 7166-7169
  *
  * If this file doesn't contain a function, there is an error in ../raw/giftDonorCoinsInterface2.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,20 +1,20 @@
 /**
- * getImage extracted from ../../deobfuscated/bundle.js at line 2181-2193
+ * getImage extracted from ../../deobfuscated/bundle.js at line 2836-2848
  *
  * If this file doesn't contain a function, there is an error in ../raw/getImage.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getImage(_0x1D0E2, _0x1D3E4)
+function getImage(_0x4CAF, _0x5398)
 {
-	if (global_ImageCache[_0x1D3E4] != null)
+	if (global_ImageCache[_0x5398] != null)
 	{
-		if (global_ImageCache[_0x1D3E4].url == _0x1D0E2)
+		if (global_ImageCache[_0x5398].url == _0x4CAF)
 		{
-			return global_ImageCache[_0x1D3E4].obj
+			return global_ImageCache[_0x5398].obj
 		}
 	};
-	var _0x1D3D6 = new ImageObject(_0x1D0E2);
-	global_ImageCache[_0x1D3E4] = _0x1D3D6;
-	return _0x1D3D6.obj
+	var _0x537B = new ImageObject(_0x4CAF);
+	global_ImageCache[_0x5398] = _0x537B;
+	return _0x537B.obj
 }

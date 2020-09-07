@@ -38,5 +38,9 @@ function openRakeDialogue()
 	{
 		document.getElementById("dialogue-rake-stardustSeeds-check-or-x").src = "images/check.png";
 	}
+	if (getItem("researcherFarming") >= 4)
+	{
+		document.getElementById("dialogue-rake-blewitMushroomSeeds-check-or-x").src = "images/check.png";
+	}
 	openDialogue("dialogue-rake");
 };

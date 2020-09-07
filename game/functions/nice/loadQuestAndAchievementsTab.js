@@ -14,4 +14,6 @@ function loadQuestAndAchievementsTab()
 	addItemBoxQuests("theWizard", "THE WIZARD", "You're a wizard, " + capitalizeFirstLetter(getItemString("username")), ["Defeated the boss after the forest."], [getItem("bushyKills") > 0], "MEDIUM", SCROLL_ID, 5);
 	addItemBoxQuests("theFisherman2", "THE FISHERMAN PART 2", "A fisherman needs help to find a special catch.", ["Have a ruby or diamond in your fishing tool."], [getItem("rubyFishingRod") == 1 || getItem("diamondFishingRod") == 1 || getItem("rubySmallFishingNet") == 1 || getItem("diamondSmallFishingNet") == 1 || getItem("rubyHarpoon") == 1 || getItem("diamondHarpoon") == 1], "MEDIUM", SCROLL_ID, 9);
 	addItemBoxQuests("mommyTheSpider", "MOMMY THE SPIDER", "Mommy is embarrassed that her babies spit out poison on every occasion.", ["Killed 3 spiders in caves."], [getItem("spiderKills") >= 3], "EASY", SCROLL_ID, 10);
+	addItemBoxQuests("theStewChef", "THE STEW CHEF", "A chef needs your help making the perfect stew.", ["Be on cooldown for 30 minutes or more."], [getItem("heroCooldown") > 1800 || getItem("theStewChefQuest") != 0], "MEDIUM", SCROLL_ID, 13);
+	addItemBoxQuests("theFrozenBarbarian", "THE FROZEN BARBARIAN", "A barbarian is freezing to death.", ["Killed 3 boneheads in the northern fields."], [getItem("boneHeadKills") >= 3], "MEDIUM", SCROLL_ID, 15);
 };

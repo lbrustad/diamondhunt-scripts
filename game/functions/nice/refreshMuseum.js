@@ -4,26 +4,6 @@ function refreshMuseum()
 {
 	document.getElementById("museum-section").innerHTML = "";
 	var criterion_index = "";
-	criterion_index = "sapphireGlassHand";
-	global_museumItemsArray[criterion_index] = true;
-	if (getItem(criterion_index + "Museum") == 1)
-	{
-		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "SAPPHIRE GLASS HAND", "", true);
-	}
-	else
-	{
-		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SAPPHIRE GLASS HAND", "", true);
-	}
-	criterion_index = "emeraldGlassHand";
-	global_museumItemsArray[criterion_index] = true;
-	if (getItem(criterion_index + "Museum") == 1)
-	{
-		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "EMERALD GLASS HAND", "", true);
-	}
-	else
-	{
-		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "EMERALD GLASS HAND", "", true);
-	}
 	criterion_index = "brokenStinger";
 	global_museumItemsArray[criterion_index] = true;
 	if (getItem(criterion_index + "Museum") == 1)
@@ -43,6 +23,26 @@ function refreshMuseum()
 	else
 	{
 		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SNAKE BONES", "", true);
+	}
+	criterion_index = "giantPearl";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "GIANT PEARL", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "GIANT PEARL", "", true);
+	}
+	criterion_index = "rareGiantPearl";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "RARE GIANT PEARL", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "RARE GIANT PEARL", "", true);
 	}
 	criterion_index = "skeletonSkull";
 	global_museumItemsArray[criterion_index] = true;
@@ -133,5 +133,55 @@ function refreshMuseum()
 	else
 	{
 		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "YETI'S FOOT (R)", "", true);
+	}
+	criterion_index = "snowmanCrafted";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "SNOWMAN", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SNOWMAN", "", true);
+	}
+	criterion_index = "sharkTooth";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "SHARK'S TOOTH", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SHARK'S TOOTH", "", true);
+	}
+	criterion_index = "sapphireGlassHand";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "SAPPHIRE GLASS HAND", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SAPPHIRE GLASS HAND", "", true);
+	}
+	criterion_index = "emeraldGlassHand";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "EMERALD GLASS HAND", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "EMERALD GLASS HAND", "", true);
+	}
+	criterion_index = "rubyGlassHand";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "RUBY GLASS HAND", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "RUBY GLASS HAND", "", true);
 	}
 };

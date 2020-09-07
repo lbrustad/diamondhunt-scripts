@@ -1,23 +1,23 @@
 /**
- * refreshTradables extracted from ../../deobfuscated/bundle.js at line 12868-12883
+ * refreshTradables extracted from ../../deobfuscated/bundle.js at line 17818-17833
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTradables.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function refreshTradables(_0x1C750)
+function refreshTradables(_0x3746)
 {
 	global_TradablesData = [];
-	var _0x1C75E = _0x1C750.split("~");
-	for (var _0x1C6B6 = 0; _0x1C6B6 < _0x1C75E.length; _0x1C6B6++)
+	var _0x3763 = _0x3746.split("~");
+	for (var _0x3607 = 0; _0x3607 < _0x3763.length; _0x3607++)
 	{
-		var _0x1C83E = _0x1C75E[_0x1C6B6];
-		_0x1C6B6++;
-		var _0x1CA0C = _0x1C75E[_0x1C6B6];
-		_0x1C6B6++;
-		var _0x1CA28 = _0x1C75E[_0x1C6B6];
-		_0x1C6B6++;
-		var _0x1C9B8 = _0x1C75E[_0x1C6B6];
-		global_TradablesData.push(new Tradables(_0x1C83E, _0x1CA0C, _0x1CA28, _0x1C9B8))
+		var _0x3933 = _0x3763[_0x3607];
+		_0x3607++;
+		var _0x3D0D = _0x3763[_0x3607];
+		_0x3607++;
+		var _0x3D47 = _0x3763[_0x3607];
+		_0x3607++;
+		var _0x3C5F = _0x3763[_0x3607];
+		global_TradablesData.push(new Tradables(_0x3933, _0x3D0D, _0x3D47, _0x3C5F))
 	}
 }

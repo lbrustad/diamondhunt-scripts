@@ -1,19 +1,19 @@
 /**
- * getMiningResourceOperatingNumber extracted from ../../deobfuscated/bundle.js at line 721-732
+ * getMiningResourceOperatingNumber extracted from ../../deobfuscated/bundle.js at line 955-966
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMiningResourceOperatingNumber.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getMiningResourceOperatingNumber(_0x1D49A)
+function getMiningResourceOperatingNumber(_0x5568)
 {
-	var _0x1D48C = 0;
-	for (var _0x1C6B6 = 0; _0x1C6B6 < 5; _0x1C6B6++)
+	var _0x554B = 0;
+	for (var _0x3607 = 0; _0x3607 < 5; _0x3607++)
 	{
-		if (getItemString(_0x1D49A + "Allocation" + _0x1C6B6) != "none")
+		if (getItemString(_0x5568 + "Allocation" + _0x3607) != "none")
 		{
-			_0x1D48C++
+			_0x554B++
 		}
 	};
-	return _0x1D48C
+	return _0x554B
 }

@@ -63,10 +63,55 @@ function HitAnimation(result, num, div, value, color, t, data)
 		{
 			legendWidth = 160;
 		}
+		if (this.number.length == 3)
+		{
+			legendWidth = 200;
+		}
+		if (this.number == "Miss")
+		{
+			legendWidth = 240;
+		}
+		if (this.number == "Immune")
+		{
+			legendWidth = 330;
+		}
 		if (this.icon == "images/coins.png")
 		{
 			legendWidth = 800;
 			x = 0;
+		}
+		if (this.icon == "images/invisibilityIcon.png")
+		{
+			legendWidth = 240;
+			x = 0;
+		}
+		if (this.icon == "images/invisibilityAmulet.png")
+		{
+			legendWidth = 240;
+			x = 0;
+		}
+		if (this.icon == "images/bushyBlockIcon.png")
+		{
+			legendWidth = 250;
+			x = 0;
+		}
+		if (this.icon == "images/stab_dark.png")
+		{
+			legendWidth = 250;
+			x = 0;
+		}
+		if (this.number.endsWith("/30)"))
+		{
+			legendWidth = 330;
+			x = 0;
+		}
+		if (this.number == "")
+		{
+			legendWidth = 80;
+		}
+		if (this.number.length == 10)
+		{
+			legendWidth = 350;
 		}
 		ctx.fillStyle = value;
 		ctx.globalAlpha = 0.5;
@@ -75,9 +120,23 @@ function HitAnimation(result, num, div, value, color, t, data)
 		ctx.fillStyle = this.borderColor;
 		ctx.strokeRect(x, y - this.getOffset(), legendWidth, size);
 		ctx.drawImage(getImage(this.icon, this.target + "_hitsplat"), x, y - this.getOffset(), size, size);
-		ctx.font = "60px Arial";
+		if (this.number.length == 10)
+		{
+			ctx.font = "30px Arial";
+		}
+		else
+		{
+			ctx.font = "60px Arial";
+		}
 		ctx.fillStyle = "black";
-		ctx.fillText(this.number, x + 130 - 45, y - this.getOffset() + 60);
+		if (this.number.length == 10)
+		{
+			ctx.fillText(this.number, x + 130 - 45, y - this.getOffset() - 12 + 60);
+		}
+		else
+		{
+			ctx.fillText(this.number, x + 130 - 45, y - this.getOffset() + 60);
+		}
 		this.frameAt++;
 		if (this.frameAt >= this.MAX_FRAMES)
 		{

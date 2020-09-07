@@ -1,5 +1,5 @@
 /**
- * changePassword extracted from ../../deobfuscated/bundle.js at line 4522-4537
+ * changePassword extracted from ../../deobfuscated/bundle.js at line 5883-5898
  *
  * If this file doesn't contain a function, there is an error in ../raw/changePassword.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

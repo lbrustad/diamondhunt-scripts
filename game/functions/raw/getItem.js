@@ -1,15 +1,15 @@
 /**
- * getItem extracted from ../../deobfuscated/bundle.js at line 2060-2082
+ * getItem extracted from ../../deobfuscated/bundle.js at line 2696-2718
  *
  * If this file doesn't contain a function, there is an error in ../raw/getItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getItem(_0x1D400, _0x1D3F2)
+function getItem(_0x53D2, _0x53B5)
 {
-	if (window["var_" + _0x1D400] == null)
+	if (window["var_" + _0x53D2] == null)
 	{
-		if (_0x1D3F2)
+		if (_0x53B5)
 		{
 			return "none"
 		}
@@ -18,13 +18,13 @@ function getItem(_0x1D400, _0x1D3F2)
 			return 0
 		}
 	};
-	var _0x1C7B2 = window["var_" + _0x1D400];
-	if (isNaN(_0x1C7B2))
+	var _0x3811 = window["var_" + _0x53D2];
+	if (isNaN(_0x3811))
 	{
-		return _0x1C7B2
+		return _0x3811
 	}
 	else
 	{
-		return parseInt(_0x1C7B2)
+		return parseInt(_0x3811)
 	}
 }

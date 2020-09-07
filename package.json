@@ -20,13 +20,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "gulp build",
-    "evaluate-game": "gulp evaluate",
-    "release": "gulp release",
-    "start": "gulp",
-    "update-game": "gulp update",
+    "start": "npm start # gulp",
+    "build": "echo \"Use 'npm start' instead.'\"",
+    "update": "gulp download && gulp deobfuscate && gulp separate-functions",
     "download": "gulp download",
-    "deobfuscate": "gulp deobfuscate"
+    "deobfuscate": "gulp deobfuscate",
+    "separate-functions": "gulp separate-functions"
   },
   "repository": {
     "type": "git",

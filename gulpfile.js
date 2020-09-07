@@ -302,7 +302,10 @@ async function mkDirs() {
 		await fs.mkdirSync('./game/functions/nice');
 	}
 }
-/** @param {string[]} lines */
+/** @param {string[]} lines
+ * @param {number} start
+ * @param {number} end
+ */
 async function separateFns(lines, start, end) {
 	let name = lines[0];
 	name = name.replace(/function\s*([^\(]+).*/, '$1');
@@ -320,7 +323,7 @@ gulp.task('separate-functions', async function ()
 	await fs.readFile('./game/deobfuscated/bundle.js', {encoding: 'utf8'}, async (err, data) => {
 		if (err) throw err;
 
-		const lines = data.split('\n'), fns = [];
+		const lines = data.split('\n');
 		let tmp = [], currentLine = 0, startLine = 0;
 		for (const line of lines) {
 			currentLine++;

@@ -1,19 +1,19 @@
 /**
- * setCSSFromServer extracted from ../../deobfuscated/bundle.js at line 769-780
+ * setCSSFromServer extracted from ../../deobfuscated/bundle.js at line 1022-1033
  *
  * If this file doesn't contain a function, there is an error in ../raw/setCSSFromServer.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function setCSSFromServer(_0x1D232, _0x1E238, _0x1E22A, _0x1E21C)
+function setCSSFromServer(_0x4F67, _0x7594, _0x7577, _0x755A)
 {
-	switch (_0x1E238)
+	switch (_0x7594)
 	{
 	case "border":
-		document.getElementById(_0x1D232).style.border = _0x1E22A;
+		document.getElementById(_0x4F67).style.border = _0x7577;
 	case "color":
-		document.getElementById(_0x1D232).style.color = _0x1E22A;
+		document.getElementById(_0x4F67).style.color = _0x7577;
 	case "display":
-		document.getElementById(_0x1D232).style.display = _0x1E22A
+		document.getElementById(_0x4F67).style.display = _0x7577
 	}
 }

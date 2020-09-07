@@ -43,6 +43,9 @@ function chat(type)
 		case "Investor":
 			th_field = "style='color:#cc66ff'";
 			break;
+		case "InvestorPlus":
+			th_field = "style='color:#00a3cc'";
+			break;
 		case "Moderator":
 			th_field = "style='color:grey;'";
 			break;
@@ -98,7 +101,14 @@ function chat(type)
 					}
 					else
 					{
-						htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+						if (icon == "InvestorPlus")
+						{
+							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + "<img src='images/investorPlus.gif' style='vertical-align:middle;'  /> " + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+						}
+						else
+						{
+							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+						}
 					}
 				}
 			}

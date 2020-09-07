@@ -8,9 +8,14 @@ function getOilCost(canCreateDiscussions)
 	case "copper":
 	case "sand":
 		return 1;
-	case "iron":
 	case "crushers":
+		return 3;
+	case "iron":
 		return 5;
+	case "giantDrills":
+		return 10;
+	case "excavators":
+		return 30;
 	case "silver":
 		return 20;
 	case "gold":

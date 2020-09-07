@@ -1,5 +1,5 @@
 /**
- * doSkyCrystalShake extracted from ../../deobfuscated/bundle.js at line 6121-6133
+ * doSkyCrystalShake extracted from ../../deobfuscated/bundle.js at line 7939-7951
  *
  * If this file doesn't contain a function, there is an error in ../raw/doSkyCrystalShake.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

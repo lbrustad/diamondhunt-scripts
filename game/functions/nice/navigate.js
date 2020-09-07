@@ -12,6 +12,10 @@ function navigate(id)
 	case "right-home":
 		refreshHomeTab();
 		break;
+	case "right-marketHistory":
+		clicksMarketHistory();
+		sendBytes("REFRESH_MARKET_HISTORY");
+		break;
 	case "right-shop":
 		loadShopTab();
 		break;

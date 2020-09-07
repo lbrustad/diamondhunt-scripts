@@ -23,6 +23,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -40,6 +44,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -57,6 +65,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -74,6 +86,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -91,6 +107,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -108,6 +128,10 @@ function refreshTagsDialoguesIcons()
 	{
 		th_field = "<img src='images/check.png' class='img-20' />";
 		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
 	}
 	else
 	{
@@ -116,6 +140,27 @@ function refreshTagsDialoguesIcons()
 	}
 	pix_color = pix_color + "<tr>";
 	pix_color = pix_color + ("<td style='padding:20px;'><span border:1px solid grey;padding:3px;><img style='vertical-align:text-top;' src='images/investor.gif' /> <span style='color:#cc66ff;dispaly:inline-block;vertical-align:text-top;font-size:16pt;'> A chat tag!</span></span></td><td>" + th_field + "</td><td><input type='button' value='" + setV + "' onclick='setOrBuyChatTag(\"" + model + "\",this.value);closeDialogue(\"dialogue-tags\")' style='color:#006666;border:1px solid #006666' class='chat-area-send-button' /></td>");
+	pix_color = pix_color + "</tr>";
+	model = "InvestorPlus";
+	curr = 1000;
+	testingForPriceAdjusted = curr - item;
+	th_field = testingForPriceAdjusted;
+	if (testingForPriceAdjusted <= 0)
+	{
+		th_field = "<img src='images/check.png' class='img-20' />";
+		setV = "SET";
+		if (getItem("chatTag") == model)
+		{
+			setV = "UNSET";
+		}
+	}
+	else
+	{
+		th_field = "<img src='images/donorCoins.png' class='img-20' /> " + testingForPriceAdjusted;
+		setV = "BUY";
+	}
+	pix_color = pix_color + "<tr>";
+	pix_color = pix_color + ("<td style='padding:20px;'><span border:1px solid grey;padding:3px;><img style='vertical-align:text-top;' src='images/investorPlus.gif' /> <span style='color:#00a3cc;dispaly:inline-block;vertical-align:text-top;font-size:16pt;'> A chat tag!</span></span></td><td>" + th_field + "</td><td><input type='button' value='" + setV + "' onclick='setOrBuyChatTag(\"" + model + "\",this.value);closeDialogue(\"dialogue-tags\")' style='color:#006666;border:1px solid #006666' class='chat-area-send-button' /></td>");
 	pix_color = pix_color + "</tr>";
 	pix_color = pix_color + "</table>";
 	pix_color = pix_color + "<br /><br />";

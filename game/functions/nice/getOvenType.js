@@ -2,7 +2,12 @@
 
 function getOvenType()
 {
-	var boxsize = "goldOven";
+	var boxsize = "promethiumOven";
+	if (getItem(boxsize) == 1)
+	{
+		return boxsize;
+	}
+	boxsize = "goldOven";
 	if (getItem(boxsize) == 1)
 	{
 		return boxsize;

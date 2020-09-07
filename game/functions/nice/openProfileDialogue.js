@@ -20,5 +20,27 @@ function openProfileDialogue()
 			document.getElementById("dialogue-profile-autologin-option-checkbox").checked = false;
 		}
 	}
+	if (localStorage.getItem("titletrigger") == null)
+	{
+		document.getElementById("dialogue-profile-titletrigger-option-checkbox").checked = true;
+	}
+	else
+	{
+		if (localStorage.getItem("titletrigger") == "off")
+		{
+			document.getElementById("dialogue-profile-titletrigger-option-checkbox").checked = false;
+		}
+	}
+	if (localStorage.getItem("notificationSound") == null)
+	{
+		document.getElementById("dialogue-profile-notificationSound-option-checkbox").checked = false;
+	}
+	else
+	{
+		if (localStorage.getItem("notificationSound") == "off")
+		{
+			document.getElementById("dialogue-profile-notificationSound-option-checkbox").checked = true;
+		}
+	}
 	openDialogueOverride("dialogue-profile", "large");
 };

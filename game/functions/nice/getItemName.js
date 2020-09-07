@@ -1,16 +1,20 @@
 'use strict';
 
-function getItemName(id)
+function getItemName(fullPath)
 {
-	var curfield = id.charAt(0).toUpperCase();
-	var i = 1;
-	for (; i < id.length; i++)
+	if (fullPath == "stardust1000")
 	{
-		if (id.charAt(i) == id.charAt(i).toUpperCase() && id.charAt(i) != "'")
-		{
-			curfield = curfield + " ";
-		}
-		curfield = curfield + id.charAt(i);
+		return "Stardust x 1000";
 	}
-	return curfield;
+	var replacedStr = fullPath.charAt(0).toUpperCase();
+	var startIndex = 1;
+	for (; startIndex < fullPath.length; startIndex++)
+	{
+		if (fullPath.charAt(startIndex) == fullPath.charAt(startIndex).toUpperCase() && fullPath.charAt(startIndex) != "'")
+		{
+			replacedStr = replacedStr + " ";
+		}
+		replacedStr = replacedStr + fullPath.charAt(startIndex);
+	}
+	return replacedStr;
 };

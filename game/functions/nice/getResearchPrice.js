@@ -12,6 +12,8 @@ function getResearchPrice(canCreateDiscussions)
 		return 25000;
 	case 3:
 		return 200000;
+	case 4:
+		return 500000;
 	default:
 		return -1;
 	}

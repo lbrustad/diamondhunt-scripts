@@ -1,13 +1,13 @@
 /**
- * displayMarket extracted from ../../deobfuscated/bundle.js at line 12609-12628
+ * displayMarket extracted from ../../deobfuscated/bundle.js at line 17552-17571
  *
  * If this file doesn't contain a function, there is an error in ../raw/displayMarket.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function displayMarket(_0x1CDB6)
+function displayMarket(_0x44A4)
 {
-	if (_0x1CDB6)
+	if (_0x44A4)
 	{
 		document.getElementById("market-loading-section").style.display = "none";
 		document.getElementById("market-slots-section").style.display = "";
@@ -16,7 +16,7 @@ function displayMarket(_0x1CDB6)
 	}
 	else
 	{
-		if (_0x1CDB6)
+		if (_0x44A4)
 		{
 			document.getElementById("market-loading-section").style.display = "";
 			document.getElementById("market-slots-section").style.display = "none";
