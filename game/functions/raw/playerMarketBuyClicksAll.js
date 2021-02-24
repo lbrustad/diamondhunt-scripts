@@ -1,5 +1,5 @@
 /**
- * playerMarketBuyClicksAll extracted from ../../deobfuscated/bundle.js at line 16776-16785
+ * playerMarketBuyClicksAll extracted from ../../deobfuscated/bundle.js at line 20512-20521
  *
  * If this file doesn't contain a function, there is an error in ../raw/playerMarketBuyClicksAll.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -7,11 +7,11 @@
 
 function playerMarketBuyClicksAll()
 {
-	var _0x3933 = document.getElementById("dialogue-market-buy-hidden-itemName").value;
-	var _0x44DE = document.getElementById("dialogue-market-buy-hidden-price").value;
-	var _0x3950 = document.getElementById("dialogue-market-buy-hidden-amount").value;
-	var _0x6252 = document.getElementById("dialogue-market-buy-input").value;
-	var _0x626F = _0x44DE * _0x6252;
-	var _0x3CD3 = createHTMLBoxCheckOrXCollection(.coins, [_0x626F], ["", ""]);
-	document.getElementById("dialogue-market-buy-area").innerHTML = _0x3CD3
+	var _0x15003 = document.getElementById("dialogue-market-buy-hidden-itemName").value;
+	var _0x15E18 = document.getElementById("dialogue-market-buy-hidden-price").value;
+	var _0x15026 = document.getElementById("dialogue-market-buy-hidden-amount").value;
+	var _0x184C9 = document.getElementById("dialogue-market-buy-input").value;
+	var _0x184EC = _0x15E18 * _0x184C9;
+	var _0x15463 = createHTMLBoxCheckOrXCollection(.coins, [_0x184EC], ["", ""]);
+	document.getElementById("dialogue-market-buy-area").innerHTML = _0x15463
 }

@@ -1,13 +1,13 @@
 /**
- * sanitize extracted from ../../deobfuscated/bundle.js at line 1287-1299
+ * sanitize extracted from ../../deobfuscated/bundle.js at line 1539-1554
  *
  * If this file doesn't contain a function, there is an error in ../raw/sanitize.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function sanitize(_0x74AC)
+function sanitize(_0x19C07)
 {
-	const _0x7472 = {
+	const _0x19BC1 = {
 		'&': "&amp;"
 		, '<': "&lt;"
 		, '>': "&gt;"
@@ -15,6 +15,9 @@ function sanitize(_0x74AC)
 		, "\'": "&#x27;"
 		, "/": "&#47;"
 	};
-	const _0x748F = /[&<>"'/]/ig;
-	return _0x74AC.replace(_0x748F, (_0x74C9) => (_0x7472[_0x74C9]))
+	const _0x19BE4 = /[&<>"'/]/ig;
+	return _0x19C07.replace(_0x19BE4, (_0x19C2A) =>
+	{
+		return (_0x19BC1[_0x19C2A])
+	})
 }

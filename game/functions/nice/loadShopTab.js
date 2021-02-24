@@ -111,4 +111,17 @@ function loadShopTab()
 			addItemBoxShop(lines, "images/pirate.png", "PIRATE<br /><br />", 500000, "tooltip-pirate", SCROLL_ID);
 		}
 	}
+	if (getItem("communityCenter5") == 1)
+	{
+		lines = "carePackage4";
+		if (getItem(lines + "Bought", false) != 1)
+		{
+			addItemBoxShop(lines, "images/carePackage4.png", "PACKAGE<br /><br />", 100000, "tooltip-carePackage", SCROLL_ID);
+		}
+		lines = "piratesParrot";
+		if (getItem(lines + "Bought", false) != 1)
+		{
+			addItemBoxShop(lines, "images/piratesParrot.png", "PIRATE'S PARROT<br />", 500000, "tooltip-piratesParrot", SCROLL_ID);
+		}
+	}
 };

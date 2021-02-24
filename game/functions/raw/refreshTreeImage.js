@@ -1,22 +1,22 @@
 /**
- * refreshTreeImage extracted from ../../deobfuscated/bundle.js at line 16266-16280
+ * refreshTreeImage extracted from ../../deobfuscated/bundle.js at line 19972-19986
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshTreeImage.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function refreshTreeImage(_0x47ED)
+function refreshTreeImage(_0x16327)
 {
-	var _0x7350 = getItemString("tree" + _0x47ED);
-	if (getItem("treeUnlocked" + _0x47ED) == 1)
+	var _0x199D7 = getItemString("tree" + _0x16327);
+	if (getItem("treeUnlocked" + _0x16327) == 1)
 	{
-		if (_0x7350 == "none")
+		if (_0x199D7 == "none")
 		{
-			document.getElementById("tree-section-img-" + _0x47ED).src = "images/tree_none.png"
+			document.getElementById("tree-section-img-" + _0x16327).src = "images/tree_none.png"
 		}
 		else
 		{
-			document.getElementById("tree-section-img-" + _0x47ED).src = "images/" + _0x7350 + getItem("treeStage" + _0x47ED) + ".png"
+			document.getElementById("tree-section-img-" + _0x16327).src = "images/" + _0x199D7 + getItem("treeStage" + _0x16327) + ".png"
 		}
 	}
 }

@@ -23,6 +23,12 @@ function getMuseumItemsCount()
 	{
 		_b_++;
 	}
+	th_field = "diamondGlassHand";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
 	th_field = "snowmanCrafted";
 	_a_++;
 	if (getItem(th_field + "Museum") == 1)
@@ -30,6 +36,12 @@ function getMuseumItemsCount()
 		_b_++;
 	}
 	th_field = "brokenStinger";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "glowingGoldBar";
 	_a_++;
 	if (getItem(th_field + "Museum") == 1)
 	{
@@ -108,6 +120,42 @@ function getMuseumItemsCount()
 		_b_++;
 	}
 	th_field = "yetiRightFoot";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "greenStoneEyes";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "purpleStoneEyes";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "redStoneEyes";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "yellowStoneEyes";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "blueStoneEyes";
+	_a_++;
+	if (getItem(th_field + "Museum") == 1)
+	{
+		_b_++;
+	}
+	th_field = "burntRemains";
 	_a_++;
 	if (getItem(th_field + "Museum") == 1)
 	{

@@ -20,6 +20,9 @@ function getBurnRate()
 	case "promethiumOven":
 		_a_ = 0.1;
 		break;
+	case "titaniumOven":
+		_a_ = 0.05;
+		break;
 	}
 	if (getItem("researcherCooking") >= 3)
 	{

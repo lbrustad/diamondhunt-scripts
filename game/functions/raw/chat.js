@@ -1,30 +1,42 @@
 /**
- * chat extracted from ../../deobfuscated/bundle.js at line 1322-1445
+ * chat extracted from ../../deobfuscated/bundle.js at line 1577-1717
  *
  * If this file doesn't contain a function, there is an error in ../raw/chat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function chat(_0x3746)
+function chat(_0x14DB0)
 {
-	var _0x3763 = _0x3746.split("~");
-	var _0x4705 = _0x3763[0];
-	var _0x46AE = _0x3763[1];
-	var _0x4657 = _0x3763[2];
-	var _0x461D = _0x3763[3];
-	var _0x4691 = _0x3763[4];
-	var _0x37BA = _0x3763[5];
-	var _0x463A = "";
-	if (_0x461D != "none")
+	var _0x14DD3 = _0x14DB0.split("~");
+	var _0x160F7 = _0x14DD3[0];
+	var _0x1606B = _0x14DD3[1];
+	var _0x15FDF = _0x14DD3[2];
+	var _0x15F99 = _0x14DD3[3];
+	var _0x16025 = _0x14DD3[4];
+	var _0x14E3C = _0x14DD3[5];
+	var _0x1608E = false;
+	if (global_friendsAndIgnoreList[_0x160F7] != null)
 	{
-		_0x463A = " <img src=\'images/" + _0x461D + ".png\' style=\'vertical-align:middle\' width=\'30px\' height=\'30px\' /> "
+		if (global_friendsAndIgnoreList[_0x160F7] == "ignore")
+		{
+			return
+		};
+		if (global_friendsAndIgnoreList[_0x160F7] == "friend")
+		{
+			_0x1608E = true
+		}
 	};
-	var _0x4674 = "";
-	var _0x46E8 = "";
-	if (_0x4657 != "none")
+	var _0x15FBC = "";
+	if (_0x15F99 != "none")
 	{
-		tagTitle = _0x4657;
-		switch (_0x4657)
+		_0x15FBC = " <img src=\'images/" + _0x15F99 + ".png\' style=\'vertical-align:middle\' width=\'30px\' height=\'30px\' /> "
+	};
+	var _0x16002 = "";
+	var _0x160D4 = "";
+	if (_0x15FDF != "none")
+	{
+		tagTitle = _0x15FDF;
+		switch (_0x15FDF)
 		{
 		case "Superdonor":
 			tagTitle = "Super donor";
@@ -36,96 +48,101 @@ function chat(_0x3746)
 			tagTitle = "Ultra donor";
 			break
 		};
-		_0x4674 = " <span class=\'chat-tag-" + _0x4657 + "\'>" + tagTitle + "</span> ";
-		switch (_0x4657)
+		_0x16002 = " <span class=\'chat-tag-" + _0x15FDF + "\'>" + tagTitle + "</span> ";
+		switch (_0x15FDF)
 		{
 		case "Dev":
-			_0x46E8 = "style=\'color:#808000\'";
+			_0x160D4 = "style=\'color:#808000\'";
 			break;
 		case "Financier":
-			_0x46E8 = "style=\'color:#007a99\'";
+			_0x160D4 = "style=\'color:#007a99\'";
 			break;
 		case "Investor":
-			_0x46E8 = "style=\'color:#cc66ff\'";
+			_0x160D4 = "style=\'color:#cc66ff\'";
 			break;
 		case "InvestorPlus":
-			_0x46E8 = "style=\'color:#00a3cc\'";
+			_0x160D4 = "style=\'color:#00a3cc\'";
 			break;
 		case "Moderator":
-			_0x46E8 = "style=\'color:grey;\'";
+			_0x160D4 = "style=\'color:grey;\'";
 			break;
 		case "yell":
-			_0x46E8 = "style=\'color:blue;\'";
+			_0x160D4 = "style=\'color:blue;\'";
 			break
 		}
 	};
-	var _0x46CB = _0x4691.split(" ");
+	var _0x160B1 = _0x16025.split(" ");
 	msg = "";
-	for (var _0x3607 = 0; _0x3607 < _0x46CB.length; _0x3607++)
+	for (var _0x14C0C = 0; _0x14C0C < _0x160B1.length; _0x14C0C++)
 	{
-		if (isValidURL(_0x46CB[_0x3607]))
+		if (isValidURL(_0x160B1[_0x14C0C]))
 		{
-			msg += convertStringToURL(_0x46CB[_0x3607]) + " "
+			msg += convertStringToURL(_0x160B1[_0x14C0C]) + " "
 		}
 		else
 		{
-			msg += sanitize(_0x46CB[_0x3607]) + " "
+			msg += sanitize(_0x160B1[_0x14C0C]) + " "
 		}
 	};
-	_0x4691 = removeChars(msg);
-	if (_0x37BA == "error")
+	_0x16025 = removeChars(msg);
+	if (_0x14E3C == "error")
 	{
-		htmlOutput = "<span style=\'color:grey\'>" + _0x4691 + "</span>"
+		htmlOutput = "<span style=\'color:grey\'>" + _0x16025 + "</span>"
 	}
 	else
 	{
-		if (_0x37BA == "pm_from")
+		if (_0x14E3C == "pm_from")
 		{
-			_0x46E8 = "style=\'color:purple\'";
-			htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + _0x4674 + "<span " + _0x46E8 + "> [PM from " + _0x4705 + "] " + _0x4691 + "</span>"
+			_0x160D4 = "style=\'color:purple\'";
+			htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x15FBC + _0x16002 + "<span " + _0x160D4 + "> [PM from " + _0x160F7 + "] " + _0x16025 + "</span>"
 		}
 		else
 		{
-			if (_0x37BA == "pm_to")
+			if (_0x14E3C == "pm_to")
 			{
-				_0x46E8 = "style=\'color:purple\'";
-				htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + _0x4674 + "<span " + _0x46E8 + "> [Sent to " + _0x4705 + "] " + _0x4691 + "</span>"
+				_0x160D4 = "style=\'color:purple\'";
+				htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x15FBC + _0x16002 + "<span " + _0x160D4 + "> [Sent to " + _0x160F7 + "] " + _0x16025 + "</span>"
 			}
 			else
 			{
-				if (_0x4657 == "yell")
+				if (_0x15FDF == "yell")
 				{
-					htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + _0x4674 + "<span " + _0x46E8 + "><b>" + _0x4691 + "</b></span>"
+					htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x15FBC + _0x16002 + "<span " + _0x160D4 + "><b>" + _0x16025 + "</b></span>"
 				}
 				else
 				{
-					if (_0x4657 == "Investor")
+					var _0x16048 = "";
+					if (_0x1608E)
 					{
-						htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + "<img src=\'images/investor.gif\' style=\'vertical-align:middle;\'  /> " + "<span " + _0x46E8 + "><b>" + _0x4705 + " (" + _0x46AE + "): </b>" + _0x4691 + "</span>"
+						_0x16048 = " <img src=\'images/smileIcon.svg\' style=\'vertical-align:middle\' width=\'30px\' height=\'30px\' /> "
+					};
+					if (_0x15FDF == "Investor")
+					{
+						htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + _0x16048 + "</span>" + _0x15FBC + "<img src=\'images/investor.gif\' style=\'vertical-align:middle;\'  /> " + "<span " + _0x160D4 + "><b oncontextmenu=\'return rightClicksChatUsername(this, \"" + _0x160F7 + "\")\' onclick=\'clicksChatUsername(\"" + _0x160F7 + "\") class=\'chat-username\'>" + _0x160F7 + " (" + _0x1606B + "): </b>" + _0x16025 + "</span>"
 					}
 					else
 					{
-						if (_0x4657 == "InvestorPlus")
+						if (_0x15FDF == "InvestorPlus")
 						{
-							htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + "<img src=\'images/investorPlus.gif\' style=\'vertical-align:middle;\'  /> " + "<span " + _0x46E8 + "><b>" + _0x4705 + " (" + _0x46AE + "): </b>" + _0x4691 + "</span>"
+							htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + _0x16048 + "</span>" + _0x15FBC + "<img src=\'images/investorPlus.gif\' style=\'vertical-align:middle;\'  /> " + "<span " + _0x160D4 + "><b oncontextmenu=\'return rightClicksChatUsername(this, \"" + _0x160F7 + "\")\' onclick=\'clicksChatUsername(\"" + _0x160F7 + "\") class=\'chat-username\'>" + _0x160F7 + " (" + _0x1606B + "): </b>" + _0x16025 + "</span>"
 						}
 						else
 						{
-							htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + "</span>" + _0x463A + _0x4674 + "<span " + _0x46E8 + "><b>" + _0x4705 + " (" + _0x46AE + "): </b>" + _0x4691 + "</span>"
+							htmlOutput = "<span style=\'color:grey\'>" + getTimeFetch() + _0x16048 + "</span>" + _0x15FBC + _0x16002 + "<span " + _0x160D4 + "><b class=\'chat-username\' oncontextmenu=\'return rightClicksChatUsername(this, \"" + _0x160F7 + "\")\' onclick=\'clicksChatUsername\"" + _0x160F7 + "\")\'>" + _0x160F7 + " (" + _0x1606B + "): </b>" + _0x16025 + "</span>"
 						}
 					}
 				}
 			}
 		}
 	};
-	var _0x4600 = document.getElementById("chat-area-view");
-	if (_0x4600.innerHTML.length >= 60000)
+	var _0x15F76 = document.getElementById("chat-area-view");
+	if (_0x15F76.innerHTML.length >= 60000)
 	{
-		_0x4600.innerHTML = _0x4600.innerHTML.substr(30000, _0x4600.innerHTML.length)
+		_0x15F76.innerHTML = _0x15F76.innerHTML.substr(30000, _0x15F76.innerHTML.length)
 	};
-	$(_0x4600).append("<div>" + htmlOutput + "</div>");
+	$(_0x15F76).append("<div>" + htmlOutput + "</div>");
 	if (global_autoscrollChat)
 	{
-		$(_0x4600).scrollTop($(_0x4600)[0].scrollHeight)
+		$(_0x15F76).scrollTop($(_0x15F76)[0].scrollHeight)
 	}
 }

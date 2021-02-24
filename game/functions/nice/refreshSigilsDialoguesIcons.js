@@ -4,7 +4,7 @@ function refreshSigilsDialoguesIcons(afterZero)
 {
 	var fsHTML = "";
 	var _a_ = false;
-	var matchSet = ["candyCaneSigil", "spiderSigil", "carrotSigil", "snowmanSigil", "catSigil", "bunnySigil", "bluePartyHatSigil", "whitePartyHatSigil", "yellowPartyHatSigil", "greenPartyHatSigil", "redPartyHatSigil", "pinkPartyHatSigil", "treeSigil", "ghostSigil", "easterEggSigil", "santaHatSigil", "pumpkinSigil"];
+	var matchSet = ["batSigil", "candyCaneSigil", "spiderSigil", "carrotSigil", "snowmanSigil", "catSigil", "bunnySigil", "bluePartyHatSigil", "whitePartyHatSigil", "yellowPartyHatSigil", "greenPartyHatSigil", "redPartyHatSigil", "pinkPartyHatSigil", "treeSigil", "ghostSigil", "easterEggSigil", "santaHatSigil", "pumpkinSigil"];
 	var i = 0;
 	for (; i < matchSet.length; i++)
 	{
@@ -96,22 +96,33 @@ function refreshSigilsDialoguesIcons(afterZero)
 			fsHTML = fsHTML + "</div>";
 		}
 	}
-	matchSet = ["chickenMonsterSigil", "ratMonsterSigil", "beeMonsterSigil", "snakeMonsterSigil", "entMonsterSigil", "thiefMonsterSigil", "bearMonsterSigil", "spiderMonsterSigil", "skeletonMonsterSigil", "lavaAlienMonsterSigil", "batMonsterSigil", "fireMageMonsterSigil", "boneHeadMonsterSigil", "mammaPolarBearMonsterSigil", "yetiMonsterSigil", "treasureChestSigil"];
+	matchSet = ["chickenMonsterSigil", "ratMonsterSigil", "beeMonsterSigil", "snakeMonsterSigil", "entMonsterSigil", "thiefMonsterSigil", "bearMonsterSigil", "spiderMonsterSigil", "skeletonMonsterSigil", "lavaAlienMonsterSigil", "batMonsterSigil", "fireMageMonsterSigil", "boneHeadMonsterSigil", "mammaPolarBearMonsterSigil", "yetiMonsterSigil", "ghostMonsterSigil", "skeletonGhostMonsterSigil", "reaperMonsterSigil", "sharkMonsterSigil", "pufferFishMonsterSigil", "tridentSoldierMonsterSigil", "skeletonMonksMonsterSigil"
+		, "dungeonSpiderMonsterSigil", "stoneWomenMonsterSigil", "museumSigil", "treasureChestSigil"
+	];
 	i = 0;
 	for (; i < matchSet.length; i++)
 	{
-		if (getItem(matchSet[i]) > 0 || afterZero)
+		var item = getItem(matchSet[i]);
+		if (matchSet[i] == "museumSigil")
+		{
+			item = 0;
+			if (hasAllMuseumItems())
+			{
+				item = 1;
+			}
+		}
+		if (item > 0 || afterZero)
 		{
 			_a_ = true;
 			fsHTML = fsHTML + ("<div onclick='sendBytes(\"CHAT_ICON=" + matchSet[i] + "\")' style='background-color:#e6e6e6;' class='dialogue-sigils-itemBox'>");
 			fsHTML = fsHTML + ("<img src='images/" + matchSet[i] + ".png' class='img-30' />");
 			if (getItemString("chatIcon") == matchSet[i])
 			{
-				fsHTML = fsHTML + ("<br /><center><span>" + getItem(matchSet[i]) + "</span> <img src='images/check.png' class='img-20' /></center>");
+				fsHTML = fsHTML + ("<br /><center><span>" + item + "</span> <img src='images/check.png' class='img-20' /></center>");
 			}
 			else
 			{
-				fsHTML = fsHTML + ("<br /><center><span>" + getItem(matchSet[i]) + "</span> </center>");
+				fsHTML = fsHTML + ("<br /><center><span>" + item + "</span> </center>");
 			}
 			fsHTML = fsHTML + "</div>";
 		}

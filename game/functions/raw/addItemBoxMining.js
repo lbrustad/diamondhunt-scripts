@@ -1,55 +1,55 @@
 /**
- * addItemBoxMining extracted from ../../deobfuscated/bundle.js at line 5009-5056
+ * addItemBoxMining extracted from ../../deobfuscated/bundle.js at line 5745-5792
  *
  * If this file doesn't contain a function, there is an error in ../raw/addItemBoxMining.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function addItemBoxMining(_0x3916, _0x384B, _0x396D, _0x3729, _0x370C, _0x3933, _0x39A7, _0x382E)
+function addItemBoxMining(_0x14FE0, _0x14EEB, _0x15049, _0x14D8D, _0x14D6A, _0x15003, _0x1508F, _0x14EC8)
 {
-	var _0x398A = document.getElementById(_0x396D);
-	var _0x3885 = document.createElement("div");
-	_0x3885.setAttribute("class", "item-box");
-	_0x3885.setAttribute("onclick", "clicksItem(\'" + _0x3916 + "\')");
-	_0x3885.setAttribute("id", "item-box-" + _0x3916);
-	if (_0x39A7 != "")
+	var _0x1506C = document.getElementById(_0x15049);
+	var _0x14F31 = document.createElement("div");
+	_0x14F31.setAttribute("class", "item-box");
+	_0x14F31.setAttribute("onclick", "clicksItem(\'" + _0x14FE0 + "\')");
+	_0x14F31.setAttribute("id", "item-box-" + _0x14FE0);
+	if (_0x1508F != "")
 	{
-		_0x3885.setAttribute("data-tooltip-id", _0x39A7)
+		_0x14F31.setAttribute("data-tooltip-id", _0x1508F)
 	};
-	_0x3885.style.backgroundColor = _0x3729;
-	_0x3885.style.border = "1px solid " + _0x370C;
-	var _0x38BF = document.createElement("div");
-	_0x38BF.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;");
-	if (_0x3916 == "miner")
+	_0x14F31.style.backgroundColor = _0x14D8D;
+	_0x14F31.style.border = "1px solid " + _0x14D6A;
+	var _0x14F77 = document.createElement("div");
+	_0x14F77.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;");
+	if (_0x14FE0 == "miner")
 	{
-		_0x38BF.innerHTML = "<img style=\'display:none;\' id=\'wrench-icon-miner\' src=\'images/wrench.png\' class=\'img-20\' /> " + _0x3933
+		_0x14F77.innerHTML = "<img style=\'display:none;\' id=\'wrench-icon-miner\' src=\'images/wrench.png\' class=\'img-20\' /> " + _0x15003
 	}
 	else
 	{
-		_0x38BF.innerHTML = _0x3933
+		_0x14F77.innerHTML = _0x15003
 	};
-	if (_0x382E)
+	if (_0x14EC8)
 	{
-		_0x38BF.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;color:orange;")
+		_0x14F77.setAttribute("style", "text-align:center; font-weight: bold;font-size:16pt;color:orange;")
 	};
-	var _0x38A2 = document.createElement("div");
-	_0x38A2.setAttribute("style", "text-align:center");
-	var _0x38DC = getImage("images/" + _0x3916 + ".png", "item-" + _0x3916 + "-box-image");
-	_0x38DC.setAttribute("class", "img-100");
-	var _0x3868 = document.createElement("item-" + _0x3916);
-	_0x3868.setAttribute("type", "number");
-	_0x3868.setAttribute("style", "text-align:center;display:block;");
-	_0x3868.innerHTML = formatNumber(getItem(_0x3916), false);
-	_0x3885.appendChild(_0x38BF);
-	_0x38A2.appendChild(_0x38DC);
-	_0x3885.appendChild(_0x38A2);
-	if (!_0x382E)
+	var _0x14F54 = document.createElement("div");
+	_0x14F54.setAttribute("style", "text-align:center");
+	var _0x14F9A = getImage("images/" + _0x14FE0 + ".png", "item-" + _0x14FE0 + "-box-image");
+	_0x14F9A.setAttribute("class", "img-100");
+	var _0x14F0E = document.createElement("item-" + _0x14FE0);
+	_0x14F0E.setAttribute("type", "number");
+	_0x14F0E.setAttribute("style", "text-align:center;display:block;");
+	_0x14F0E.innerHTML = formatNumber(getItem(_0x14FE0), false);
+	_0x14F31.appendChild(_0x14F77);
+	_0x14F54.appendChild(_0x14F9A);
+	_0x14F31.appendChild(_0x14F54);
+	if (!_0x14EC8)
 	{
-		if (getItem(_0x3916, false) == 0)
+		if (getItem(_0x14FE0, false) == 0)
 		{
-			_0x3885.style.display = "none"
+			_0x14F31.style.display = "none"
 		};
-		_0x3885.appendChild(_0x3868)
+		_0x14F31.appendChild(_0x14F0E)
 	};
-	_0x398A.appendChild(_0x3885)
+	_0x1506C.appendChild(_0x14F31)
 }

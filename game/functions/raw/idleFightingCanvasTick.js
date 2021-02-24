@@ -1,5 +1,5 @@
 /**
- * idleFightingCanvasTick extracted from ../../deobfuscated/bundle.js at line 11294-11338
+ * idleFightingCanvasTick extracted from ../../deobfuscated/bundle.js at line 13672-13719
  *
  * If this file doesn't contain a function, there is an error in ../raw/idleFightingCanvasTick.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -48,5 +48,8 @@ function idleFightingCanvasTick()
 	global_canvasFightingHero2D.drawImage(getImage("images/" + getItem("shield", true) + "Equip.png", "hero_fighting_shield"), 0, global_idleFightingHeroCanvasTickFrame.getYValue());
 	global_canvasFightingHero2D.drawImage(getImage("images/" + getItem("weapon", true) + "Equip.png", "hero_fighting_weapon"), 0, global_idleFightingHeroCanvasTickFrame.getYValue());
 	global_canvasFightingHero2D.drawImage(getImage("images/" + getItem("arrows", true) + "Equip.png", "hero_fighting_arrows"), 0, 0);
-	global_heroHitAnimationHashSet.forEach((_0x4F4A) => _0x4F4A.draw(100, 350))
+	global_heroHitAnimationHashSet.forEach((_0x16C0A) =>
+	{
+		return _0x16C0A.draw(100, 350)
+	})
 }

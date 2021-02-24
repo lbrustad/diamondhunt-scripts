@@ -1,5 +1,5 @@
 /**
- * refreshCombatTab extracted from ../../deobfuscated/bundle.js at line 14673-14682
+ * refreshCombatTab extracted from ../../deobfuscated/bundle.js at line 18114-18123
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshCombatTab.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

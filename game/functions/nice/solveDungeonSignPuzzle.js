@@ -1,0 +1,44 @@
+'use strict';
+
+function solveDungeonSignPuzzle()
+{
+	var ret = "DUNGEON_SIGN_PUZZLE=";
+	var s = "";
+	s = document.getElementById("table-td-dungeonSigns-" + 1).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 2).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 3).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 4).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 5).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 6).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 7).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 8).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 9).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 10).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 11).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + (s + "~");
+	s = document.getElementById("table-td-dungeonSigns-" + 12).src.split("/");
+	s = s[s.length - 1].slice(0, -4);
+	ret = ret + s;
+	sendBytes(ret);
+};

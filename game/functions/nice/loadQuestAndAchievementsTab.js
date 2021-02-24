@@ -16,4 +16,6 @@ function loadQuestAndAchievementsTab()
 	addItemBoxQuests("mommyTheSpider", "MOMMY THE SPIDER", "Mommy is embarrassed that her babies spit out poison on every occasion.", ["Killed 3 spiders in caves."], [getItem("spiderKills") >= 3], "EASY", SCROLL_ID, 10);
 	addItemBoxQuests("theStewChef", "THE STEW CHEF", "A chef needs your help making the perfect stew.", ["Be on cooldown for 30 minutes or more."], [getItem("heroCooldown") > 1800 || getItem("theStewChefQuest") != 0], "MEDIUM", SCROLL_ID, 13);
 	addItemBoxQuests("theFrozenBarbarian", "THE FROZEN BARBARIAN", "A barbarian is freezing to death.", ["Killed 3 boneheads in the northern fields."], [getItem("boneHeadKills") >= 3], "MEDIUM", SCROLL_ID, 15);
+	addItemBoxQuests("theFishEggsExperiment", "THE FIGH EGGS EXPERIMENT", "Yet again, the fisherman needs your help!", ["Completed The Fisherman Part 2", "Opened a ocean loot bag."], [getItem("theFisherman2Quest") == -1, getItem("oceanLootBagOpened") > 0], "MEDIUM", SCROLL_ID, 16);
+	addItemBoxQuests("theTraitor", "TRAITOR!", "A traitor has been discovered.", ["Found the traitor."], [getItem("traitorFound") >= 1], "HARD", SCROLL_ID, 15);
 };

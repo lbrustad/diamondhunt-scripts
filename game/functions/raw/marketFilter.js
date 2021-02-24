@@ -1,39 +1,39 @@
 /**
- * marketFilter extracted from ../../deobfuscated/bundle.js at line 17780-17816
+ * marketFilter extracted from ../../deobfuscated/bundle.js at line 21530-21566
  *
  * If this file doesn't contain a function, there is an error in ../raw/marketFilter.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function marketFilter(_0x3811, _0x602B)
+function marketFilter(_0x14EA5, _0x1820D)
 {
-	_0x3811 = _0x3811.toLowerCase();
-	var _0x6065 = document.getElementById("market-table");
-	var _0x6048 = _0x6065.getElementsByTagName("tr");
-	for (var _0x3607 = 0; _0x3607 < _0x6048.length; _0x3607++)
+	_0x14EA5 = _0x14EA5.toLowerCase();
+	var _0x18253 = document.getElementById("market-table");
+	var _0x18230 = _0x18253.getElementsByTagName("tr");
+	for (var _0x14C0C = 0; _0x14C0C < _0x18230.length; _0x14C0C++)
 	{
-		_0x6048[_0x3607].style.display = "";
-		var _0x4ED6 = _0x6048[_0x3607].id.split("-")[2];
-		if (_0x4ED6 != null)
+		_0x18230[_0x14C0C].style.display = "";
+		var _0x14D47 = _0x18230[_0x14C0C].id.split("-")[2];
+		if (_0x14D47 != null)
 		{
-			_0x4ED6 = getItemName(_0x4ED6).toLowerCase();
-			if (_0x602B)
+			_0x14D47 = getItemName(_0x14D47).toLowerCase();
+			if (_0x1820D)
 			{
-				if (_0x4ED6 != _0x3811)
+				if (_0x14D47 != _0x14EA5)
 				{
-					_0x6048[_0x3607].style.display = "none"
+					_0x18230[_0x14C0C].style.display = "none"
 				}
 			}
 			else
 			{
-				if (!_0x4ED6.includes(_0x3811.trim()))
+				if (!_0x14D47.includes(_0x14EA5.trim()))
 				{
-					_0x6048[_0x3607].style.display = "none"
+					_0x18230[_0x14C0C].style.display = "none"
 				}
 			}
 		}
 	};
-	if (_0x3811.length > 0)
+	if (_0x14EA5.length > 0)
 	{
 		document.getElementById("market-filter-x").style.display = ""
 	}

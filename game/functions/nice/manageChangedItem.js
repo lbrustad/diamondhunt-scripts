@@ -2,12 +2,12 @@
 
 function manageChangedItem(type)
 {
-	var item = getItem(type, false);
+	var text = getItem(type, false);
 	if (type.endsWith("Allocation0") || type.endsWith("Allocation1") || type.endsWith("Allocation2") || type.endsWith("Allocation3") || type.endsWith("Allocation4"))
 	{
 		refreshMiningAllocationIcons();
 	}
-	if (item == -1)
+	if (text == -1)
 	{
 		if (type.endsWith("Quest"))
 		{
@@ -28,7 +28,7 @@ function manageChangedItem(type)
 		}
 		if (type == "theFrozenBarbarianQuest")
 		{
-			if (item == 1)
+			if (text == 1)
 			{
 				showElement("frozenBarbarianMap");
 			}
@@ -36,6 +36,13 @@ function manageChangedItem(type)
 			{
 				hideElement("frozenBarbarianMap");
 			}
+		}
+	}
+	if (type.toLowerCase().endsWith("lootbag"))
+	{
+		if (document.getElementById("explorer" + "-status") != null)
+		{
+			document.getElementById("explorer" + "-status").innerHTML = formatNumber(getTotalLootBagsOwned());
 		}
 	}
 	if (type.startsWith("heroDebuff"))
@@ -64,14 +71,14 @@ function manageChangedItem(type)
 	}
 	if (type.endsWith("Seeds"))
 	{
-		if (item == 0)
+		if (text == 0)
 		{
 			selectedSeed = "none";
 		}
 	}
 	if (type.endsWith("PotionTimer"))
 	{
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("notification-" + type);
 			if (document.getElementById("notification" + "-" + type) != null)
@@ -111,7 +118,7 @@ function manageChangedItem(type)
 	switch (type)
 	{
 	case "wrench":
-		if (item > 0)
+		if (text > 0)
 		{
 			if (document.getElementById("wrench-icon-miner") != null)
 			{
@@ -122,16 +129,16 @@ function manageChangedItem(type)
 	case "chefCooldown":
 		if (document.getElementById("chef" + "-itemBox-value") != null)
 		{
-			if (item <= 1)
+			if (text <= 1)
 			{
 				document.getElementById("chef" + "-itemBox-value").innerHTML = "Ready";
 			}
 			else
 			{
-				document.getElementById("chef" + "-itemBox-value").innerHTML = formatTime(item);
+				document.getElementById("chef" + "-itemBox-value").innerHTML = formatTime(text);
 			}
 		}
-		if (item == 0 && getItem("theStewChefQuest") == -1)
+		if (text == 0 && getItem("theStewChefQuest") == -1)
 		{
 			showElement("notification-chefStew");
 		}
@@ -140,23 +147,38 @@ function manageChangedItem(type)
 			hideElement("notification-chefStew");
 		}
 		break;
+	case "piratesParrot":
+		if (text > 0 && document.getElementById("item-box-pirate-image") != null)
+		{
+			document.getElementById("item-box-pirate-image").src = "images/pirate2.png";
+		}
+		break;
+	case "spyglass":
+		if (document.getElementById("item-box-data-pirate") != null)
+		{
+			if (getItem("spyglass") > 0)
+			{
+				document.getElementById("item-box-data-pirate").style.display = "block";
+			}
+		}
+		break;
 	case "oxygenTankTimer":
 	case "rowBoatTimer":
 	case "canoeBoatTimer":
 		var htmlElId = type.substring(0, type.length - 5);
-		if (item > 1)
+		if (text > 1)
 		{
 			showElement("notification-" + type);
 			if (document.getElementById(htmlElId + "-itemBox-value") != null)
 			{
-				document.getElementById(htmlElId + "-itemBox-value").innerHTML = formatTime(item);
+				document.getElementById(htmlElId + "-itemBox-value").innerHTML = formatTime(text);
 			}
 			hideElement("notification-" + type + "-Ready");
 		}
 		else
 		{
 			hideElement("notification-" + type);
-			if (item == 1)
+			if (text == 1)
 			{
 				if (document.getElementById(htmlElId + "-itemBox-value") != null)
 				{
@@ -174,8 +196,14 @@ function manageChangedItem(type)
 			}
 		}
 		break;
+	case "dungeonSignsSolved":
+		if (text > 0)
+		{
+			document.getElementById("dungeonNotes-combat").style.display = "";
+		}
+		break;
 	case "shinyMonster":
-		if (item == 1)
+		if (text == 1)
 		{
 			showElement("shiny-monster-gif");
 		}
@@ -185,7 +213,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "blueFurnaceOrbBound":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("blueFurnaceOrb-tooltip-furnace");
 		}
@@ -200,6 +228,135 @@ function manageChangedItem(type)
 			hideElement("notification-specialBaitOn");
 		}
 		break;
+	case "greenShinyMonsterOrbBound":
+	case "greenShinyMonsterOrbBoundTimer":
+		var name = "greenShinyMonsterOrbBound";
+		if (getItem(name) > 0)
+		{
+			if (getItem(name + "Timer") == 0)
+			{
+				showElement("notification-" + name);
+				hideElement("notification-" + name + "Timer");
+			}
+			else
+			{
+				hideElement("notification-" + name);
+				showElement("notification-" + name + "Timer");
+			}
+		}
+		break;
+	case "theTraitorQuest":
+		if (getItem("theTraitorQuest") == -1)
+		{
+			if (document.getElementById("castle-traitor") != null)
+			{
+				document.getElementById("castle-traitor").style.display = "none";
+			}
+		}
+		if (getItem("theTraitorQuest") >= 2)
+		{
+			if (document.getElementById("castle-traitor") != null)
+			{
+				document.getElementById("castle-traitor").style.display = "none";
+			}
+		}
+		if (getItem("theTraitorQuest") == 4)
+		{
+			if (document.getElementById("castle-traitor1") != null)
+			{
+				document.getElementById("castle-traitor1").style.display = "";
+			}
+		}
+		else
+		{
+			document.getElementById("castle-traitor1").style.display = "none";
+		}
+		if (getItem("theTraitorQuest") == 5)
+		{
+			if (document.getElementById("castle-traitor2") != null)
+			{
+				document.getElementById("castle-traitor2").style.display = "";
+			}
+		}
+		else
+		{
+			document.getElementById("castle-traitor2").style.display = "none";
+		}
+		if (getItem("theTraitorQuest") == 6 || getItem("theTraitorQuest") == 7)
+		{
+			if (document.getElementById("castle-traitor3") != null)
+			{
+				document.getElementById("castle-traitor3").style.display = "";
+			}
+		}
+		else
+		{
+			document.getElementById("castle-traitor3").style.display = "none";
+		}
+		break;
+	case "greenShinyWoodcuttingOrbBound":
+	case "greenShinyWoodcuttingOrbBoundTimer":
+		name = "greenShinyWoodcuttingOrbBound";
+		if (getItem(name) > 0)
+		{
+			if (getItem(name + "Timer") == 0)
+			{
+				showElement("notification-" + name);
+				hideElement("notification-" + name + "Timer");
+			}
+			else
+			{
+				hideElement("notification-" + name);
+				showElement("notification-" + name + "Timer");
+			}
+		}
+		break;
+	case "greenShinyFarmingOrbBound":
+	case "greenShinyFarmingOrbBoundTimer":
+		name = "greenShinyFarmingOrbBound";
+		if (getItem(name) > 0)
+		{
+			if (getItem(name + "Timer") == 0)
+			{
+				showElement("notification-" + name);
+				hideElement("notification-" + name + "Timer");
+			}
+			else
+			{
+				hideElement("notification-" + name);
+				showElement("notification-" + name + "Timer");
+			}
+		}
+		break;
+	case "watchSeed":
+	case "watchAt":
+	case "watch":
+	case "sapphireWatch":
+	case "emeraldWatch":
+	case "rubyWatch":
+	case "diamondWatch":
+		var optionMatch = getWatchTypeData();
+		if (optionMatch == null)
+		{
+			return;
+		}
+		var pluginName = optionMatch[0];
+		var _viewContentAlign = getItemString("watchSeed");
+		if (_viewContentAlign == "none")
+		{
+			if (document.getElementById(pluginName + "-status") != null)
+			{
+				document.getElementById(pluginName + "-status").innerHTML = "Not Set";
+			}
+		}
+		else
+		{
+			if (document.getElementById(pluginName + "-status") != null)
+			{
+				document.getElementById(pluginName + "-status").innerHTML = "<img src='images/" + _viewContentAlign + ".png' class='img-20' /> " + getItem("watchAt") + "/" + getItem("watchLimit");
+			}
+		}
+		break;
 	case "plotShiny1":
 	case "plotShiny2":
 	case "plotShiny3":
@@ -207,7 +364,7 @@ function manageChangedItem(type)
 	case "plotShiny5":
 	case "plotShiny6":
 		var s = type.substr(9);
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("plot-section-shiny-" + s);
 		}
@@ -217,18 +374,18 @@ function manageChangedItem(type)
 		}
 		break;
 	case "repelMonster":
-		if (item == "none")
+		if (text == "none")
 		{
 			hideElement("notification-repelNotification");
 		}
 		else
 		{
-			document.getElementById("repelNotification-monsterImg").src = "images/" + item + "_monster_idle_0.png";
+			document.getElementById("repelNotification-monsterImg").src = "images/" + text + "_monster_idle_0.png";
 			showElement("notification-repelNotification");
 		}
 		break;
 	case "teleportCooldown":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("teleport-spell-cd-notif");
 		}
@@ -241,7 +398,9 @@ function manageChangedItem(type)
 		loadQuestAndAchievementsTab();
 		break;
 	case "treasureMap":
-		if (item > 0)
+	case "greenTreasureMap":
+	case "redTreasureMap":
+		if (text > 0)
 		{
 			showElement("notification-treasureMapReady");
 		}
@@ -251,13 +410,13 @@ function manageChangedItem(type)
 		}
 		break;
 	case "researcherMagic":
-		if (item >= 3)
+		if (text >= 3)
 		{
 			showElement("item-box-convertMagic");
 		}
 		break;
 	case "hardcoreId":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("hardcore-icon-top-left").style.display = "";
 		}
@@ -267,7 +426,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "combatTut":
-		if (item == 3)
+		if (text == 3)
 		{
 			showElement("notification-hint");
 		}
@@ -275,7 +434,7 @@ function manageChangedItem(type)
 		{
 			hideElement("notification-hint");
 		}
-		if (item >= 2)
+		if (text >= 2)
 		{
 			document.getElementById("fighting-screen-magic-area").style.display = "none";
 			document.getElementById("combat-spell-heal").style.display = "none";
@@ -298,9 +457,11 @@ function manageChangedItem(type)
 	case "energyRing1":
 	case "energyRing2":
 	case "energyRing3":
+	case "energyRing4":
 	case "cooldownRing1":
 	case "cooldownRing2":
 	case "cooldownRing3":
+	case "cooldownRing4":
 		initializeTooltips();
 		break;
 	case "oilIn":
@@ -376,15 +537,15 @@ function manageChangedItem(type)
 		loadDonorShopTab();
 		break;
 	case "lastCombatMap":
-		if (item > 0)
+		if (text > 0)
 		{
-			changeCombatMap(item);
+			changeCombatMap(text);
 		}
 		break;
 	case "fireFeatherSpawn":
-		if (item > 0)
+		if (text > 0)
 		{
-			showElement("fireFeatherSpawn-" + item);
+			showElement("fireFeatherSpawn-" + text);
 			showElement("notification-fireFeatherSpawnReady");
 		}
 		else
@@ -394,9 +555,9 @@ function manageChangedItem(type)
 		}
 		break;
 	case "iceFeatherSpawn":
-		if (item > 0)
+		if (text > 0)
 		{
-			showElement("iceFeatherSpawn-" + item);
+			showElement("iceFeatherSpawn-" + text);
 			showElement("notification-iceFeatherSpawnReady");
 		}
 		else
@@ -412,7 +573,7 @@ function manageChangedItem(type)
 		document.getElementById("img-rocket-map").src = "images/rocketMap" + getItem(type) + ".png";
 		break;
 	case "updateLogNotification":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("new-updates-gif").style.display = "";
 		}
@@ -422,7 +583,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "giantSnakeTimer":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("notification-" + type);
 		}
@@ -435,13 +596,28 @@ function manageChangedItem(type)
 	case "woodcuttingReadyNotification":
 	case "farmingReadyNotification":
 	case "updateTimer":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("notification-" + type);
 		}
 		else
 		{
 			hideElement("notification-" + type);
+		}
+		break;
+	case "castleCooldown":
+		if (getItem("speechKing") > 0)
+		{
+			if (text > 0)
+			{
+				showElement("notification-castleCooldown");
+				hideElement("notification-castleReady");
+			}
+			else
+			{
+				hideElement("notification-castleCooldown");
+				showElement("notification-castleReady");
+			}
 		}
 		break;
 	case "cooksBookTimer":
@@ -467,7 +643,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "titaniumRocketBoostersAvailable":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("notification-rocketBoost");
 		}
@@ -476,15 +652,39 @@ function manageChangedItem(type)
 			hideElement("notification-rocketBoost");
 		}
 		break;
+	case "robotTimer":
+		if (text > 1)
+		{
+			setInnerHTML("notification-robot-value", formatTime(text));
+			showElement("notification-robot");
+		}
+		else
+		{
+			if (text == 1)
+			{
+				setInnerHTML("notification-robot-value", "Ready");
+				showElement("notification-robot");
+			}
+			else
+			{
+				hideElement("notification-robot");
+			}
+		}
+		break;
 	case "rocketKm":
 		if (getItem(type) == 0)
 		{
 			hideElement("notification-rocket");
 			setInnerHTML("itemBox-rocket-amount", "");
+			if (getItem("rocket") > 0)
+			{
+				showElement("notification-rocketReady");
+			}
 		}
 		else
 		{
-			if (getItemString("rocketDestination") == "moon" && getItem(type) == 384000)
+			hideElement("notification-rocketReady");
+			if (getItemString("rocketDestination") == "moon" && getItem(type) == 384000 || getItemString("rocketDestination") == "mars" && getItem(type) == 54000000)
 			{
 				if (document.getElementById("itemBox-rocket-amount") != null)
 				{
@@ -524,20 +724,21 @@ function manageChangedItem(type)
 	case "greenCrystalUsed":
 	case "redCrystalUsed":
 	case "blueCrystalUsed":
+	case "yellowCrystalUsed":
 		refreshDarkCrystalUsedLabel();
 		refreshFaradoxDarkCrystalTooltip();
 		break;
 	case "researcherTimer":
-		if (item == 1)
+		if (text == 1)
 		{
 			document.getElementById("researcher-status-label").innerHTML = "<img src='images/" + getItemString("researcherSkill") + "Skill.png' class='img-50' /> <span onclick='sendBytes(\"CLAIM_RESEARCHER\")' style='display:inline-block;border:1px solid green;background-color:black;padding:15px;cursor:pointer;'>CLAIM <img src='images/atom.png' class='img-30' /></span></i>";
 			showElement("notification-researcherReady");
 		}
 		else
 		{
-			if (item > 1)
+			if (text > 1)
 			{
-				document.getElementById("researcher-status-label").innerHTML = "<img src='images/" + getItemString("researcherSkill") + "Skill.png' class='img-50' /> " + formatTime(item);
+				document.getElementById("researcher-status-label").innerHTML = "<img src='images/" + getItemString("researcherSkill") + "Skill.png' class='img-50' /> " + formatTime(text);
 				showElement("notification-researcher");
 				showElement("notification-researcherTimerNotification");
 				hideElement("notification-researcherReady");
@@ -554,20 +755,20 @@ function manageChangedItem(type)
 		refreshResearching();
 		break;
 	case "researcherMining":
-		if (item == 1)
+		if (text == 1)
 		{
 			showElement("item-box-diamond_verydark");
 		}
 		else
 		{
-			if (item >= 2 && item <= 3)
+			if (text >= 2 && text <= 3)
 			{
 				hideElement("item-box-diamond_verydark");
 				showElement("item-box-gemList2");
 			}
 			else
 			{
-				if (item >= 4)
+				if (text >= 4)
 				{
 					showElement("item-box-gemList3");
 					hideElement("item-box-gemList2");
@@ -580,7 +781,7 @@ function manageChangedItem(type)
 		document.getElementById("navigation-right-home-image").src = "images/" + getItemString("home") + ".png";
 		break;
 	case "homeHint":
-		if (item == 1)
+		if (text == 1)
 		{
 			hideElement("img-hint-arrow-home-button");
 		}
@@ -599,7 +800,7 @@ function manageChangedItem(type)
 	case "treeUnlocked4":
 	case "treeUnlocked5":
 	case "treeUnlocked6":
-		if (item > 0)
+		if (text > 0)
 		{
 			unlockTreePatch(type.substr(12));
 		}
@@ -621,7 +822,7 @@ function manageChangedItem(type)
 	case "plotUnlocked4":
 	case "plotUnlocked5":
 	case "plotUnlocked6":
-		if (item > 0)
+		if (text > 0)
 		{
 			unlockPlotPatch(type.substr(12));
 		}
@@ -644,7 +845,7 @@ function manageChangedItem(type)
 		break;
 	case "heroMana":
 	case "heroMaxMana":
-		if (item > 0)
+		if (text > 0)
 		{
 			showElement("hero-mana-bar-fighting");
 			showElement("monster-mana-bar-fighting");
@@ -696,28 +897,28 @@ function manageChangedItem(type)
 		refreshMonsterHpBar();
 		break;
 	case "miningUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-miningXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-miningXPArea").style.display = "";
 		}
 		break;
 	case "craftingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-craftingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-craftingXPArea").style.display = "";
 		}
 		break;
 	case "bobsPanicQuest":
-		if (item == -1)
+		if (text == -1)
 		{
 			document.getElementById("img-hint-arrow-farming-button").style.display = "none";
 			document.getElementById("img-hint-arrow-woodcutting-button").style.display = "none";
 		}
 		break;
 	case "woodcuttingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-woodcuttingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-woodcuttingXPArea").style.display = "";
@@ -725,7 +926,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "fishingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-fishingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-fishingXPArea").style.display = "";
@@ -733,7 +934,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "cookingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-cookingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-cookingXPArea").style.display = "";
@@ -743,7 +944,7 @@ function manageChangedItem(type)
 	case "magicUnlocked":
 	case "spellScrollReflectCombatMapFound":
 	case "spellScrollTeleportCombatMapFound":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-magicXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-magicXPArea").style.display = "";
@@ -781,7 +982,7 @@ function manageChangedItem(type)
 		}
 		break;
 	case "farmingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-farmingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-farmingXPArea").style.display = "";
@@ -789,13 +990,13 @@ function manageChangedItem(type)
 		}
 		break;
 	case "magicTabNotification":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("img-hint-arrow-magic-button").style.display = "none";
 		}
 		break;
 	case "brewingUnlocked":
-		if (item > 0)
+		if (text > 0)
 		{
 			document.getElementById("span-topBar-brewingXPAreaLocked").style.display = "none";
 			document.getElementById("span-topBar-brewingXPArea").style.display = "";
@@ -900,25 +1101,25 @@ function manageChangedItem(type)
 		refreshManaStarTotalLabels();
 		break;
 	case "letTheMiningBeginQuest":
-		if (item == 2)
+		if (text == 2)
 		{
 			document.getElementById("navigation-right-mining-button").style.display = "";
 		}
 		else
 		{
-			if (item > 2 || item == -1)
+			if (text > 2 || text == -1)
 			{
 				document.getElementById("navigation-right-mining-button").style.display = "";
 				document.getElementById("img-hint-arrow-mining-button").style.display = "none";
 			}
 		}
-		if (item == 3)
+		if (text == 3)
 		{
 			document.getElementById("navigation-right-crafting-button").style.display = "";
 		}
 		else
 		{
-			if (item > 3 || item == -1)
+			if (text > 3 || text == -1)
 			{
 				document.getElementById("navigation-right-crafting-button").style.display = "";
 				document.getElementById("img-hint-arrow-crafting-button").style.display = "none";
@@ -926,12 +1127,12 @@ function manageChangedItem(type)
 		}
 		break;
 	case "monsterName":
-		if (item == "none" && global_lastTabId == "right-combat-fighting")
+		if (text == "none" && global_lastTabId == "right-combat-fighting")
 		{
 			navigate("right-combat");
 		}
 		resetAnimationOfCurrentFightToIdle();
-		if (item == "none")
+		if (text == "none")
 		{
 			hideElement("notification-inCombat");
 		}

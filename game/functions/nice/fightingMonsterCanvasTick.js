@@ -12,7 +12,7 @@ function fightingMonsterCanvasTick()
 		return;
 	}
 	global_canvasFightingMonster2D.clearRect(0, 0, global_canvasFightingMonster.width, global_canvasFightingMonster.height);
-	if (getItem("monsterHp") == 0)
+	if (getItem("monsterHp") == 0 && getItem("monsterName") != "corruptedKnight")
 	{
 		global_canvasFightingMonster2D.globalAlpha = 0.5;
 		global_canvasFightingMonster2D.drawImage(mergedPiskel.getDeathImage(), 50, global_canvasFightingMonster.height - mergedPiskel.getHeight() - 50);

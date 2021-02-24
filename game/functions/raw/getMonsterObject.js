@@ -1,11 +1,11 @@
 /**
- * getMonsterObject extracted from ../../deobfuscated/bundle.js at line 13942-14206
+ * getMonsterObject extracted from ../../deobfuscated/bundle.js at line 17270-17611
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMonsterObject.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getMonsterObject(_0x4ED6)
+function getMonsterObject(_0x14D47)
 {
 	if (window.chickenMonsterObj == null)
 	{
@@ -37,6 +37,11 @@ function getMonsterObject(_0x4ED6)
 		piranhasMonsterObj = new PiranhasMonster();
 		piranhasMonsterObj.preloadImages()
 	};
+	if (window.witchMonsterObj == null)
+	{
+		witchMonsterObj = new WitchMonster();
+		witchMonsterObj.preloadImages()
+	};
 	if (window.lavaAlienMonsterObj == null)
 	{
 		lavaAlienMonsterObj = new LavaAlienMonster();
@@ -52,10 +57,20 @@ function getMonsterObject(_0x4ED6)
 		sharkMonsterObj = new SharkMonster();
 		sharkMonsterObj.preloadImages()
 	};
+	if (window.tridentSharkMonsterObj == null)
+	{
+		tridentSharkMonsterObj = new TridentSharkMonster();
+		tridentSharkMonsterObj.preloadImages()
+	};
 	if (window.tridentSoldierMonsterObj == null)
 	{
 		tridentSoldierMonsterObj = new TridentSoldierMonster();
 		tridentSoldierMonsterObj.preloadImages()
+	};
+	if (window.corruptedKnightMonsterObj == null)
+	{
+		corruptedKnightMonsterObj = new CorruptedKnightMonster();
+		corruptedKnightMonsterObj.preloadImages()
 	};
 	if (window.babyPolarBearMonsterObj == null)
 	{
@@ -81,52 +96,87 @@ function getMonsterObject(_0x4ED6)
 		ratMonsterObj = new RatMonster();
 		ratMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "bee" && window.beeMonsterObj == null)
+	if (_0x14D47 == "bee" && window.beeMonsterObj == null)
 	{
 		beeMonsterObj = new BeeMonster();
 		beeMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "bat" && window.batMonsterObj == null)
+	if (_0x14D47 == "bat" && window.batMonsterObj == null)
 	{
 		batMonsterObj = new BatMonster();
 		batMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "fireMage" && window.fireMageMonsterObj == null)
+	if (_0x14D47 == "fireMage" && window.fireMageMonsterObj == null)
 	{
 		fireMageMonsterObj = new FireMageMonster();
 		fireMageMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "boneHead" && window.boneHeadMonsterObj == null)
+	if (_0x14D47 == "boneHead" && window.boneHeadMonsterObj == null)
 	{
 		boneHeadMonsterObj = new BoneHeadMonster();
 		boneHeadMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "ghost" && window.ghostMonsterObj == null)
+	if (_0x14D47 == "knight1" && window.knight1MonsterObj == null)
+	{
+		knight1MonsterObj = new Knight1Monster();
+		knight1MonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "knight2" && window.knight2MonsterObj == null)
+	{
+		knight2MonsterObj = new Knight2Monster();
+		knight2MonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "knight3" && window.knight3MonsterObj == null)
+	{
+		knight3MonsterObj = new Knight3Monster();
+		knight3MonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "knight4" && window.knight4MonsterObj == null)
+	{
+		knight4MonsterObj = new Knight4Monster();
+		knight4MonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "knight5" && window.knight5MonsterObj == null)
+	{
+		knight5MonsterObj = new Knight5Monster();
+		knight5MonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "skeletonMonks" && window.skeletonMonksMonsterObj == null)
+	{
+		skeletonMonksMonsterObj = new SkeletonMonksMonster();
+		skeletonMonksMonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "stoneWomen" && window.stoneWomenMonsterObj == null)
+	{
+		stoneWomenMonsterObj = new StoneWomenMonster();
+		stoneWomenMonsterObj.preloadImages()
+	};
+	if (_0x14D47 == "ghost" && window.ghostMonsterObj == null)
 	{
 		ghostMonsterObj = new GhostMonster();
 		ghostMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "explorer" && window.explorerMonsterObj == null)
+	if (_0x14D47 == "explorer" && window.explorerMonsterObj == null)
 	{
 		explorerMonsterObj = new ExplorerMonster();
 		explorerMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "skeletonGhost" && window.skeletonGhostMonsterObj == null)
+	if (_0x14D47 == "skeletonGhost" && window.skeletonGhostMonsterObj == null)
 	{
 		skeletonGhostMonsterObj = new SkeletonGhostMonster();
 		skeletonGhostMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "cemeterySkeleton" && window.cemeterySkeletonMonsterObj == null)
+	if (_0x14D47 == "cemeterySkeleton" && window.cemeterySkeletonMonsterObj == null)
 	{
 		cemeterySkeletonMonsterObj = new CemeterySkeletonMonster();
 		cemeterySkeletonMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "fireCemeterySkeleton" && window.fireCemeterySkeletonMonsterObj == null)
+	if (_0x14D47 == "fireCemeterySkeleton" && window.fireCemeterySkeletonMonsterObj == null)
 	{
 		fireCemeterySkeletonMonsterObj = new FireCemeterySkeletonMonster();
 		fireCemeterySkeletonMonsterObj.preloadImages()
 	};
-	if (_0x4ED6 == "iceCemeterySkeleton" && window.iceCemeterySkeletonMonsterObj == null)
+	if (_0x14D47 == "iceCemeterySkeleton" && window.iceCemeterySkeletonMonsterObj == null)
 	{
 		iceCemeterySkeletonMonsterObj = new IceCemeterySkeletonMonster();
 		iceCemeterySkeletonMonsterObj.preloadImages()
@@ -150,6 +200,11 @@ function getMonsterObject(_0x4ED6)
 	{
 		spiderMonsterObj = new SpiderMonster();
 		spiderMonsterObj.preloadImages()
+	};
+	if (window.dungeonSpiderMonsterObj == null)
+	{
+		dungeonSpiderMonsterObj = new DungeonSpiderMonster();
+		dungeonSpiderMonsterObj.preloadImages()
 	};
 	if (window.skeletonMonsterObj == null)
 	{
@@ -191,7 +246,7 @@ function getMonsterObject(_0x4ED6)
 		frozenBarbarianObj = new FrozenBarbarianMonster();
 		frozenBarbarianObj.preloadImages()
 	};
-	switch (_0x4ED6)
+	switch (_0x14D47)
 	{
 	case "chicken":
 		return chickenMonsterObj;
@@ -201,6 +256,8 @@ function getMonsterObject(_0x4ED6)
 		return fireHawkMonsterObj;
 	case "iceHawk":
 		return iceHawkMonsterObj;
+	case "witch":
+		return witchMonsterObj;
 	case "piranhas":
 		return piranhasMonsterObj;
 	case "lavaAlien":
@@ -209,8 +266,12 @@ function getMonsterObject(_0x4ED6)
 		return reaperMonsterObj;
 	case "shark":
 		return sharkMonsterObj;
+	case "tridentShark":
+		return tridentSharkMonsterObj;
 	case "tridentSoldier":
 		return tridentSoldierMonsterObj;
+	case "corruptedKnight":
+		return corruptedKnightMonsterObj;
 	case "babyPolarBear":
 		return babyPolarBearMonsterObj;
 	case "skeletonTree":
@@ -251,10 +312,26 @@ function getMonsterObject(_0x4ED6)
 		return bearPackMonsterObj;
 	case "spider":
 		return spiderMonsterObj;
+	case "dungeonSpider":
+		return dungeonSpiderMonsterObj;
 	case "skeleton":
 		return skeletonMonsterObj;
 	case "boneHead":
 		return boneHeadMonsterObj;
+	case "knight1":
+		return knight1MonsterObj;
+	case "knight2":
+		return knight2MonsterObj;
+	case "knight3":
+		return knight3MonsterObj;
+	case "knight4":
+		return knight4MonsterObj;
+	case "knight5":
+		return knight5MonsterObj;
+	case "skeletonMonks":
+		return skeletonMonksMonsterObj;
+	case "stoneWomen":
+		return stoneWomenMonsterObj;
 	case "ghost":
 		return ghostMonsterObj;
 	case "explorer":

@@ -21,5 +21,9 @@ function refreshDarkCrystalUsedLabel()
 		{
 			document.getElementById("darkCrystalUsed-label").innerHTML += "<img src='images/blueCrystal.png' class='img-30' />";
 		}
+		if (getItem("yellowCrystalUsed") == 1)
+		{
+			document.getElementById("darkCrystalUsed-label").innerHTML += "<img src='images/yellowCrystal.png' class='img-30' />";
+		}
 	}
 };

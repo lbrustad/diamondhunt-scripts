@@ -1,5 +1,5 @@
 /**
- * infoRepelPotionDialogue extracted from ../../deobfuscated/bundle.js at line 4034-4037
+ * infoRepelPotionDialogue extracted from ../../deobfuscated/bundle.js at line 4722-4725
  *
  * If this file doesn't contain a function, there is an error in ../raw/infoRepelPotionDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

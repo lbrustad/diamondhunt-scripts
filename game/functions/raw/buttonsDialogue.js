@@ -1,13 +1,13 @@
 /**
- * buttonsDialogue extracted from ../../deobfuscated/bundle.js at line 14558-14647
+ * buttonsDialogue extracted from ../../deobfuscated/bundle.js at line 17992-18081
  *
  * If this file doesn't contain a function, there is an error in ../raw/buttonsDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function buttonsDialogue(_0x42B7, _0x42D4, _0x42F1, _0x430E, _0x432B, _0x4348, _0x4365, _0x4382, _0x4243, _0x4260, _0x427D, _0x429A, _0x43BC, _0x43D9, _0x43F6, _0x4413, _0x4430, _0x4226)
+function buttonsDialogue(_0x15B7F, _0x15BA2, _0x15BC5, _0x15BE8, _0x15C0B, _0x15C2E, _0x15C51, _0x15C74, _0x15AF3, _0x15B16, _0x15B39, _0x15B5C, _0x15CBA, _0x15CDD, _0x15D00, _0x15D23, _0x15D46, _0x15AD0)
 {
-	if (_0x42B7 == "none")
+	if (_0x15B7F == "none")
 	{
 		document.getElementById("dialogue-fancy-button-div-1").style.display = "none"
 	}
@@ -15,7 +15,7 @@ function buttonsDialogue(_0x42B7, _0x42D4, _0x42F1, _0x430E, _0x432B, _0x4348, _
 	{
 		document.getElementById("dialogue-fancy-button-div-1").style.display = ""
 	};
-	if (_0x42D4 == "none")
+	if (_0x15BA2 == "none")
 	{
 		document.getElementById("dialogue-fancy-button-div-2").style.display = "none"
 	}
@@ -23,7 +23,7 @@ function buttonsDialogue(_0x42B7, _0x42D4, _0x42F1, _0x430E, _0x432B, _0x4348, _
 	{
 		document.getElementById("dialogue-fancy-button-div-2").style.display = ""
 	};
-	if (_0x42F1 == "none")
+	if (_0x15BC5 == "none")
 	{
 		document.getElementById("dialogue-fancy-button-div-3").style.display = "none"
 	}
@@ -31,7 +31,7 @@ function buttonsDialogue(_0x42B7, _0x42D4, _0x42F1, _0x430E, _0x432B, _0x4348, _
 	{
 		document.getElementById("dialogue-fancy-button-div-3").style.display = ""
 	};
-	if (_0x430E == "none")
+	if (_0x15BE8 == "none")
 	{
 		document.getElementById("dialogue-fancy-button-div-4").style.display = "none"
 	}
@@ -39,59 +39,59 @@ function buttonsDialogue(_0x42B7, _0x42D4, _0x42F1, _0x430E, _0x432B, _0x4348, _
 	{
 		document.getElementById("dialogue-fancy-button-div-4").style.display = ""
 	};
-	for (var _0x3607 = 1; _0x3607 <= 4; _0x3607++)
+	for (var _0x14C0C = 1; _0x14C0C <= 4; _0x14C0C++)
 	{
-		var _0x3A1B = window["btnImage" + _0x3607];
-		var _0x3A8F = window["btnTitle" + _0x3607];
-		var _0x384B = window["btnDesc" + _0x3607];
-		var _0x439F = window["cmd" + _0x3607];
-		if (_0x3607 == 1)
+		var _0x1511B = window["btnImage" + _0x14C0C];
+		var _0x151A7 = window["btnTitle" + _0x14C0C];
+		var _0x14EEB = window["btnDesc" + _0x14C0C];
+		var _0x15C97 = window["cmd" + _0x14C0C];
+		if (_0x14C0C == 1)
 		{
-			var _0x3A1B = _0x42B7;
-			var _0x3A8F = _0x432B;
-			var _0x384B = _0x4243;
-			var _0x439F = _0x43BC
+			var _0x1511B = _0x15B7F;
+			var _0x151A7 = _0x15C0B;
+			var _0x14EEB = _0x15AF3;
+			var _0x15C97 = _0x15CBA
 		}
 		else
 		{
-			if (_0x3607 == 2)
+			if (_0x14C0C == 2)
 			{
-				var _0x3A1B = _0x42D4;
-				var _0x3A8F = _0x4348;
-				var _0x384B = _0x4260;
-				var _0x439F = _0x43D9
+				var _0x1511B = _0x15BA2;
+				var _0x151A7 = _0x15C2E;
+				var _0x14EEB = _0x15B16;
+				var _0x15C97 = _0x15CDD
 			}
 			else
 			{
-				if (_0x3607 == 3)
+				if (_0x14C0C == 3)
 				{
-					var _0x3A1B = _0x42F1;
-					var _0x3A8F = _0x4365;
-					var _0x384B = _0x427D;
-					var _0x439F = _0x43F6
+					var _0x1511B = _0x15BC5;
+					var _0x151A7 = _0x15C51;
+					var _0x14EEB = _0x15B39;
+					var _0x15C97 = _0x15D00
 				}
 				else
 				{
-					if (_0x3607 == 4)
+					if (_0x14C0C == 4)
 					{
-						var _0x3A1B = _0x430E;
-						var _0x3A8F = _0x4382;
-						var _0x384B = _0x429A;
-						var _0x439F = _0x4413
+						var _0x1511B = _0x15BE8;
+						var _0x151A7 = _0x15C74;
+						var _0x14EEB = _0x15B5C;
+						var _0x15C97 = _0x15D23
 					}
 				}
 			}
 		};
-		if (_0x3A1B != "none")
+		if (_0x1511B != "none")
 		{
-			document.getElementById("dialogue-fancy-button-div-" + _0x3607).style.display = "";
-			document.getElementById("dialogue-fancy-button-img-" + _0x3607).src = _0x3A1B;
-			document.getElementById("dialogue-fancy-button-title-" + _0x3607).innerHTML = _0x3A8F;
-			document.getElementById("dialogue-fancy-button-desc-" + _0x3607).innerHTML = _0x384B;
-			document.getElementById("dialogue-fancy-button-div-" + _0x3607).setAttribute("onclick", "sendBytes(\'" + _0x439F + "\');closeDialogue(\'dialogue-fancy-buttons\')")
+			document.getElementById("dialogue-fancy-button-div-" + _0x14C0C).style.display = "";
+			document.getElementById("dialogue-fancy-button-img-" + _0x14C0C).src = _0x1511B;
+			document.getElementById("dialogue-fancy-button-title-" + _0x14C0C).innerHTML = _0x151A7;
+			document.getElementById("dialogue-fancy-button-desc-" + _0x14C0C).innerHTML = _0x14EEB;
+			document.getElementById("dialogue-fancy-button-div-" + _0x14C0C).setAttribute("onclick", "sendBytes(\'" + _0x15C97 + "\');closeDialogue(\'dialogue-fancy-buttons\')")
 		}
 	};
-	document.getElementById("dialogue-fancy-buttons-top-div").innerHTML = _0x4430;
-	document.getElementById("dialogue-fancy-buttons-bottom-div").innerHTML = _0x4226;
+	document.getElementById("dialogue-fancy-buttons-top-div").innerHTML = _0x15D46;
+	document.getElementById("dialogue-fancy-buttons-bottom-div").innerHTML = _0x15AD0;
 	openDialogue("dialogue-fancy-buttons")
 }

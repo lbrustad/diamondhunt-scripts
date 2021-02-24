@@ -1,20 +1,20 @@
 /**
- * serverCommand extracted from ../../deobfuscated/bundle.js at line 256-539
+ * serverCommand extracted from ../../deobfuscated/bundle.js at line 302-650
  *
  * If this file doesn't contain a function, there is an error in ../raw/serverCommand.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function serverCommand(_0x3746)
+function serverCommand(_0x14DB0)
 {
-	var _0x39C4 = _0x3746;
-	if (_0x39C4.includes("="))
+	var _0x150B2 = _0x14DB0;
+	if (_0x150B2.includes("="))
 	{
-		var _0x3763 = _0x3746.split("=");
-		var _0x753D = _0x3746.split("=").slice(1).join("=").split("~");
-		_0x39C4 = _0x3763[0]
+		var _0x14DD3 = _0x14DB0.split("=");
+		var _0x19CB6 = _0x14DB0.split("=").slice(1).join("=").split("~");
+		_0x150B2 = _0x14DD3[0]
 	};
-	switch (_0x39C4)
+	switch (_0x150B2)
 	{
 	case "CONNECTION_ESTABLISHED":
 		if (localStorage.getItem("auto_login_token") === null || localStorage.getItem("auto-login") != null)
@@ -56,7 +56,7 @@ function serverCommand(_0x3746)
 		}, 9000);
 		break;
 	case "SET_ITEMS":
-		setItems(_0x3746.substr(_0x39C4.length + 1));
+		setItems(_0x14DB0.substr(_0x150B2.length + 1));
 		global_setItemsTickCount++;
 		if (!global_loadedFirstItemsFlag)
 		{
@@ -65,32 +65,53 @@ function serverCommand(_0x3746)
 			sendBytes("LOAD_OBJECTS")
 		};
 		break;
+	case "HIDE_ITEMS":
+		hideItems(_0x14DB0.substr(_0x150B2.length + 1));
+		break;
 	case "DIALOGUE_CHEF_SPICES":
 		openDialogueSpices();
 		break;
 	case "LOAD_FOOD_OBJECTS":
-		objects_loadFood(_0x3746.substr(18));
+		objects_loadFood(_0x14DB0.substr(18));
 		break;
 	case "FORCE_REFRESH_TRADABLES":
 		sendBytes("REFRESH_TRADABLES");
 		break;
+	case "REFRESH_FRIENDS_LIST_ARRAY":
+		refreshFriendsListArray(_0x14DB0.substr(27));
+		break;
+	case "REFRESH_FRIENDS_LIST":
+		refreshFriendsList(_0x14DB0.substr(21));
+		break;
+	case "SHOW_LOADING":
+		showLoading();
+		break;
+	case "HIDE_LOADING":
+		hideLoading();
+		break;
+	case "REFRESH_IGNORE_LIST":
+		refreshIgnoreList(_0x14DB0.substr(20));
+		break;
+	case "REFRESH_CAST_CHEST_LOG":
+		refreshCastleChestLog(_0x14DB0.substr(23));
+		break;
 	case "LOAD_MACHINERY_OBJECTS":
-		objects_loadMachinery(_0x3746.substr(23));
+		objects_loadMachinery(_0x14DB0.substr(23));
 		break;
 	case "LOAD_SHOP_OBJECTS":
-		objects_loadShopPrices(_0x3746.substr(18));
+		objects_loadShopPrices(_0x14DB0.substr(18));
 		break;
 	case "OPEN_DONOR_PAGE":
 		clicksDonorShopItem("buyDonorCoins");
 		break;
 	case "REFRESH_TRADABLES":
-		refreshTradables(_0x3746.substr(18));
+		refreshTradables(_0x14DB0.substr(18));
 		break;
 	case "JS_ALERT":
-		alert(_0x3746.substr(9));
+		alert(_0x14DB0.substr(9));
 		break;
 	case "REFESH_MARKET":
-		refreshMarket(_0x3746.substr(14));
+		refreshMarket(_0x14DB0.substr(14));
 		refreshMarketGUI();
 		populateMarketTable();
 		displayMarket(true);
@@ -99,19 +120,19 @@ function serverCommand(_0x3746)
 		completeCemeteryTombs();
 		break;
 	case "LOAD_SEED_OBJECTS":
-		objects_loadSeeds(_0x3746.substr(18));
+		objects_loadSeeds(_0x14DB0.substr(18));
 		break;
 	case "LOAD_STARDUST_TOOL_CONVERSION":
-		objects_loadStardustTools(_0x3746.substr(30));
+		objects_loadStardustTools(_0x14DB0.substr(30));
 		break;
 	case "RELOAD":
 		setTimeout(function ()
 		{
 			location.reload()
-		}, parseInt(_0x3746.substr(7)));
+		}, parseInt(_0x14DB0.substr(7)));
 		break;
 	case "LOAD_EQUIPMENT_OBJECTS":
-		objects_loadEquipment(_0x3746.substr(23));
+		objects_loadEquipment(_0x14DB0.substr(23));
 		loadOnceOnLogin();
 		sendBytes("READY");
 		document.getElementById("chat-area").style.display = "";
@@ -141,14 +162,20 @@ function serverCommand(_0x3746)
 			dimScreen("combat_animation", true)
 		};
 		break;
+	case "CALL_BACK":
+		setTimeout(function ()
+		{
+			sendBytes(_0x19CB6[0])
+		}, parseInt(_0x19CB6[1]));
+		break;
 	case "SET_LOCAL_STORAGE":
-		localStorage.setItem(_0x753D[0], _0x753D[1]);
+		localStorage.setItem(_0x19CB6[0], _0x19CB6[1]);
 		break;
 	case "REFRESH_MARKET_HISTORY":
-		refreshMarketHistory(_0x3746.substr(23));
+		refreshMarketHistory(_0x14DB0.substr(23));
 		break;
 	case "SET_INNER_HTML":
-		setInnerHTML(_0x753D[0], _0x753D[1]);
+		setInnerHTML(_0x19CB6[0], _0x19CB6[1]);
 		break;
 	case "EXPLORER_MESSAGE":
 		setTimeout(function ()
@@ -156,21 +183,48 @@ function serverCommand(_0x3746)
 			confirmDialogue("images/explorer.png", "Pssst. Come talk to me.<br /><br /><span style=\'color:grey\'>Explorer added to combat section.</span>", "Close", "", "")
 		}, 4000);
 		break;
+	case "CORRUPTED_KNIGHT_ANIMATION":
+		doCorruptedKnightAnimation();
+		break;
 	case "CONFIRM_DIALOGUE":
-		returnCommand = _0x753D[4];
-		if (_0x753D.length > 5)
+		returnCommand = _0x19CB6[4];
+		if (_0x19CB6.length > 5)
 		{
 			returnCommand = "";
-			for (var _0x3607 = 4; _0x3607 < _0x753D.length; _0x3607++)
+			for (var _0x14C0C = 4; _0x14C0C < _0x19CB6.length; _0x14C0C++)
 			{
-				returnCommand += "~" + _0x753D[_0x3607]
+				returnCommand += "~" + _0x19CB6[_0x14C0C]
 			};
 			returnCommand = returnCommand.substr(1)
 		};
-		confirmDialogue(_0x753D[0], _0x753D[1], _0x753D[2], _0x753D[3], returnCommand);
+		confirmDialogue(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2], _0x19CB6[3], returnCommand);
+		break;
+	case "CONFIRM_DELAY_DIALOGUE":
+		setTimeout(function ()
+		{
+			confirmDialogue(_0x19CB6[0], _0x19CB6[1], "Close", "", "")
+		}, _0x19CB6[2]);
+		break;
+	case "CONFIRM_DIALOGUE_2":
+		confirmDialogue2(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2], _0x19CB6[3], _0x19CB6[4], _0x19CB6[5], _0x19CB6[6]);
+		break;
+	case "CONFIRM_DIALOGUE_3":
+		confirmDialogue3(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2], _0x19CB6[3], _0x19CB6[4], _0x19CB6[5], _0x19CB6[6], _0x19CB6[7], _0x19CB6[8]);
+		break;
+	case "VIEW_CASTLE_WEAKNESSES":
+		viewCastleKnightWeaknesses();
+		break;
+	case "SHOW_SPY_TOAST":
+		showSpyToast();
+		break;
+	case "HIDE_SPY_TOAST":
+		hideSpyToast();
 		break;
 	case "furnaceCapacity":
 		initializeTooltips();
+		break;
+	case "EXIT_COMBAT_MAP":
+		exitCombatMap();
 		break;
 	case "BUY_SPECIAL_FISHING_BAIT_DIALOGUE":
 		openInputDialogue("Special Bait<br />", "images/specialBait.png", "specialBait", 1, ["specialBait"], [1], ["coins"], [500], "Buy from Sketchy Dealer", "BUY_SPECIAL_BAIT", "Used to catch a special anguler fish.");
@@ -178,35 +232,35 @@ function serverCommand(_0x3746)
 	case "ST":
 		setTimeout(function ()
 		{
-			scrollText(_0x753D[0], _0x753D[1], _0x753D[2])
-		}, parseInt(_0x753D[3]));
+			scrollText(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2])
+		}, parseInt(_0x19CB6[3]));
 		break;
 	case "QUEST_OPTIONS":
-		openQuestDialogue(_0x753D[0], _0x753D[1], _0x753D[2], _0x753D[3], _0x753D[4], _0x753D[5], _0x753D[6], _0x753D[7], _0x753D[8], _0x753D[9], _0x753D[10], _0x753D[11]);
+		openQuestDialogue(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2], _0x19CB6[3], _0x19CB6[4], _0x19CB6[5], _0x19CB6[6], _0x19CB6[7], _0x19CB6[8], _0x19CB6[9], _0x19CB6[10], _0x19CB6[11]);
 		break;
 	case "LEVEL_UP":
-		levelUp(_0x753D[0], _0x753D[1]);
+		levelUp(_0x19CB6[0], _0x19CB6[1]);
 		break;
 	case "LOOT_DIALOGUE":
-		lootDialogue(_0x3746.substr(14));
+		lootDialogue(_0x14DB0.substr(14));
 		break;
 	case "NAVIGATE":
-		navigate(_0x3746.substr(9));
+		navigate(_0x14DB0.substr(9));
 		break;
 	case "HIT_SPLAT":
-		addHitSplit(_0x3746.substr(10));
+		addHitSplit(_0x14DB0.substr(10));
 		break;
 	case "CSS":
-		setCSSFromServer(_0x753D[0], _0x753D[1], _0x753D[2], _0x753D[3]);
+		setCSSFromServer(_0x19CB6[0], _0x19CB6[1], _0x19CB6[2], _0x19CB6[3]);
 		break;
 	case "SET_GLOBAL_VAR":
-		window[_0x753D[0]] = _0x753D[1];
+		window[_0x19CB6[0]] = _0x19CB6[1];
 		break;
 	case "START_MONSTER_ANIMATION":
-		startMonsterAnimation(_0x3746.substr(24));
+		startMonsterAnimation(_0x14DB0.substr(24));
 		break;
 	case "START_HERO_ANIMATION":
-		startHeroAnimation(_0x3746.substr(21));
+		startHeroAnimation(_0x14DB0.substr(21));
 		break;
 	case "RELEASE_FARADOX":
 		dimScreen("release_faradox", true);
@@ -215,7 +269,7 @@ function serverCommand(_0x3746)
 		dimScreen("release_faradox_2", true);
 		break;
 	case "COMBAT_TUTORIAL":
-		combatTutorial(_0x3746.substr(16));
+		combatTutorial(_0x14DB0.substr(16));
 		break;
 	case "ACCESS_MANA":
 		dimScreen("mana", true);
@@ -225,6 +279,17 @@ function serverCommand(_0x3746)
 		break;
 	case "SKY_CRYSTAL_SHAKE":
 		doSkyCrystalShake();
+		break;
+	case "QUEST_SHAKE_FISH_EGGS":
+		$("#body").effect("shake"
+		, {
+			direction: "left"
+			, times: 40
+			, distance: 10
+		}, 2000);
+		break;
+	case "SHAKE_DUNGEON":
+		shakeDungeon();
 		break;
 	case "SHAKE_ROCKET_IMAGE":
 		shakeRocketNotificationImage();
@@ -236,22 +301,22 @@ function serverCommand(_0x3746)
 		dimScreen("dead_hero_special", true);
 		break;
 	case "REFRESH_TREE_LIST_TAB":
-		refreshTreeListTab(_0x3746.substr(22));
+		refreshTreeListTab(_0x14DB0.substr(22));
 		break;
 	case "REFRESH_COMBAT_LOGGER":
-		refreshCombatLogger(_0x3746.substr(22));
+		refreshCombatLogger(_0x14DB0.substr(22));
 		break;
 	case "REFRESH_LOOT_BAGS_LOGGER":
-		refreshLootBagsLogger(_0x3746.substr(25));
+		refreshLootBagsLogger(_0x14DB0.substr(25));
 		break;
 	case "REFRESH_TRANSFORM_LOGGER":
-		refreshTransferLogger(_0x3746.substr(25));
+		refreshTransferLogger(_0x14DB0.substr(25));
 		break;
 	case "CONVERT_GUEST_ERROR":
-		displayConvertGuestError(_0x3746.substr(20));
+		displayConvertGuestError(_0x14DB0.substr(20));
 		break;
 	case "CONVERT_GUEST_ERROR":
-		displayConvertGuestError(_0x3746.substr(20));
+		displayConvertGuestError(_0x14DB0.substr(20));
 		break;
 	case "CONVERT_GUEST_SUCCESS":
 		closeDialogue("dialogue-profile-guest-to-user-password");
@@ -265,10 +330,10 @@ function serverCommand(_0x3746)
 		logout();
 		break;
 	case "CHAT":
-		chat(_0x3746.substr(5));
+		chat(_0x14DB0.substr(5));
 		break;
 	case "REFRESH_MUTE_LIST":
-		loadMuteList(_0x3746.substr(18));
+		loadMuteList(_0x14DB0.substr(18));
 		break;
 	case "PLAY_NOTIFICATION":
 		if (global_setItemsTickCount < 5)

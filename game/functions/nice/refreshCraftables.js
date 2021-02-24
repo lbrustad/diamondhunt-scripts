@@ -64,6 +64,51 @@ function refreshCraftables()
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
 	}
+	if (global_craftingType == "watchMould")
+	{
+		id = "watch";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [43], ["goldBars", "planter", "watchMould"], [100, 1, 1], "Ability for bob the farmer to use the planter for you, automatically planting seeds.", false, "Watch");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+	}
+	if (global_craftingType.startsWith("promethium") && global_craftingType.endsWith("Mould"))
+	{
+		id = "promethiumHelmet";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["promethiumBars", "promethiumHelmetMould"], [30, 1], "A piece of promethium armour.", false, "Promethium Helmet");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "promethiumBody";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["promethiumBars", "promethiumBodyMould"], [80, 1], "A piece of promethium armour.", false, "Promethium Body");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "promethiumLegs";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["promethiumBars", "promethiumLegsMould"], [60, 1], "A piece of promethium armour.", false, "Promethium Legs");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "promethiumBoots";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["promethiumBars", "promethiumBootsMould"], [20, 1], "A piece of promethium armour.", false, "Promethium Boots");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "promethiumGloves";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["promethiumBars", "promethiumGlovesMould"], [20, 1], "A piece of promethium armour.", false, "Promethium Gloves");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+	}
+	if (global_craftingType == "spyglassMould" && getItem("spyglass") == 0)
+	{
+		id = "spyglass";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [65], ["glass", "mapleLogs", "spyglassMould"], [80, 200, 1], "Ability for your pirate to find green treaure maps.", false, "Spyglass");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+	}
 	if (global_craftingType == "chainsawMould")
 	{
 		id = "chainsaw";
@@ -147,12 +192,38 @@ function refreshCraftables()
 			panels[id] = new CraftingRecipe(id, ["crafting"], [60], ["promethiumBars", "purpleQuartzMineral", "ringMould"], [20, 1, 1], "Increases maximum mana by 3.", false, "Mana Ring (3)");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
+		id = "cooldownRing4";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["titaniumBars", "crystalPrismeMineral", "ringMould"], [20, 1, 1], "Reduces combat cooldown by 15%.", false, "Cooldown Ring (4)");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "energyRing4";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["titaniumBars", "amberMineral", "ringMould"], [20, 1, 1], "Reduces energy use by 15%.", false, "Energy Ring (4)");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "manaRing4";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["titaniumBars", "tanzaniteMineral", "ringMould"], [20, 1, 1], "Increases maximum mana by 5.", false, "Mana Ring (4)");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
 	}
 	if (global_craftingType == "offhandIronDagger")
 	{
 		id = "offhandIronDagger";
 		{
 			panels[id] = new CraftingRecipe(id, ["crafting"], [35], ["daggerHandle", "daggerBlade"], [1, 1], "An offhand iron dagger.", false, "Offhand Dagger");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+	}
+	if (global_craftingType == "offhandScythe")
+	{
+		id = "offhandScythe";
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [35], ["offhandIronDagger", "scytheBlade"], [1, 1], "An upgraded offhand dagger.", false, "Offhand Dagger+");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
 	}
@@ -214,6 +285,24 @@ function refreshCraftables()
 		panels[id] = new CraftingRecipe(id, ["crafting"], [60], ["diamond", "goldBars"], [1, 5], "A key to open a treasure chest.<br /><span style='color:silver;font-size:10pt'>Seven roll on drop table</span>", false, "Diamond Key");
 		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 	}
+	if (global_craftingType == "promethiumKey")
+	{
+		id = "promethiumKey";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [40], ["promethiumBars"], [5], "A key to open a green treasure chest.<br /><span style='color:silver;font-size:10pt'>One roll on drop table</span>", false, "Promethium Key");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		id = "sapphirePromethiumKey";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [50], ["sapphire", "promethiumBars"], [1, 5], "A key to open a green treasure chest.<br /><span style='color:silver;font-size:10pt'>Two roll on drop table</span>", false, "Sapphire Key");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		id = "emeraldPromethiumKey";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [60], ["emerald", "promethiumBars"], [1, 5], "A key to open a green treasure chest.<br /><span style='color:silver;font-size:10pt'>Three roll on drop table</span>", false, "Emerald Key");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		id = "rubyPromethiumKey";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["ruby", "promethiumBars"], [1, 5], "A key to open a green treasure chest.<br /><span style='color:silver;font-size:10pt'>Five roll on drop table</span>", false, "Ruby Key");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		id = "diamondPromethiumKey";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["diamond", "promethiumBars"], [1, 5], "A key to open a green treasure chest.<br /><span style='color:silver;font-size:10pt'>Seven roll on drop table</span>", false, "Diamond Key");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+	}
 	if (global_craftingType == "feather")
 	{
 		id = "arrow";
@@ -224,6 +313,15 @@ function refreshCraftables()
 	{
 		id = "fireArrow";
 		panels[id] = new CraftingRecipe(id, ["crafting"], [40], ["fireFeather", "lavaLogs", "bones"], [1, 1, 1], "Used with a bow.", true, "Fire Arrow");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+	}
+	if (global_craftingType == "maceSpikes")
+	{
+		id = "arrowPlus";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [60], ["feather", "mapleLogs", "maceSpikes"], [1, 1, 1], "Used with a bow.", true, "Arrow+");
+		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		id = "stoneMacePlus";
+		panels[id] = new CraftingRecipe(id, ["crafting"], [60], ["stoneMace", "maceSpikes"], [1, 200], "Upgrades your mace for additional spike damage.", false, "Stone Mace+");
 		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 	}
 	if (global_craftingType == "iceFeather")
@@ -327,6 +425,27 @@ function refreshCraftables()
 		id = "reaperGloves";
 		panels[id] = new CraftingRecipe(id, ["crafting"], [50], ["blackSilk"], [6], "A piece of mage equipment.", false, "Reaper Gloves");
 		pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+	}
+	if (global_craftingType == "oilFactoryBlueprint")
+	{
+		id = "oilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [55], ["ironBars", "silverBars", "goldBars", "oilFactoryBlueprint"], [1000, 500, 250, 1], "Ability to hire workers for additional oil prodcution.", false, "Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "promethiumOilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [64], ["oilFactory", "promethiumBars", "promethiumOilFactoryBlueprint"], [1, 120, 1], "Increases capacity workers by 10.", false, "Promethium Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "titaniumOilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [72], ["promethiumOilFactory", "titaniumBars", "titaniumOilFactoryBlueprint"], [1, 30, 1], "Increases capacity workers by 10.", false, "Titanium Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
 	}
 	if (global_craftingType == "batSkin")
 	{
@@ -570,6 +689,12 @@ function refreshCraftables()
 			panels[id] = new CraftingRecipe(id, ["crafting"], [42], ["mapleLogs"], [10], "Upgrades the shop to carry more items.", false, "Community Center 4");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
+		id = "watch";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [43], ["goldBars", "planter", "watchMould"], [100, 1, 1], "Ability for bob the farmer to use the planter for you, automatically planting seeds.", false, "Watch");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
 		id = "goldOilWell";
 		if (getItem(id + "Total") == 0)
 		{
@@ -606,6 +731,12 @@ function refreshCraftables()
 			panels[id] = new CraftingRecipe(id, ["crafting"], [54], ["promethiumBars", "stone", "goldFurnace"], [25, 80000, 1], "Increases your furnace capacity.", false, "Promethium Furnace");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
+		id = "oilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [55], ["ironBars", "silverBars", "goldBars", "oilFactoryBlueprint"], [1000, 500, 250, 1], "Ability to hire workers for additional oil prodcution.", false, "Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
 		id = "promethiumOilWell";
 		if (getItem(id + "Total") == 0)
 		{
@@ -616,6 +747,12 @@ function refreshCraftables()
 		if (getItem(id + "Total") == 0)
 		{
 			panels[id] = new CraftingRecipe(id, ["crafting"], [58], ["ironBars", "mapleLogs", "trowelMould"], [30, 50, 1], "Increases your rate at finding seeds.", false, "Trowel");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "communityCenter5";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [59], ["lavaLogs"], [10], "Upgrades the shop to carry more items.", false, "Community Center 5");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
 		id = "rocket";
@@ -649,10 +786,22 @@ function refreshCraftables()
 			panels[id] = new CraftingRecipe(id, ["crafting"], [63], ["promethiumBars", "goldOven"], [100, 1], "Reduces the oven's burn rate.", false, "Promethium Oven");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
+		id = "promethiumOilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [64], ["oilFactory", "promethiumBars", "promethiumOilFactoryBlueprint"], [1, 120, 1], "Increases capacity workers by 10.", false, "Promethium Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
 		id = "excavators";
 		if (getItem(id) == 0 || getItem("researcherMining") >= 3 && getItem(id) < 3)
 		{
 			panels[id] = new CraftingRecipe(id, ["crafting"], [65], ["ironBars", "silverBars"], [5000, 2000], "Mine a desired ore at the cost of oil.", false, "Excavator");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "spyglass";
+		if (getItem(id) == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [65], ["glass", "mapleLogs", "spyglassMould"], [80, 200, 1], "Ability for your pirate to find green treaure maps.", false, "Spyglass");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
 		id = "charcoalFoundry";
@@ -671,6 +820,61 @@ function refreshCraftables()
 		if (getItem(id + "Total") == 0)
 		{
 			panels[id] = new CraftingRecipe(id, ["crafting"], [70], ["titaniumBars", "stone", "promethiumFurnace"], [15, 150000, 1], "Increases your furnace capacity.", false, "Titanium Furnace");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "titaniumOilFactory";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [72], ["promethiumOilFactory", "titaniumBars", "titaniumOilFactoryBlueprint"], [1, 30, 1], "Increases capacity workers by 10.", false, "Titanium Oil Factory");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "titaniumOven";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [75], ["titaniumBars", "promethiumOven"], [75, 1], "Cook food perfectly.", false, "Titanium Oven");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "oilStorage5";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [77], ["stone", "oilStorage4"], [400000, 1], "Increases oil capacity to 600,000", false, "Oil Storage V");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "titaniumCharcoalFoundry";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [78], ["ironBars", "titaniumBars", "charcoalFoundry"], [10000, 75, 1], "Increases the chance of getting charcoal for each log.", false, "Titanium Charcoal Foundry");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "diamondGlassHand";
+		if (getItem(id) == 0 && getItem(id + "Museum") == 0)
+		{
+			if (getItem("museum") == 1)
+			{
+				panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["glass", "diamond"], [20, 1], "A magnificent piece of art, it must be worth a lot of money.<br /><span style='color:green'><img src='images/atom.png' class='img-20' /> Requires a Museum</span>", false, "Diamond Glass Hand");
+			}
+			else
+			{
+				panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["glass", "diamond"], [20, 1], "A magnificent piece of art, it must be worth a lot of money.<br /><span style='color:red'><img src='images/atom.png' class='img-20' /> Requires a Museum</span>", false, "Diamond Glass Hand");
+			}
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "robot";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [80], ["bronzeBars", "goldBars", "promethiumBars"], [10000, 2000, 225], "A robot controlled using AI to dig through the earth for additional ore.", false, "Robot");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "shieldedRobot";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [82], ["diamondRobot", "charcoal", "lava"], [1, 1000, 100], "Ability to send your robot even deeper, where the temperature is high due to the earth's heat.", false, "Robot Heatshield");
+			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
+		}
+		id = "tnt";
+		if (getItem(id + "Total") == 0)
+		{
+			panels[id] = new CraftingRecipe(id, ["crafting"], [85], ["gunPowder", "string", "thickString", "logs"], [20, 50, 20, 20], "Can produce a powerful explosion. Should be used with care to avoid injuries.", false, "TNT");
 			pix_color = pix_color + addRecipeToTable(panels[id], SCROLL_ID);
 		}
 	}

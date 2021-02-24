@@ -1,5 +1,5 @@
 /**
- * resetSeedItemBoxBorders extracted from ../../deobfuscated/bundle.js at line 8671-8681
+ * resetSeedItemBoxBorders extracted from ../../deobfuscated/bundle.js at line 10428-10438
  *
  * If this file doesn't contain a function, there is an error in ../raw/resetSeedItemBoxBorders.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -7,12 +7,12 @@
 
 function resetSeedItemBoxBorders()
 {
-	for (var _0x3607 = 0; _0x3607 < global_seedMap.length; _0x3607++)
+	for (var _0x14C0C = 0; _0x14C0C < global_seedMap.length; _0x14C0C++)
 	{
-		var _0x5A64 = global_seedMap[_0x3607];
-		if (document.getElementById("item-box-" + _0x5A64.name) != null)
+		var _0x17ACE = global_seedMap[_0x14C0C];
+		if (document.getElementById("item-box-" + _0x17ACE.name) != null)
 		{
-			document.getElementById("item-box-" + _0x5A64.name).style.border = "1px solid grey"
+			document.getElementById("item-box-" + _0x17ACE.name).style.border = "1px solid grey"
 		}
 	}
 }

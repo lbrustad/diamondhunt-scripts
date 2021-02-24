@@ -1,13 +1,13 @@
 /**
- * changeBackgroundRightSection extracted from ../../deobfuscated/bundle.js at line 4132-4145
+ * changeBackgroundRightSection extracted from ../../deobfuscated/bundle.js at line 4820-4833
  *
  * If this file doesn't contain a function, there is an error in ../raw/changeBackgroundRightSection.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function changeBackgroundRightSection(_0x444D)
+function changeBackgroundRightSection(_0x15D69)
 {
-	switch (_0x444D)
+	switch (_0x15D69)
 	{
 	case "woodcutting":
 		;

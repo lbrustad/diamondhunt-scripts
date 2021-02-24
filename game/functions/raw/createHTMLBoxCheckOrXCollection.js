@@ -1,18 +1,18 @@
 /**
- * createHTMLBoxCheckOrXCollection extracted from ../../deobfuscated/bundle.js at line 10130-10140
+ * createHTMLBoxCheckOrXCollection extracted from ../../deobfuscated/bundle.js at line 12280-12290
  *
  * If this file doesn't contain a function, there is an error in ../raw/createHTMLBoxCheckOrXCollection.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function createHTMLBoxCheckOrXCollection(_0x4DEE, _0x4DD1, _0x4DB4)
+function createHTMLBoxCheckOrXCollection(_0x16A89, _0x16A66, _0x16A43)
 {
-	var _0x41B2 = "";
-	_0x41B2 += "<div>";
-	for (var _0x3607 = 0; _0x3607 < _0x4DEE.length; _0x3607++)
+	var _0x15A44 = "";
+	_0x15A44 += "<div>";
+	for (var _0x14C0C = 0; _0x14C0C < _0x16A89.length; _0x14C0C++)
 	{
-		_0x41B2 += createHTMLBoxCheckOrX(_0x4DEE[_0x3607], _0x4DD1[_0x3607], _0x4DB4[_0x3607])
+		_0x15A44 += createHTMLBoxCheckOrX(_0x16A89[_0x14C0C], _0x16A66[_0x14C0C], _0x16A43[_0x14C0C])
 	};
-	_0x41B2 += "</div>";
-	return _0x41B2
+	_0x15A44 += "</div>";
+	return _0x15A44
 }

@@ -154,6 +154,16 @@ function refreshMuseum()
 	{
 		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "SHARK'S TOOTH", "", true);
 	}
+	criterion_index = "glowingGoldBar";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "GLOWING GOLD", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "GLOWING GOLD", "", true);
+	}
 	criterion_index = "sapphireGlassHand";
 	global_museumItemsArray[criterion_index] = true;
 	if (getItem(criterion_index + "Museum") == 1)
@@ -183,5 +193,75 @@ function refreshMuseum()
 	else
 	{
 		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "RUBY GLASS HAND", "", true);
+	}
+	criterion_index = "diamondGlassHand";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "DIAMOND GLASS HAND", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "DIAMOND GLASS HAND", "", true);
+	}
+	criterion_index = "greenStoneEyes";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (G)", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (G)", "", true);
+	}
+	criterion_index = "purpleStoneEyes";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (P)", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (P)", "", true);
+	}
+	criterion_index = "redStoneEyes";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (R)", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (R)", "", true);
+	}
+	criterion_index = "yellowStoneEyes";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (O)", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (O)", "", true);
+	}
+	criterion_index = "blueStoneEyes";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (B)", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "STONE EYES (B)", "", true);
+	}
+	criterion_index = "burntRemains";
+	global_museumItemsArray[criterion_index] = true;
+	if (getItem(criterion_index + "Museum") == 1)
+	{
+		addItemBox(criterion_index, 0, "", "museum-section", "#1a344c", "#0d1a26", "BURNT REMAINS", "", true);
+	}
+	else
+	{
+		addMuseumItemBox("x_grey", criterion_index + "Museum", 1, "", "museum-section", "#1a344c", "#0d1a26", "BURNT REMAINS", "", true);
 	}
 };

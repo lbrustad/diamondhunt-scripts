@@ -1,5 +1,5 @@
 /**
- * refreshHomeTab extracted from ../../deobfuscated/bundle.js at line 1535-1541
+ * refreshHomeTab extracted from ../../deobfuscated/bundle.js at line 1832-1838
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshHomeTab.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

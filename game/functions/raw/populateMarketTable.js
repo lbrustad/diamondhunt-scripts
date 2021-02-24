@@ -1,5 +1,5 @@
 /**
- * populateMarketTable extracted from ../../deobfuscated/bundle.js at line 17701-17751
+ * populateMarketTable extracted from ../../deobfuscated/bundle.js at line 21451-21501
  *
  * If this file doesn't contain a function, there is an error in ../raw/populateMarketTable.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -12,44 +12,44 @@ function populateMarketTable()
 		document.getElementById("market-display-section").innerHTML = "<h1 style=\'text-align:center\'>Market is currently empty.</h1>";
 		return
 	};
-	var _0x3AAC = "<center>";
-	_0x3AAC += "<table id=\'market-table\' class=\'sortable basic-table\' width=\'90%\'>";
-	_0x3AAC += "<thead>";
-	_0x3AAC += "<tr><th width=\'15%\' colspan=\'2\'>Name</th><th width=\'15%\'>Amount</th><th width=\'15%\'>Price each</th><th width=\'15%\'>Category</th><th width=\'5%\'>Expires In</th></tr>";
-	_0x3AAC += "</thead>";
-	_0x3AAC += "<tbody>";
-	for (var _0x3607 = 0; _0x3607 < global_MarketData.length; _0x3607++)
+	var _0x151CA = "<center>";
+	_0x151CA += "<table id=\'market-table\' class=\'sortable basic-table\' width=\'90%\'>";
+	_0x151CA += "<thead>";
+	_0x151CA += "<tr><th width=\'15%\' colspan=\'2\'>Name</th><th width=\'15%\'>Amount</th><th width=\'15%\'>Price each</th><th width=\'15%\'>Category</th><th width=\'5%\'>Expires In</th></tr>";
+	_0x151CA += "</thead>";
+	_0x151CA += "<tbody>";
+	for (var _0x14C0C = 0; _0x14C0C < global_MarketData.length; _0x14C0C++)
 	{
-		var _0x6A06 = global_MarketData[_0x3607];
-		var _0x5FD4 = _0x6A06.keyFound;
-		var _0x3933 = _0x6A06.itemName;
-		var _0x5F60 = _0x6A06.itemAmount;
-		var _0x69E9 = _0x6A06.price;
-		var _0x5F7D = _0x6A06.itemCategory;
-		var _0x600E = _0x6A06.postDate;
-		_0x600E = formatTime((_0x600E - getCurrentMillis()) / 1000);
-		if (_0x5F60 == 0 || _0x600E == 0)
+		var _0x18E15 = global_MarketData[_0x14C0C];
+		var _0x181A4 = _0x18E15.keyFound;
+		var _0x15003 = _0x18E15.itemName;
+		var _0x18118 = _0x18E15.itemAmount;
+		var _0x18DF2 = _0x18E15.price;
+		var _0x1813B = _0x18E15.itemCategory;
+		var _0x181EA = _0x18E15.postDate;
+		_0x181EA = formatTime((_0x181EA - getCurrentMillis()) / 1000);
+		if (_0x18118 == 0 || _0x181EA == 0)
 		{
 			continue
 		};
-		customAttribute = "onclick=\'purchaseFromMarket(\"" + _0x5FD4 + "\",\"" + _0x3933 + "\",\"" + _0x5F60 + "\",\"" + _0x69E9 + "\")\'";
-		if (_0x5FD4.split("_")[0] == getItem("playerId"))
+		customAttribute = "onclick=\'purchaseFromMarket(\"" + _0x181A4 + "\",\"" + _0x15003 + "\",\"" + _0x18118 + "\",\"" + _0x18DF2 + "\")\'";
+		if (_0x181A4.split("_")[0] == getItem("playerId"))
 		{
 			customAttribute = "style=\'background-color:silver;\'"
 		};
-		_0x3AAC += "<tr class=\'tr-hover\' id=\'marekt-row-" + _0x3933 + "\' " + customAttribute + " style=\'border:1px solid grey\'>";
-		_0x3AAC += "<td style=\'border:none\'>" + getItemName(_0x3933).toUpperCase() + "</td>";
-		_0x3AAC += "<td style=\'border:none\'>" + "<img class=\'img-50\' src=\'images/" + _0x3933 + ".png\'" + "</td>";
-		_0x3AAC += "<td style=\'border:none\'>" + formatNumber(_0x5F60) + "</td>";
-		_0x3AAC += "<td style=\'border:none\'>" + formatNumber(_0x69E9) + "</td>";
-		_0x3AAC += "<td style=\'color:grey\'style=\'border:none\'>" + _0x5F7D + "</td>";
-		_0x3AAC += "<td style=\'border:none\'>" + _0x600E + "</td>";
-		_0x3AAC += "</tr>"
+		_0x151CA += "<tr class=\'tr-hover\' id=\'marekt-row-" + _0x15003 + "\' " + customAttribute + " style=\'border:1px solid grey\'>";
+		_0x151CA += "<td style=\'border:none\'>" + getItemName(_0x15003).toUpperCase() + "</td>";
+		_0x151CA += "<td style=\'border:none\'>" + "<img class=\'img-50\' src=\'images/" + _0x15003 + ".png\'" + "</td>";
+		_0x151CA += "<td style=\'border:none\'>" + formatNumber(_0x18118) + "</td>";
+		_0x151CA += "<td style=\'border:none\'>" + formatNumber(_0x18DF2) + "</td>";
+		_0x151CA += "<td style=\'color:grey\'style=\'border:none\'>" + _0x1813B + "</td>";
+		_0x151CA += "<td style=\'border:none\'>" + _0x181EA + "</td>";
+		_0x151CA += "</tr>"
 	};
-	_0x3AAC += "</tbody>";
-	_0x3AAC += "</table>";
-	_0x3AAC += "</center>";
-	document.getElementById("market-display-section").innerHTML = _0x3AAC;
+	_0x151CA += "</tbody>";
+	_0x151CA += "</table>";
+	_0x151CA += "</center>";
+	document.getElementById("market-display-section").innerHTML = _0x151CA;
 	sorttable.makeSortable(document.getElementById("market-table"));
 	if (document.getElementById("market-filter").value.length > 0)
 	{

@@ -28,21 +28,42 @@ function hideOtherInterfacesForCombat(canCreateDiscussions)
 				}
 				else
 				{
-					if (getItemString("currentFighingArea") != "none")
+					if (getItemString("monsterName") == "tridentShark")
 					{
-						changeBodyBackground("images/" + getItemString("currentFighingArea") + "_background.png");
-						if (getItemString("currentFighingArea") == "northernFields" || getItemString("monsterName") == "iceHawk")
+						changeBodyBackground("images/" + "ocean" + "_background.png");
+					}
+					else
+					{
+						if (getItemString("monsterName") == "corruptedKnight")
 						{
-							if (!snowflakes_loaded)
-							{
-								generateSnowflakes();
-							}
-							changeBodyBackground("images/" + "northernFields" + "_background.png");
-							document.getElementById("snowflakeContainer").style.display = "block";
+							changeBodyBackground("images/forest" + "_background.png");
 						}
 						else
 						{
-							document.getElementById("snowflakeContainer").style.display = "none";
+							if (getItemString("monsterName").startsWith("knight"))
+							{
+								changeBodyBackground("images/" + "castleSoldiers" + "_background.png");
+							}
+							else
+							{
+								if (getItemString("currentFighingArea") != "none")
+								{
+									changeBodyBackground("images/" + getItemString("currentFighingArea") + "_background.png");
+									if (getItemString("currentFighingArea") == "northernFields" || getItemString("monsterName") == "iceHawk")
+									{
+										if (!snowflakes_loaded)
+										{
+											generateSnowflakes();
+										}
+										changeBodyBackground("images/" + "northernFields" + "_background.png");
+										document.getElementById("snowflakeContainer").style.display = "block";
+									}
+									else
+									{
+										document.getElementById("snowflakeContainer").style.display = "none";
+									}
+								}
+							}
 						}
 					}
 				}

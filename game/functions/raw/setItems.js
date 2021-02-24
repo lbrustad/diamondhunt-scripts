@@ -1,65 +1,65 @@
 /**
- * setItems extracted from ../../deobfuscated/bundle.js at line 1544-1601
+ * setItems extracted from ../../deobfuscated/bundle.js at line 1841-1898
  *
  * If this file doesn't contain a function, there is an error in ../raw/setItems.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function setItems(_0x3746)
+function setItems(_0x14DB0)
 {
 	clientSetItesmTick++;
-	var _0x3763 = _0x3746.split("~");
-	var _0x767C = [];
-	for (var _0x3607 = 0; _0x3607 < _0x3763.length; _0x3607++)
+	var _0x14DD3 = _0x14DB0.split("~");
+	var _0x176B4 = [];
+	for (var _0x14C0C = 0; _0x14C0C < _0x14DD3.length; _0x14C0C++)
 	{
-		var _0x3933 = _0x3763[_0x3607];
-		_0x3607++;
-		var _0x7699 = _0x3763[_0x3607];
-		var _0x76D3 = getItem(_0x3933);
-		setItem(_0x3933, _0x7699);
-		if (_0x76D3 != _0x7699 || clientSetItesmTick <= 3)
+		var _0x15003 = _0x14DD3[_0x14C0C];
+		_0x14C0C++;
+		var _0x176D7 = _0x14DD3[_0x14C0C];
+		var _0x1771D = getItem(_0x15003);
+		setItem(_0x15003, _0x176D7);
+		if (_0x1771D != _0x176D7 || clientSetItesmTick <= 3)
 		{
-			_0x767C.push(_0x3933)
+			_0x176B4.push(_0x15003)
 		};
-		if (document.getElementById("item-box-" + _0x3933) !== null)
+		if (document.getElementById("item-box-" + _0x15003) !== null)
 		{
-			if (getItem(_0x3933, false) > 0)
+			if (getItem(_0x15003, false) > 0)
 			{
-				if (document.getElementById("item-box-" + _0x3933).style.display == "none")
+				if (document.getElementById("item-box-" + _0x15003).style.display == "none")
 				{
-					document.getElementById("item-box-" + _0x3933).style.display = ""
+					document.getElementById("item-box-" + _0x15003).style.display = ""
 				}
 			}
 			else
 			{
-				if (document.getElementById("item-box-" + _0x3933).style.display != "none")
+				if (document.getElementById("item-box-" + _0x15003).style.display != "none")
 				{
-					document.getElementById("item-box-" + _0x3933).style.display = "none"
+					document.getElementById("item-box-" + _0x15003).style.display = "none"
 				}
 			}
 		};
-		var _0x765F = document.getElementsByTagName("item-" + _0x3933);
-		for (var _0x76B6 = 0; _0x76B6 < _0x765F.length; _0x76B6++)
+		var _0x17691 = document.getElementsByTagName("item-" + _0x15003);
+		for (var _0x176FA = 0; _0x176FA < _0x17691.length; _0x176FA++)
 		{
-			if (_0x765F[_0x76B6].hasAttribute("type"))
+			if (_0x17691[_0x176FA].hasAttribute("type"))
 			{
-				if (_0x765F[_0x76B6].getAttribute("type") == "timer")
+				if (_0x17691[_0x176FA].getAttribute("type") == "timer")
 				{
-					_0x765F[_0x76B6].innerHTML = formatTime(_0x7699)
+					_0x17691[_0x176FA].innerHTML = formatTime(_0x176D7)
 				};
-				if (_0x765F[_0x76B6].getAttribute("type") == "number")
+				if (_0x17691[_0x176FA].getAttribute("type") == "number")
 				{
-					_0x765F[_0x76B6].innerHTML = formatNumber(_0x7699)
+					_0x17691[_0x176FA].innerHTML = formatNumber(_0x176D7)
 				}
 			}
 			else
 			{
-				_0x765F[_0x76B6].innerHTML = _0x7699
+				_0x17691[_0x176FA].innerHTML = _0x176D7
 			}
 		}
 	};
-	for (var _0x3607 = 0; _0x3607 < _0x767C.length; _0x3607++)
+	for (var _0x14C0C = 0; _0x14C0C < _0x176B4.length; _0x14C0C++)
 	{
-		manageChangedItem(_0x767C[_0x3607])
+		manageChangedItem(_0x176B4[_0x14C0C])
 	}
 }

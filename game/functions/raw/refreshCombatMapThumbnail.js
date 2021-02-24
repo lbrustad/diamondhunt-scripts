@@ -1,35 +1,35 @@
 /**
- * refreshCombatMapThumbnail extracted from ../../deobfuscated/bundle.js at line 11561-11588
+ * refreshCombatMapThumbnail extracted from ../../deobfuscated/bundle.js at line 11981-12008
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshCombatMapThumbnail.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function refreshCombatMapThumbnail(_0x6AB4)
+function refreshCombatMapThumbnail(_0x2F5C7)
 {
-	for (var _0x3607 = 1; _0x3607 <= 100; _0x3607++)
+	for (var _0x25403 = 1; _0x25403 <= 100; _0x25403++)
 	{
-		if (_0x3607 == 5)
+		if (_0x25403 == 5)
 		{
 			continue
 		};
-		var _0x6AD1 = document.getElementById("div-map-" + _0x3607 + "-thumbnail");
-		if (_0x6AD1 == null)
+		var _0x2F61E = document.getElementById("div-map-" + _0x25403 + "-thumbnail");
+		if (_0x2F61E == null)
 		{
 			break
 		};
-		if (getItem("lastCombatMapHistory" + _0x3607) == 0 && _0x3607 > 1)
+		if (getItem("lastCombatMapHistory" + _0x25403) == 0 && _0x25403 > 1)
 		{
-			_0x6AD1.style.display = "none"
+			_0x2F61E.style.display = "none"
 		}
 		else
 		{
-			_0x6AD1.style.display = ""
+			_0x2F61E.style.display = ""
 		};
-		_0x6AD1.style.border = "none";
-		if (_0x6AB4 == _0x3607)
+		_0x2F61E.style.border = "none";
+		if (_0x2F5C7 == _0x25403)
 		{
-			_0x6AD1.style.border = "3px solid green"
+			_0x2F61E.style.border = "3px solid green"
 		}
 	}
 }

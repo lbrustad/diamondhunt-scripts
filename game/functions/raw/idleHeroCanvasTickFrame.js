@@ -1,5 +1,5 @@
 /**
- * idleHeroCanvasTickFrame extracted from ../../deobfuscated/bundle.js at line 2916-2931
+ * idleHeroCanvasTickFrame extracted from ../../deobfuscated/bundle.js at line 3546-3561
  *
  * If this file doesn't contain a function, there is an error in ../raw/idleHeroCanvasTickFrame.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

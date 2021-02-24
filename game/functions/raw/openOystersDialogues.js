@@ -1,5 +1,5 @@
 /**
- * openOystersDialogues extracted from ../../deobfuscated/bundle.js at line 18070-18073
+ * openOystersDialogues extracted from ../../deobfuscated/bundle.js at line 21897-21900
  *
  * If this file doesn't contain a function, there is an error in ../raw/openOystersDialogues.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

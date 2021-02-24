@@ -25,6 +25,13 @@ function TridentSoldierMonster()
 			image = getImage("images/" + this.name + "_" + "monster" + "_" + exprData.name + "_" + exprData.framesArray[i] + ".png", this.name + "_" + exprData.framesArray[i] + "_" + exprData);
 			$("#section-combat-loader").append(image);
 		}
+		exprData = this.healAnimationObject;
+		i = 0;
+		for (; i < exprData.getNumberOfFrames(); i++)
+		{
+			image = getImage("images/" + this.name + "_" + "monster" + "_" + exprData.name + "_" + exprData.framesArray[i] + ".png", this.name + "_" + i + "_" + exprData);
+			$("#section-combat-loader").append(image);
+		}
 	};
 	this.tick = function ()
 	{

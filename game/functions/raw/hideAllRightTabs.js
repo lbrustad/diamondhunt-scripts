@@ -1,5 +1,5 @@
 /**
- * hideAllRightTabs extracted from ../../deobfuscated/bundle.js at line 3544-3592
+ * hideAllRightTabs extracted from ../../deobfuscated/bundle.js at line 4183-4233
  *
  * If this file doesn't contain a function, there is an error in ../raw/hideAllRightTabs.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -29,9 +29,11 @@ function hideAllRightTabs()
 	document.getElementById("navigation-right-gemList").style.display = "none";
 	document.getElementById("navigation-right-convertMagic").style.display = "none";
 	document.getElementById("navigation-right-transformLog").style.display = "none";
+	document.getElementById("navigation-right-dungeonSigns").style.display = "none";
 	document.getElementById("navigation-right-museum").style.display = "none";
 	document.getElementById("navigation-right-puzzleChest1").style.display = "none";
 	document.getElementById("navigation-right-combatLog").style.display = "none";
+	document.getElementById("navigation-right-castleChestLog").style.display = "none";
 	document.getElementById("navigation-right-pirate").style.display = "none";
 	document.getElementById("navigation-right-marketHistory").style.display = "none";
 	document.getElementById("navigation-right-explorer").style.display = "none";

@@ -1,13 +1,19 @@
 'use strict';
 
-function generateHTMLGeneralTooltip(mmCoreLogEnabledDefault, mmCoreLogEnabledConfigName, curVolume, delta)
+function generateHTMLGeneralTooltip(terria, url, name, pix_base)
 {
-	var raw_unread_count = "";
-	raw_unread_count = raw_unread_count + ("<div id='" + mmCoreLogEnabledDefault + "' style='display:none;'>");
-	raw_unread_count = raw_unread_count + ("<h2>" + curVolume + "</h2>");
-	raw_unread_count = raw_unread_count + "<hr class='hr-thin' />";
-	raw_unread_count = raw_unread_count + delta;
-	raw_unread_count = raw_unread_count + getTooltipSellsForLabel(mmCoreLogEnabledConfigName);
-	raw_unread_count = raw_unread_count + "</div>";
-	return raw_unread_count;
+	var pix_color = "";
+	pix_color = pix_color + ("<div id='" + terria + "' style='display:none;'>");
+	if (url != "" || name != "")
+	{
+		pix_color = pix_color + ("<h2>" + name + "</h2>");
+		pix_color = pix_color + "<hr class='hr-thin' />";
+	}
+	pix_color = pix_color + pix_base;
+	if (url != "")
+	{
+		pix_color = pix_color + getTooltipSellsForLabel(url);
+	}
+	pix_color = pix_color + "</div>";
+	return pix_color;
 };

@@ -60,6 +60,9 @@ function serverCommand(client)
 			sendBytes("LOAD_OBJECTS");
 		}
 		break;
+	case "HIDE_ITEMS":
+		hideItems(client.substr(inventoryKeys.length + 1));
+		break;
 	case "DIALOGUE_CHEF_SPICES":
 		openDialogueSpices();
 		break;
@@ -68,6 +71,24 @@ function serverCommand(client)
 		break;
 	case "FORCE_REFRESH_TRADABLES":
 		sendBytes("REFRESH_TRADABLES");
+		break;
+	case "REFRESH_FRIENDS_LIST_ARRAY":
+		refreshFriendsListArray(client.substr(27));
+		break;
+	case "REFRESH_FRIENDS_LIST":
+		refreshFriendsList(client.substr(21));
+		break;
+	case "SHOW_LOADING":
+		showLoading();
+		break;
+	case "HIDE_LOADING":
+		hideLoading();
+		break;
+	case "REFRESH_IGNORE_LIST":
+		refreshIgnoreList(client.substr(20));
+		break;
+	case "REFRESH_CAST_CHEST_LOG":
+		refreshCastleChestLog(client.substr(23));
 		break;
 	case "LOAD_MACHINERY_OBJECTS":
 		objects_loadMachinery(client.substr(23));
@@ -136,6 +157,12 @@ function serverCommand(client)
 			dimScreen("combat_animation", true);
 		}
 		break;
+	case "CALL_BACK":
+		setTimeout(function ()
+		{
+			sendBytes(items[0]);
+		}, parseInt(items[1]));
+		break;
 	case "SET_LOCAL_STORAGE":
 		localStorage.setItem(items[0], items[1]);
 		break;
@@ -151,6 +178,9 @@ function serverCommand(client)
 			confirmDialogue("images/explorer.png", "Pssst. Come talk to me.<br /><br /><span style='color:grey'>Explorer added to combat section.</span>", "Close", "", "");
 		}, 4000);
 		break;
+	case "CORRUPTED_KNIGHT_ANIMATION":
+		doCorruptedKnightAnimation();
+		break;
 	case "CONFIRM_DIALOGUE":
 		returnCommand = items[4];
 		if (items.length > 5)
@@ -165,8 +195,32 @@ function serverCommand(client)
 		}
 		confirmDialogue(items[0], items[1], items[2], items[3], returnCommand);
 		break;
+	case "CONFIRM_DELAY_DIALOGUE":
+		setTimeout(function ()
+		{
+			confirmDialogue(items[0], items[1], "Close", "", "");
+		}, items[2]);
+		break;
+	case "CONFIRM_DIALOGUE_2":
+		confirmDialogue2(items[0], items[1], items[2], items[3], items[4], items[5], items[6]);
+		break;
+	case "CONFIRM_DIALOGUE_3":
+		confirmDialogue3(items[0], items[1], items[2], items[3], items[4], items[5], items[6], items[7], items[8]);
+		break;
+	case "VIEW_CASTLE_WEAKNESSES":
+		viewCastleKnightWeaknesses();
+		break;
+	case "SHOW_SPY_TOAST":
+		showSpyToast();
+		break;
+	case "HIDE_SPY_TOAST":
+		hideSpyToast();
+		break;
 	case "furnaceCapacity":
 		initializeTooltips();
+		break;
+	case "EXIT_COMBAT_MAP":
+		exitCombatMap();
 		break;
 	case "BUY_SPECIAL_FISHING_BAIT_DIALOGUE":
 		openInputDialogue("Special Bait<br />", "images/specialBait.png", "specialBait", 1, ["specialBait"], [1], ["coins"], [500], "Buy from Sketchy Dealer", "BUY_SPECIAL_BAIT", "Used to catch a special anguler fish.");
@@ -221,6 +275,17 @@ function serverCommand(client)
 		break;
 	case "SKY_CRYSTAL_SHAKE":
 		doSkyCrystalShake();
+		break;
+	case "QUEST_SHAKE_FISH_EGGS":
+		$("#body").effect("shake"
+		, {
+			direction: "left"
+			, times: 40
+			, distance: 10
+		}, 2000);
+		break;
+	case "SHAKE_DUNGEON":
+		shakeDungeon();
 		break;
 	case "SHAKE_ROCKET_IMAGE":
 		shakeRocketNotificationImage();

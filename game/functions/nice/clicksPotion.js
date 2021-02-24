@@ -39,7 +39,14 @@ function clicksPotion(name)
 						}
 						else
 						{
-							confirmDialogue("images/" + name + ".png", "Drink this potion?", "Drink", "Cancel", "DRINK=" + name);
+							if (name == "largeRubyStardustPotion")
+							{
+								confirmDialogue("images/" + name + ".png", "Pour over a ruby?<br /><br /><span style='color:grey'>You will lose your ruby.</span>", "Pour on Ruby", "Cancel", "DRINK=" + name);
+							}
+							else
+							{
+								confirmDialogue("images/" + name + ".png", "Drink this potion?", "Drink", "Cancel", "DRINK=" + name);
+							}
 						}
 					}
 				}

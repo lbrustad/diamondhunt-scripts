@@ -1,29 +1,43 @@
 /**
- * getCharcoalSuccessRate extracted from ../../deobfuscated/bundle.js at line 17316-17337
+ * getCharcoalSuccessRate extracted from ../../deobfuscated/bundle.js at line 21052-21087
  *
  * If this file doesn't contain a function, there is an error in ../raw/getCharcoalSuccessRate.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getCharcoalSuccessRate(_0x52CD)
+function getCharcoalSuccessRate(_0x17024)
 {
-	switch (_0x52CD)
+	var _0x17047 = 0;
+	switch (_0x17024)
 	{
 	case "logs":
-		return 0.01;
+		_0x17047 = 0.01;
+		break;
 	case "oakLogs":
-		return 0.02;
+		_0x17047 = 0.02;
+		break;
 	case "willowLogs":
-		return 0.03;
+		_0x17047 = 0.03;
+		break;
 	case "bambooLogs":
-		return 0.05;
+		_0x17047 = 0.05;
+		break;
 	case "mapleLogs":
-		return 0.07;
+		_0x17047 = 0.07;
+		break;
 	case "lavaLogs":
-		return 0.10;
+		_0x17047 = 0.10;
+		break;
 	case "pineLogs":
-		return 0.14;
+		_0x17047 = 0.14;
+		break;
 	case "stardustLogs":
-		return 0.20
-	}
+		_0x17047 = 0.20;
+		break
+	};
+	if (getItem("titaniumCharcoalFoundry") == 1)
+	{
+		_0x17047 *= 2
+	};
+	return _0x17047
 }

@@ -74,10 +74,24 @@ function clicksShopItem(sPrefix)
 		confirmDialogue("images/" + sPrefix + ".png", artistTrack, "Purchase", "Cancel", "SHOP=" + sPrefix);
 	}
 	break;
+	case "carePackage4":
+	{
+		totalAssertions = 100000;
+		artistTrack = "Purchase <span style='color:brown'>care package</span> for <img src='images/coins.png' class='img-30' /> " + formatNumber(totalAssertions) + " coins?";
+		confirmDialogue("images/" + sPrefix + ".png", artistTrack, "Purchase", "Cancel", "SHOP=" + sPrefix);
+	}
+	break;
 	case "pirate":
 	{
 		totalAssertions = 500000;
 		artistTrack = "Hire a <span style='color:brown'>Pirate</span> for <img src='images/coins.png' class='img-30' /> " + formatNumber(totalAssertions) + " coins?";
+		confirmDialogue("images/" + sPrefix + ".png", artistTrack, "Purchase", "Cancel", "SHOP=" + sPrefix);
+	}
+	break;
+	case "piratesParrot":
+	{
+		totalAssertions = 500000;
+		artistTrack = "Buy a parrot for your pirate at " + formatNumber(totalAssertions) + " coins?<br /><br /><span style='color:grey'>Permanently increases your chance of finding maps by 25%.</span>";
 		confirmDialogue("images/" + sPrefix + ".png", artistTrack, "Purchase", "Cancel", "SHOP=" + sPrefix);
 	}
 	break;

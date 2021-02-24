@@ -1,5 +1,5 @@
 /**
- * openProfileDialogue extracted from ../../deobfuscated/bundle.js at line 5787-5830
+ * openProfileDialogue extracted from ../../deobfuscated/bundle.js at line 6764-6807
  *
  * If this file doesn't contain a function, there is an error in ../raw/openProfileDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

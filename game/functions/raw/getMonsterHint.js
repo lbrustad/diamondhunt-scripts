@@ -1,13 +1,13 @@
 /**
- * getMonsterHint extracted from ../../deobfuscated/bundle.js at line 11512-11545
+ * getMonsterHint extracted from ../../deobfuscated/bundle.js at line 13930-13969
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMonsterHint.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getMonsterHint(_0x4B19)
+function getMonsterHint(_0x166D8)
 {
-	switch (_0x4B19)
+	switch (_0x166D8)
 	{
 	case "tridentSoldier":
 		return "<img src=\'images/info_grey.png\' class=\'img-20\' />  After every 8 normal attacks, his weapon will charge.  If the trident soldier is over 30 HP, his charge will deal damage.  If not, it will heal him.";
@@ -35,6 +35,12 @@ function getMonsterHint(_0x4B19)
 		return "<img src=\'images/info_grey.png\' class=\'img-20\' />  A great source of feathers.";
 	case "bee":
 		return "<img src=\'images/info_grey.png\' class=\'img-20\' /> Attacks slighty faster than a rat or chicken.";
+	case "skeletonMonks":
+		return "<img src=\'images/info_grey.png\' class=\'img-20\' /> Attacking a charged skeleton monk will heal them for the damage dealt.<br />Also constantly heals when reaching low hp.";
+	case "dungeonSpider":
+		return "<img src=\'images/info_grey.png\' class=\'img-20\' /> Spits out poison at 30 HP.";
+	case "stoneWomen":
+		return "<img src=\'images/info_grey.png\' class=\'img-20\' /> Has 6 different forms and changes between them regularly.<br />Each form has a major weakness which is hinted in the sprite.<br />The form it begins with has no weaknesses.";
 	default:
 		return "<span style=\'color:grey\'>(No hints available for this NPC)</span>"
 	}

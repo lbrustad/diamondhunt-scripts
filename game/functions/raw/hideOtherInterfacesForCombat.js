@@ -1,13 +1,13 @@
 /**
- * hideOtherInterfacesForCombat extracted from ../../deobfuscated/bundle.js at line 14493-14556
+ * hideOtherInterfacesForCombat extracted from ../../deobfuscated/bundle.js at line 17906-17990
  *
  * If this file doesn't contain a function, there is an error in ../raw/hideOtherInterfacesForCombat.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function hideOtherInterfacesForCombat(_0x578F)
+function hideOtherInterfacesForCombat(_0x17740)
 {
-	if (_0x578F)
+	if (_0x17740)
 	{
 		document.getElementById("table-top-main-items").style.display = "none";
 		document.getElementById("top-bar-skills").style.display = "none";
@@ -33,21 +33,42 @@ function hideOtherInterfacesForCombat(_0x578F)
 				}
 				else
 				{
-					if (getItemString("currentFighingArea") != "none")
+					if (getItemString("monsterName") == "tridentShark")
 					{
-						changeBodyBackground("images/" + getItemString("currentFighingArea") + "_background.png");
-						if (getItemString("currentFighingArea") == "northernFields" || getItemString("monsterName") == "iceHawk")
+						changeBodyBackground("images/" + "ocean" + "_background.png")
+					}
+					else
+					{
+						if (getItemString("monsterName") == "corruptedKnight")
 						{
-							if (!snowflakes_loaded)
-							{
-								generateSnowflakes()
-							};
-							changeBodyBackground("images/" + "northernFields" + "_background.png");
-							document.getElementById("snowflakeContainer").style.display = "block"
+							changeBodyBackground("images/forest" + "_background.png")
 						}
 						else
 						{
-							document.getElementById("snowflakeContainer").style.display = "none"
+							if (getItemString("monsterName").startsWith("knight"))
+							{
+								changeBodyBackground("images/" + "castleSoldiers" + "_background.png")
+							}
+							else
+							{
+								if (getItemString("currentFighingArea") != "none")
+								{
+									changeBodyBackground("images/" + getItemString("currentFighingArea") + "_background.png");
+									if (getItemString("currentFighingArea") == "northernFields" || getItemString("monsterName") == "iceHawk")
+									{
+										if (!snowflakes_loaded)
+										{
+											generateSnowflakes()
+										};
+										changeBodyBackground("images/" + "northernFields" + "_background.png");
+										document.getElementById("snowflakeContainer").style.display = "block"
+									}
+									else
+									{
+										document.getElementById("snowflakeContainer").style.display = "none"
+									}
+								}
+							}
 						}
 					}
 				}

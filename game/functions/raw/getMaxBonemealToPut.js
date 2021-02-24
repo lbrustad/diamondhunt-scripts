@@ -1,29 +1,29 @@
 /**
- * getMaxBonemealToPut extracted from ../../deobfuscated/bundle.js at line 16802-16827
+ * getMaxBonemealToPut extracted from ../../deobfuscated/bundle.js at line 20538-20563
  *
  * If this file doesn't contain a function, there is an error in ../raw/getMaxBonemealToPut.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getMaxBonemealToPut(_0x5259)
+function getMaxBonemealToPut(_0x16FBB)
 {
-	var _0x4195 = parseInt(getBonemealTypeData()[3]);
+	var _0x15A21 = parseInt(getBonemealTypeData()[3]);
 	if (getItem("diamondBonemealBin") > 0)
 	{
-		return getItem(_0x5259)
+		return getItem(_0x16FBB)
 	};
-	if (_0x4195 > 0)
+	if (_0x15A21 > 0)
 	{
-		_0x4195 -= getItem("bonemeal");
-		var _0x5480 = getBonemealAmount(_0x5259);
-		var _0x4949 = parseInt(_0x4195 / _0x5480);
-		if (_0x4949 > getItem(_0x5259))
+		_0x15A21 -= getItem("bonemeal");
+		var _0x17254 = getBonemealAmount(_0x16FBB);
+		var _0x164CB = parseInt(_0x15A21 / _0x17254);
+		if (_0x164CB > getItem(_0x16FBB))
 		{
-			return getItem(_0x5259)
+			return getItem(_0x16FBB)
 		}
 		else
 		{
-			return _0x4949
+			return _0x164CB
 		}
 	}
 	else

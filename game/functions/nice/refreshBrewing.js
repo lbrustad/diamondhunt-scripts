@@ -186,5 +186,14 @@ function refreshBrewing()
 	}
 	brewingRecipes[potionItemName] = new CraftingRecipe(potionItemName, ["brewing"], [55], ["goldLeaf", "limeLeaf", "bronzeBars", "ironBars", "silverBars", "goldBars", "promethiumBars", "largeVial"], [8, 50, 1, 1, 1, 1, 1, 1], potionItemNameDescription, true, potionDisplayName);
 	pix_color = pix_color + addRecipeToTable(brewingRecipes[potionItemName], SCROLL_ID);
+	potionItemName = "largeRubyStardustPotion";
+	potionDisplayName = "Ruby Stardust Potion";
+	potionItemNameDescription = "Can be poured on a ruby, converting it into stardust.";
+	if (getItem(potionItemName + "Drank") == 0)
+	{
+		potionItemNameDescription = "???";
+	}
+	brewingRecipes[potionItemName] = new CraftingRecipe(potionItemName, ["brewing"], [60], ["goldLeaf", "redMushroom", "largeVial"], [16, 1500, 1], potionItemNameDescription, true, potionDisplayName);
+	pix_color = pix_color + addRecipeToTable(brewingRecipes[potionItemName], SCROLL_ID);
 	document.getElementById(SCROLL_ID).innerHTML = "<table class='table-craftables' width='90%'><tbody><tr><th>Name</th><th>Item</th><th>Level</th><th>Materials</th><th>Description</th></tr>" + pix_color + "</tbody></table><br /><br />";
 };

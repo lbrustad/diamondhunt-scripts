@@ -78,42 +78,42 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/bonemeal.png' class='img-20' /> " + "<item-bonemeal>0</item-bonemeal>";
 	}
 	if (name == "axe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 5 - 10";
 	}
 	if (name == "sapphireAxe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 10 - 15";
 	}
 	if (name == "emeraldAxe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 15 - 20";
 	}
 	if (name == "rubyAxe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 20 - 25";
 	}
 	if (name == "diamondAxe")
 	{
 		wrapper = document.createElement("span");
 		wrapper.setAttribute("type", "number");
-		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> 25 - 30";
 	}
 	if (name == "chainsaw")
@@ -122,6 +122,21 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 		wrapper.setAttribute("type", "number");
 		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/logs.png' class='img-20' /> +5";
+	}
+	if (name == "pirate")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:none;color:grey");
+		wrapper.setAttribute("id", "item-box-data-pirate");
+		wrapper.innerHTML = "<img src='images/spyglass.png' class='img-20' />";
+	}
+	if (name == "oilFactory" || name == "promethiumOilFactory" || name == "titaniumOilFactory")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;");
+		wrapper.innerHTML = "<img src='images/oil.png' class='img-20' /> <item-oilFactoryWorkers>0</item-oilFactoryWorkers>";
 	}
 	if (name == "sapphireChainsaw")
 	{
@@ -157,6 +172,20 @@ function addItemBox(name, getterOrType, setterOrGetter, switchTextDiv, p_color, 
 		wrapper.setAttribute("type", "number");
 		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
 		wrapper.innerHTML = "<img src='images/seedList.png' class='img-20' /> +5%";
+	}
+	if (name == "explorer")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<img src='images/lootBag_black.png' class='img-20' /> <span id='" + name + "-status'>0</span>";
+	}
+	if (name == "watch" || name == "sapphireWatch" || name == "emeraldWatch" || name == "rubyWatch" || name == "diamondWatch")
+	{
+		wrapper = document.createElement("span");
+		wrapper.setAttribute("type", "number");
+		wrapper.setAttribute("style", "text-align:center;display:block;color:grey");
+		wrapper.innerHTML = "<div id='" + name + "-status'>Not Set</div>";
 	}
 	if (name == "sapphireTrowel")
 	{

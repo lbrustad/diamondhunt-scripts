@@ -14,8 +14,15 @@ function SpiderMonster()
 		var i = 0;
 		for (; i < exprData.getNumberOfFrames(); i++)
 		{
-			var img = getImage("images/" + this.name + "_" + "monster" + "_" + exprData.name + "_" + exprData.framesArray[i] + ".png", this.name + "_" + i + "_" + exprData);
-			$("#section-combat-loader").append(img);
+			var image = getImage("images/" + this.name + "_" + "monster" + "_" + exprData.name + "_" + exprData.framesArray[i] + ".png", this.name + "_" + i + "_" + exprData);
+			$("#section-combat-loader").append(image);
+		}
+		exprData = this.secondaryAnimationObject;
+		i = 0;
+		for (; i < exprData.getNumberOfFrames(); i++)
+		{
+			image = getImage("images/" + this.name + "_" + "monster" + "_" + exprData.name + "_" + exprData.framesArray[i] + ".png", this.name + "_" + i + "_" + exprData);
+			$("#section-combat-loader").append(image);
 		}
 	};
 	this.tick = function ()

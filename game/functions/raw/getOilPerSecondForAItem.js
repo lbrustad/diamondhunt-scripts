@@ -1,13 +1,13 @@
 /**
- * getOilPerSecondForAItem extracted from ../../deobfuscated/bundle.js at line 5622-5639
+ * getOilPerSecondForAItem extracted from ../../deobfuscated/bundle.js at line 6486-6503
  *
  * If this file doesn't contain a function, there is an error in ../raw/getOilPerSecondForAItem.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getOilPerSecondForAItem(_0x47D0)
+function getOilPerSecondForAItem(_0x16255)
 {
-	switch (_0x47D0)
+	switch (_0x16255)
 	{
 	case "bronzeOilWell":
 		return 1;

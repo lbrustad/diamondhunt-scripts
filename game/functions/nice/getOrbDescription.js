@@ -20,6 +20,24 @@ function getOrbDescription(canCreateDiscussions)
 	case "blueManaOrb":
 		th_field = "Mana regenerates very fast out of combat.";
 		break;
+	case "greenFishingOrb":
+		th_field = "Catch 20% more fish.";
+		break;
+	case "greenRocketOrb":
+		th_field = "Gain double the ore when looting other planets and moons.";
+		break;
+	case "greenOilFactoryOrb":
+		th_field = "Ability to hire an additional 50 factory workers.";
+		break;
+	case "greenShinyMonsterOrb":
+		th_field = "Right click a monster in combat to make it shiny.";
+		break;
+	case "greenShinyWoodcuttingOrb":
+		th_field = "Right click a tree to make it shiny.";
+		break;
+	case "greenShinyFarmingOrb":
+		th_field = "Right click a crop to make it shiny.";
+		break;
 	}
 	return th_field;
 };

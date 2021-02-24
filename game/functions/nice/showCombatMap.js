@@ -9,4 +9,5 @@ function showCombatMap()
 	document.getElementById("top-bar-skills").style.display = "none";
 	document.getElementById("table-top-main-items").style.display = "none";
 	document.getElementById("navigation-area-buttons").style.display = "none";
+	refreshCombatThumbnails();
 };

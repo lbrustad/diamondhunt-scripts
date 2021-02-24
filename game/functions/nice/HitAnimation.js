@@ -95,6 +95,11 @@ function HitAnimation(result, num, div, value, color, t, data)
 			legendWidth = 250;
 			x = 0;
 		}
+		if (this.icon == "images/deadIcon.png")
+		{
+			legendWidth = 300;
+			x = 0;
+		}
 		if (this.icon == "images/stab_dark.png")
 		{
 			legendWidth = 250;

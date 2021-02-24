@@ -1,5 +1,5 @@
 /**
- * openRakeDialogue extracted from ../../deobfuscated/bundle.js at line 16846-16889
+ * openRakeDialogue extracted from ../../deobfuscated/bundle.js at line 20582-20625
  *
  * If this file doesn't contain a function, there is an error in ../raw/openRakeDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

@@ -1,5 +1,5 @@
 /**
- * titaniumRocketBoostersMoreInfo extracted from ../../deobfuscated/bundle.js at line 11860-11863
+ * titaniumRocketBoostersMoreInfo extracted from ../../deobfuscated/bundle.js at line 14684-14687
  *
  * If this file doesn't contain a function, there is an error in ../raw/titaniumRocketBoostersMoreInfo.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

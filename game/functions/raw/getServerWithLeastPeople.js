@@ -7,27 +7,27 @@
 
 function getServerWithLeastPeople()
 {
-	var _0x566D = 0;
-	var _0x568A = 10000000;
-	for (var _0x3607 = 0; _0x3607 <= 100; _0x3607++)
+	var _0x17510 = 0;
+	var _0x17533 = 10000000;
+	for (var _0x14C0C = 0; _0x14C0C <= 100; _0x14C0C++)
 	{
-		if (servers_information[_0x3607] == null)
+		if (servers_information[_0x14C0C] == null)
 		{
 			break
 		};
-		var _0x56A7 = servers_information[_0x3607][0];
-		var _0x56E1 = servers_information[_0x3607][1];
-		var _0x56C4 = servers_information[_0x3607][2];
-		var _0x5650 = servers_information[_0x3607][3];
-		if (_0x56C4 == 1 || _0x56E1 == 0)
+		var _0x17556 = servers_information[_0x14C0C][0];
+		var _0x1759C = servers_information[_0x14C0C][1];
+		var _0x17579 = servers_information[_0x14C0C][2];
+		var _0x174ED = servers_information[_0x14C0C][3];
+		if (_0x17579 == 1 || _0x1759C == 0)
 		{
 			continue
 		};
-		if (_0x568A > _0x5650)
+		if (_0x17533 > _0x174ED)
 		{
-			_0x566D = _0x56A7;
-			_0x568A = _0x5650
+			_0x17510 = _0x17556;
+			_0x17533 = _0x174ED
 		}
 	};
-	return _0x566D
+	return _0x17510
 }

@@ -1,54 +1,54 @@
 /**
- * refreshMarketHistory extracted from ../../deobfuscated/bundle.js at line 2962-3008
+ * refreshMarketHistory extracted from ../../deobfuscated/bundle.js at line 3592-3638
  *
  * If this file doesn't contain a function, there is an error in ../raw/refreshMarketHistory.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function refreshMarketHistory(_0x3746)
+function refreshMarketHistory(_0x14DB0)
 {
-	var _0x6C2D = document.getElementById("marketHistory-section");
+	var _0x19117 = document.getElementById("marketHistory-section");
 	document.getElementById("marketHistory-loading").style.display = "none";
-	if (_0x3746 == "error")
+	if (_0x14DB0 == "error")
 	{
 		document.getElementById("marketHistory-section").innerHTML = "<center>An error has occured.  Too many requests.  Try again later.</center>";
 		return
 	};
-	if (_0x3746 == "empty")
+	if (_0x14DB0 == "empty")
 	{
 		document.getElementById("marketHistory-section").innerHTML = "<center>There are no transactions on the market for this account.</center>";
 		return
 	};
-	var _0x3763 = _0x3746.split("~");
-	var _0x41B2 = "<center><table class=\'simple-table\' width=\'70%\'>";
-	_0x41B2 += "<tr>";
-	_0x41B2 += "<th>" + "Item" + "</th>";
-	_0x41B2 += "<th>" + "Icon" + "</th>";
-	_0x41B2 += "<th>" + "Amount" + "</th>";
-	_0x41B2 += "<th>" + "Price" + "</th>";
-	_0x41B2 += "<th>" + "Bought/Sold" + "</th>";
-	_0x41B2 += "<th>" + "Date <span style=\'color:grey\'>MM/DD/YYYY</span>" + "</th>";
-	_0x41B2 += "</tr>";
-	for (var _0x3607 = 0; _0x3607 < _0x3763.length; _0x3607 += 0)
+	var _0x14DD3 = _0x14DB0.split("~");
+	var _0x15A44 = "<center><table class=\'simple-table\' width=\'70%\'>";
+	_0x15A44 += "<tr>";
+	_0x15A44 += "<th>" + "Item" + "</th>";
+	_0x15A44 += "<th>" + "Icon" + "</th>";
+	_0x15A44 += "<th>" + "Amount" + "</th>";
+	_0x15A44 += "<th>" + "Price" + "</th>";
+	_0x15A44 += "<th>" + "Bought/Sold" + "</th>";
+	_0x15A44 += "<th>" + "Date <span style=\'color:grey\'>MM/DD/YYYY</span>" + "</th>";
+	_0x15A44 += "</tr>";
+	for (var _0x14C0C = 0; _0x14C0C < _0x14DD3.length; _0x14C0C += 0)
 	{
-		var _0x6C4A = _0x3763[_0x3607] == "true";
-		_0x3607++;
-		var _0x6C67 = _0x3763[_0x3607];
-		_0x3607++;
-		var _0x44C1 = _0x3763[_0x3607];
-		_0x3607++;
-		var _0x6C84 = _0x3763[_0x3607];
-		_0x3607++;
-		var _0x6C10 = _0x3763[_0x3607];
-		_0x3607++;
-		_0x41B2 += "<tr>";
-		_0x41B2 += "<td>" + getItemName(_0x6C67) + "</td>";
-		_0x41B2 += "<td>" + "<img src=\'images/" + _0x6C67 + ".png\' class=\'img-50\' />" + "</td>";
-		_0x41B2 += "<td>" + formatNumber(_0x44C1) + "</td>";
-		_0x41B2 += "<td>" + formatNumber(_0x6C84 * _0x44C1) + " <img src=\'images/coins.png\' class=\'img-20\' /> <br /><span style=\'color:grey;font-size:10pt;\'>(" + formatNumber(_0x6C84) + " each)</span></td>";
-		_0x41B2 += "<td>" + _0x6C4A + "</td>";
-		_0x41B2 += "<td>" + new Date(parseInt(_0x6C10)).toLocaleDateString("en-US"); + "</td>";
-		_0x41B2 += "</tr>"
+		var _0x1913A = _0x14DD3[_0x14C0C] == "true";
+		_0x14C0C++;
+		var _0x1915D = _0x14DD3[_0x14C0C];
+		_0x14C0C++;
+		var _0x15DF5 = _0x14DD3[_0x14C0C];
+		_0x14C0C++;
+		var _0x19180 = _0x14DD3[_0x14C0C];
+		_0x14C0C++;
+		var _0x190F4 = _0x14DD3[_0x14C0C];
+		_0x14C0C++;
+		_0x15A44 += "<tr>";
+		_0x15A44 += "<td>" + getItemName(_0x1915D) + "</td>";
+		_0x15A44 += "<td>" + "<img src=\'images/" + _0x1915D + ".png\' class=\'img-50\' />" + "</td>";
+		_0x15A44 += "<td>" + formatNumber(_0x15DF5) + "</td>";
+		_0x15A44 += "<td>" + formatNumber(_0x19180 * _0x15DF5) + " <img src=\'images/coins.png\' class=\'img-20\' /> <br /><span style=\'color:grey;font-size:10pt;\'>(" + formatNumber(_0x19180) + " each)</span></td>";
+		_0x15A44 += "<td>" + _0x1913A + "</td>";
+		_0x15A44 += "<td>" + new Date(parseInt(_0x190F4)).toLocaleDateString("en-US"); + "</td>";
+		_0x15A44 += "</tr>"
 	};
-	_0x6C2D.innerHTML = _0x41B2
+	_0x19117.innerHTML = _0x15A44
 }

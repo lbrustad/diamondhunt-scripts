@@ -2,29 +2,47 @@
 
 function getSeedDropRate(canCreateDiscussions)
 {
+	var KFactor = 0;
 	switch (canCreateDiscussions)
 	{
 	case "dottedGreenLeafSeeds":
-		return 14400;
+		KFactor = 14400;
+		break;
 	case "greenLeafSeeds":
-		return 14400 * 2;
+		KFactor = 14400 * 2;
+		break;
 	case "limeLeafSeeds":
-		return 60000;
+		KFactor = 60000;
+		break;
 	case "goldLeafSeeds":
-		return 150000;
+		KFactor = 150000;
+		break;
 	case "crystalLeafSeeds":
-		return 500000;
+		KFactor = 500000;
+		break;
 	case "stripedGoldLeafSeeds":
-		return 1000000;
+		KFactor = 1000000;
+		break;
 	case "stripedCrystalLeafSeeds":
-		return 3000000;
+		KFactor = 3000000;
+		break;
 	case "redMushroomSeeds":
-		return 3600;
+		KFactor = 3600;
+		break;
 	case "blewitMushroomSeeds":
-		return 36000;
+		KFactor = 36000;
+		break;
 	case "stardustSeeds":
-		return 28800;
+		KFactor = 28800;
+		break;
 	default:
-		return 0;
+		KFactor = 0;
+		break;
 	}
+	if (getTrowelTypeData()[3] == 0)
+	{
+		return KFactor;
+	}
+	var BlueWe = getTrowelTypeData()[3] / 100;
+	return parseInt(KFactor * (1 - BlueWe));
 };

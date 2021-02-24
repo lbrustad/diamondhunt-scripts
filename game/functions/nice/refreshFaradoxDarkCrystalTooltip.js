@@ -19,5 +19,9 @@ function refreshFaradoxDarkCrystalTooltip()
 	{
 		attributeTemplate++;
 	}
+	if (getItem("yellowCrystalUsed") > 0)
+	{
+		attributeTemplate++;
+	}
 	document.getElementById("darkCrystalUsed-amm").innerHTML = attributeTemplate;
 };

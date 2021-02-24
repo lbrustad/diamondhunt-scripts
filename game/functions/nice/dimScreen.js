@@ -201,6 +201,34 @@ function dimScreen(name, buildingApp)
 			});
 			return;
 		}
+		if (name == "corrupted_knight_escape")
+		{
+			keyToAdd = keyToAdd + "<center>";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "<br /><br />";
+			keyToAdd = keyToAdd + "</center>";
+			$("#dim-screen").fadeIn(1000);
+			$("#game").fadeOut(1000, function ()
+			{
+				setTimeout(function ()
+				{
+					setTimeout(function ()
+					{
+						$("#dim-screen").fadeOut(1000, function ()
+						{
+							faradoxRandomShow();
+						});
+						$("#dim-screen").fadeOut(1000, function ()
+						{
+							$("#game").fadeIn(2000);
+							faradoxRandomShow2();
+						});
+					}, 2000);
+				}, 1000);
+			});
+			return;
+		}
 		if (name == "dead_hero_special")
 		{
 			keyToAdd = keyToAdd + "<center>";

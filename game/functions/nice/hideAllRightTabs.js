@@ -24,9 +24,11 @@ function hideAllRightTabs()
 	document.getElementById("navigation-right-gemList").style.display = "none";
 	document.getElementById("navigation-right-convertMagic").style.display = "none";
 	document.getElementById("navigation-right-transformLog").style.display = "none";
+	document.getElementById("navigation-right-dungeonSigns").style.display = "none";
 	document.getElementById("navigation-right-museum").style.display = "none";
 	document.getElementById("navigation-right-puzzleChest1").style.display = "none";
 	document.getElementById("navigation-right-combatLog").style.display = "none";
+	document.getElementById("navigation-right-castleChestLog").style.display = "none";
 	document.getElementById("navigation-right-pirate").style.display = "none";
 	document.getElementById("navigation-right-marketHistory").style.display = "none";
 	document.getElementById("navigation-right-explorer").style.display = "none";

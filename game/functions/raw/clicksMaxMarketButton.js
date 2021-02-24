@@ -1,5 +1,5 @@
 /**
- * clicksMaxMarketButton extracted from ../../deobfuscated/bundle.js at line 16829-16833
+ * clicksMaxMarketButton extracted from ../../deobfuscated/bundle.js at line 20565-20569
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksMaxMarketButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

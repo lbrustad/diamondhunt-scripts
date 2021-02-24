@@ -15,5 +15,9 @@ function getAreaTimer(GUTTER_SIZE)
 	{
 		MINOR_INTERVAL_RATIO = MINOR_INTERVAL_RATIO - 0.10;
 	}
+	if (getItem("cooldownRing4") == 1)
+	{
+		MINOR_INTERVAL_RATIO = MINOR_INTERVAL_RATIO - 0.15;
+	}
 	return parseInt(GUTTER_SIZE * MINOR_INTERVAL_RATIO);
 };

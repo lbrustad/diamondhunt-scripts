@@ -3,12 +3,24 @@
 function chat(type)
 {
 	var localStorage = type.split("~");
-	var randomPlaylistConfigStr = localStorage[0];
-	var stickiesArray = localStorage[1];
+	var stickiesArray = localStorage[0];
+	var randomPlaylistConfigStr = localStorage[1];
 	var icon = localStorage[2];
 	var mode = localStorage[3];
 	var key = localStorage[4];
 	var parsed = localStorage[5];
+	var _a_ = false;
+	if (global_friendsAndIgnoreList[stickiesArray] != null)
+	{
+		if (global_friendsAndIgnoreList[stickiesArray] == "ignore")
+		{
+			return;
+		}
+		if (global_friendsAndIgnoreList[stickiesArray] == "friend")
+		{
+			_a_ = true;
+		}
+	}
 	var annotation = "";
 	if (mode != "none")
 	{
@@ -78,14 +90,14 @@ function chat(type)
 		if (parsed == "pm_from")
 		{
 			th_field = "style='color:purple'";
-			htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "> [PM from " + randomPlaylistConfigStr + "] " + key + "</span>";
+			htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "> [PM from " + stickiesArray + "] " + key + "</span>";
 		}
 		else
 		{
 			if (parsed == "pm_to")
 			{
 				th_field = "style='color:purple'";
-				htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "> [Sent to " + randomPlaylistConfigStr + "] " + key + "</span>";
+				htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "> [Sent to " + stickiesArray + "] " + key + "</span>";
 			}
 			else
 			{
@@ -95,19 +107,24 @@ function chat(type)
 				}
 				else
 				{
+					var osecs = "";
+					if (_a_)
+					{
+						osecs = " <img src='images/smileIcon.svg' style='vertical-align:middle' width='30px' height='30px' /> ";
+					}
 					if (icon == "Investor")
 					{
-						htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + "<img src='images/investor.gif' style='vertical-align:middle;'  /> " + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+						htmlOutput = "<span style='color:grey'>" + getTimeFetch() + osecs + "</span>" + annotation + "<img src='images/investor.gif' style='vertical-align:middle;'  /> " + "<span " + th_field + "><b oncontextmenu='return rightClicksChatUsername(this, \"" + stickiesArray + "\")' onclick='clicksChatUsername(\"" + stickiesArray + "\") class='chat-username'>" + stickiesArray + " (" + randomPlaylistConfigStr + "): </b>" + key + "</span>";
 					}
 					else
 					{
 						if (icon == "InvestorPlus")
 						{
-							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + "<img src='images/investorPlus.gif' style='vertical-align:middle;'  /> " + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + osecs + "</span>" + annotation + "<img src='images/investorPlus.gif' style='vertical-align:middle;'  /> " + "<span " + th_field + "><b oncontextmenu='return rightClicksChatUsername(this, \"" + stickiesArray + "\")' onclick='clicksChatUsername(\"" + stickiesArray + "\") class='chat-username'>" + stickiesArray + " (" + randomPlaylistConfigStr + "): </b>" + key + "</span>";
 						}
 						else
 						{
-							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + "</span>" + annotation + pid + "<span " + th_field + "><b>" + randomPlaylistConfigStr + " (" + stickiesArray + "): </b>" + key + "</span>";
+							htmlOutput = "<span style='color:grey'>" + getTimeFetch() + osecs + "</span>" + annotation + pid + "<span " + th_field + "><b class='chat-username' oncontextmenu='return rightClicksChatUsername(this, \"" + stickiesArray + "\")' onclick='clicksChatUsername\"" + stickiesArray + "\")'>" + stickiesArray + " (" + randomPlaylistConfigStr + "): </b>" + key + "</span>";
 						}
 					}
 				}

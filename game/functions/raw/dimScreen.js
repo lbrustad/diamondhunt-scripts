@@ -1,30 +1,30 @@
 /**
- * dimScreen extracted from ../../deobfuscated/bundle.js at line 15999-16232
+ * dimScreen extracted from ../../deobfuscated/bundle.js at line 19677-19938
  *
  * If this file doesn't contain a function, there is an error in ../raw/dimScreen.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function dimScreen(_0x39C4, _0x4E0B)
+function dimScreen(_0x150B2, _0x16AAC)
 {
-	if (_0x4E0B)
+	if (_0x16AAC)
 	{
-		var _0x41B2 = "";
-		if (_0x39C4 == "bushy_dead")
+		var _0x15A44 = "";
+		if (_0x150B2 == "bushy_dead")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-2\' src=\'images/greenCrystalAbsorbed.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-2\' src=\'images/greenCrystalAbsorbed.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(5000);
 			$("#game").fadeOut(5000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					$("#dim-screen-img-2").effect("shake"
@@ -50,19 +50,19 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		if (_0x39C4 == "mana")
+		if (_0x150B2 == "mana")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/animation_mana1.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-2\' src=\'images/default_hero.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/animation_mana1.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-2\' src=\'images/default_hero.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(5000);
 			$("#game").fadeOut(5000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					setTimeout(function ()
@@ -82,20 +82,20 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		if (_0x39C4 == "combat_animation")
+		if (_0x150B2 == "combat_animation")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/reaper_grey.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<span id=\'dim-screen-area1\'></span>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<span id=\'dim-screen-area2\'></span>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/reaper_grey.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<span id=\'dim-screen-area1\'></span>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<span id=\'dim-screen-area2\'></span>";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(10);
 			$("#game").fadeOut(10, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					setTimeout(function ()
@@ -113,21 +113,21 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		if (_0x39C4 == "release_faradox")
+		if (_0x150B2 == "release_faradox")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/faradox.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/faradox.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(5000);
 			$("#game").fadeOut(5000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					addTextByDelay("You have released me.", $("#dim-screen-area1"), 50);
@@ -147,21 +147,21 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		if (_0x39C4 == "release_faradox_2")
+		if (_0x150B2 == "release_faradox_2")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/faradox.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/faradox.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:red\' id=\'dim-screen-area2\'></div>";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(5000);
 			$("#game").fadeOut(5000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					addTextByDelay("I am watching every move you make.", $("#dim-screen-area1"), 50);
@@ -181,20 +181,20 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		var _0x41B2 = "";
-		if (_0x39C4 == "dead_hero")
+		var _0x15A44 = "";
+		if (_0x150B2 == "dead_hero")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/deadHero.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/deadHero.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(1000);
 			$("#game").fadeOut(1000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					addTextByDelay("You have fainted.", $("#dim-screen-area1"), 50);
@@ -206,19 +206,47 @@ function dimScreen(_0x39C4, _0x4E0B)
 			});
 			return
 		};
-		if (_0x39C4 == "dead_hero_special")
+		if (_0x150B2 == "corrupted_knight_escape")
 		{
-			_0x41B2 += "<center>";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<img id=\'dim-screen-img-1\' src=\'images/deadHero.png\' />";
-			_0x41B2 += "<br /><br />";
-			_0x41B2 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
-			_0x41B2 += "</center>";
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "</center>";
 			$("#dim-screen").fadeIn(1000);
 			$("#game").fadeOut(1000, function ()
 			{
-				document.getElementById("dim-screen").innerHTML = _0x41B2;
+				setTimeout(function ()
+				{
+					setTimeout(function ()
+					{
+						$("#dim-screen").fadeOut(1000, function ()
+						{
+							faradoxRandomShow()
+						});
+						$("#dim-screen").fadeOut(1000, function ()
+						{
+							$("#game").fadeIn(2000);
+							faradoxRandomShow2()
+						})
+					}, 2000)
+				}, 1000)
+			});
+			return
+		};
+		if (_0x150B2 == "dead_hero_special")
+		{
+			_0x15A44 += "<center>";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<img id=\'dim-screen-img-1\' src=\'images/deadHero.png\' />";
+			_0x15A44 += "<br /><br />";
+			_0x15A44 += "<div style=\'color:grey\' id=\'dim-screen-area1\'></div>";
+			_0x15A44 += "</center>";
+			$("#dim-screen").fadeIn(1000);
+			$("#game").fadeOut(1000, function ()
+			{
+				document.getElementById("dim-screen").innerHTML = _0x15A44;
 				setTimeout(function ()
 				{
 					addTextByDelay("You have fainted.", $("#dim-screen-area1"), 50);

@@ -1,13 +1,13 @@
 /**
- * getBonemealAmount extracted from ../../deobfuscated/bundle.js at line 16787-16800
+ * getBonemealAmount extracted from ../../deobfuscated/bundle.js at line 20523-20536
  *
  * If this file doesn't contain a function, there is an error in ../raw/getBonemealAmount.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function getBonemealAmount(_0x5259)
+function getBonemealAmount(_0x16FBB)
 {
-	switch (_0x5259)
+	switch (_0x16FBB)
 	{
 	case "bones":
 		return 1;

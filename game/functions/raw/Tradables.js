@@ -1,14 +1,14 @@
 /**
- * Tradables extracted from ../../deobfuscated/bundle.js at line 17500-17506
+ * Tradables extracted from ../../deobfuscated/bundle.js at line 21250-21256
  *
  * If this file doesn't contain a function, there is an error in ../raw/Tradables.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function Tradables(_0x3933, _0x3D0D, _0x3D47, _0x3C5F)
+function Tradables(_0x15003, _0x154A9, _0x154EF, _0x153D7)
 {
-	this.itemName = _0x3933;
-	this.lowerLimit = _0x3D0D;
-	this.upperLimit = _0x3D47;
-	this.category = _0x3C5F
+	this.itemName = _0x15003;
+	this.lowerLimit = _0x154A9;
+	this.upperLimit = _0x154EF;
+	this.category = _0x153D7
 }

@@ -175,7 +175,17 @@ function getResearchPerkDescription(steal, param)
 		}
 		if (param == "cooking")
 		{
-			return "Teleporting on of an area or a boss will refund 10% of the energy used.";
+			return "Teleporting from an area/boss will refund 10% of the energy used.";
+		}
+		if (param == "mining")
+		{
+			return "Ability to find special mining scrolls to learn different ways of gaining additional XP. <br /><span onclick='showMiningScrollsFound()' class='researcher-more-info-button'>(more info)</span>";
+		}
+		break;
+	case 5:
+		if (param == "mining")
+		{
+			return "Ability to send your rocket to mars.";
 		}
 	}
 	return "-1";

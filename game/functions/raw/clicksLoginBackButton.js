@@ -1,5 +1,5 @@
 /**
- * clicksLoginBackButton extracted from ../../deobfuscated/bundle.js at line 2773-2778
+ * clicksLoginBackButton extracted from ../../deobfuscated/bundle.js at line 3403-3408
  *
  * If this file doesn't contain a function, there is an error in ../raw/clicksLoginBackButton.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

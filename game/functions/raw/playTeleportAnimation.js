@@ -1,5 +1,5 @@
 /**
- * playTeleportAnimation extracted from ../../deobfuscated/bundle.js at line 16239-16244
+ * playTeleportAnimation extracted from ../../deobfuscated/bundle.js at line 19945-19950
  *
  * If this file doesn't contain a function, there is an error in ../raw/playTeleportAnimation.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

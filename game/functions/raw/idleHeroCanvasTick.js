@@ -1,5 +1,5 @@
 /**
- * idleHeroCanvasTick extracted from ../../deobfuscated/bundle.js at line 3010-3031
+ * idleHeroCanvasTick extracted from ../../deobfuscated/bundle.js at line 3640-3661
  *
  * If this file doesn't contain a function, there is an error in ../raw/idleHeroCanvasTick.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

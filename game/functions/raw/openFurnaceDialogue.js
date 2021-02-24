@@ -1,25 +1,25 @@
 /**
- * openFurnaceDialogue extracted from ../../deobfuscated/bundle.js at line 10008-10025
+ * openFurnaceDialogue extracted from ../../deobfuscated/bundle.js at line 12158-12175
  *
  * If this file doesn't contain a function, there is an error in ../raw/openFurnaceDialogue.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
  **/
 
-function openFurnaceDialogue(_0x51C8)
+function openFurnaceDialogue(_0x16F0C)
 {
 	document.getElementById("dialogue-furnace-selectOre").innerHTML = "";
-	var _0x41B2 = "";
+	var _0x15A44 = "";
 	if (getItem("researcherCrafting") >= 1)
 	{
-		_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "sand")
+		_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "sand")
 	};
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "copper");
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "iron");
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "silver");
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "gold");
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "promethium");
-	_0x41B2 += generateHTMLToSelectOreFurnace(_0x51C8, "titanium");
-	document.getElementById("dialogue-furnace-selectOre").innerHTML = _0x41B2;
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "copper");
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "iron");
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "silver");
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "gold");
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "promethium");
+	_0x15A44 += generateHTMLToSelectOreFurnace(_0x16F0C, "titanium");
+	document.getElementById("dialogue-furnace-selectOre").innerHTML = _0x15A44;
 	document.getElementById("dialogue-furnace-buttons-area").innerHTML = "<br /><div onclick=\'closeDialogue(\"dialogue-furnace\")\' class=\'dialogue-button\'>Close</div>";
 	openDialogueOverride("dialogue-furnace", "large")
 }

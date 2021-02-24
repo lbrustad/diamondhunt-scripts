@@ -1,5 +1,5 @@
 /**
- * clientTick extracted from ../../deobfuscated/bundle.js at line 1223-1285
+ * clientTick extracted from ../../deobfuscated/bundle.js at line 1475-1537
  *
  * If this file doesn't contain a function, there is an error in ../raw/clientTick.js
  * You can fix it manually and use http://jsnice.org/ to make it nice

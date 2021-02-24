@@ -1,5 +1,5 @@
 /**
- * MammaPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 12633-12685
+ * MammaPolarBearMonster extracted from ../../deobfuscated/bundle.js at line 15731-15783
  *
  * If this file doesn't contain a function, there is an error in ../raw/MammaPolarBearMonster.js
  * You can fix it manually and use http://jsnice.org/ to make it nice
@@ -14,11 +14,11 @@ function MammaPolarBearMonster()
 	this.currentAnimation = this.idleAnimationObject;
 	this.preloadImages = function ()
 	{
-		var _0x413E = this.idleAnimationObject;
-		for (var _0x3607 = 0; _0x3607 < _0x413E.getNumberOfFrames(); _0x3607++)
+		var _0x159B8 = this.idleAnimationObject;
+		for (var _0x14C0C = 0; _0x14C0C < _0x159B8.getNumberOfFrames(); _0x14C0C++)
 		{
-			var _0x415B = getImage("images/" + this.name + "_" + "monster" + "_" + _0x413E.name + "_" + _0x413E.framesArray[_0x3607] + ".png", this.name + "_" + _0x3607 + "_" + _0x413E);
-			$("#section-combat-loader").append(_0x415B)
+			var _0x159DB = getImage("images/" + this.name + "_" + "monster" + "_" + _0x159B8.name + "_" + _0x159B8.framesArray[_0x14C0C] + ".png", this.name + "_" + _0x14C0C + "_" + _0x159B8);
+			$("#section-combat-loader").append(_0x159DB)
 		}
 	};
 	this.tick = function ()
